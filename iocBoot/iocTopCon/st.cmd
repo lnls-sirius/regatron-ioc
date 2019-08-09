@@ -28,3 +28,5 @@ dbLoadRecords("db/TopCon.db", "DEVICE=TopCon:Slave, PORT=P02")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
+
+#var streamDebug 1

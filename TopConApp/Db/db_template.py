@@ -91,6 +91,7 @@ record(calcout, "$$(DEVICE):${pv}_eslo"){
 record(calcout, "$$(DEVICE):${pv}_d"){
     field(CALC, "A#0") # If != NO_ALARM
     field(INPA, "$$(DEVICE):${ref}.SEVR CP")
+    field(INPB, "$$(DEVICE):${ref} CP")
     field(OUT,  "$$(DEVICE):${pv}.DISA")
 }
 
@@ -120,6 +121,7 @@ record(calcout, "$$(DEVICE):${pv}_eslo"){
 record(calcout, "$$(DEVICE):${pv}_d"){
     field(CALC, "A#0") # If != NO_ALARM
     field(INPA, "$$(DEVICE):${ref0}.SEVR CP")
+    field(INPB, "$$(DEVICE):${ref0} CP")
     field(OUT,  "$$(DEVICE):${pv}.DISA")
 }
 

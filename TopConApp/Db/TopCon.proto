@@ -1,0 +1,1296 @@
+
+LockTimeout     = 5000;
+WriteTimeout    = 100;
+ReplyTimeout    = 1000;
+ReadTimeout     = 100;
+ExtraInput      = Error;
+Terminator      = ;
+
+
+selectSystem{
+    MaxInput = 5;
+    out "\xA5\x06\x11\xD0\x50\x00", "\x40\x00", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+}
+
+selectMaster{
+    MaxInput = 5;
+    out "\xA5\x06\x11\xD0\x50\x00", "\x00\x00", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+}
+
+setStartupVoltageSlope{
+    MaxInput = 5;
+    out "\xA5\x06\x11\x54\x51\x00", "%#.2r", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+    @mismatch{ in "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+setStartupCurrentSlope{
+    MaxInput = 5;
+    out "\xA5\x06\x11\x55\x51\x00", "%#.2r", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+    @mismatch{ in "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+setVoltageSlope{
+    MaxInput = 5;
+    out "\xA5\x06\x11\x56\x51\x00", "%#.2r", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+    @mismatch{ in "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+setCurrentSlope{
+    MaxInput = 5;
+    out "\xA5\x06\x11\x57\x51\x00", "%#.2r", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+    @mismatch{ in "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getActiveInterface{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x87\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getStartupVoltageSlope{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x54\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getStartupCurrentSlope{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x55\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSVoltageSlope{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x56\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getCurrentSlope{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x57\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleVoltagePreset_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x80\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleVoltagePreset{
+    selectMaster;
+    getModuleVoltagePreset_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemVoltagePreset_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x80\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemVoltagePreset{
+    selectSystem;
+    getSystemVoltagePreset_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleVoltageLimitQ4_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x1F\x25\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleVoltageLimitQ4{
+    selectMaster;
+    getModuleVoltageLimitQ4_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemVoltageLimitQ4_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x1F\x25\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemVoltageLimitQ4{
+    selectSystem;
+    getSystemVoltageLimitQ4_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleCurrentPreset_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x81\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleCurrentPreset{
+    selectMaster;
+    getModuleCurrentPreset_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemCurrentPreset_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x81\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemCurrentPreset{
+    selectSystem;
+    getSystemCurrentPreset_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleCurrentLimitQ4_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x1D\x25\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleCurrentLimitQ4{
+    selectMaster;
+    getModuleCurrentLimitQ4_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemCurrentLimitQ4_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x1D\x25\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemCurrentLimitQ4{
+    selectSystem;
+    getSystemCurrentLimitQ4_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModulePowerPreset_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x82\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModulePowerPreset{
+    selectMaster;
+    getModulePowerPreset_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemPowerPreset_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x82\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemPowerPreset{
+    selectSystem;
+    getSystemPowerPreset_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModulePowerLimitQ4_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x1E\x25\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModulePowerLimitQ4{
+    selectMaster;
+    getModulePowerLimitQ4_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemPowerLimitQ4_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x1E\x25\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemPowerLimitQ4{
+    selectSystem;
+    getSystemPowerLimitQ4_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleResistencePreset_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x83\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleResistencePreset{
+    selectMaster;
+    getModuleResistencePreset_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemResistencePreset_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x83\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemResistencePreset{
+    selectSystem;
+    getSystemResistencePreset_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getNomDCLinkVoltage{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x05\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getDCLinkVoltage{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x12\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleOutputVoltage_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x84\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleOutputVoltage{
+    selectMaster;
+    getModuleOutputVoltage_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemOutputVoltage_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x84\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemOutputVoltage{
+    selectSystem;
+    getSystemOutputVoltage_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleOutputCurrent_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x85\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleOutputCurrent{
+    selectMaster;
+    getModuleOutputCurrent_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemOutputCurrent_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x85\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemOutputCurrent{
+    selectSystem;
+    getSystemOutputCurrent_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleOutputPower_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x86\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleOutputPower{
+    selectMaster;
+    getModuleOutputPower_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemOutputPower_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x86\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemOutputPower{
+    selectSystem;
+    getSystemOutputPower_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getIGBTTemp{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x07\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getRectfierTemp{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0F\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleMaxVoltage{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x00\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleMaxCurrent{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x01\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleMaxPower{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x02\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleMinVoltage{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0F\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleMinCurrent{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x10\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleMinPower{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x11\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleNomInternalRes{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x03\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemMaxVoltage{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0B\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemMaxCurrent{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0C\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemMaxPower{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0D\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemMinVoltage{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x12\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemMinCurrent{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x13\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemMinPower{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x14\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemNomInternalRes{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0E\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#2r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+setOutputVoltageOnOff{
+    MaxInput = 5;
+    out "\xA5\x06\x11\x89\x50\x00", "%#0.2r", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+    @mismatch{ in "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+saveSettings{
+    MaxInput = 5;
+    out "\xA5\x06\x11\x8A\x50\x00", "\x01\x00", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+}
+
+clearError{
+    MaxInput = 5;
+    out "\xA5\x06\x11\x8B\x50\x00", "\x01\x00", "%2<sum>", "%#/(?sm)(..)(......)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(..)/\1\3\2/", "\xA5\x02\x11\x00", "%2<sum>";
+}
+
+getModuleStdErrorGroup_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x8D\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup{
+    selectMaster;
+    getModuleStdErrorGroup_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup0_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x93\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup0{
+    selectMaster;
+    getModuleStdErrorGroup0_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup1_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x94\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup1{
+    selectMaster;
+    getModuleStdErrorGroup1_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup2_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x95\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup2{
+    selectMaster;
+    getModuleStdErrorGroup2_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup3_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x96\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup3{
+    selectMaster;
+    getModuleStdErrorGroup3_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup4_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x97\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup4{
+    selectMaster;
+    getModuleStdErrorGroup4_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup5_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x98\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup5{
+    selectMaster;
+    getModuleStdErrorGroup5_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup6_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x99\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup6{
+    selectMaster;
+    getModuleStdErrorGroup6_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup7_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xA8\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup7{
+    selectMaster;
+    getModuleStdErrorGroup7_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup8_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xA9\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup8{
+    selectMaster;
+    getModuleStdErrorGroup8_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroup9_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAA\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroup9{
+    selectMaster;
+    getModuleStdErrorGroup9_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroupA_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAB\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroupA{
+    selectMaster;
+    getModuleStdErrorGroupA_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroupB_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAC\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroupB{
+    selectMaster;
+    getModuleStdErrorGroupB_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroupC_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAD\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroupC{
+    selectMaster;
+    getModuleStdErrorGroupC_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroupD_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAE\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroupD{
+    selectMaster;
+    getModuleStdErrorGroupD_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroupE_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAF\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroupE{
+    selectMaster;
+    getModuleStdErrorGroupE_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleStdErrorGroupF_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x9A\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleStdErrorGroupF{
+    selectMaster;
+    getModuleStdErrorGroupF_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupG_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x00\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupG{
+    selectMaster;
+    getModuleExtErrorGroupG_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupH_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x01\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupH{
+    selectMaster;
+    getModuleExtErrorGroupH_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupI_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x02\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupI{
+    selectMaster;
+    getModuleExtErrorGroupI_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupJ_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x03\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupJ{
+    selectMaster;
+    getModuleExtErrorGroupJ_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupK_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x04\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupK{
+    selectMaster;
+    getModuleExtErrorGroupK_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupL_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x05\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupL{
+    selectMaster;
+    getModuleExtErrorGroupL_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupM_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x06\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupM{
+    selectMaster;
+    getModuleExtErrorGroupM_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupN_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x07\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupN{
+    selectMaster;
+    getModuleExtErrorGroupN_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupS_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0B\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupS{
+    selectMaster;
+    getModuleExtErrorGroupS_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupT_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0C\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupT{
+    selectMaster;
+    getModuleExtErrorGroupT_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupU_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0D\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupU{
+    selectMaster;
+    getModuleExtErrorGroupU_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupV_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0E\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupV{
+    selectMaster;
+    getModuleExtErrorGroupV_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupW_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0F\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupW{
+    selectMaster;
+    getModuleExtErrorGroupW_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleExtErrorGroupX_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x10\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleExtErrorGroupX{
+    selectMaster;
+    getModuleExtErrorGroupX_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x8D\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup{
+    selectSystem;
+    getSystemStdErrorGroup_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup0_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x93\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup0{
+    selectSystem;
+    getSystemStdErrorGroup0_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup1_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x94\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup1{
+    selectSystem;
+    getSystemStdErrorGroup1_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup2_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x95\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup2{
+    selectSystem;
+    getSystemStdErrorGroup2_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup3_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x96\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup3{
+    selectSystem;
+    getSystemStdErrorGroup3_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup4_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x97\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup4{
+    selectSystem;
+    getSystemStdErrorGroup4_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup5_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x98\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup5{
+    selectSystem;
+    getSystemStdErrorGroup5_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup6_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x99\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup6{
+    selectSystem;
+    getSystemStdErrorGroup6_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup7_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xA8\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup7{
+    selectSystem;
+    getSystemStdErrorGroup7_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup8_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xA9\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup8{
+    selectSystem;
+    getSystemStdErrorGroup8_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroup9_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAA\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroup9{
+    selectSystem;
+    getSystemStdErrorGroup9_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroupA_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAB\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroupA{
+    selectSystem;
+    getSystemStdErrorGroupA_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroupB_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAC\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroupB{
+    selectSystem;
+    getSystemStdErrorGroupB_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroupC_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAD\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroupC{
+    selectSystem;
+    getSystemStdErrorGroupC_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroupD_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAE\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroupD{
+    selectSystem;
+    getSystemStdErrorGroupD_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroupE_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xAF\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroupE{
+    selectSystem;
+    getSystemStdErrorGroupE_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemStdErrorGroupF_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x9A\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemStdErrorGroupF{
+    selectSystem;
+    getSystemStdErrorGroupF_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroup_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x00\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroup{
+    selectSystem;
+    getSystemExtErrorGroup_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupH_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x01\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupH{
+    selectSystem;
+    getSystemExtErrorGroupH_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupI_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x02\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupI{
+    selectSystem;
+    getSystemExtErrorGroupI_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupJ_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x03\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupJ{
+    selectSystem;
+    getSystemExtErrorGroupJ_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupK_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x04\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupK{
+    selectSystem;
+    getSystemExtErrorGroupK_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupL_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x05\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupL{
+    selectSystem;
+    getSystemExtErrorGroupL_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupM_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x06\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupM{
+    selectSystem;
+    getSystemExtErrorGroupM_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupN_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x07\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupN{
+    selectSystem;
+    getSystemExtErrorGroupN_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupS_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0B\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupS{
+    selectSystem;
+    getSystemExtErrorGroupS_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupT_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0C\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupT{
+    selectSystem;
+    getSystemExtErrorGroupT_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupU_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0D\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupU{
+    selectSystem;
+    getSystemExtErrorGroupU_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupV_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0E\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupV{
+    selectSystem;
+    getSystemExtErrorGroupV_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupW_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x0F\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupW{
+    selectSystem;
+    getSystemExtErrorGroupW_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemExtErrorGroupX_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x10\x2A\x30", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemExtErrorGroupX{
+    selectSystem;
+    getSystemExtErrorGroupX_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getFirmwareMain{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x01\x7E\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getFirmwareVersion{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x02\x7E\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getFirmwareRevision{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x03\x7E\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSerialNumHigh{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x28\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSerialNumLow{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x29\x51\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemState_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x8C\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemState{
+    selectSystem;
+    getSystemState_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleState_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\x8C\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleState{
+    selectMaster;
+    getModuleState_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getSystemControlMode_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xB8\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getSystemControlMode{
+    selectSystem;
+    getSystemControlMode_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+getModuleControlMode_{
+    MaxInput = 7;
+    out "\xA5\x04\x10\xB8\x50\x00", "%2<sum>", "%#/(?sm)(..)(....)(.)/\1\3\2/";
+    in  "%#/(?sm)(..)(.)(....)/\1\3\2/", "\xA5\x04\x10\x00", "%#02r", "%2<sum>";
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}
+
+getModuleControlMode{
+    selectMaster;
+    getModuleControlMode_;
+    @mismatch{ in "\?", "\?", "\?", "\?", "%(\$1_error)#1r", "\?", "\?"; }
+}

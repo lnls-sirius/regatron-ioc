@@ -25,7 +25,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorLogin-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrLogin-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -38,7 +38,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorTemperature-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrTemperature-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -48,7 +48,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorOutputVoltage-Mon</string>
+        <string>ca://${P}:Sys:StdErrOutVolt-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -68,21 +68,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -97,7 +97,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalModulator-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrIntrnModulator-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -110,7 +110,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorConfiguration-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrConf-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -120,7 +120,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorConfiguration-Mon</string>
+        <string>ca://${P}:Sys:StdErrConf-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -140,21 +140,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -166,7 +166,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalModulator-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrnModulator-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -186,21 +186,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -212,7 +212,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorCommunication-Mon</string>
+        <string>ca://${P}:Sys:StdErrComm-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -232,21 +232,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -261,7 +261,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalADoverrange2-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrIntrnADOvrRng2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -274,7 +274,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorCommunication-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrComm-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -284,7 +284,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorTemperature-Mon</string>
+        <string>ca://${P}:Sys:StdErrTemperature-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -304,21 +304,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -330,7 +330,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalADoverrange1-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrnADOvrRng1-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -350,21 +350,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -379,7 +379,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorOutputCurrent-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrOutCurrent-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -389,7 +389,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorConfiguration2-Mon</string>
+        <string>ca://${P}:Sys:StdErrConf2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -409,21 +409,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -438,7 +438,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorConfiguration2-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrConf2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -451,7 +451,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalPDSP-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrIntrnPDSP-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -461,7 +461,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorMiscellaneous-Mon</string>
+        <string>ca://${P}:Sys:StdErrMisc-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -481,21 +481,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -507,7 +507,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalADunderrange2-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrnADUndrRng2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -527,21 +527,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -553,7 +553,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalADunderrange1-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrnADUndrRng1-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -573,21 +573,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -602,7 +602,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorOutputVoltage-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrOutVolt-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -612,7 +612,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorSupply-Mon</string>
+        <string>ca://${P}:Sys:StdErrSupply-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -632,21 +632,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -661,7 +661,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorSupply-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrSupply-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -671,7 +671,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalADoverrange2-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrnADOvrRng2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -691,21 +691,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -720,7 +720,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalADoverrange1-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrIntrnADOvrRng1-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -733,7 +733,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorMiscellaneous-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrMisc-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -743,7 +743,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorLogin-Mon</string>
+        <string>ca://${P}:Sys:StdErrLogin-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -763,21 +763,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -792,7 +792,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalADunderrange1-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrIntrnADUndrRng1-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -805,7 +805,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalADunderrange2-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrIntrnADUndrRng2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -818,7 +818,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternal-Mon.DESC</string>
+        <string>ca://${P}:Sys:StdErrIntrn-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -828,7 +828,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternalPDSP-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrnPDSP-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -848,21 +848,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -874,7 +874,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorOutputCurrent-Mon</string>
+        <string>ca://${P}:Sys:StdErrOutCurrent-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -894,21 +894,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -920,7 +920,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternal-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -940,21 +940,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -968,7 +968,7 @@
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>ca://${P}:Sys:StdErrorGroup-Mon</string>
+          <string>ca://${P}:Sys:StdErrGroup-Mon</string>
          </property>
          <property name="onColor" stdset="0">
           <color>
@@ -988,21 +988,21 @@
          </property>
          <property name="labels" stdset="0">
           <stringlist>
-           <string>Internal</string>
-           <string>Internal (PDSP)</string>
-           <string>Output Current</string>
-           <string>Output Voltage</string>
+           <string>Intrn</string>
+           <string>Intrn (PDSP)</string>
+           <string>Out Current</string>
+           <string>Out Volt</string>
            <string>Supply</string>
            <string>Temperature</string>
-           <string>Communication</string>
-           <string>Internal (Modulator)</string>
-           <string>Internal (AD overrange 1)</string>
-           <string>Internal (AD overrange 2)</string>
-           <string>Internal (AD underrange 1)</string>
-           <string>Internal (AD underrange 2)</string>
+           <string>Comm</string>
+           <string>Intrn (Modulator)</string>
+           <string>Intrn (AD overrange 1)</string>
+           <string>Intrn (AD overrange 2)</string>
+           <string>Intrn (AD underrange 1)</string>
+           <string>Intrn (AD underrange 2)</string>
            <string>Login</string>
-           <string>Configuration</string>
-           <string>Configuration 2</string>
+           <string>Conf</string>
+           <string>Conf 2</string>
            <string>Miscellaneous</string>
           </stringlist>
          </property>
@@ -1040,7 +1040,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Error Mod '0.5' Std</string>
+      <string>./proc-error_warn.sh ${P} Err Mod '0.5' Std</string>
      </property>
     </widget>
    </item>
@@ -1052,7 +1052,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalPDSP-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrnPDSP-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1072,21 +1072,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1101,7 +1101,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalPDSP-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrIntrnPDSP-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1114,7 +1114,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternal-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrIntrn-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1124,7 +1124,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternal-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1144,21 +1144,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1172,7 +1172,7 @@
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>ca://${P}:Mod:StdErrorGroup-Mon</string>
+          <string>ca://${P}:Mod:StdErrGroup-Mon</string>
          </property>
          <property name="onColor" stdset="0">
           <color>
@@ -1192,21 +1192,21 @@
          </property>
          <property name="labels" stdset="0">
           <stringlist>
-           <string>Internal</string>
-           <string>Internal (PDSP)</string>
-           <string>Output Current</string>
-           <string>Output Voltage</string>
+           <string>Intrn</string>
+           <string>Intrn (PDSP)</string>
+           <string>Out Current</string>
+           <string>Out Volt</string>
            <string>Supply</string>
            <string>Temperature</string>
-           <string>Communication</string>
-           <string>Internal (Modulator)</string>
-           <string>Internal (AD overrange 1)</string>
-           <string>Internal (AD overrange 2)</string>
-           <string>Internal (AD underrange 1)</string>
-           <string>Internal (AD underrange 2)</string>
+           <string>Comm</string>
+           <string>Intrn (Modulator)</string>
+           <string>Intrn (AD overrange 1)</string>
+           <string>Intrn (AD overrange 2)</string>
+           <string>Intrn (AD underrange 1)</string>
+           <string>Intrn (AD underrange 2)</string>
            <string>Login</string>
-           <string>Configuration</string>
-           <string>Configuration 2</string>
+           <string>Conf</string>
+           <string>Conf 2</string>
            <string>Miscellaneous</string>
           </stringlist>
          </property>
@@ -1236,7 +1236,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorMiscellaneous-Mon</string>
+        <string>ca://${P}:Mod:StdErrMisc-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1256,21 +1256,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1285,7 +1285,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorMiscellaneous-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrMisc-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1295,7 +1295,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorConfiguration2-Mon</string>
+        <string>ca://${P}:Mod:StdErrConf2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1315,21 +1315,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1344,7 +1344,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorConfiguration2-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrConf2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1354,7 +1354,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorConfiguration-Mon</string>
+        <string>ca://${P}:Mod:StdErrConf-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1374,21 +1374,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1403,7 +1403,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorConfiguration-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrConf-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1413,7 +1413,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorLogin-Mon</string>
+        <string>ca://${P}:Mod:StdErrLogin-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1433,21 +1433,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1462,7 +1462,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorLogin-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrLogin-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1472,7 +1472,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalADunderrange2-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrnADUndrRng2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1492,21 +1492,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1521,7 +1521,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalADunderrange2-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrIntrnADUndrRng2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1531,7 +1531,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalADunderrange1-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrnADUndrRng1-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1551,21 +1551,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1580,7 +1580,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalADunderrange1-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrIntrnADUndrRng1-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1590,7 +1590,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalADoverrange1-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrnADOvrRng1-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1610,21 +1610,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1639,7 +1639,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalADoverrange1-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrIntrnADOvrRng1-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1649,7 +1649,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalADoverrange2-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrnADOvrRng2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1669,21 +1669,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1698,7 +1698,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalADoverrange2-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrIntrnADOvrRng2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1708,7 +1708,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalModulator-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrnModulator-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1728,21 +1728,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1757,7 +1757,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternalModulator-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrIntrnModulator-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1767,7 +1767,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorCommunication-Mon</string>
+        <string>ca://${P}:Mod:StdErrComm-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1787,21 +1787,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1816,7 +1816,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorCommunication-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrComm-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1826,7 +1826,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorTemperature-Mon</string>
+        <string>ca://${P}:Mod:StdErrTemperature-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1846,21 +1846,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1875,7 +1875,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorTemperature-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrTemperature-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1885,7 +1885,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorSupply-Mon</string>
+        <string>ca://${P}:Mod:StdErrSupply-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1905,21 +1905,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1934,7 +1934,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorSupply-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrSupply-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1944,7 +1944,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorOutputVoltage-Mon</string>
+        <string>ca://${P}:Mod:StdErrOutVolt-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1964,21 +1964,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -1993,7 +1993,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorOutputVoltage-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrOutVolt-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2003,7 +2003,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorOutputCurrent-Mon</string>
+        <string>ca://${P}:Mod:StdErrOutCurrent-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2023,21 +2023,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2052,7 +2052,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorOutputCurrent-Mon.DESC</string>
+        <string>ca://${P}:Mod:StdErrOutCurrent-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2068,7 +2068,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Standard Error Group</string>
+      <string>Standard Err Group</string>
      </property>
     </widget>
    </item>
@@ -2103,7 +2103,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCSystem-Mon</string>
+        <string>ca://${P}:Sys:ExtErrIBCSystem-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2123,21 +2123,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2149,7 +2149,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCMiscellaneous-Mon</string>
+        <string>ca://${P}:Sys:ExtErrIBCMisc-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2169,21 +2169,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2195,7 +2195,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternal-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2222,21 +2222,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2251,7 +2251,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCSystem-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrIBCSystem-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2261,7 +2261,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCInverter2-Mon</string>
+        <string>ca://${P}:Sys:ExtErrIBCInverter2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2281,21 +2281,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2307,7 +2307,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorSupply2-Mon</string>
+        <string>ca://${P}:Sys:ExtErrSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2327,21 +2327,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2356,7 +2356,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCInverter-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrIBCInverter-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2369,7 +2369,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCInverter2-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrIBCInverter2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2382,7 +2382,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCMiscellaneous-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrIBCMisc-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2395,7 +2395,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorSupply2-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2408,7 +2408,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorConfiguration3-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrConf3-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2421,7 +2421,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorCommunication2-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrComm2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2434,7 +2434,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorSupply2-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2444,7 +2444,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorCommunication3-Mon</string>
+        <string>ca://${P}:Sys:ExtErrComm3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2464,21 +2464,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2490,7 +2490,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorConfiguration3-Mon</string>
+        <string>ca://${P}:Sys:ExtErrConf3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2510,21 +2510,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2536,7 +2536,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorSupply2-Mon</string>
+        <string>ca://${P}:Sys:ExtErrSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2556,21 +2556,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2582,7 +2582,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCSuppply-Mon</string>
+        <string>ca://${P}:Sys:ExtErrIBCSuppply-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2602,21 +2602,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2631,7 +2631,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorCommunication3-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrComm3-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2641,7 +2641,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternal-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2668,21 +2668,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2694,7 +2694,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorInternal2-Mon</string>
+        <string>ca://${P}:Sys:ExtErrIntrn2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2714,21 +2714,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2743,7 +2743,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorInternal2-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrIntrn2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2753,7 +2753,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorCommunication2-Mon</string>
+        <string>ca://${P}:Sys:ExtErrComm2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2773,21 +2773,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2801,7 +2801,7 @@
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>ca://${P}:Sys:StdErrorGroup-Mon</string>
+          <string>ca://${P}:Sys:StdErrGroup-Mon</string>
          </property>
          <property name="onColor" stdset="0">
           <color>
@@ -2823,8 +2823,8 @@
           <stringlist>
            <string>IBC System</string>
            <string>IBC Supply</string>
-           <string>IBC Communication</string>
-           <string>IBC Power</string>
+           <string>IBC Comm</string>
+           <string>IBC Pwr</string>
            <string>IBC Inverter</string>
            <string>IBC Miscellaneous</string>
            <string>IBC Inverter 2</string>
@@ -2833,10 +2833,10 @@
            <string>not used</string>
            <string>Supply 2</string>
            <string>Login 2</string>
-           <string>Configuration 3</string>
-           <string>Communication 3</string>
-           <string>Internal 2</string>
-           <string>Communication 2</string>
+           <string>Conf 3</string>
+           <string>Comm 3</string>
+           <string>Intrn 2</string>
+           <string>Comm 2</string>
           </stringlist>
          </property>
         </widget>
@@ -2865,7 +2865,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdErrorInternal-Mon</string>
+        <string>ca://${P}:Sys:StdErrIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2892,21 +2892,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2921,7 +2921,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCCommunication-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrIBCComm-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2931,7 +2931,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCInverter-Mon</string>
+        <string>ca://${P}:Sys:ExtErrIBCInverter-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2951,21 +2951,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -2980,7 +2980,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCPower-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrIBCPwr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2993,7 +2993,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCSuppply-Mon.DESC</string>
+        <string>ca://${P}:Sys:ExtErrIBCSuppply-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3003,7 +3003,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCPower-Mon</string>
+        <string>ca://${P}:Sys:ExtErrIBCPwr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3023,21 +3023,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3049,7 +3049,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtErrorIBCCommunication-Mon</string>
+        <string>ca://${P}:Sys:ExtErrIBCComm-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3069,21 +3069,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3108,7 +3108,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Extended Error Group</string>
+      <string>Extended Err Group</string>
      </property>
     </widget>
    </item>
@@ -3142,7 +3142,7 @@
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>ca://${P}:Mod:StdErrorGroup-Mon</string>
+          <string>ca://${P}:Mod:StdErrGroup-Mon</string>
          </property>
          <property name="onColor" stdset="0">
           <color>
@@ -3164,8 +3164,8 @@
           <stringlist>
            <string>IBC Modtem</string>
            <string>IBC Supply</string>
-           <string>IBC Communication</string>
-           <string>IBC Power</string>
+           <string>IBC Comm</string>
+           <string>IBC Pwr</string>
            <string>IBC Inverter</string>
            <string>IBC Miscellaneous</string>
            <string>IBC Inverter 2</string>
@@ -3174,10 +3174,10 @@
            <string>not used</string>
            <string>Supply 2</string>
            <string>Login 2</string>
-           <string>Configuration 3</string>
-           <string>Communication 3</string>
-           <string>Internal 2</string>
-           <string>Communication 2</string>
+           <string>Conf 3</string>
+           <string>Comm 3</string>
+           <string>Intrn 2</string>
+           <string>Comm 2</string>
           </stringlist>
          </property>
         </widget>
@@ -3206,7 +3206,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCSystem-Mon</string>
+        <string>ca://${P}:Mod:ExtErrIBCSystem-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3226,21 +3226,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3255,7 +3255,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCSystem-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrIBCSystem-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3265,7 +3265,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCSuppply-Mon</string>
+        <string>ca://${P}:Mod:ExtErrIBCSuppply-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3285,21 +3285,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3314,7 +3314,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCSuppply-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrIBCSuppply-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3324,7 +3324,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCCommunication-Mon</string>
+        <string>ca://${P}:Mod:ExtErrIBCComm-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3344,21 +3344,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3373,7 +3373,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCCommunication-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrIBCComm-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3383,7 +3383,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCPower-Mon</string>
+        <string>ca://${P}:Mod:ExtErrIBCPwr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3403,21 +3403,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3432,7 +3432,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCPower-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrIBCPwr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3442,7 +3442,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCInverter-Mon</string>
+        <string>ca://${P}:Mod:ExtErrIBCInverter-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3462,21 +3462,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3491,7 +3491,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCInverter-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrIBCInverter-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3501,7 +3501,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCMiscellaneous-Mon</string>
+        <string>ca://${P}:Mod:ExtErrIBCMisc-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3521,21 +3521,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3550,7 +3550,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCMiscellaneous-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrIBCMisc-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3560,7 +3560,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCInverter2-Mon</string>
+        <string>ca://${P}:Mod:ExtErrIBCInverter2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3580,21 +3580,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3609,7 +3609,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorIBCInverter2-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrIBCInverter2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3619,7 +3619,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternal-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3646,21 +3646,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3672,7 +3672,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternal-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3699,21 +3699,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3725,7 +3725,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdErrorInternal-Mon</string>
+        <string>ca://${P}:Mod:StdErrIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3752,21 +3752,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3778,7 +3778,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorSupply2-Mon</string>
+        <string>ca://${P}:Mod:ExtErrSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3798,21 +3798,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3827,7 +3827,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorSupply2-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3837,7 +3837,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorSupply2-Mon</string>
+        <string>ca://${P}:Mod:ExtErrSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3857,21 +3857,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3886,7 +3886,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorSupply2-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3896,7 +3896,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorConfiguration3-Mon</string>
+        <string>ca://${P}:Mod:ExtErrConf3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3916,21 +3916,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -3945,7 +3945,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorConfiguration3-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrConf3-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3955,7 +3955,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorCommunication3-Mon</string>
+        <string>ca://${P}:Mod:ExtErrComm3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3975,21 +3975,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -4004,7 +4004,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorCommunication3-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrComm3-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4014,7 +4014,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorInternal2-Mon</string>
+        <string>ca://${P}:Mod:ExtErrIntrn2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4034,21 +4034,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -4063,7 +4063,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorInternal2-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrIntrn2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4073,7 +4073,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorCommunication2-Mon</string>
+        <string>ca://${P}:Mod:ExtErrComm2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4093,21 +4093,21 @@
        </property>
        <property name="labels" stdset="0">
         <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
+         <string>Intrn</string>
+         <string>Intrn (PDSP)</string>
+         <string>Out Current</string>
+         <string>Out Volt</string>
          <string>Supply</string>
          <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
+         <string>Comm</string>
+         <string>Intrn (Modulator)</string>
+         <string>Intrn (AD overrange 1)</string>
+         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD underrange 1)</string>
+         <string>Intrn (AD underrange 2)</string>
          <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
+         <string>Conf</string>
+         <string>Conf 2</string>
          <string>Miscellaneous</string>
         </stringlist>
        </property>
@@ -4122,7 +4122,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtErrorCommunication2-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtErrComm2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4147,7 +4147,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Error Mod '0.5' Ext</string>
+      <string>./proc-error_warn.sh ${P} Err Mod '0.5' Ext</string>
      </property>
     </widget>
    </item>
@@ -4163,7 +4163,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Error Sys '0.5' Ext</string>
+      <string>./proc-error_warn.sh ${P} Err Sys '0.5' Ext</string>
      </property>
     </widget>
    </item>
@@ -4179,7 +4179,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Error Sys '0.5' Std</string>
+      <string>./proc-error_warn.sh ${P} Err Sys '0.5' Std</string>
      </property>
     </widget>
    </item>

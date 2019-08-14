@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1429</width>
-    <height>1133</height>
+    <width>1535</width>
+    <height>1276</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,59 @@
   <layout class="QGridLayout" name="gridLayout_8">
    <item row="3" column="4" rowspan="2" colspan="2">
     <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_2">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternal-Mon</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>16</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Internal</string>
+         <string>Internal (PDSP)</string>
+         <string>Output Current</string>
+         <string>Output Voltage</string>
+         <string>Supply</string>
+         <string>Temperature</string>
+         <string>Communication</string>
+         <string>Internal (Modulator)</string>
+         <string>Internal (AD overrange 1)</string>
+         <string>Internal (AD overrange 2)</string>
+         <string>Internal (AD underrange 1)</string>
+         <string>Internal (AD underrange 2)</string>
+         <string>Login</string>
+         <string>Configuration</string>
+         <string>Configuration 2</string>
+         <string>Miscellaneous</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
      <item row="12" column="2">
       <widget class="PyDMLabel" name="PyDMLabel_13">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnLogin-Mon.DESC</string>
@@ -30,6 +79,9 @@
       <widget class="PyDMLabel" name="PyDMLabel_6">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnTemperature-Mon.DESC</string>
@@ -46,8 +98,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -87,6 +139,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnInternalModulator-Mon.DESC</string>
        </property>
@@ -96,6 +151,9 @@
       <widget class="PyDMLabel" name="PyDMLabel_14">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnConfiguration-Mon.DESC</string>
@@ -112,8 +170,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -158,8 +216,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -204,8 +262,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -245,6 +303,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnInternalADoverrange2-Mon.DESC</string>
        </property>
@@ -254,6 +315,9 @@
       <widget class="PyDMLabel" name="PyDMLabel_7">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnCommunication-Mon.DESC</string>
@@ -270,8 +334,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -316,8 +380,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -357,6 +421,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnOutputCurrent-Mon.DESC</string>
        </property>
@@ -372,8 +439,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -413,6 +480,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnConfiguration2-Mon.DESC</string>
        </property>
@@ -423,12 +493,15 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnInternalPDSP-Mon.DESC</string>
        </property>
       </widget>
      </item>
-     <item row="15" column="1">
+     <item row="16" column="1">
       <widget class="PyDMByteIndicator" name="PyDMByteIndicator_17">
        <property name="toolTip">
         <string/>
@@ -438,8 +511,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -484,8 +557,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -530,8 +603,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -571,6 +644,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnOutputVoltage-Mon.DESC</string>
        </property>
@@ -586,8 +662,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -627,6 +703,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnSupply-Mon.DESC</string>
        </property>
@@ -642,8 +721,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -683,15 +762,21 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnInternalADoverrange1-Mon.DESC</string>
        </property>
       </widget>
      </item>
-     <item row="15" column="2">
+     <item row="16" column="2">
       <widget class="PyDMLabel" name="PyDMLabel_16">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnMiscellaneous-Mon.DESC</string>
@@ -708,8 +793,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -749,6 +834,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnInternalADunderrange1-Mon.DESC</string>
        </property>
@@ -759,6 +847,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnInternalADunderrange2-Mon.DESC</string>
        </property>
@@ -768,6 +859,9 @@
       <widget class="PyDMLabel" name="PyDMLabel">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:StdWarnInternal-Mon.DESC</string>
@@ -784,8 +878,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -830,8 +924,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -866,53 +960,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_2">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnInternal-Mon</string>
-       </property>
-       <property name="onColor" stdset="0">
-        <color>
-         <red>204</red>
-         <green>0</green>
-         <blue>0</blue>
-        </color>
-       </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="showLabels" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="numBits" stdset="0">
-        <number>16</number>
-       </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
-         <string>Supply</string>
-         <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
-         <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
-         <string>Miscellaneous</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0" rowspan="16">
+     <item row="0" column="0" rowspan="17">
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="PyDMByteIndicator" name="PyDMByteIndicator_19">
@@ -924,8 +972,8 @@
          </property>
          <property name="onColor" stdset="0">
           <color>
-           <red>204</red>
-           <green>0</green>
+           <red>206</red>
+           <green>92</green>
            <blue>0</blue>
           </color>
          </property>
@@ -978,6 +1026,214 @@
        </item>
       </layout>
      </item>
+     <item row="2" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_20">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnOutputCurrent-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_31">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnConfiguration-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_28">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternalADunderrange1-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_19">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternalPDSP-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_25">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternalModulator-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_18">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternal-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_32">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnConfiguration2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_23">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnTemperature-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_26">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternalADoverrange1-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_29">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternalADunderrange2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_27">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternalADoverrange2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_22">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnSupply-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_24">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnCommunication-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_21">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnOutputVoltage-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_30">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnLogin-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="16" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_33">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnMiscellaneous-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item row="0" column="3">
@@ -1022,6 +1278,59 @@
    </item>
    <item row="7" column="4" colspan="2">
     <layout class="QGridLayout" name="gridLayout_2">
+     <item row="7" column="1">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_27">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:StdWarnInternal-Mon</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="offColor" stdset="0">
+        <color>
+         <red>211</red>
+         <green>215</green>
+         <blue>207</blue>
+        </color>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>16</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Internal</string>
+         <string>Internal (PDSP)</string>
+         <string>Output Current</string>
+         <string>Output Voltage</string>
+         <string>Supply</string>
+         <string>Temperature</string>
+         <string>Communication</string>
+         <string>Internal (Modulator)</string>
+         <string>Internal (AD overrange 1)</string>
+         <string>Internal (AD overrange 2)</string>
+         <string>Internal (AD underrange 1)</string>
+         <string>Internal (AD underrange 2)</string>
+         <string>Login</string>
+         <string>Configuration</string>
+         <string>Configuration 2</string>
+         <string>Miscellaneous</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="1">
       <widget class="PyDMByteIndicator" name="PyDMByteIndicator_20">
        <property name="toolTip">
@@ -1032,8 +1341,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1078,8 +1387,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1124,9 +1433,9 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>186</red>
-         <green>189</green>
-         <blue>182</blue>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
         </color>
        </property>
        <property name="offColor" stdset="0">
@@ -1172,6 +1481,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnIBCSystem-Mon.DESC</string>
        </property>
@@ -1187,8 +1499,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1233,8 +1545,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1274,6 +1586,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnIBCInverter-Mon.DESC</string>
        </property>
@@ -1283,6 +1598,9 @@
       <widget class="PyDMLabel" name="PyDMLabel_23">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnIBCInverter2-Mon.DESC</string>
@@ -1294,6 +1612,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnIBCMiscellaneous-Mon.DESC</string>
        </property>
@@ -1303,6 +1624,9 @@
       <widget class="PyDMLabel" name="PyDMLabel_24">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnSupply2-Mon.DESC</string>
@@ -1314,6 +1638,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnConfiguration3-Mon.DESC</string>
        </property>
@@ -1324,6 +1651,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnCommunication2-Mon.DESC</string>
        </property>
@@ -1333,6 +1663,9 @@
       <widget class="PyDMLabel" name="PyDMLabel_25">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnSupply2-Mon.DESC</string>
@@ -1349,8 +1682,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1395,8 +1728,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1441,8 +1774,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1487,8 +1820,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1528,31 +1861,27 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnCommunication3-Mon.DESC</string>
        </property>
       </widget>
      </item>
-     <item row="7" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_27">
+     <item row="2" column="1">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_22">
        <property name="toolTip">
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnInternal-Mon</string>
+        <string>ca://${P}:Sys:ExtWarnIBCCommunication-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>186</red>
-         <green>189</green>
-         <blue>182</blue>
-        </color>
-       </property>
-       <property name="offColor" stdset="0">
-        <color>
-         <red>211</red>
-         <green>215</green>
-         <blue>207</blue>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
         </color>
        </property>
        <property name="orientation" stdset="0">
@@ -1596,8 +1925,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1637,6 +1966,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnInternal2-Mon.DESC</string>
        </property>
@@ -1652,8 +1984,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1700,8 +2032,8 @@
          </property>
          <property name="onColor" stdset="0">
           <color>
-           <red>204</red>
-           <green>0</green>
+           <red>206</red>
+           <green>92</green>
            <blue>0</blue>
           </color>
          </property>
@@ -1764,9 +2096,9 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>186</red>
-         <green>189</green>
-         <blue>182</blue>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
         </color>
        </property>
        <property name="offColor" stdset="0">
@@ -1812,6 +2144,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnIBCCommunication-Mon.DESC</string>
        </property>
@@ -1827,8 +2162,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1868,6 +2203,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnIBCPower-Mon.DESC</string>
        </property>
@@ -1877,6 +2215,9 @@
       <widget class="PyDMLabel" name="PyDMLabel_18">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Sys:ExtWarnIBCSuppply-Mon.DESC</string>
@@ -1893,8 +2234,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -1929,49 +2270,172 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_22">
+     <item row="0" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_47">
        <property name="toolTip">
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCCommunication-Mon</string>
+        <string>ca://${P}:Sys:ExtWarnIBCSystem-Mon.PROC</string>
        </property>
-       <property name="onColor" stdset="0">
-        <color>
-         <red>204</red>
-         <green>0</green>
-         <blue>0</blue>
-        </color>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
        </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Horizontal</enum>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_48">
+       <property name="toolTip">
+        <string/>
        </property>
-       <property name="showLabels" stdset="0">
-        <bool>false</bool>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnIBCSuppply-Mon.PROC</string>
        </property>
-       <property name="numBits" stdset="0">
-        <number>16</number>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
        </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
-         <string>Supply</string>
-         <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
-         <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
-         <string>Miscellaneous</string>
-        </stringlist>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_49">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnIBCCommunication-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_50">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnIBCPower-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_51">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnIBCInverter-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_52">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnIBCMiscellaneous-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_53">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnIBCInverter2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_57">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnSupply2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_58">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnSupply2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_59">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnConfiguration3-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_60">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnCommunication3-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_61">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnInternal2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_62">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Sys:ExtWarnCommunication2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -2054,7 +2518,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Warn Sys '1.0' Std</string>
+      <string>./proc-error_warn.sh ${P} Warn Sys '0.5' Std</string>
      </property>
     </widget>
    </item>
@@ -2072,8 +2536,8 @@
          </property>
          <property name="onColor" stdset="0">
           <color>
-           <red>204</red>
-           <green>0</green>
+           <red>206</red>
+           <green>92</green>
            <blue>0</blue>
           </color>
          </property>
@@ -2136,8 +2600,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2177,176 +2641,11 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnInternal-Mon.DESC</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_90">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnInternalPDSP-Mon</string>
-       </property>
-       <property name="onColor" stdset="0">
-        <color>
-         <red>204</red>
-         <green>0</green>
-         <blue>0</blue>
-        </color>
-       </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="showLabels" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="numBits" stdset="0">
-        <number>16</number>
-       </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
-         <string>Supply</string>
-         <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
-         <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
-         <string>Miscellaneous</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_79">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnInternalPDSP-Mon.DESC</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_91">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutputCurrent-Mon</string>
-       </property>
-       <property name="onColor" stdset="0">
-        <color>
-         <red>204</red>
-         <green>0</green>
-         <blue>0</blue>
-        </color>
-       </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="showLabels" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="numBits" stdset="0">
-        <number>16</number>
-       </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
-         <string>Supply</string>
-         <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
-         <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
-         <string>Miscellaneous</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_80">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutputCurrent-Mon.DESC</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_92">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutputVoltage-Mon</string>
-       </property>
-       <property name="onColor" stdset="0">
-        <color>
-         <red>204</red>
-         <green>0</green>
-         <blue>0</blue>
-        </color>
-       </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="showLabels" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="numBits" stdset="0">
-        <number>16</number>
-       </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
-         <string>Supply</string>
-         <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
-         <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
-         <string>Miscellaneous</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_81">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutputVoltage-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2360,8 +2659,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2401,8 +2700,188 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnSupply-Mon.DESC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_90">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternalPDSP-Mon</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>16</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Internal</string>
+         <string>Internal (PDSP)</string>
+         <string>Output Current</string>
+         <string>Output Voltage</string>
+         <string>Supply</string>
+         <string>Temperature</string>
+         <string>Communication</string>
+         <string>Internal (Modulator)</string>
+         <string>Internal (AD overrange 1)</string>
+         <string>Internal (AD overrange 2)</string>
+         <string>Internal (AD underrange 1)</string>
+         <string>Internal (AD underrange 2)</string>
+         <string>Login</string>
+         <string>Configuration</string>
+         <string>Configuration 2</string>
+         <string>Miscellaneous</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="PyDMLabel" name="PyDMLabel_79">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternalPDSP-Mon.DESC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_91">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnOutputCurrent-Mon</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>16</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Internal</string>
+         <string>Internal (PDSP)</string>
+         <string>Output Current</string>
+         <string>Output Voltage</string>
+         <string>Supply</string>
+         <string>Temperature</string>
+         <string>Communication</string>
+         <string>Internal (Modulator)</string>
+         <string>Internal (AD overrange 1)</string>
+         <string>Internal (AD overrange 2)</string>
+         <string>Internal (AD underrange 1)</string>
+         <string>Internal (AD underrange 2)</string>
+         <string>Login</string>
+         <string>Configuration</string>
+         <string>Configuration 2</string>
+         <string>Miscellaneous</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="PyDMLabel" name="PyDMLabel_80">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnOutputCurrent-Mon.DESC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_92">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnOutputVoltage-Mon</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>16</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Internal</string>
+         <string>Internal (PDSP)</string>
+         <string>Output Current</string>
+         <string>Output Voltage</string>
+         <string>Supply</string>
+         <string>Temperature</string>
+         <string>Communication</string>
+         <string>Internal (Modulator)</string>
+         <string>Internal (AD overrange 1)</string>
+         <string>Internal (AD overrange 2)</string>
+         <string>Internal (AD underrange 1)</string>
+         <string>Internal (AD underrange 2)</string>
+         <string>Login</string>
+         <string>Configuration</string>
+         <string>Configuration 2</string>
+         <string>Miscellaneous</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="PyDMLabel" name="PyDMLabel_81">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnOutputVoltage-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2416,8 +2895,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2457,6 +2936,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnTemperature-Mon.DESC</string>
        </property>
@@ -2472,8 +2954,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2513,6 +2995,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnCommunication-Mon.DESC</string>
        </property>
@@ -2528,8 +3013,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2569,6 +3054,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnInternalModulator-Mon.DESC</string>
        </property>
@@ -2584,8 +3072,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2625,6 +3113,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnInternalADoverrange1-Mon.DESC</string>
        </property>
@@ -2640,8 +3131,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2681,6 +3172,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnInternalADoverrange2-Mon.DESC</string>
        </property>
@@ -2696,8 +3190,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2737,6 +3231,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnInternalADunderrange1-Mon.DESC</string>
        </property>
@@ -2752,8 +3249,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2793,6 +3290,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnInternalADunderrange2-Mon.DESC</string>
        </property>
@@ -2808,8 +3308,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2849,6 +3349,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnLogin-Mon.DESC</string>
        </property>
@@ -2864,8 +3367,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2905,6 +3408,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnConfiguration-Mon.DESC</string>
        </property>
@@ -2920,8 +3426,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -2961,6 +3467,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnConfiguration2-Mon.DESC</string>
        </property>
@@ -2976,8 +3485,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3017,8 +3526,219 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:StdWarnMiscellaneous-Mon.DESC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_2">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternal-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_3">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternalPDSP-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_4">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnOutputCurrent-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_5">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnOutputVoltage-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_6">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnSupply-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_7">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnTemperature-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_8">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnCommunication-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_9">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternalModulator-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_10">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternalADoverrange1-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_11">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternalADoverrange2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_12">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternalADunderrange1-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_13">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnInternalADunderrange2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_14">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnLogin-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_15">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnConfiguration-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_16">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnConfiguration2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_17">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:StdWarnMiscellaneous-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -3036,13 +3756,72 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Warn Mod '1.0' Std</string>
+      <string>./proc-error_warn.sh ${P} Warn Mod '0.5' Std</string>
      </property>
     </widget>
    </item>
    <item row="7" column="0" colspan="2">
     <layout class="QGridLayout" name="gridLayout_7">
-     <item row="0" column="0" rowspan="16">
+     <item row="1" column="1">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_107">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCSuppply-Mon</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>16</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Internal</string>
+         <string>Internal (PDSP)</string>
+         <string>Output Current</string>
+         <string>Output Voltage</string>
+         <string>Supply</string>
+         <string>Temperature</string>
+         <string>Communication</string>
+         <string>Internal (Modulator)</string>
+         <string>Internal (AD overrange 1)</string>
+         <string>Internal (AD overrange 2)</string>
+         <string>Internal (AD underrange 1)</string>
+         <string>Internal (AD underrange 2)</string>
+         <string>Login</string>
+         <string>Configuration</string>
+         <string>Configuration 2</string>
+         <string>Miscellaneous</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="PyDMLabel" name="PyDMLabel_95">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCSuppply-Mon.DESC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="18">
       <layout class="QHBoxLayout" name="horizontalLayout_8">
        <item>
         <widget class="PyDMByteIndicator" name="PyDMByteIndicator_105">
@@ -3054,8 +3833,8 @@
          </property>
          <property name="onColor" stdset="0">
           <color>
-           <red>204</red>
-           <green>0</green>
+           <red>206</red>
+           <green>92</green>
            <blue>0</blue>
           </color>
          </property>
@@ -3118,8 +3897,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3159,64 +3938,11 @@
        <property name="toolTip">
         <string/>
        </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSystem-Mon.DESC</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_107">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSuppply-Mon</string>
-       </property>
-       <property name="onColor" stdset="0">
-        <color>
-         <red>204</red>
-         <green>0</green>
-         <blue>0</blue>
-        </color>
-       </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="showLabels" stdset="0">
+       <property name="alarmSensitiveBorder" stdset="0">
         <bool>false</bool>
        </property>
-       <property name="numBits" stdset="0">
-        <number>16</number>
-       </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
-         <string>Supply</string>
-         <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
-         <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
-         <string>Miscellaneous</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_95">
-       <property name="toolTip">
-        <string/>
-       </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSuppply-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtWarnIBCSystem-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3230,8 +3956,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3271,6 +3997,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:ExtWarnIBCCommunication-Mon.DESC</string>
        </property>
@@ -3286,8 +4015,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3327,6 +4056,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:ExtWarnIBCPower-Mon.DESC</string>
        </property>
@@ -3342,8 +4074,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3383,6 +4115,9 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:ExtWarnIBCInverter-Mon.DESC</string>
        </property>
@@ -3398,8 +4133,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3439,12 +4174,15 @@
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:ExtWarnIBCMiscellaneous-Mon.DESC</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
+     <item row="7" column="1">
       <widget class="PyDMByteIndicator" name="PyDMByteIndicator_112">
        <property name="toolTip">
         <string/>
@@ -3454,8 +4192,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3490,17 +4228,20 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="2">
+     <item row="7" column="2">
       <widget class="PyDMLabel" name="PyDMLabel_100">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:ExtWarnIBCInverter2-Mon.DESC</string>
        </property>
       </widget>
      </item>
-     <item row="7" column="1">
+     <item row="8" column="1">
       <widget class="PyDMByteIndicator" name="PyDMByteIndicator_113">
        <property name="toolTip">
         <string/>
@@ -3510,62 +4251,9 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>186</red>
-         <green>189</green>
-         <blue>182</blue>
-        </color>
-       </property>
-       <property name="offColor" stdset="0">
-        <color>
-         <red>211</red>
-         <green>215</green>
-         <blue>207</blue>
-        </color>
-       </property>
-       <property name="orientation" stdset="0">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="showLabels" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="numBits" stdset="0">
-        <number>16</number>
-       </property>
-       <property name="labels" stdset="0">
-        <stringlist>
-         <string>Internal</string>
-         <string>Internal (PDSP)</string>
-         <string>Output Current</string>
-         <string>Output Voltage</string>
-         <string>Supply</string>
-         <string>Temperature</string>
-         <string>Communication</string>
-         <string>Internal (Modulator)</string>
-         <string>Internal (AD overrange 1)</string>
-         <string>Internal (AD overrange 2)</string>
-         <string>Internal (AD underrange 1)</string>
-         <string>Internal (AD underrange 2)</string>
-         <string>Login</string>
-         <string>Configuration</string>
-         <string>Configuration 2</string>
-         <string>Miscellaneous</string>
-        </stringlist>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_114">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnInternal-Mon</string>
-       </property>
-       <property name="onColor" stdset="0">
-        <color>
-         <red>186</red>
-         <green>189</green>
-         <blue>182</blue>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
         </color>
        </property>
        <property name="offColor" stdset="0">
@@ -3607,7 +4295,7 @@
       </widget>
      </item>
      <item row="9" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_115">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_114">
        <property name="toolTip">
         <string/>
        </property>
@@ -3616,9 +4304,9 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>186</red>
-         <green>189</green>
-         <blue>182</blue>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
         </color>
        </property>
        <property name="offColor" stdset="0">
@@ -3660,18 +4348,25 @@
       </widget>
      </item>
      <item row="10" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_116">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_115">
        <property name="toolTip">
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnSupply2-Mon</string>
+        <string>ca://${P}:Mod:StdWarnInternal-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
+        </color>
+       </property>
+       <property name="offColor" stdset="0">
+        <color>
+         <red>211</red>
+         <green>215</green>
+         <blue>207</blue>
         </color>
        </property>
        <property name="orientation" stdset="0">
@@ -3705,18 +4400,8 @@
        </property>
       </widget>
      </item>
-     <item row="10" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_101">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnSupply2-Mon.DESC</string>
-       </property>
-      </widget>
-     </item>
      <item row="11" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_117">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_116">
        <property name="toolTip">
         <string/>
        </property>
@@ -3725,8 +4410,8 @@
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3762,9 +4447,12 @@
       </widget>
      </item>
      <item row="11" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_102">
+      <widget class="PyDMLabel" name="PyDMLabel_101">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
         <string>ca://${P}:Mod:ExtWarnSupply2-Mon.DESC</string>
@@ -3772,17 +4460,17 @@
       </widget>
      </item>
      <item row="12" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_118">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_117">
        <property name="toolTip">
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnConfiguration3-Mon</string>
+        <string>ca://${P}:Mod:ExtWarnSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3818,27 +4506,30 @@
       </widget>
      </item>
      <item row="12" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_103">
+      <widget class="PyDMLabel" name="PyDMLabel_102">
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnConfiguration3-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtWarnSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
      <item row="13" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_119">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_118">
        <property name="toolTip">
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnCommunication3-Mon</string>
+        <string>ca://${P}:Mod:ExtWarnConfiguration3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3874,27 +4565,30 @@
       </widget>
      </item>
      <item row="13" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_104">
+      <widget class="PyDMLabel" name="PyDMLabel_103">
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnCommunication3-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtWarnConfiguration3-Mon.DESC</string>
        </property>
       </widget>
      </item>
      <item row="14" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_120">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_119">
        <property name="toolTip">
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnInternal2-Mon</string>
+        <string>ca://${P}:Mod:ExtWarnCommunication3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3930,27 +4624,30 @@
       </widget>
      </item>
      <item row="14" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_105">
+      <widget class="PyDMLabel" name="PyDMLabel_104">
        <property name="toolTip">
         <string/>
        </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnInternal2-Mon.DESC</string>
+        <string>ca://${P}:Mod:ExtWarnCommunication3-Mon.DESC</string>
        </property>
       </widget>
      </item>
      <item row="15" column="1">
-      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_121">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_120">
        <property name="toolTip">
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnCommunication2-Mon</string>
+        <string>ca://${P}:Mod:ExtWarnInternal2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
-         <red>204</red>
-         <green>0</green>
+         <red>206</red>
+         <green>92</green>
          <blue>0</blue>
         </color>
        </property>
@@ -3986,12 +4683,243 @@
       </widget>
      </item>
      <item row="15" column="2">
-      <widget class="PyDMLabel" name="PyDMLabel_106">
+      <widget class="PyDMLabel" name="PyDMLabel_105">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnInternal2-Mon.DESC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="1">
+      <widget class="PyDMByteIndicator" name="PyDMByteIndicator_121">
        <property name="toolTip">
         <string/>
        </property>
        <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnCommunication2-Mon</string>
+       </property>
+       <property name="onColor" stdset="0">
+        <color>
+         <red>206</red>
+         <green>92</green>
+         <blue>0</blue>
+        </color>
+       </property>
+       <property name="orientation" stdset="0">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="showLabels" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="numBits" stdset="0">
+        <number>16</number>
+       </property>
+       <property name="labels" stdset="0">
+        <stringlist>
+         <string>Internal</string>
+         <string>Internal (PDSP)</string>
+         <string>Output Current</string>
+         <string>Output Voltage</string>
+         <string>Supply</string>
+         <string>Temperature</string>
+         <string>Communication</string>
+         <string>Internal (Modulator)</string>
+         <string>Internal (AD overrange 1)</string>
+         <string>Internal (AD overrange 2)</string>
+         <string>Internal (AD underrange 1)</string>
+         <string>Internal (AD underrange 2)</string>
+         <string>Login</string>
+         <string>Configuration</string>
+         <string>Configuration 2</string>
+         <string>Miscellaneous</string>
+        </stringlist>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="2">
+      <widget class="PyDMLabel" name="PyDMLabel_106">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="alarmSensitiveBorder" stdset="0">
+        <bool>false</bool>
+       </property>
+       <property name="channel" stdset="0">
         <string>ca://${P}:Mod:ExtWarnCommunication2-Mon.DESC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_41">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnSupply2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_36">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCCommunication-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="12" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_42">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnSupply2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_40">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCInverter2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_35">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCSuppply-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_34">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCSystem-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_37">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCPower-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_39">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCMiscellaneous-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="13" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_43">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnConfiguration3-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_38">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnIBCInverter-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="15" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_45">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnInternal2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="14" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_44">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnCommunication3-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="17" column="3">
+      <widget class="PyDMPushButton" name="PyDMPushButton_46">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="channel" stdset="0">
+        <string>ca://${P}:Mod:ExtWarnCommunication2-Mon.PROC</string>
+       </property>
+       <property name="pressValue" stdset="0">
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -4009,7 +4937,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh '${P}' Warn Mod '1.0' Ext</string>
+      <string>./proc-error_warn.sh '${P}' Warn Mod '0.5' Ext</string>
      </property>
     </widget>
    </item>
@@ -4025,7 +4953,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Warn Sys '1.0' Ext</string>
+      <string>./proc-error_warn.sh ${P} Warn Sys '0.5' Ext</string>
      </property>
     </widget>
    </item>
@@ -4041,6 +4969,11 @@
    <class>PyDMByteIndicator</class>
    <extends>QWidget</extends>
    <header>pydm.widgets.byte</header>
+  </customwidget>
+  <customwidget>
+   <class>PyDMPushButton</class>
+   <extends>QPushButton</extends>
+   <header>pydm.widgets.pushbutton</header>
   </customwidget>
   <customwidget>
    <class>PyDMShellCommand</class>

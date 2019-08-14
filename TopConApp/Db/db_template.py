@@ -1,5 +1,17 @@
 #!/usr/bin/python3
 from string import Template
+select = '''
+record(bo, "$(DEVICE):SelectMaster-Cmd"){
+    field(DTYP, "stream")
+    field(OUT,  "@TopCon.proto selectMaster($$(DEVICE):SelectMaster-Cmd) $(PORT)")
+    field(DISS, "INVALID")
+}
+record(bo, "$$(DEVICE):SelectSystem-Cmd"){
+    field(DTYP, "stream")
+    field(OUT,  "@TopCon.proto selectSystem($$(DEVICE):SelectSystem-Cmd) $(PORT)")
+    field(DISS, "INVALID")
+}
+'''
 err =  Template('''
 record(longin, "$$(DEVICE):${pv}_error"){
     field(DESC, "${DESC}")
@@ -8,7 +20,6 @@ record(longin, "$$(DEVICE):${pv}_error"){
     field(VAL,  "0")
 }
 ''')
-
 bo_cmd = Template('''
 record(bo, "$$(DEVICE):${pv}"){
     field(DESC, "${DESC}")
@@ -52,8 +63,81 @@ record(ao, "$$(DEVICE):${pv}"){
     field(OUT,  "@TopCon.proto ${proto}($$(DEVICE):${pv}) $$(PORT)")
 }
 ''')
-
 loop_analog = Template('''
+record(longin, "$$(DEVICE):${pv}-RB_error"){
+    field(DESC, "${DESC}")
+    field(DTYP, "Soft Channel")
+    field(PINI, "YES")
+    field(PHAS, "0")
+    field(VAL,  "0")
+}
+record(longin, "$$(DEVICE):${pv}-SP_error"){
+    field(DESC, "${DESC}")
+    field(DTYP, "Soft Channel")
+    field(PINI, "YES")
+    field(PHAS, "0")
+    field(VAL,  "0")
+}
+record(ai, "$$(DEVICE):${pv}-RB"){
+    field(PINI, "YES")
+    field(SCAN, "${SCAN}")
+    field(DESC, "${DESC}")
+    field(DTYP, "stream")
+    field(EGU,  "${EGU}")
+    field(PREC, "${PREC}")
+    field(PHAS, "0")
+    field(LINR, "${LINR}")
+    field(EOFF, "${EOFF}")
+    field(ESLO, "${ESLO}")
+
+    field(INP,  "@TopCon.proto get${proto}($$(DEVICE):${pv}-RB)  $$(PORT)")
+}
+record(ao, "$$(DEVICE):${pv}-SP"){
+    field(DESC, "${DESC}")
+    field(DTYP, "stream")
+    field(EGU,  "${EGU}")
+    field(PREC, "${PREC}")
+    field(LINR, "${LINR}")
+    field(EOFF, "${EOFF}")
+    field(ESLO, "${ESLO}")
+    field(DRVL, "${DRVL}")
+    field(DRVH, "${DRVH}")
+    field(DISA, "${DISA}")
+    field(DISV, "1")
+    field(DISS, "INVALID")
+    field(OUT,  "@TopCon.proto set${proto}($$(DEVICE):${pv}-SP) $$(PORT)")
+    field(FLNK, "$$(DEVICE):${pv}-RB")
+}
+record(seq, "$$(DEVICE):${pv}_init"){
+    field(PINI, "YES")
+    field(PHAS, "1")
+
+    field(DOL1, "1")
+    field(LNK1, "$$(DEVICE):${pv}-SP.DISA")
+
+    field(DLY2, "10")
+    field(DOL2, "$$(DEVICE):${pv}-RB")
+    field(LNK2, "$$(DEVICE):${pv}-SP")
+
+    field(DOL1, "0")
+    field(LNK1, "$$(DEVICE):${pv}-SP.DISA")
+}
+''')
+loop_analog_ref = Template('''
+record(longin, "$$(DEVICE):${pv}-RB_error"){
+    field(DESC, "${DESC}")
+    field(DTYP, "Soft Channel")
+    field(PINI, "YES")
+    field(PHAS, "0")
+    field(VAL,  "0")
+}
+record(longin, "$$(DEVICE):${pv}-SP_error"){
+    field(DESC, "${DESC}")
+    field(DTYP, "Soft Channel")
+    field(PINI, "YES")
+    field(PHAS, "0")
+    field(VAL,  "0")
+}
 record(calcout, "$$(DEVICE):${pv}-RB_eslo"){
     field(CALC, "A/${MINUS}4000.")
     field(INPA, "$$(DEVICE):${ref} CP MSS")
@@ -79,20 +163,20 @@ record(calcout, "$$(DEVICE):${pv}-SP_d"){
     field(OUT,  "$$(DEVICE):${pv}-SP.DISA")
     field(FLNK, "$$(DEVICE):${pv}-SP_${HL}")
 }
-record(ao, "$$(DEVICE):${pv}_${HL}"){
+record(ao, "$$(DEVICE):${pv}-SP_${HL}"){
     field(DTYP, "Soft Channel")
     field(OMSL, "closed_loop")
     field(DOL,  "$$(DEVICE):${ref}")
     field(OUT,  "$$(DEVICE):${pv}-SP.DRV${HL}")
 }
 record(ai, "$$(DEVICE):${pv}-RB"){
-    field(PINI, "${PINI}")
+    field(PINI, "YES")
     field(SCAN, "${SCAN}")
     field(DESC, "${DESC}")
     field(DTYP, "stream")
     field(EGU,  "${EGU}")
     field(PREC, "${PREC}")
-    field(PHAS, "${PHAS}")
+    field(PHAS, "1")
     field(LINR, "LINEAR")
     field(EOFF, "${EOFF}")
     field(ESLO, "${ESLO}")
@@ -107,7 +191,6 @@ record(ao, "$$(DEVICE):${pv}-SP"){
     field(DTYP, "stream")
     field(EGU,  "${EGU}")
     field(PREC, "${PREC}")
-    field(PHAS, "${PHAS}")
     field(LINR, "LINEAR")
     field(EOFF, "${EOFF}")
     field(ESLO, "${ESLO}")
@@ -117,23 +200,7 @@ record(ao, "$$(DEVICE):${pv}-SP"){
     field(OUT,  "@TopCon.proto set${proto}($$(DEVICE):${pv}-SP)  $$(PORT)")
     field(FLNK, "$$(DEVICE):${pv}-RB")
 }
-record(seq, "$$(DEVICE):${pv}_init"){
-    field(PINI, "YES")
-    field(PHAS, "2")
-
-    field(DOL1, "1")
-    field(LNK1, "$$(DEVICE):${pv}-SP.DISA")
-
-    field(DLY2, "10")
-    field(DOL2, "$$(DEVICE):${pv}-RB")
-    field(LNK2, "$$(DEVICE):${pv}-SP")
-}
-
 ''')
-
-"""
-HL : Wich limit is valid? High or Low? H / L
-"""
 ao_ref = Template('''
 record(calcout, "$$(DEVICE):${pv}_eslo"){
     field(CALC, "A/${MINUS}4000.")
@@ -185,26 +252,6 @@ record(ai, "$$(DEVICE):${pv}"){
     field(INP,  "@TopCon.proto ${proto}($$(DEVICE):${pv})  $$(PORT)")
 }
 ''')
-
-#ai_ref_2123 = Template('''
-#record(calc, "$$(DEVICE):${pv}"){
-#    field(CALC, "B/${MINUS}4000.*A") # @todo: For now we assume always Q1
-#    field(INPA, "$$(DEVICE):${pv}_raw PP CP MSS")
-#    field(INPB, "$$(DEVICE):${ref0} NPP CP MSS") # Nominal when standard (Q1)
-#    #field(INPC, "$$(DEVICE):${ref1} NPP CP MSS") # Nominal when power feedback mode (Q4)
-#    field(EGU,  "${EGU}")
-#}
-#
-#record(ai, "$$(DEVICE):${pv}_raw"){
-#    field(DESC, "${DESC}")
-#    field(DTYP, "stream")
-#    field(EGU,  "RAW")
-#    field(PREC, "${PREC}")
-#    field(PHAS, "${PHAS}")
-#
-#    field(INP,  "@TopCon.proto ${proto}($$(DEVICE):${pv})  $$(PORT)")
-#}
-#''')
 ai_ref = Template('''
 record(calcout, "$$(DEVICE):${pv}_eslo"){
     field(CALC, "A/${MINUS}4000.")
@@ -250,7 +297,6 @@ record(calcout, "$$(DEVICE):${pv}_d"){
     field(INPB, "$$(DEVICE):${ref0} CP")
     field(OUT,  "$$(DEVICE):${pv}.DISA")
 }
-
 record(ai, "$$(DEVICE):${pv}"){
     field(PINI, "${PINI}")
     field(SCAN, "${SCAN}")
@@ -281,7 +327,6 @@ record(longin, "$$(DEVICE):${pv}"){
     field(INP,  "@TopCon.proto ${proto}($$(DEVICE):${pv})  $$(PORT)")
 }
 ''')
-
 mbbi = Template('''
 record(mbbi, "$$(DEVICE):${pv}") {
     field(PINI, "${PINI}")

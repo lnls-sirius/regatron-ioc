@@ -3,7 +3,7 @@
 
 from string import Template
 from proto_template import SINT16_R, SINT16_W, UINT16_W, UINT16_W_1, UINT16_R, SELECT_SYSTEM, SELECT_MASTER, SELECT_R_INDEX, SELECT_W_INDEX
-from db_template import ai, ai_ref, ai_ref_2, ao, ao_ref,bo, bo_cmd, mbbi, err, longin, loop_analog
+from db_template import ai, ai_ref, ai_ref_2, ao, ao_ref,bo, bo_cmd, mbbi, err, longin, loop_analog, loop_analog_ref, select
 
 class Select():
     MASTER = 'selectMaster'
@@ -179,78 +179,44 @@ UINT16_R_mapping = [
 ]
 
 SINT16_loop_mapping = [
-
-]
-
-SINT16_W_mapping = [
-    # ------------- Set Values -------------
+    # ------------- Loop Values -------------
     # Voltage preset
-    {'pv':'Mod:VoltagePreset-SP', 'proto':'setModVoltagePreset', 'addr':0x005080, 'DESC':'Module voltage preset Q1', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.MASTER},
-    {'pv':'Sys:VoltagePreset-SP', 'proto':'setSysVoltagePreset', 'addr':0x005080, 'DESC':'System voltage preset Q1', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM},
+    {'pv':'Mod:VoltagePreset',    'proto':'ModVoltagePreset', 'addr':0x005080, 'DESC':'Module voltage preset Q1', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
+    {'pv':'Sys:VoltagePreset',    'proto':'SysVoltagePreset', 'addr':0x005080, 'DESC':'System voltage preset Q1', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
     # Voltage limit Q4
-    {'pv':'Mod:VoltageLimitQ4-SP', 'proto':'setModVoltageLimitQ4', 'addr':0x30251F, 'DESC':'Module voltage limit Q4', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.MASTER},
-    {'pv':'Sys:VoltageLimitQ4-SP', 'proto':'setSysVoltageLimitQ4', 'addr':0x30251F, 'DESC':'System voltage limit Q4', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM},
+    {'pv':'Mod:VoltageLimitQ4',   'proto':'ModVoltageLimitQ4', 'addr':0x30251F, 'DESC':'Module voltage limit Q4', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
+    {'pv':'Sys:VoltageLimitQ4',   'proto':'SysVoltageLimitQ4', 'addr':0x30251F, 'DESC':'System voltage limit Q4', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
     # Current preset
-    {'pv':'Mod:CurrentPreset-SP', 'proto':'setModCurrentPreset', 'addr':0x005081, 'DESC':'Module current preset Q1', 'EGU':'V', 'ref':'Sys:MaxCurrent-Mon', 'PHAS':'1', 'SELECT':Select.MASTER},
-    {'pv':'Sys:CurrentPreset-SP', 'proto':'setSysCurrentPreset', 'addr':0x005081, 'DESC':'System current preset Q1', 'EGU':'V', 'ref':'Sys:MaxCurrent-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM},
+    {'pv':'Mod:CurrentPreset',    'proto':'ModCurrentPreset', 'addr':0x005081, 'DESC':'Module current preset Q1', 'EGU':'V', 'ref':'Sys:MaxCurrent-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
+    {'pv':'Sys:CurrentPreset',    'proto':'SysCurrentPreset', 'addr':0x005081, 'DESC':'System current preset Q1', 'EGU':'V', 'ref':'Sys:MaxCurrent-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
     # Current limit Q4
-    {'pv':'Mod:CurrentLimitQ4-SP', 'proto':'setModCurrentLimitQ4', 'addr':0x30251D, 'DESC':'Module current limit Q4', 'EGU':'A', 'ref':'Sys:MinCurrent-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'MINUS':'-'},
-    {'pv':'Sys:CurrentLimitQ4-SP', 'proto':'setSysCurrentLimitQ4', 'addr':0x30251D, 'DESC':'System current limit Q4', 'EGU':'A', 'ref':'Sys:MinCurrent-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'MINUS':'-'},
+    {'pv':'Mod:CurrentLimitQ4',   'proto':'ModCurrentLimitQ4', 'addr':0x30251D, 'DESC':'Module current limit Q4', 'EGU':'A', 'ref':'Sys:MinCurrent-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'MINUS':'-', 'PINI':'YES'},
+    {'pv':'Sys:CurrentLimitQ4',   'proto':'SysCurrentLimitQ4', 'addr':0x30251D, 'DESC':'System current limit Q4', 'EGU':'A', 'ref':'Sys:MinCurrent-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'MINUS':'-', 'PINI':'YES'},
     # Power preset
-    {'pv':'Mod:PowerPreset-SP', 'proto':'setModPowerPreset', 'addr':0x005082, 'DESC':'Module power preset Q1', 'EGU':'kW', 'ref':'Sys:MaxPower-Mon', 'PHAS':'1', 'SELECT':Select.MASTER},
-    {'pv':'Sys:PowerPreset-SP', 'proto':'setSysPowerPreset', 'addr':0x005082, 'DESC':'System power preset Q1', 'EGU':'kW', 'ref':'Sys:MaxPower-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM},
+    {'pv':'Mod:PowerPreset',      'proto':'ModPowerPreset', 'addr':0x005082, 'DESC':'Module power preset Q1', 'EGU':'kW', 'ref':'Sys:MaxPower-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
+    {'pv':'Sys:PowerPreset',      'proto':'SysPowerPreset', 'addr':0x005082, 'DESC':'System power preset Q1', 'EGU':'kW', 'ref':'Sys:MaxPower-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
     # Power limit Q4
-    {'pv':'Mod:PowerLimitQ4-SP', 'proto':'setModPowerLimitQ4', 'addr':0x30251E, 'DESC':'Module power limit Q4', 'EGU':'kW', 'ref':'Sys:MinPower-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'MINUS':'-'},
-    {'pv':'Sys:PowerLimitQ4-SP', 'proto':'setSysPowerLimitQ4', 'addr':0x30251E, 'DESC':'System power limit Q4', 'EGU':'kW', 'ref':'Sys:MinPower-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'MINUS':'-'},
+    {'pv':'Mod:PowerLimitQ4',     'proto':'ModPowerLimitQ4', 'addr':0x30251E, 'DESC':'Module power limit Q4', 'EGU':'kW', 'ref':'Sys:MinPower-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'MINUS':'-', 'PINI':'YES'},
+    {'pv':'Sys:PowerLimitQ4',     'proto':'SysPowerLimitQ4', 'addr':0x30251E, 'DESC':'System power limit Q4', 'EGU':'kW', 'ref':'Sys:MinPower-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'MINUS':'-', 'PINI':'YES'},
     # Resistence Preset
-    {'pv':'Mod:ResistencePreset-SP', 'proto':'setModResistencePreset', 'addr':0x005083, 'DESC':'Module resistence preset', 'EGU':'mOhms', 'ref':'Sys:NomInternalRes-Mon', 'PHAS':'1', 'SELECT':Select.MASTER},
-    {'pv':'Sys:ResistencePreset-SP', 'proto':'setSysResistencePreset', 'addr':0x005083, 'DESC':'System resistence preset', 'EGU':'mOhms', 'ref':'Sys:NomInternalRes-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM},
-
+    {'pv':'Mod:ResistencePreset', 'proto':'ModResistencePreset', 'addr':0x005083, 'DESC':'Module resistence preset', 'EGU':'mOhms', 'ref':'Sys:NomInternalRes-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
+    {'pv':'Sys:ResistencePreset', 'proto':'SysResistencePreset', 'addr':0x005083, 'DESC':'System resistence preset', 'EGU':'mOhms', 'ref':'Sys:NomInternalRes-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
 
     # ------------- Controller Parameters -------------
     # Slope
-    {'pv':'StartupVoltageSlope-SP', 'proto':'setStartupVoltageSlope', 'addr':0x005154, 'DESC':'Startup volt 100% in x ms', 'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'DRVH':'1.05', 'DRVL': '0.05', 'LINR':'LINEAR', 'DISA':'$(MASTER=0)'},
-    {'pv':'StartupCurrentSlope-SP', 'proto':'setStartupCurrentSlope', 'addr':0x005155, 'DESC':'Startup curr 100% in x ms', 'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'DRVH':'1.05', 'DRVL': '0.05', 'LINR':'LINEAR', 'DISA':'$(MASTER=0)'},
-    {'pv':'VoltageSlope-SP',        'proto':'setVoltageSlope',        'addr':0x005156, 'DESC':'Voltage slope',             'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'DRVH':'1.05', 'DRVL': '0.05', 'LINR':'LINEAR', 'DISA':'$(MASTER=0)'},
-    {'pv':'CurrentSlope-SP',        'proto':'setCurrentSlope',        'addr':0x005157, 'DESC':'Current slope',             'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'DRVH':'1.05', 'DRVL': '0.05', 'LINR':'LINEAR', 'DISA':'$(MASTER=0)'},
+    {'pv':'StartupVoltageSlope', 'proto':'StartupVoltageSlope', 'addr':0x005154, 'DESC':'Startup volt 100% in x ms', 'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'DRVH':'1.05', 'DRVL': '0.05', 'LINR':'LINEAR', 'DISA':'$(MASTER=0)'},
+    {'pv':'StartupCurrentSlope', 'proto':'StartupCurrentSlope', 'addr':0x005155, 'DESC':'Startup curr 100% in x ms', 'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'DRVH':'1.05', 'DRVL': '0.05', 'LINR':'LINEAR', 'DISA':'$(MASTER=0)'},
+    {'pv':'VoltageSlope',        'proto':'VoltageSlope',        'addr':0x005156, 'DESC':'Voltage slope',             'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'DRVH':'1.05', 'DRVL': '0.05', 'LINR':'LINEAR', 'DISA':'$(MASTER=0)'},
+    {'pv':'CurrentSlope',        'proto':'CurrentSlope',        'addr':0x005157, 'DESC':'Current slope',             'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'DRVH':'1.05', 'DRVL': '0.05', 'LINR':'LINEAR', 'DISA':'$(MASTER=0)'},
 ]
 
-SINT16_R_mapping = [
+SINT16_W_mapping = [ ]
 
+SINT16_R_mapping = [
     # ------------- Remote Controle Input -------------
     {'pv':'ActiveInterface-Mon',        'proto':'getActiveInterface', 'addr':0x005087, 'DESC':'Active interface', 'type':'mbbi',
         'ZRST': 'Analog/Digital Inputs', 'ONST':'HMI', 'TWST':'RS232', 'THST':'Internal', 'DESC':'Which interface is active', 'FRST':'passiv',
          'FRVL': '32767', 'SCAN':'10 second'},
-
-    # ------------- Controller Parameters -------------
-    # Slope
-    {'pv':'StartupVoltageSlope-RB', 'proto':'getStartupVoltageSlope', 'addr':0x005154, 'DESC':'Startup volt 100% in x ms', 'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'LINR':'LINEAR', 'PINI':'YES'},
-    {'pv':'StartupCurrentSlope-RB', 'proto':'getStartupCurrentSlope', 'addr':0x005155, 'DESC':'Startup curr 100% in x ms', 'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'LINR':'LINEAR', 'PINI':'YES'},
-    {'pv':'VoltageSlope-RB',        'proto':'getSVoltageSlope',       'addr':0x005156, 'DESC':'Voltage slope',             'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'LINR':'LINEAR', 'PINI':'YES'},
-    {'pv':'CurrentSlope-RB',        'proto':'getCurrentSlope',        'addr':0x005157, 'DESC':'Current slope',             'EGU':'ms', 'ESLO':'-0.00003125', 'EOFF':'1.05', 'LINR':'LINEAR', 'PINI':'YES'},
-
-    # ------------- Set Values -------------
-    # Voltage preset
-    {'pv':'Mod:VoltagePreset-RB', 'proto':'getModVoltagePreset', 'addr':0x005080, 'DESC':'Module voltage preset Q1', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
-    {'pv':'Sys:VoltagePreset-RB', 'proto':'getSysVoltagePreset', 'addr':0x005080, 'DESC':'System voltage preset Q1', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
-    # Voltage limit Q4
-    {'pv':'Mod:VoltageLimitQ4-RB', 'proto':'getModVoltageLimitQ4', 'addr':0x30251F, 'DESC':'Module voltage limit Q4', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
-    {'pv':'Sys:VoltageLimitQ4-RB', 'proto':'getSysVoltageLimitQ4', 'addr':0x30251F, 'DESC':'System voltage limit Q4', 'EGU':'V', 'ref':'Sys:MaxVoltage-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
-    # Current preset
-    {'pv':'Mod:CurrentPreset-RB', 'proto':'getModCurrentPreset', 'addr':0x005081, 'DESC':'Module current preset Q1', 'EGU':'V', 'ref':'Sys:MaxCurrent-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
-    {'pv':'Sys:CurrentPreset-RB', 'proto':'getSysCurrentPreset', 'addr':0x005081, 'DESC':'System current preset Q1', 'EGU':'V', 'ref':'Sys:MaxCurrent-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
-    # Current limit Q4
-    {'pv':'Mod:CurrentLimitQ4-RB', 'proto':'getModCurrentLimitQ4', 'addr':0x30251D, 'DESC':'Module current limit Q4', 'EGU':'A', 'ref':'Sys:MinCurrent-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'MINUS':'-', 'PINI':'YES'},
-    {'pv':'Sys:CurrentLimitQ4-RB', 'proto':'getSysCurrentLimitQ4', 'addr':0x30251D, 'DESC':'System current limit Q4', 'EGU':'A', 'ref':'Sys:MinCurrent-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'MINUS':'-', 'PINI':'YES'},
-    # Power preset
-    {'pv':'Mod:PowerPreset-RB', 'proto':'getModPowerPreset', 'addr':0x005082, 'DESC':'Module power preset Q1', 'EGU':'kW', 'ref':'Sys:MaxPower-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
-    {'pv':'Sys:PowerPreset-RB', 'proto':'getSysPowerPreset', 'addr':0x005082, 'DESC':'System power preset Q1', 'EGU':'kW', 'ref':'Sys:MaxPower-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
-    # Power limit Q4
-    {'pv':'Mod:PowerLimitQ4-RB', 'proto':'getModPowerLimitQ4', 'addr':0x30251E, 'DESC':'Module power limit Q4', 'EGU':'kW', 'ref':'Sys:MinPower-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'MINUS':'-', 'PINI':'YES'},
-    {'pv':'Sys:PowerLimitQ4-RB', 'proto':'getSysPowerLimitQ4', 'addr':0x30251E, 'DESC':'System power limit Q4', 'EGU':'kW', 'ref':'Sys:MinPower-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'MINUS':'-', 'PINI':'YES'},
-    # Resistence Preset
-    {'pv':'Mod:ResistencePreset-RB', 'proto':'getModResistencePreset', 'addr':0x005083, 'DESC':'Module resistence preset', 'EGU':'mOhms', 'ref':'Sys:NomInternalRes-Mon', 'PHAS':'1', 'SELECT':Select.MASTER, 'PINI':'YES'},
-    {'pv':'Sys:ResistencePreset-RB', 'proto':'getSysResistencePreset', 'addr':0x005083, 'DESC':'System resistence preset', 'EGU':'mOhms', 'ref':'Sys:NomInternalRes-Mon', 'PHAS':'1', 'SELECT':Select.SYSTEM, 'PINI':'YES'},
 
     # ------------- Actual Values -------------
     # DC Link
@@ -293,9 +259,9 @@ SINT16_R_mapping = [
 db_str = ''
 proto_str = '''
 LockTimeout     = 10000;
-WriteTimeout    = 100;
+WriteTimeout    = 10;
 ReplyTimeout    = 1000;
-ReadTimeout     = 100;
+ReadTimeout     = 10;
 ExtraInput      = Error;
 Terminator      = ;
 
@@ -312,106 +278,144 @@ def getSINT16_R():
     proto_str += SELECT_SYSTEM
     proto_str += SELECT_MASTER
 
+    db_str += select
+
+    # SINT16 Analog Loop
+    for mapping in SINT16_loop_mapping:
+        mapping['address'] =  getAddr(mapping['addr'])
+        mapping['HL'] = 'H' if not mapping.get('MINUS') else 'L'
+
+        if mapping.get('SELECT'):
+            if mapping.get('ref'):
+                db_str += loop_analog_ref.safe_substitute(default, **mapping)
+            else:
+                db_str += loop_analog.safe_substitute(default, **mapping)
+
+            proto  = mapping['proto']
+            proto_ = mapping['proto'] + '_'
+            pv     = mapping['pv']
+
+            mapping['proto_'] = 'set' + proto
+            mapping['proto']  = 'set' + proto_
+            mapping['pv'] = pv + '-SP'
+            proto_str += SINT16_W.safe_substitute(default, **mapping)
+            proto_str += SELECT_W_INDEX.safe_substitute(default, **mapping)
+
+            mapping['proto_'] = 'get' + proto
+            mapping['proto']  = 'get' + proto_
+            mapping['pv'] = pv + '-RB'
+            proto_str += SINT16_R.safe_substitute(default, **mapping)
+            proto_str += SELECT_R_INDEX.safe_substitute(default, **mapping)
+            continue
+
+        db_str += loop_analog.safe_substitute(default, **mapping)
+        proto  = mapping['proto']
+
+        mapping['proto'] = 'set' + proto
+        proto_str += SINT16_W.safe_substitute(default, **mapping)
+        mapping['proto'] = 'get' + proto
+        proto_str += SINT16_R.safe_substitute(default, **mapping)
+
     # SINT16 W
     for mapping in SINT16_W_mapping:
         mapping['address'] =  getAddr(mapping['addr'])
         mapping['HL'] = 'H' if not mapping.get('MINUS') else 'L'
-        db_str += err.substitute(default, **mapping)
+        db_str += err.safe_substitute(default, **mapping)
 
         if mapping.get('SELECT'):
             if mapping.get('ref'):
-                db_str += ao_ref.substitute(default, **mapping)
+                db_str += ao_ref.safe_substitute(default, **mapping)
             else:
-                db_str += ao.substitute(default, **mapping)
+                db_str += ao.safe_substitute(default, **mapping)
             mapping['proto_'] = mapping['proto']
             mapping['proto'] = mapping['proto'] + '_'
-            proto_str += SINT16_W.substitute(default, **mapping)
-            proto_str += SELECT_W_INDEX.substitute(default, **mapping)
+            proto_str += SINT16_W.safe_substitute(default, **mapping)
+            proto_str += SELECT_W_INDEX.safe_substitute(default, **mapping)
             continue
 
-        db_str += ao.substitute(default, **mapping)
-        proto_str += SINT16_W.substitute(default, **mapping)
+        db_str += ao_ref.safe_substitute(default, **mapping)
+        proto_str += SINT16_W.safe_substitute(default, **mapping)
 
 
     # SINT16 R
     for mapping in SINT16_R_mapping:
         mapping['address'] =  getAddr(mapping['addr'])
 
-        db_str += err.substitute(default, **mapping)
+        db_str += err.safe_substitute(default, **mapping)
 
         if mapping.get('type') == 'mbbi':
-            db_str += mbbi.substitute(default, **mapping)
+            db_str += mbbi.safe_substitute(default, **mapping)
         elif mapping.get('ref'):
             if type(mapping.get('ref')) == list:
-                db_str += ai_ref_2.substitute(default, **mapping, ref0 = mapping['ref'][0], ref1 = mapping['ref'][1])
+                db_str += ai_ref_2.safe_substitute(default, **mapping, ref0 = mapping['ref'][0], ref1 = mapping['ref'][1])
             else:
-                db_str += ai_ref.substitute(default, **mapping)
+                db_str += ai_ref.safe_substitute(default, **mapping)
         else:
-            db_str += ai.substitute(default, **mapping)
+            db_str += ai.safe_substitute(default, **mapping)
 
         if mapping.get('SELECT'):
             mapping['proto_'] = mapping['proto']
             mapping['proto'] = mapping['proto'] + '_'
-            proto_str += SINT16_R.substitute(default, **mapping)
-            proto_str += SELECT_R_INDEX.substitute(default, **mapping)
+            proto_str += SINT16_R.safe_substitute(default, **mapping)
+            proto_str += SELECT_R_INDEX.safe_substitute(default, **mapping)
         else:
-            proto_str += SINT16_R.substitute(default, **mapping)
+            proto_str += SINT16_R.safe_substitute(default, **mapping)
 
 
     # UINT16 W
     for mapping in UINT16_W_mapping:
         mapping['address'] =  getAddr(mapping['addr'])
-        db_str += err.substitute(default, **mapping)
+        db_str += err.safe_substitute(default, **mapping)
 
         if mapping['type'] == 'bo':
-            proto_str += UINT16_W.substitute(default, **mapping)
-            db_str += bo.substitute(default, **mapping)
+            proto_str += UINT16_W.safe_substitute(default, **mapping)
+            db_str += bo.safe_substitute(default, **mapping)
         elif mapping['type'] == 'bo_cmd':
-            proto_str += UINT16_W_1.substitute(default, **mapping)
-            db_str += bo_cmd.substitute(default, **mapping)
+            proto_str += UINT16_W_1.safe_substitute(default, **mapping)
+            db_str += bo_cmd.safe_substitute(default, **mapping)
 
     # UINT16 R
     for mapping in UINT16_R_mapping:
         mapping['address'] =  getAddr(mapping['addr'])
-        db_str += err.substitute(default, **mapping)
+        db_str += err.safe_substitute(default, **mapping)
 
         if mapping['type'] == 'ai':
-            db_str += ai.substitute(default, **mapping)
+            db_str += ai.safe_substitute(default, **mapping)
 
             if mapping.get('SELECT'):
                 mapping['proto_'] = mapping['proto']
                 mapping['proto'] = mapping['proto'] + '_'
 
-                proto_str += UINT16_R.substitute(default, **mapping)
-                proto_str += SELECT_R_INDEX.substitute(default, **mapping)
+                proto_str += UINT16_R.safe_substitute(default, **mapping)
+                proto_str += SELECT_R_INDEX.safe_substitute(default, **mapping)
             else:
-                proto_str += UINT16_R.substitute(default, **mapping)
+                proto_str += UINT16_R.safe_substitute(default, **mapping)
 
         elif mapping['type'] == 'longin':
             if mapping.get('SELECT'):
-                db_str += longin.substitute(default, **mapping)
+                db_str += longin.safe_substitute(default, **mapping)
 
                 mapping['proto_'] = mapping['proto']
                 mapping['proto'] = mapping['proto'] + '_'
 
-                proto_str += UINT16_R.substitute(default, **mapping)
-                proto_str += SELECT_R_INDEX.substitute(default, **mapping)
+                proto_str += UINT16_R.safe_substitute(default, **mapping)
+                proto_str += SELECT_R_INDEX.safe_substitute(default, **mapping)
             else:
-                proto_str += UINT16_R.substitute(default, **mapping)
-                db_str += longin.substitute(default, **mapping)
+                proto_str += UINT16_R.safe_substitute(default, **mapping)
+                db_str += longin.safe_substitute(default, **mapping)
 
         elif mapping['type'] == 'mbbi':
             if mapping.get('SELECT'):
-                db_str += mbbi.substitute(default, **mapping)
+                db_str += mbbi.safe_substitute(default, **mapping)
 
                 mapping['proto_'] = mapping['proto']
                 mapping['proto'] = mapping['proto'] + '_'
 
-                proto_str += UINT16_R.substitute(default, **mapping)
-                proto_str += SELECT_R_INDEX.substitute(default, **mapping)
+                proto_str += UINT16_R.safe_substitute(default, **mapping)
+                proto_str += SELECT_R_INDEX.safe_substitute(default, **mapping)
             else:
-                db_str += mbbi.substitute(default, **mapping)
-                proto_str += UINT16_R.substitute(default, **mapping)
+                db_str += mbbi.safe_substitute(default, **mapping)
+                proto_str += UINT16_R.safe_substitute(default, **mapping)
 
 
 if __name__ == '__main__':

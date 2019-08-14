@@ -6,7 +6,7 @@ record(bo, "$(DEVICE):SelectMaster-Cmd"){
     field(OUT,  "@TopCon.proto selectMaster($$(DEVICE):SelectMaster-Cmd) $(PORT)")
     field(DISS, "INVALID")
 }
-record(bo, "$$(DEVICE):SelectSystem-Cmd"){
+record(bo, "$(DEVICE):SelectSystem-Cmd"){
     field(DTYP, "stream")
     field(OUT,  "@TopCon.proto selectSystem($$(DEVICE):SelectSystem-Cmd) $(PORT)")
     field(DISS, "INVALID")

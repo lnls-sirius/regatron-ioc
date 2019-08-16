@@ -12,6 +12,7 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 DB += TopCon.db
 DB += TopCon.proto
+DB += TopConMaster.db
 
 include $(TOP)/configure/RULES
 

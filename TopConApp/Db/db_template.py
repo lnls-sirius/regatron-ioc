@@ -1,15 +1,20 @@
 #!/usr/bin/python3
 from string import Template
 select = '''
-record(bo, "$(DEVICE):SelectMaster-Cmd"){
+record(bo, "$(DEVICE):selectMaster-Cmd"){
     field(DTYP, "stream")
-    field(OUT,  "@TopCon.proto selectMaster($$(DEVICE):SelectMaster-Cmd) $(PORT)")
+    field(OUT,  "@TopCon.proto selectMaster($(DEVICE),:SelectMaster-Cmd) $(PORT)")
     field(DISS, "INVALID")
 }
-record(bo, "$(DEVICE):SelectSystem-Cmd"){
+record(bo, "$(DEVICE):selectSystem-Cmd"){
     field(DTYP, "stream")
-    field(OUT,  "@TopCon.proto selectSystem($$(DEVICE):SelectSystem-Cmd) $(PORT)")
+    field(OUT,  "@TopCon.proto selectSystem($(DEVICE),:SelectSystem-Cmd) $(PORT)")
     field(DISS, "INVALID")
+}
+record(longin, "$(DEVICE):SelIdx-Mon"){
+    field(DTYP, "Soft Channel")
+    field(DESC, "Module select index")
+    field(SCAN, "Passive")
 }
 '''
 err =  Template('''
@@ -27,7 +32,7 @@ record(bo, "$$(DEVICE):${pv}"){
     field(ONAM, "Clear")
     field(DISA, "${DISA}")
     field(DISV, "${DISV}")
-    field(OUT,  "@TopCon.proto ${proto}($$(DEVICE):${pv}) $$(PORT)")
+    field(OUT,  "@TopCon.proto ${proto}($$(DEVICE),:${pv}) $$(PORT)")
     field(DISS, "INVALID")
 }
 ''')
@@ -41,7 +46,7 @@ record(bo, "$$(DEVICE):${pv}"){
     field(DISV, "${DISV}")
     field(DISS, "INVALID")
 
-    field(OUT,  "@TopCon.proto ${proto}($$(DEVICE):${pv}) $$(PORT)")
+    field(OUT,  "@TopCon.proto ${proto}($$(DEVICE),:${pv}) $$(PORT)")
 }
 ''')
 ao = Template('''
@@ -60,7 +65,7 @@ record(ao, "$$(DEVICE):${pv}"){
     field(DISV, "${DISV}")
     field(DISS, "INVALID")
 
-    field(OUT,  "@TopCon.proto ${proto}($$(DEVICE):${pv}) $$(PORT)")
+    field(OUT,  "@TopCon.proto ${proto}($$(DEVICE),:${pv}) $$(PORT)")
 }
 ''')
 loop_analog = Template('''
@@ -90,7 +95,7 @@ record(ai, "$$(DEVICE):${pv}-RB"){
     field(EOFF, "${EOFF}")
     field(ESLO, "${ESLO}")
 
-    field(INP,  "@TopCon.proto get${proto}($$(DEVICE):${pv}-RB)  $$(PORT)")
+    field(INP,  "@TopCon.proto get${proto}($$(DEVICE),:${pv}-RB)  $$(PORT)")
 }
 record(ao, "$$(DEVICE):${pv}-SP"){
     field(DESC, "${DESC}")
@@ -105,7 +110,7 @@ record(ao, "$$(DEVICE):${pv}-SP"){
     field(DISA, "${DISA}")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto set${proto}($$(DEVICE):${pv}-SP) $$(PORT)")
+    field(OUT,  "@TopCon.proto set${proto}($$(DEVICE),:${pv}-SP) $$(PORT)")
     field(FLNK, "$$(DEVICE):${pv}-RB")
 }
 record(seq, "$$(DEVICE):${pv}_init"){
@@ -184,7 +189,7 @@ record(ai, "$$(DEVICE):${pv}-RB"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto get${proto}($$(DEVICE):${pv}-RB)  $$(PORT)")
+    field(INP,  "@TopCon.proto get${proto}($$(DEVICE),:${pv}-RB)  $$(PORT)")
 }
 record(ao, "$$(DEVICE):${pv}-SP"){
     field(DESC, "${DESC}")
@@ -197,7 +202,7 @@ record(ao, "$$(DEVICE):${pv}-SP"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto set${proto}($$(DEVICE):${pv}-SP)  $$(PORT)")
+    field(OUT,  "@TopCon.proto set${proto}($$(DEVICE),:${pv}-SP)  $$(PORT)")
     field(FLNK, "$$(DEVICE):${pv}-RB")
 }
 ''')
@@ -233,7 +238,7 @@ record(ao, "$$(DEVICE):${pv}"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto ${proto}($$(DEVICE):${pv})  $$(PORT)")
+    field(OUT,  "@TopCon.proto ${proto}($$(DEVICE),:${pv})  $$(PORT)")
 }
 ''')
 ai = Template('''
@@ -249,9 +254,68 @@ record(ai, "$$(DEVICE):${pv}"){
     field(EOFF, "${EOFF}")
     field(ESLO, "${ESLO}")
 
-    field(INP,  "@TopCon.proto ${proto}($$(DEVICE):${pv})  $$(PORT)")
+    field(INP,  "@TopCon.proto ${proto}($$(DEVICE),:${pv})  $$(PORT)")
 }
 ''')
+ai_sel = Template('''
+record(fanout, "$$(DEVICE):${pv}_fanout"){
+    field(SCAN, "${SCAN}")
+    field(LNK2, "$$(DEVICE):${SELECT}-Cmd")
+    field(LNK1, "$$(DEVICE):${pv}")
+}
+record(ai, "$$(DEVICE):${pv}"){
+    field(PINI, "${PINI}")
+    field(SCAN, "Passive")
+    field(DESC, "${DESC}")
+    field(DTYP, "stream")
+    field(EGU,  "${EGU}")
+    field(PREC, "${PREC}")
+    field(PHAS, "${PHAS}")
+    field(LINR, "${LINR}")
+    field(EOFF, "${EOFF}")
+    field(ESLO, "${ESLO}")
+
+    field(INP,  "@TopCon.proto ${proto}($$(DEVICE),:${pv})  $$(PORT)")
+}
+''')
+ai_ref_sel = Template('''
+record(fanout, "$$(DEVICE):${pv}_fanout"){
+    field(SCAN, "${SCAN}")
+    field(LNK2, "$$(DEVICE):${SELECT}-Cmd")
+    field(LNK1, "$$(DEVICE):${pv}")
+}
+record(calcout, "$$(DEVICE):${pv}_eslo"){
+    field(CALC, "A/${MINUS}4000.")
+    field(INPA, "$$(DEVICE):${ref} CP MSS")
+    field(EGU,  "${EGU}")
+    field(OUT,  "$$(DEVICE):${pv}.ESLO")
+}
+record(calcout, "$$(DEVICE):${pv}_d"){
+    field(CALC, "A#0") # If != NO_ALARM
+    field(INPA, "$$(DEVICE):${ref}.SEVR CP")
+    field(INPB, "$$(DEVICE):${ref} CP")
+    field(OUT,  "$$(DEVICE):${pv}.DISA")
+}
+
+record(ai, "$$(DEVICE):${pv}"){
+    field(PINI, "${PINI}")
+    field(SCAN, "Passive")
+    field(DESC, "${DESC}")
+    field(DTYP, "stream")
+    field(EGU,  "${EGU}")
+    field(PREC, "${PREC}")
+    field(PHAS, "${PHAS}")
+    field(LINR, "LINEAR")
+    field(EOFF, "${EOFF}")
+    field(ESLO, "${ESLO}")
+    field(DISA, "1")
+    field(DISV, "1")
+    field(DISS, "INVALID")
+
+    field(INP,  "@TopCon.proto ${proto}($$(DEVICE),:${pv})  $$(PORT)")
+}
+''')
+
 ai_ref = Template('''
 record(calcout, "$$(DEVICE):${pv}_eslo"){
     field(CALC, "A/${MINUS}4000.")
@@ -281,7 +345,7 @@ record(ai, "$$(DEVICE):${pv}"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto ${proto}($$(DEVICE):${pv})  $$(PORT)")
+    field(INP,  "@TopCon.proto ${proto}($$(DEVICE),:${pv})  $$(PORT)")
 }
 ''')
 ai_ref_2 = Template('''
@@ -312,7 +376,7 @@ record(ai, "$$(DEVICE):${pv}"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto ${proto}($$(DEVICE):${pv})  $$(PORT)")
+    field(INP,  "@TopCon.proto ${proto}($$(DEVICE),:${pv})  $$(PORT)")
 }
 ''')
 longin = Template('''
@@ -324,7 +388,7 @@ record(longin, "$$(DEVICE):${pv}"){
     field(EGU,  "${EGU}")
     field(PHAS, "${PHAS}")
 
-    field(INP,  "@TopCon.proto ${proto}($$(DEVICE):${pv})  $$(PORT)")
+    field(INP,  "@TopCon.proto ${proto}($$(DEVICE),:${pv})  $$(PORT)")
 }
 ''')
 mbbi = Template('''
@@ -369,6 +433,6 @@ record(mbbi, "$$(DEVICE):${pv}") {
     field(FFSV, "${FFSV}")
 
     field(DTYP, "stream")
-    field(INP,  "@TopCon.proto ${proto}($$(DEVICE):${pv}) $$(PORT)")
+    field(INP,  "@TopCon.proto ${proto}($$(DEVICE),:${pv}) $$(PORT)")
 }
 ''')

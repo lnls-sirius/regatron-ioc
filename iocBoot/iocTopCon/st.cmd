@@ -23,8 +23,12 @@ asynSetOption("P02", 0, "bits", "8")
 asynSetOption("P02", 0, "parity", "none")
 asynSetOption("P02", 0, "stop", "1")
 
-dbLoadRecords("db/TopCon.db", "DEVICE=TopCon:Master, PORT=P01, MASTER=1")
-dbLoadRecords("db/TopCon.db", "DEVICE=TopCon:Slave, PORT=P02")
+#dbLoadRecords("db/TopCon.db", "DEVICE=PA-RaPS03:PS-Reg-SI01-M, PORT=P01, MASTER=1")
+
+dbLoadRecords("db/TopCon.db",       "DEVICE=Tc, PORT=P01")
+dbLoadRecords("db/TopConMaster.db", "DEVICE=Tc, PORT=P01")
+
+dbLoadRecords("db/TopCon.db",       "DEVICE=Tc2, PORT=P02")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

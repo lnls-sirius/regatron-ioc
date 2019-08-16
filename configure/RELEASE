@@ -1,4 +1,4 @@
-STREAM_PROTOCOL_PATH = $(TOP)/db
+STREAM_PROTOCOL_PATH=$(TOP)/db
 CALC=/opt/epics-R3.15.6/modules/synApps/calc-R3-7-3
 ASYN=/opt/epics-R3.15.6/modules/asyn4-35
 STREAM=/opt/epics-R3.15.6/modules/StreamDevice-2.8.9

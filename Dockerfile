@@ -3,6 +3,8 @@
  
  FROM  lnlscon/epics-r3.15.6:v1.1
  LABEL maintainer="Claudio Carneiro <claudio.carneiro@lnls.br>"
+
+ RUN apt-get -y install python3
  
  ENV TZ America/Sao_Paulo
  ENV TOP /opt/cons-topcon

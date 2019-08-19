@@ -50,14 +50,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -122,14 +122,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -194,14 +194,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -240,14 +240,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -286,14 +286,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -358,14 +358,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -404,14 +404,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -463,14 +463,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -535,14 +535,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -581,14 +581,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -627,14 +627,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -686,14 +686,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -745,14 +745,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -817,14 +817,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -902,14 +902,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -948,14 +948,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -996,14 +996,14 @@
            <string>Temperature</string>
            <string>Comm</string>
            <string>Intrn (Modulator)</string>
-           <string>Intrn (AD overrange 1)</string>
-           <string>Intrn (AD overrange 2)</string>
+           <string>Intrn (AD OvrRng 1)</string>
+           <string>Intrn (AD OvrRng 2)</string>
            <string>Intrn (AD UndrRng 1)</string>
            <string>Intrn (AD UndrRng 2)</string>
            <string>Login</string>
            <string>Conf</string>
            <string>Conf 2</string>
-           <string>Miscellaneous</string>
+           <string>Misc</string>
           </stringlist>
          </property>
         </widget>
@@ -1319,14 +1319,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1365,14 +1365,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1411,14 +1411,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1464,14 +1464,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1523,14 +1523,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1569,14 +1569,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1706,14 +1706,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1752,14 +1752,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1798,14 +1798,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1844,14 +1844,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1903,14 +1903,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -1949,14 +1949,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2008,14 +2008,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2053,7 +2053,7 @@
            <string>IBC Comm</string>
            <string>IBC Pwr</string>
            <string>IBC Inverter</string>
-           <string>IBC Miscellaneous</string>
+           <string>IBC Misc</string>
            <string>IBC Inverter 2</string>
            <string>not used</string>
            <string>not used</string>
@@ -2127,14 +2127,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2186,14 +2186,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2258,14 +2258,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2560,14 +2560,14 @@
            <string>Temperature</string>
            <string>Comm</string>
            <string>Intrn (Modulator)</string>
-           <string>Intrn (AD overrange 1)</string>
-           <string>Intrn (AD overrange 2)</string>
+           <string>Intrn (AD OvrRng 1)</string>
+           <string>Intrn (AD OvrRng 2)</string>
            <string>Intrn (AD UndrRng 1)</string>
            <string>Intrn (AD UndrRng 2)</string>
            <string>Login</string>
            <string>Conf</string>
            <string>Conf 2</string>
-           <string>Miscellaneous</string>
+           <string>Misc</string>
           </stringlist>
          </property>
         </widget>
@@ -2624,14 +2624,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2683,14 +2683,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2742,14 +2742,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2801,14 +2801,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2860,14 +2860,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2919,14 +2919,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -2978,14 +2978,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3037,14 +3037,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3096,14 +3096,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3155,14 +3155,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3214,14 +3214,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3273,14 +3273,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3332,14 +3332,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3391,14 +3391,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3450,14 +3450,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3509,14 +3509,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3796,14 +3796,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3854,7 +3854,7 @@
            <string>IBC Comm</string>
            <string>IBC Pwr</string>
            <string>IBC Inverter</string>
-           <string>IBC Miscellaneous</string>
+           <string>IBC Misc</string>
            <string>IBC Inverter 2</string>
            <string>not used</string>
            <string>not used</string>
@@ -3921,14 +3921,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -3980,14 +3980,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4039,14 +4039,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4098,14 +4098,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4157,14 +4157,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4216,14 +4216,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4282,14 +4282,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4335,14 +4335,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4388,14 +4388,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4434,14 +4434,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4493,14 +4493,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4552,14 +4552,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4611,14 +4611,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4670,14 +4670,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>
@@ -4729,14 +4729,14 @@
          <string>Temperature</string>
          <string>Comm</string>
          <string>Intrn (Modulator)</string>
-         <string>Intrn (AD overrange 1)</string>
-         <string>Intrn (AD overrange 2)</string>
+         <string>Intrn (AD OvrRng 1)</string>
+         <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
          <string>Intrn (AD UndrRng 2)</string>
          <string>Login</string>
          <string>Conf</string>
          <string>Conf 2</string>
-         <string>Miscellaneous</string>
+         <string>Misc</string>
         </stringlist>
        </property>
       </widget>

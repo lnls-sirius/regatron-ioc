@@ -13,6 +13,7 @@ include $(TOP)/configure/CONFIG
 DB += TopCon.db
 DB += TopCon.proto
 DB += TopConMaster.db
+DB += $(ASYN)/db/asynRecord.db
 
 include $(TOP)/configure/RULES
 

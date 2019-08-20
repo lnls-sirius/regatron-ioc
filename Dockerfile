@@ -16,7 +16,10 @@
  COPY iocBoot         iocBoot
  COPY TopConApp       TopConApp
 
- RUN make clean; make distclean; cd TopConApp/Db; make db; cd ../../; make -j 32
+ RUN make clean; make distclean; \
+    cd iocBoot/iocTopCon; ./gen.py;  cd ../../; \
+    cd TopConApp/Db; make db; cd ../../; \
+    make -j 32
 
  WORKDIR ${TOP}/iocBoot/iocTopCon
  CMD /usr/local/bin/procServ -L - -f --chdir ${TOP}/iocBoot/iocTopCon ${PORT} ./st.cmd

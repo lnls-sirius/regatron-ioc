@@ -131,6 +131,22 @@ dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPS?:SI-Reg:PS-B12-2_1A, PORT=P8
 dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPS?:SI-Reg:PS-B12-2_2A, PORT=P10")
 dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPS?:SI-Reg:PS-B12-2_3A, PORT=P12")
 dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPS?:SI-Reg:PS-B12-2_4A, PORT=P14")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-1_1A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-1_1B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-1_2A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-1_2B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-1_3A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-1_3B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-1_4A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-1_4B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-2_1A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-2_1B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-2_2A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-2_2B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-2_3A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-2_3B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-2_4A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-B12-2_4B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 

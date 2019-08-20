@@ -91,6 +91,16 @@ dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPS?:SI-Reg:PS-Q12_C, PORT=P6")
 dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPS?:SI-Reg:PS-Q33_A, PORT=P7")
 dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPS?:SI-Reg:PS-Q33_B, PORT=P8")
 dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPS?:SI-Reg:PS-Q33_C, PORT=P9")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-QFAP,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-QFB,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-QDAP12,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-QDB12,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-Q12_A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-Q12_B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-Q12_C,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-Q33_A,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-Q33_B,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/asynRecord.db",   "P=PA-RaPS?:SI-Reg:PS-Q33_C,R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 

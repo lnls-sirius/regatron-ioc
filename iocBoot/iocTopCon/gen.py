@@ -28,8 +28,11 @@ asynSetOption("${PORT}", 0, "bits", "8")
 asynSetOption("${PORT}", 0, "parity", "none")
 asynSetOption("${PORT}", 0, "stop", "1")
 ''')
+
 db = Template('''
 dbLoadRecords("db/TopCon.db",       "DEVICE=${PV}, PORT=${PORT}")''')
+asyn_db = Template('''
+dbLoadRecords("db/asynRecord.db",   "P=${PV},R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")''')
 m_db = Template('''
 dbLoadRecords("db/TopConMaster.db", "DEVICE=${PV}, PORT=${PORT}")''')
 
@@ -86,20 +89,20 @@ if __name__ == '__main__':
     for d in rega:
         with open(d['file'], 'w+') as f:
              f.write(header)
-             s_ports = ''
-             dbs = '' 
-             m_dbs = ''
+             s_ports, dbs, m_dbs, asyn_dbs = '','','',''
              port = 0
              for item in d['items']:
                  item['PORT'] = 'P{}'.format(port)
                  port += 1
                  s_ports += s_port.safe_substitute(**item)
+                 asyn_dbs += asyn_db.safe_substitute(**item)
                  dbs += db.safe_substitute(**item)
                  if item['M'] == True:
                      m_dbs += m_db.safe_substitute(**item)
              f.write(s_ports)
              f.write(dbs)
              f.write(m_dbs)
+             f.write(asyn_dbs)
              f.write(footer)
              os.chmod(d['file'], 0o755)
 

@@ -27,8 +27,10 @@ asynSetOption("P02", 0, "stop", "1")
 
 dbLoadRecords("db/TopCon.db",       "DEVICE=Tc, PORT=P01")
 dbLoadRecords("db/TopConMaster.db", "DEVICE=Tc, PORT=P01")
-
+dbLoadRecords("db/asynRecord.db",   "P=Tc,R=,PORT=P01,ADDR=,IMAX=,OMAX=")
+ 
 dbLoadRecords("db/TopCon.db",       "DEVICE=Tc2, PORT=P02")
+dbLoadRecords("db/asynRecord.db",   "P=Tc2,R=,PORT=P02,ADDR=,IMAX=,OMAX=")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

@@ -1,7 +1,0 @@
-epicsEnvSet("IOC","iocTopCon")
-epicsEnvSet("TOP","/home/con-srv/LA-disk0/misc-brick/repository/cons-topcon")
-epicsEnvSet("STREAM_PROTOCOL_PATH","/home/con-srv/LA-disk0/misc-brick/repository/cons-topcon/db")
-epicsEnvSet("CALC","/opt/epics-R3.15.6/modules/synApps/calc-R3-7-3")
-epicsEnvSet("ASYN","/opt/epics-R3.15.6/modules/asyn4-35")
-epicsEnvSet("STREAM","/opt/epics-R3.15.6/modules/StreamDevice-2.8.9")
-epicsEnvSet("EPICS_BASE","/opt/epics-R3.15.6/base")

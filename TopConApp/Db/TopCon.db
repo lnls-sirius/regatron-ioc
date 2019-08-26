@@ -123,14 +123,14 @@ record(longin, "$(DEVICE):Mod:StdWarnSupply-Mon"){
     field(INP,  "@TopCon.proto getModStdWarnGroup4($(DEVICE),:Mod:StdWarnSupply-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Mod:StdWarnTemperature-Mon_error"){
+record(longin, "$(DEVICE):Mod:StdWarnT-Mon_error"){
     field(DESC, "Std warning group 5")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Mod:StdWarnTemperature-Mon"){
+record(longin, "$(DEVICE):Mod:StdWarnT-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 5")
@@ -138,7 +138,7 @@ record(longin, "$(DEVICE):Mod:StdWarnTemperature-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getModStdWarnGroup5($(DEVICE),:Mod:StdWarnTemperature-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getModStdWarnGroup5($(DEVICE),:Mod:StdWarnT-Mon)  $(PORT)")
 }
 
 record(longin, "$(DEVICE):Mod:StdWarnComm-Mon_error"){
@@ -681,14 +681,14 @@ record(longin, "$(DEVICE):Mod:StdErrSupply-Mon"){
     field(INP,  "@TopCon.proto getModStdErrGroup4($(DEVICE),:Mod:StdErrSupply-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Mod:StdErrTemperature-Mon_error"){
+record(longin, "$(DEVICE):Mod:StdErrT-Mon_error"){
     field(DESC, "Std error group 5")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Mod:StdErrTemperature-Mon"){
+record(longin, "$(DEVICE):Mod:StdErrT-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std error group 5")
@@ -696,7 +696,7 @@ record(longin, "$(DEVICE):Mod:StdErrTemperature-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getModStdErrGroup5($(DEVICE),:Mod:StdErrTemperature-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getModStdErrGroup5($(DEVICE),:Mod:StdErrT-Mon)  $(PORT)")
 }
 
 record(longin, "$(DEVICE):Mod:StdErrComm-Mon_error"){

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1295</width>
-    <height>1822</height>
+    <width>1249</width>
+    <height>1706</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1275</width>
-        <height>1802</height>
+        <width>1215</width>
+        <height>1702</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_7">
@@ -485,7 +485,20 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="1">
+         <item row="3" column="0">
+          <widget class="PyDMLabel" name="dcLnkNom_107">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="channel" stdset="0">
+            <string>ca://${P}:Mod:MinCurrent-Mon</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
           <widget class="PyDMPushButton" name="PyDMPushButton_14">
            <property name="maximumSize">
             <size>
@@ -501,6 +514,38 @@
            </property>
            <property name="pressValue" stdset="0">
             <string>1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="PyDMLabel" name="dcLnkNomDesc_109">
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="alarmSensitiveBorder" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="channel" stdset="0">
+            <string>ca://${P}:Mod:MinCurrent-Mon.DESC</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="PyDMLabel" name="dcLnkNom_108">
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="channel" stdset="0">
+            <string>ca://${P}:Mod:MinCurrent-Mon_error</string>
            </property>
           </widget>
          </item>
@@ -1146,11 +1191,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:DCLinkVolt-Mon_error</string>
@@ -1181,11 +1226,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:OutPwr-Mon_error</string>
@@ -1216,11 +1261,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:OutCurrent-Mon_error</string>
@@ -1238,11 +1283,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:OutVolt-Mon_error</string>
@@ -1274,11 +1319,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:NomDCLinkVolt-Mon_error</string>
@@ -1423,11 +1468,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:OutCurrent-Mon_error</string>
@@ -1490,11 +1535,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:OutPwr-Mon_error</string>
@@ -1525,11 +1570,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:OutVolt-Mon_error</string>
@@ -1581,11 +1626,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:CurrentLimQ4-RB_error</string>
@@ -1626,11 +1671,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:PwrPreset-RB_error</string>
@@ -1648,11 +1693,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:VoltLimQ4-RB_error</string>
@@ -1680,11 +1725,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string notr="true">ca://${P}:Mod:ResPreset-RB_error</string>
@@ -1715,11 +1760,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:VoltPreset-RB_error</string>
@@ -1737,11 +1782,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:CurrentPreset-RB_error</string>
@@ -1878,11 +1923,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:PwrLimQ4-RB_error</string>
@@ -2053,11 +2098,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:PwrPreset-SP_error</string>
@@ -2075,11 +2120,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:CurrentPreset-SP_error</string>
@@ -2155,11 +2200,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:VoltPreset-SP_error</string>
@@ -2241,11 +2286,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:VoltLimQ4-SP_error</string>
@@ -2348,11 +2393,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:CurrentLimQ4-SP_error</string>
@@ -2488,11 +2533,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string notr="true">ca://${P}:Mod:ResPreset-SP_error</string>
@@ -2599,11 +2644,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:PwrLimQ4-SP_error</string>
@@ -2772,11 +2817,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:VoltPreset-RB_error</string>
@@ -2820,11 +2865,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:VoltLimQ4-RB_error</string>
@@ -2868,11 +2913,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:CurrentPreset-RB_error</string>
@@ -2890,11 +2935,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:PwrPreset-RB_error</string>
@@ -2912,11 +2957,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:ResPreset-RB_error</string>
@@ -3000,11 +3045,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:CurrentLimQ4-RB_error</string>
@@ -3065,11 +3110,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:PwrLimQ4-RB_error</string>
@@ -3425,11 +3470,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:CurrentPreset-SP_error</string>
@@ -3447,11 +3492,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:CurrentLimQ4-SP_error</string>
@@ -3484,11 +3529,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:VoltLimQ4-SP_error</string>
@@ -3522,11 +3567,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:ResPreset-SP_error</string>
@@ -3560,11 +3605,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:PwrLimQ4-SP_error</string>
@@ -3679,11 +3724,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:VoltPreset-SP_error</string>
@@ -3701,11 +3746,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:PwrPreset-SP_error</string>
@@ -3993,11 +4038,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:CurrentSlope-RB_error</string>
@@ -4015,11 +4060,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:StartupCurrentSlope-RB_error</string>
@@ -4037,11 +4082,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:VoltSlope-RB_error</string>
@@ -4173,11 +4218,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:StartupVoltSlope-RB_error</string>
@@ -4361,11 +4406,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:CurrentSlope-SP_error</string>
@@ -4440,11 +4485,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:VoltSlope-SP_error</string>
@@ -4462,11 +4507,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:StartupVoltSlope-SP_error</string>
@@ -4503,11 +4548,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:StartupCurrentSlope-SP_error</string>
@@ -4542,16 +4587,16 @@
            <property name="text">
             <string>Warnings</string>
            </property>
-           <property name="filenames" stdset="0">
-            <stringlist>
-             <string>warning.ui</string>
-            </stringlist>
-           </property>
            <property name="showIcon" stdset="0">
             <bool>false</bool>
            </property>
            <property name="openInNewWindow" stdset="0">
             <bool>true</bool>
+           </property>
+           <property name="filenames" stdset="0">
+            <stringlist>
+             <string>warning.ui</string>
+            </stringlist>
            </property>
           </widget>
          </item>
@@ -4701,21 +4746,19 @@
            <property name="text">
             <string>Errs</string>
            </property>
-           <property name="filenames" stdset="0">
-            <stringlist>
-             <string>error.ui</string>
-            </stringlist>
-           </property>
            <property name="showIcon" stdset="0">
             <bool>false</bool>
            </property>
            <property name="macros" stdset="0">
-            <stringlist>
-             <string>P=${P}</string>
-            </stringlist>
+            <string>P=${P}</string>
            </property>
            <property name="openInNewWindow" stdset="0">
             <bool>true</bool>
+           </property>
+           <property name="filenames" stdset="0">
+            <stringlist>
+             <string>error.ui</string>
+            </stringlist>
            </property>
           </widget>
          </item>
@@ -4837,11 +4880,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:State-Mon.DESC</string>
@@ -4882,11 +4925,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Mod:ControlMode-Mon.DESC</string>
@@ -4956,11 +4999,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:ActiveInterface-Mon.DESC</string>
@@ -5028,11 +5071,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:ControlMode-Mon.DESC</string>
@@ -5044,11 +5087,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Sys:State-Mon.DESC</string>
@@ -5291,11 +5334,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:IGBTT-Mon_error</string>
@@ -5313,11 +5356,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:RectifierT-Mon_error</string>
@@ -5393,6 +5436,30 @@
        </item>
        <item row="9" column="0" rowspan="4">
         <layout class="QGridLayout" name="gridLayout_5">
+         <item row="7" column="0">
+          <widget class="PyDMLabel" name="dcLnkNom_58">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="rules" stdset="0">
+            <string>[{&quot;name&quot;: &quot;Visible&quot;, &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Enabled' if (ch[0] == 1) else 'Disabled'&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;ca://${P}.ENBL&quot;, &quot;trigger&quot;: true}]}]</string>
+           </property>
+           <property name="alarmSensitiveBorder" stdset="0">
+            <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="channel" stdset="0">
+            <string/>
+           </property>
+          </widget>
+         </item>
          <item row="6" column="0">
           <widget class="PyDMLabel" name="dcLnkNom_57">
            <property name="font">
@@ -5406,11 +5473,11 @@
            <property name="rules" stdset="0">
             <string>[{&quot;name&quot;: &quot;Visible&quot;, &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Connected' if (ch[0] == 1) else 'Disconnected'&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;ca://${P}.CNCT&quot;, &quot;trigger&quot;: true}]}]</string>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string/>
@@ -5436,11 +5503,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Clear-Cmd.DESC</string>
@@ -5452,11 +5519,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Save-Cmd.DESC</string>
@@ -5487,11 +5554,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:OutVolt-Sel.DESC</string>
@@ -5519,11 +5586,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Clear-Cmd_error</string>
@@ -5541,11 +5608,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:Save-Cmd_error</string>
@@ -5582,11 +5649,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}:OutVolt-Sel_error</string>
@@ -5620,11 +5687,11 @@
            <property name="rules" stdset="0">
             <string>[]</string>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}.IFACE</string>
@@ -5647,30 +5714,6 @@
            </property>
            <property name="relativeChange" stdset="0">
             <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="PyDMLabel" name="dcLnkNom_58">
-           <property name="font">
-            <font>
-             <pointsize>9</pointsize>
-            </font>
-           </property>
-           <property name="toolTip">
-            <string/>
-           </property>
-           <property name="rules" stdset="0">
-            <string>[{&quot;name&quot;: &quot;Visible&quot;, &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Enabled' if (ch[0] == 1) else 'Disabled'&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;ca://${P}.ENBL&quot;, &quot;trigger&quot;: true}]}]</string>
-           </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
-           <property name="alarmSensitiveBorder" stdset="0">
-            <bool>false</bool>
-           </property>
-           <property name="channel" stdset="0">
-            <string/>
            </property>
           </widget>
          </item>
@@ -5706,11 +5749,11 @@
            <property name="rules" stdset="0">
             <string>[{&quot;name&quot;: &quot;Visible&quot;, &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Auto Connect' if (ch[0] == 1) else 'no Auto Connect'&quot;, &quot;channels&quot;: [{&quot;channel&quot;: &quot;ca://${P}.AUCT&quot;, &quot;trigger&quot;: true}]}]</string>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string/>
@@ -5741,11 +5784,11 @@
            <property name="toolTip">
             <string/>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}.PORT</string>
@@ -5786,11 +5829,11 @@
            <property name="rules" stdset="0">
             <string>[]</string>
            </property>
-           <property name="showUnits" stdset="0">
-            <bool>true</bool>
-           </property>
            <property name="alarmSensitiveBorder" stdset="0">
             <bool>false</bool>
+           </property>
+           <property name="showUnits" stdset="0">
+            <bool>true</bool>
            </property>
            <property name="channel" stdset="0">
             <string>ca://${P}.ERRS</string>
@@ -5807,12 +5850,18 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="0" colspan="6">
-          <widget class="Line" name="line">
+         <item row="4" column="0">
+          <spacer name="verticalSpacer_4">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Vertical</enum>
            </property>
-          </widget>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>15</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </item>

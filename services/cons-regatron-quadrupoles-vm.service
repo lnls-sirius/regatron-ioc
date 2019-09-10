@@ -1,0 +1,15 @@
+[Unit]
+Description=Regatron Quadrupoles
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/VBoxManage startvm "Regatron Quadrupoles" --type headless
+ExecStop=/usr/bin/VBoxManage controlvm "Regatron Quadrupoles" poweroff
+RemainAfterExit=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

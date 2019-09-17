@@ -52,14 +52,14 @@ record(bo, "$(DEVICE):Clear-Cmd"){
     field(DISS, "INVALID")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnGroup-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnGroup-Mon_err"){
     field(DESC, "Standard warning group")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnGroup-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnGroup-Mon"){
     field(PINI, "NO")
     field(SCAN, "10 second")
     field(DESC, "Standard warning group")
@@ -67,17 +67,17 @@ record(longin, "$(DEVICE):Sys:StdWarnGroup-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup($(DEVICE),:Sys:StdWarnGroup-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup($(DEVICE),:Sys-StdWarnGroup-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrn-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnIntrn-Mon_err"){
     field(DESC, "Std warning group 0")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrn-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnIntrn-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 0")
@@ -85,17 +85,17 @@ record(longin, "$(DEVICE):Sys:StdWarnIntrn-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup0($(DEVICE),:Sys:StdWarnIntrn-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup0($(DEVICE),:Sys-StdWarnIntrn-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnPDSP-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnIntrnPDSP-Mon_err"){
     field(DESC, "Std warning group 1")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnPDSP-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnIntrnPDSP-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 1")
@@ -103,17 +103,17 @@ record(longin, "$(DEVICE):Sys:StdWarnIntrnPDSP-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup1($(DEVICE),:Sys:StdWarnIntrnPDSP-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup1($(DEVICE),:Sys-StdWarnIntrnPDSP-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnOutCurrent-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnOutCurrent-Mon_err"){
     field(DESC, "Std warning group 2")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnOutCurrent-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnOutCurrent-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 2")
@@ -121,17 +121,17 @@ record(longin, "$(DEVICE):Sys:StdWarnOutCurrent-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup2($(DEVICE),:Sys:StdWarnOutCurrent-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup2($(DEVICE),:Sys-StdWarnOutCurrent-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnOutVolt-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnOutVolt-Mon_err"){
     field(DESC, "Std warning group 3")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnOutVolt-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnOutVolt-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 3")
@@ -139,17 +139,17 @@ record(longin, "$(DEVICE):Sys:StdWarnOutVolt-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup3($(DEVICE),:Sys:StdWarnOutVolt-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup3($(DEVICE),:Sys-StdWarnOutVolt-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnSupply-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnSupply-Mon_err"){
     field(DESC, "Std warning group 4")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnSupply-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnSupply-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 4")
@@ -157,17 +157,17 @@ record(longin, "$(DEVICE):Sys:StdWarnSupply-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup4($(DEVICE),:Sys:StdWarnSupply-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup4($(DEVICE),:Sys-StdWarnSupply-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnT-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnT-Mon_err"){
     field(DESC, "Std warning group 5")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnT-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnT-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 5")
@@ -175,17 +175,17 @@ record(longin, "$(DEVICE):Sys:StdWarnT-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup5($(DEVICE),:Sys:StdWarnT-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup5($(DEVICE),:Sys-StdWarnT-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnComm-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnComm-Mon_err"){
     field(DESC, "Std warning group 6")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnComm-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnComm-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 6")
@@ -193,17 +193,17 @@ record(longin, "$(DEVICE):Sys:StdWarnComm-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup6($(DEVICE),:Sys:StdWarnComm-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup6($(DEVICE),:Sys-StdWarnComm-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnMod-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnIntrnMod-Mon_err"){
     field(DESC, "Std warning group 7")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnMod-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnIntrnMod-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 7")
@@ -211,17 +211,17 @@ record(longin, "$(DEVICE):Sys:StdWarnIntrnMod-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup7($(DEVICE),:Sys:StdWarnIntrnMod-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup7($(DEVICE),:Sys-StdWarnIntrnMod-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnADOvrRng1-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnAD1Ovr-Mon_err"){
     field(DESC, "Std warning group 8")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnADOvrRng1-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnAD1Ovr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 8")
@@ -229,17 +229,17 @@ record(longin, "$(DEVICE):Sys:StdWarnIntrnADOvrRng1-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup8($(DEVICE),:Sys:StdWarnIntrnADOvrRng1-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup8($(DEVICE),:Sys-StdWarnAD1Ovr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnADOvrRng2-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnAD2Ovr-Mon_err"){
     field(DESC, "Std warning group 9")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnADOvrRng2-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnAD2Ovr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group 9")
@@ -247,17 +247,17 @@ record(longin, "$(DEVICE):Sys:StdWarnIntrnADOvrRng2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroup9($(DEVICE),:Sys:StdWarnIntrnADOvrRng2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroup9($(DEVICE),:Sys-StdWarnAD2Ovr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnADUndrRng1-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnAD1Undr-Mon_err"){
     field(DESC, "Std warning group A")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnADUndrRng1-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnAD1Undr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group A")
@@ -265,17 +265,17 @@ record(longin, "$(DEVICE):Sys:StdWarnIntrnADUndrRng1-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroupA($(DEVICE),:Sys:StdWarnIntrnADUndrRng1-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroupA($(DEVICE),:Sys-StdWarnAD1Undr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnADUndrRng2-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnAD2Undr-Mon_err"){
     field(DESC, "Std warning group B")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnIntrnADUndrRng2-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnAD2Undr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group B")
@@ -283,17 +283,17 @@ record(longin, "$(DEVICE):Sys:StdWarnIntrnADUndrRng2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroupB($(DEVICE),:Sys:StdWarnIntrnADUndrRng2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroupB($(DEVICE),:Sys-StdWarnAD2Undr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnLogin-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnLogin-Mon_err"){
     field(DESC, "Std warning group C")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnLogin-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnLogin-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group C")
@@ -301,17 +301,17 @@ record(longin, "$(DEVICE):Sys:StdWarnLogin-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroupC($(DEVICE),:Sys:StdWarnLogin-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroupC($(DEVICE),:Sys-StdWarnLogin-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnConf-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnConf-Mon_err"){
     field(DESC, "Std warning group D")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnConf-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnConf-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group D")
@@ -319,17 +319,17 @@ record(longin, "$(DEVICE):Sys:StdWarnConf-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroupD($(DEVICE),:Sys:StdWarnConf-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroupD($(DEVICE),:Sys-StdWarnConf-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnConf2-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnConf2-Mon_err"){
     field(DESC, "Std warning group E")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnConf2-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnConf2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group E")
@@ -337,17 +337,17 @@ record(longin, "$(DEVICE):Sys:StdWarnConf2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroupE($(DEVICE),:Sys:StdWarnConf2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroupE($(DEVICE),:Sys-StdWarnConf2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnMisc-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdWarnMisc-Mon_err"){
     field(DESC, "Std warning group F")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdWarnMisc-Mon"){
+record(longin, "$(DEVICE):Sys-StdWarnMisc-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std warning group F")
@@ -355,17 +355,17 @@ record(longin, "$(DEVICE):Sys:StdWarnMisc-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdWarnGroupF($(DEVICE),:Sys:StdWarnMisc-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdWarnGroupF($(DEVICE),:Sys-StdWarnMisc-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnGroup-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnGroup-Mon_err"){
     field(DESC, "Extended warning group")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnGroup-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnGroup-Mon"){
     field(PINI, "NO")
     field(SCAN, "10 second")
     field(DESC, "Extended warning group")
@@ -373,17 +373,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnGroup-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroup($(DEVICE),:Sys:ExtWarnGroup-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroup($(DEVICE),:Sys-ExtWarnGroup-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCSystem-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCSystem-Mon_err"){
     field(DESC, "Ext warning group G")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCSystem-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCSystem-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group G")
@@ -391,17 +391,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnIBCSystem-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupG($(DEVICE),:Sys:ExtWarnIBCSystem-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupG($(DEVICE),:Sys-ExtWarnIBCSystem-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCSuppply-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCSuppply-Mon_err"){
     field(DESC, "Ext warning group H")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCSuppply-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCSuppply-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group H")
@@ -409,17 +409,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnIBCSuppply-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupH($(DEVICE),:Sys:ExtWarnIBCSuppply-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupH($(DEVICE),:Sys-ExtWarnIBCSuppply-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCComm-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCComm-Mon_err"){
     field(DESC, "Ext warning group J")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCComm-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCComm-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group J")
@@ -427,17 +427,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnIBCComm-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupJ($(DEVICE),:Sys:ExtWarnIBCComm-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupJ($(DEVICE),:Sys-ExtWarnIBCComm-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCPwr-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCPwr-Mon_err"){
     field(DESC, "Ext warning group K")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCPwr-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCPwr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group K")
@@ -445,17 +445,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnIBCPwr-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupK($(DEVICE),:Sys:ExtWarnIBCPwr-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupK($(DEVICE),:Sys-ExtWarnIBCPwr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCInverter-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter-Mon_err"){
     field(DESC, "Ext warning group L")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCInverter-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group L")
@@ -463,17 +463,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnIBCInverter-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupL($(DEVICE),:Sys:ExtWarnIBCInverter-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupL($(DEVICE),:Sys-ExtWarnIBCInverter-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCMisc-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCMisc-Mon_err"){
     field(DESC, "Ext warning group M")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCMisc-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCMisc-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group M")
@@ -481,17 +481,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnIBCMisc-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupM($(DEVICE),:Sys:ExtWarnIBCMisc-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupM($(DEVICE),:Sys-ExtWarnIBCMisc-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCInverter2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter2-Mon_err"){
     field(DESC, "Ext warning group N")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIBCInverter2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group N")
@@ -499,17 +499,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnIBCInverter2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupN($(DEVICE),:Sys:ExtWarnIBCInverter2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupN($(DEVICE),:Sys-ExtWarnIBCInverter2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnSupply2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnSupply2-Mon_err"){
     field(DESC, "Ext warning group S")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnSupply2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnSupply2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group S")
@@ -517,17 +517,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnSupply2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupS($(DEVICE),:Sys:ExtWarnSupply2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupS($(DEVICE),:Sys-ExtWarnSupply2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnLogin2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnLogin2-Mon_err"){
     field(DESC, "Ext warning group T")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnLogin2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnLogin2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group T")
@@ -535,17 +535,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnLogin2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupT($(DEVICE),:Sys:ExtWarnLogin2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupT($(DEVICE),:Sys-ExtWarnLogin2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnConf3-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnConf3-Mon_err"){
     field(DESC, "Ext warning group U")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnConf3-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnConf3-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group U")
@@ -553,17 +553,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnConf3-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupU($(DEVICE),:Sys:ExtWarnConf3-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupU($(DEVICE),:Sys-ExtWarnConf3-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnComm3-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnComm3-Mon_err"){
     field(DESC, "Ext warning group V")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnComm3-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnComm3-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group V")
@@ -571,17 +571,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnComm3-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupV($(DEVICE),:Sys:ExtWarnComm3-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupV($(DEVICE),:Sys-ExtWarnComm3-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIntrn2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIntrn2-Mon_err"){
     field(DESC, "Ext warning group W")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnIntrn2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIntrn2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group W")
@@ -589,17 +589,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnIntrn2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupW($(DEVICE),:Sys:ExtWarnIntrn2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupW($(DEVICE),:Sys-ExtWarnIntrn2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnComm2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnComm2-Mon_err"){
     field(DESC, "Ext warning group X")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtWarnComm2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnComm2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group X")
@@ -607,17 +607,17 @@ record(longin, "$(DEVICE):Sys:ExtWarnComm2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupX($(DEVICE),:Sys:ExtWarnComm2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupX($(DEVICE),:Sys-ExtWarnComm2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrGroup-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrGroup-Mon_err"){
     field(DESC, "Standard err group")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrGroup-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrGroup-Mon"){
     field(PINI, "NO")
     field(SCAN, "10 second")
     field(DESC, "Standard err group")
@@ -625,17 +625,17 @@ record(longin, "$(DEVICE):Sys:StdErrGroup-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup($(DEVICE),:Sys:StdErrGroup-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup($(DEVICE),:Sys-StdErrGroup-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrn-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrIntrn-Mon_err"){
     field(DESC, "Std err group 0")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrn-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrIntrn-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 0")
@@ -643,17 +643,17 @@ record(longin, "$(DEVICE):Sys:StdErrIntrn-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup0($(DEVICE),:Sys:StdErrIntrn-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup0($(DEVICE),:Sys-StdErrIntrn-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnPDSP-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrIntrnPDSP-Mon_err"){
     field(DESC, "Std err group 1")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnPDSP-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrIntrnPDSP-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 1")
@@ -661,17 +661,17 @@ record(longin, "$(DEVICE):Sys:StdErrIntrnPDSP-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup1($(DEVICE),:Sys:StdErrIntrnPDSP-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup1($(DEVICE),:Sys-StdErrIntrnPDSP-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrOutCurrent-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrOutCurrent-Mon_err"){
     field(DESC, "Std err group 2")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrOutCurrent-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrOutCurrent-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 2")
@@ -679,17 +679,17 @@ record(longin, "$(DEVICE):Sys:StdErrOutCurrent-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup2($(DEVICE),:Sys:StdErrOutCurrent-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup2($(DEVICE),:Sys-StdErrOutCurrent-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrOutVolt-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrOutVolt-Mon_err"){
     field(DESC, "Std err group 3")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrOutVolt-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrOutVolt-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 3")
@@ -697,17 +697,17 @@ record(longin, "$(DEVICE):Sys:StdErrOutVolt-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup3($(DEVICE),:Sys:StdErrOutVolt-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup3($(DEVICE),:Sys-StdErrOutVolt-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrSupply-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrSupply-Mon_err"){
     field(DESC, "Std err group 4")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrSupply-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrSupply-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 4")
@@ -715,17 +715,17 @@ record(longin, "$(DEVICE):Sys:StdErrSupply-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup4($(DEVICE),:Sys:StdErrSupply-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup4($(DEVICE),:Sys-StdErrSupply-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrT-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrT-Mon_err"){
     field(DESC, "Std err group 5")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrT-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrT-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 5")
@@ -733,17 +733,17 @@ record(longin, "$(DEVICE):Sys:StdErrT-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup5($(DEVICE),:Sys:StdErrT-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup5($(DEVICE),:Sys-StdErrT-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrComm-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrComm-Mon_err"){
     field(DESC, "Std err group 6")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrComm-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrComm-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 6")
@@ -751,17 +751,17 @@ record(longin, "$(DEVICE):Sys:StdErrComm-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup6($(DEVICE),:Sys:StdErrComm-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup6($(DEVICE),:Sys-StdErrComm-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnMod-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrIntrnMod-Mon_err"){
     field(DESC, "Std err group 7")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnMod-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrIntrnMod-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 7")
@@ -769,17 +769,17 @@ record(longin, "$(DEVICE):Sys:StdErrIntrnMod-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup7($(DEVICE),:Sys:StdErrIntrnMod-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup7($(DEVICE),:Sys-StdErrIntrnMod-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnADOvrRng1-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrAD1Ovr-Mon_err"){
     field(DESC, "Std err group 8")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnADOvrRng1-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrAD1Ovr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 8")
@@ -787,17 +787,17 @@ record(longin, "$(DEVICE):Sys:StdErrIntrnADOvrRng1-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup8($(DEVICE),:Sys:StdErrIntrnADOvrRng1-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup8($(DEVICE),:Sys-StdErrAD1Ovr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnADOvrRng2-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrAD2Ovr-Mon_err"){
     field(DESC, "Std err group 9")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnADOvrRng2-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrAD2Ovr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group 9")
@@ -805,17 +805,17 @@ record(longin, "$(DEVICE):Sys:StdErrIntrnADOvrRng2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroup9($(DEVICE),:Sys:StdErrIntrnADOvrRng2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroup9($(DEVICE),:Sys-StdErrAD2Ovr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnADUndrRng1-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrAD1Undr-Mon_err"){
     field(DESC, "Std err group A")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnADUndrRng1-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrAD1Undr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group A")
@@ -823,17 +823,17 @@ record(longin, "$(DEVICE):Sys:StdErrIntrnADUndrRng1-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroupA($(DEVICE),:Sys:StdErrIntrnADUndrRng1-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroupA($(DEVICE),:Sys-StdErrAD1Undr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnADUndrRng2-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrAD2Undr-Mon_err"){
     field(DESC, "Std err group B")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrIntrnADUndrRng2-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrAD2Undr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group B")
@@ -841,17 +841,17 @@ record(longin, "$(DEVICE):Sys:StdErrIntrnADUndrRng2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroupB($(DEVICE),:Sys:StdErrIntrnADUndrRng2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroupB($(DEVICE),:Sys-StdErrAD2Undr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrLogin-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrLogin-Mon_err"){
     field(DESC, "Std err group C")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrLogin-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrLogin-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group C")
@@ -859,17 +859,17 @@ record(longin, "$(DEVICE):Sys:StdErrLogin-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroupC($(DEVICE),:Sys:StdErrLogin-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroupC($(DEVICE),:Sys-StdErrLogin-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrConf-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrConf-Mon_err"){
     field(DESC, "Std err group D")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrConf-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrConf-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group D")
@@ -877,17 +877,17 @@ record(longin, "$(DEVICE):Sys:StdErrConf-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroupD($(DEVICE),:Sys:StdErrConf-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroupD($(DEVICE),:Sys-StdErrConf-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrConf2-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrConf2-Mon_err"){
     field(DESC, "Std err group E")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrConf2-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrConf2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group E")
@@ -895,17 +895,17 @@ record(longin, "$(DEVICE):Sys:StdErrConf2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroupE($(DEVICE),:Sys:StdErrConf2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroupE($(DEVICE),:Sys-StdErrConf2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrMisc-Mon_err"){
+record(longin, "$(DEVICE):Sys-StdErrMisc-Mon_err"){
     field(DESC, "Std err group F")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:StdErrMisc-Mon"){
+record(longin, "$(DEVICE):Sys-StdErrMisc-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Std err group F")
@@ -913,17 +913,17 @@ record(longin, "$(DEVICE):Sys:StdErrMisc-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysStdErrGroupF($(DEVICE),:Sys:StdErrMisc-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysStdErrGroupF($(DEVICE),:Sys-StdErrMisc-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrGroup-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrGroup-Mon_err"){
     field(DESC, "Extended err group")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrGroup-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrGroup-Mon"){
     field(PINI, "NO")
     field(SCAN, "10 second")
     field(DESC, "Extended err group")
@@ -931,17 +931,17 @@ record(longin, "$(DEVICE):Sys:ExtErrGroup-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroup($(DEVICE),:Sys:ExtErrGroup-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroup($(DEVICE),:Sys-ExtErrGroup-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCSystem-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCSystem-Mon_err"){
     field(DESC, "Ext err group G")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCSystem-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCSystem-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group G")
@@ -949,17 +949,17 @@ record(longin, "$(DEVICE):Sys:ExtErrIBCSystem-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupG($(DEVICE),:Sys:ExtErrIBCSystem-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupG($(DEVICE),:Sys-ExtErrIBCSystem-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCSuppply-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCSuppply-Mon_err"){
     field(DESC, "Ext err group H")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCSuppply-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCSuppply-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group H")
@@ -967,17 +967,17 @@ record(longin, "$(DEVICE):Sys:ExtErrIBCSuppply-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupH($(DEVICE),:Sys:ExtErrIBCSuppply-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupH($(DEVICE),:Sys-ExtErrIBCSuppply-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCComm-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCComm-Mon_err"){
     field(DESC, "Ext err group J")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCComm-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCComm-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group J")
@@ -985,17 +985,17 @@ record(longin, "$(DEVICE):Sys:ExtErrIBCComm-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupJ($(DEVICE),:Sys:ExtErrIBCComm-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupJ($(DEVICE),:Sys-ExtErrIBCComm-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCPwr-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCPwr-Mon_err"){
     field(DESC, "Ext err group K")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCPwr-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCPwr-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group K")
@@ -1003,17 +1003,17 @@ record(longin, "$(DEVICE):Sys:ExtErrIBCPwr-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupK($(DEVICE),:Sys:ExtErrIBCPwr-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupK($(DEVICE),:Sys-ExtErrIBCPwr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCInverter-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCInverter-Mon_err"){
     field(DESC, "Ext err group L")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCInverter-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCInverter-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group L")
@@ -1021,17 +1021,17 @@ record(longin, "$(DEVICE):Sys:ExtErrIBCInverter-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupL($(DEVICE),:Sys:ExtErrIBCInverter-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupL($(DEVICE),:Sys-ExtErrIBCInverter-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCMisc-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCMisc-Mon_err"){
     field(DESC, "Ext err group M")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCMisc-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCMisc-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group M")
@@ -1039,17 +1039,17 @@ record(longin, "$(DEVICE):Sys:ExtErrIBCMisc-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupM($(DEVICE),:Sys:ExtErrIBCMisc-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupM($(DEVICE),:Sys-ExtErrIBCMisc-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCInverter2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCInverter2-Mon_err"){
     field(DESC, "Ext err group N")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIBCInverter2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCInverter2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group N")
@@ -1057,17 +1057,17 @@ record(longin, "$(DEVICE):Sys:ExtErrIBCInverter2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupN($(DEVICE),:Sys:ExtErrIBCInverter2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupN($(DEVICE),:Sys-ExtErrIBCInverter2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrSupply2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrSupply2-Mon_err"){
     field(DESC, "Ext err group S")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrSupply2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrSupply2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group S")
@@ -1075,17 +1075,17 @@ record(longin, "$(DEVICE):Sys:ExtErrSupply2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupS($(DEVICE),:Sys:ExtErrSupply2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupS($(DEVICE),:Sys-ExtErrSupply2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrLogin2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrLogin2-Mon_err"){
     field(DESC, "Ext err group T")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrLogin2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrLogin2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group T")
@@ -1093,17 +1093,17 @@ record(longin, "$(DEVICE):Sys:ExtErrLogin2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupT($(DEVICE),:Sys:ExtErrLogin2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupT($(DEVICE),:Sys-ExtErrLogin2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrConf3-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrConf3-Mon_err"){
     field(DESC, "Ext err group U")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrConf3-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrConf3-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group U")
@@ -1111,17 +1111,17 @@ record(longin, "$(DEVICE):Sys:ExtErrConf3-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupU($(DEVICE),:Sys:ExtErrConf3-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupU($(DEVICE),:Sys-ExtErrConf3-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrComm3-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrComm3-Mon_err"){
     field(DESC, "Ext err group V")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrComm3-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrComm3-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group V")
@@ -1129,17 +1129,17 @@ record(longin, "$(DEVICE):Sys:ExtErrComm3-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupV($(DEVICE),:Sys:ExtErrComm3-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupV($(DEVICE),:Sys-ExtErrComm3-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIntrn2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIntrn2-Mon_err"){
     field(DESC, "Ext err group W")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrIntrn2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIntrn2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group W")
@@ -1147,17 +1147,17 @@ record(longin, "$(DEVICE):Sys:ExtErrIntrn2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupW($(DEVICE),:Sys:ExtErrIntrn2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupW($(DEVICE),:Sys-ExtErrIntrn2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrComm2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrComm2-Mon_err"){
     field(DESC, "Ext err group X")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys:ExtErrComm2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrComm2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group X")
@@ -1165,17 +1165,17 @@ record(longin, "$(DEVICE):Sys:ExtErrComm2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupX($(DEVICE),:Sys:ExtErrComm2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupX($(DEVICE),:Sys-ExtErrComm2-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:State-Mon_err"){
+record(longin, "$(DEVICE):Sys-State-Mon_err"){
     field(DESC, "System state")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(mbbi, "$(DEVICE):Sys:State-Mon") {
+record(mbbi, "$(DEVICE):Sys-State-Mon") {
     field(PINI, "NO")
     field(SCAN, "10 second")
     field(PHAS, "0")
@@ -1216,17 +1216,17 @@ record(mbbi, "$(DEVICE):Sys:State-Mon") {
     field(FFSV, "")
 
     field(DTYP, "stream")
-    field(INP,  "@TopCon.proto getSysState($(DEVICE),:Sys:State-Mon) $(PORT)")
+    field(INP,  "@TopCon.proto getSysState($(DEVICE),:Sys-State-Mon) $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:ControlMode-Mon_err"){
+record(longin, "$(DEVICE):Sys-ControlMode-Mon_err"){
     field(DESC, "System control mode")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(mbbi, "$(DEVICE):Sys:ControlMode-Mon") {
+record(mbbi, "$(DEVICE):Sys-ControlMode-Mon") {
     field(PINI, "NO")
     field(SCAN, "10 second")
     field(PHAS, "0")
@@ -1267,55 +1267,55 @@ record(mbbi, "$(DEVICE):Sys:ControlMode-Mon") {
     field(FFSV, "")
 
     field(DTYP, "stream")
-    field(INP,  "@TopCon.proto getSysControlMode($(DEVICE),:Sys:ControlMode-Mon) $(PORT)")
+    field(INP,  "@TopCon.proto getSysControlMode($(DEVICE),:Sys-ControlMode-Mon) $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:VoltPreset-RB_err"){
+record(longin, "$(DEVICE):Sys-VoltPreset-RB_err"){
     field(DESC, "System voltage preset Q1")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$(DEVICE):Sys:VoltPreset-SP_err"){
+record(longin, "$(DEVICE):Sys-VoltPreset-SP_err"){
     field(DESC, "System voltage preset Q1")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(calcout, "$(DEVICE):Sys:VoltPreset-RB_eslo"){
+record(calcout, "$(DEVICE):Sys-VoltPreset-RB_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon CP MSS")
     field(EGU,  "V")
-    field(OUT,  "$(DEVICE):Sys:VoltPreset-RB.ESLO")
+    field(OUT,  "$(DEVICE):Sys-VoltPreset-RB.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:VoltPreset-RB_d"){
+record(calcout, "$(DEVICE):Sys-VoltPreset-RB_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxVolt-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:VoltPreset-RB.DISA")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxVolt-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-VoltPreset-RB.DISA")
 }
-record(calcout, "$(DEVICE):Sys:VoltPreset-SP_eslo"){
+record(calcout, "$(DEVICE):Sys-VoltPreset-SP_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon CP MSS")
     field(EGU,  "V")
-    field(OUT,  "$(DEVICE):Sys:VoltPreset-SP.ESLO MSS")
+    field(OUT,  "$(DEVICE):Sys-VoltPreset-SP.ESLO MSS")
 }
-record(calcout, "$(DEVICE):Sys:VoltPreset-SP_d"){
+record(calcout, "$(DEVICE):Sys-VoltPreset-SP_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxVolt-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:VoltPreset-SP.DISA")
-    field(FLNK, "$(DEVICE):Sys:VoltPreset-SP_H")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxVolt-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-VoltPreset-SP.DISA")
+    field(FLNK, "$(DEVICE):Sys-VoltPreset-SP_H")
 }
-record(ao, "$(DEVICE):Sys:VoltPreset-SP_H"){
+record(ao, "$(DEVICE):Sys-VoltPreset-SP_H"){
     field(DTYP, "Soft Channel")
     field(OMSL, "closed_loop")
-    field(DOL,  "$(DEVICE):Sys:MaxVolt-Mon")
-    field(OUT,  "$(DEVICE):Sys:VoltPreset-SP.DRVH")
+    field(DOL,  "$(DEVICE):Sys-MaxVolt-Mon")
+    field(OUT,  "$(DEVICE):Sys-VoltPreset-SP.DRVH")
 }
-record(ai, "$(DEVICE):Sys:VoltPreset-RB"){
+record(ai, "$(DEVICE):Sys-VoltPreset-RB"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "System voltage preset Q1")
@@ -1330,9 +1330,9 @@ record(ai, "$(DEVICE):Sys:VoltPreset-RB"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysVoltPreset($(DEVICE),:Sys:VoltPreset-RB)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysVoltPreset($(DEVICE),:Sys-VoltPreset-RB)  $(PORT)")
 }
-record(ao, "$(DEVICE):Sys:VoltPreset-SP"){
+record(ao, "$(DEVICE):Sys-VoltPreset-SP"){
     field(DESC, "System voltage preset Q1")
     field(DTYP, "stream")
     field(EGU,  "V")
@@ -1343,56 +1343,56 @@ record(ao, "$(DEVICE):Sys:VoltPreset-SP"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto setSysVoltPreset($(DEVICE),:Sys:VoltPreset-SP)  $(PORT)")
-    field(FLNK, "$(DEVICE):Sys:VoltPreset-RB")
+    field(OUT,  "@TopCon.proto setSysVoltPreset($(DEVICE),:Sys-VoltPreset-SP)  $(PORT)")
+    field(FLNK, "$(DEVICE):Sys-VoltPreset-RB")
 }
 
-record(longin, "$(DEVICE):Sys:VoltLimQ4-RB_err"){
+record(longin, "$(DEVICE):Sys-VoltLimQ4-RB_err"){
     field(DESC, "System voltage limit Q4")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$(DEVICE):Sys:VoltLimQ4-SP_err"){
+record(longin, "$(DEVICE):Sys-VoltLimQ4-SP_err"){
     field(DESC, "System voltage limit Q4")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(calcout, "$(DEVICE):Sys:VoltLimQ4-RB_eslo"){
+record(calcout, "$(DEVICE):Sys-VoltLimQ4-RB_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon CP MSS")
     field(EGU,  "V")
-    field(OUT,  "$(DEVICE):Sys:VoltLimQ4-RB.ESLO")
+    field(OUT,  "$(DEVICE):Sys-VoltLimQ4-RB.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:VoltLimQ4-RB_d"){
+record(calcout, "$(DEVICE):Sys-VoltLimQ4-RB_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxVolt-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:VoltLimQ4-RB.DISA")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxVolt-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-VoltLimQ4-RB.DISA")
 }
-record(calcout, "$(DEVICE):Sys:VoltLimQ4-SP_eslo"){
+record(calcout, "$(DEVICE):Sys-VoltLimQ4-SP_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon CP MSS")
     field(EGU,  "V")
-    field(OUT,  "$(DEVICE):Sys:VoltLimQ4-SP.ESLO MSS")
+    field(OUT,  "$(DEVICE):Sys-VoltLimQ4-SP.ESLO MSS")
 }
-record(calcout, "$(DEVICE):Sys:VoltLimQ4-SP_d"){
+record(calcout, "$(DEVICE):Sys-VoltLimQ4-SP_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxVolt-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:VoltLimQ4-SP.DISA")
-    field(FLNK, "$(DEVICE):Sys:VoltLimQ4-SP_H")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxVolt-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-VoltLimQ4-SP.DISA")
+    field(FLNK, "$(DEVICE):Sys-VoltLimQ4-SP_H")
 }
-record(ao, "$(DEVICE):Sys:VoltLimQ4-SP_H"){
+record(ao, "$(DEVICE):Sys-VoltLimQ4-SP_H"){
     field(DTYP, "Soft Channel")
     field(OMSL, "closed_loop")
-    field(DOL,  "$(DEVICE):Sys:MaxVolt-Mon")
-    field(OUT,  "$(DEVICE):Sys:VoltLimQ4-SP.DRVH")
+    field(DOL,  "$(DEVICE):Sys-MaxVolt-Mon")
+    field(OUT,  "$(DEVICE):Sys-VoltLimQ4-SP.DRVH")
 }
-record(ai, "$(DEVICE):Sys:VoltLimQ4-RB"){
+record(ai, "$(DEVICE):Sys-VoltLimQ4-RB"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "System voltage limit Q4")
@@ -1407,9 +1407,9 @@ record(ai, "$(DEVICE):Sys:VoltLimQ4-RB"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysVoltLimQ4($(DEVICE),:Sys:VoltLimQ4-RB)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysVoltLimQ4($(DEVICE),:Sys-VoltLimQ4-RB)  $(PORT)")
 }
-record(ao, "$(DEVICE):Sys:VoltLimQ4-SP"){
+record(ao, "$(DEVICE):Sys-VoltLimQ4-SP"){
     field(DESC, "System voltage limit Q4")
     field(DTYP, "stream")
     field(EGU,  "V")
@@ -1420,56 +1420,56 @@ record(ao, "$(DEVICE):Sys:VoltLimQ4-SP"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto setSysVoltLimQ4($(DEVICE),:Sys:VoltLimQ4-SP)  $(PORT)")
-    field(FLNK, "$(DEVICE):Sys:VoltLimQ4-RB")
+    field(OUT,  "@TopCon.proto setSysVoltLimQ4($(DEVICE),:Sys-VoltLimQ4-SP)  $(PORT)")
+    field(FLNK, "$(DEVICE):Sys-VoltLimQ4-RB")
 }
 
-record(longin, "$(DEVICE):Sys:CurrentPreset-RB_err"){
+record(longin, "$(DEVICE):Sys-CurrentPreset-RB_err"){
     field(DESC, "System current preset Q1")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$(DEVICE):Sys:CurrentPreset-SP_err"){
+record(longin, "$(DEVICE):Sys-CurrentPreset-SP_err"){
     field(DESC, "System current preset Q1")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(calcout, "$(DEVICE):Sys:CurrentPreset-RB_eslo"){
+record(calcout, "$(DEVICE):Sys-CurrentPreset-RB_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxCurrent-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxCurrent-Mon CP MSS")
     field(EGU,  "V")
-    field(OUT,  "$(DEVICE):Sys:CurrentPreset-RB.ESLO")
+    field(OUT,  "$(DEVICE):Sys-CurrentPreset-RB.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:CurrentPreset-RB_d"){
+record(calcout, "$(DEVICE):Sys-CurrentPreset-RB_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxCurrent-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxCurrent-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:CurrentPreset-RB.DISA")
+    field(INPA, "$(DEVICE):Sys-MaxCurrent-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxCurrent-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-CurrentPreset-RB.DISA")
 }
-record(calcout, "$(DEVICE):Sys:CurrentPreset-SP_eslo"){
+record(calcout, "$(DEVICE):Sys-CurrentPreset-SP_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxCurrent-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxCurrent-Mon CP MSS")
     field(EGU,  "V")
-    field(OUT,  "$(DEVICE):Sys:CurrentPreset-SP.ESLO MSS")
+    field(OUT,  "$(DEVICE):Sys-CurrentPreset-SP.ESLO MSS")
 }
-record(calcout, "$(DEVICE):Sys:CurrentPreset-SP_d"){
+record(calcout, "$(DEVICE):Sys-CurrentPreset-SP_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxCurrent-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxCurrent-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:CurrentPreset-SP.DISA")
-    field(FLNK, "$(DEVICE):Sys:CurrentPreset-SP_H")
+    field(INPA, "$(DEVICE):Sys-MaxCurrent-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxCurrent-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-CurrentPreset-SP.DISA")
+    field(FLNK, "$(DEVICE):Sys-CurrentPreset-SP_H")
 }
-record(ao, "$(DEVICE):Sys:CurrentPreset-SP_H"){
+record(ao, "$(DEVICE):Sys-CurrentPreset-SP_H"){
     field(DTYP, "Soft Channel")
     field(OMSL, "closed_loop")
-    field(DOL,  "$(DEVICE):Sys:MaxCurrent-Mon")
-    field(OUT,  "$(DEVICE):Sys:CurrentPreset-SP.DRVH")
+    field(DOL,  "$(DEVICE):Sys-MaxCurrent-Mon")
+    field(OUT,  "$(DEVICE):Sys-CurrentPreset-SP.DRVH")
 }
-record(ai, "$(DEVICE):Sys:CurrentPreset-RB"){
+record(ai, "$(DEVICE):Sys-CurrentPreset-RB"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "System current preset Q1")
@@ -1484,9 +1484,9 @@ record(ai, "$(DEVICE):Sys:CurrentPreset-RB"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysCurrentPreset($(DEVICE),:Sys:CurrentPreset-RB)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysCurrentPreset($(DEVICE),:Sys-CurrentPreset-RB)  $(PORT)")
 }
-record(ao, "$(DEVICE):Sys:CurrentPreset-SP"){
+record(ao, "$(DEVICE):Sys-CurrentPreset-SP"){
     field(DESC, "System current preset Q1")
     field(DTYP, "stream")
     field(EGU,  "V")
@@ -1497,56 +1497,56 @@ record(ao, "$(DEVICE):Sys:CurrentPreset-SP"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto setSysCurrentPreset($(DEVICE),:Sys:CurrentPreset-SP)  $(PORT)")
-    field(FLNK, "$(DEVICE):Sys:CurrentPreset-RB")
+    field(OUT,  "@TopCon.proto setSysCurrentPreset($(DEVICE),:Sys-CurrentPreset-SP)  $(PORT)")
+    field(FLNK, "$(DEVICE):Sys-CurrentPreset-RB")
 }
 
-record(longin, "$(DEVICE):Sys:CurrentLimQ4-RB_err"){
+record(longin, "$(DEVICE):Sys-CurrentLimQ4-RB_err"){
     field(DESC, "System current limit Q4")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$(DEVICE):Sys:CurrentLimQ4-SP_err"){
+record(longin, "$(DEVICE):Sys-CurrentLimQ4-SP_err"){
     field(DESC, "System current limit Q4")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(calcout, "$(DEVICE):Sys:CurrentLimQ4-RB_eslo"){
+record(calcout, "$(DEVICE):Sys-CurrentLimQ4-RB_eslo"){
     field(CALC, "A/-4000.")
-    field(INPA, "$(DEVICE):Sys:MinCurrent-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MinCurrent-Mon CP MSS")
     field(EGU,  "A")
-    field(OUT,  "$(DEVICE):Sys:CurrentLimQ4-RB.ESLO")
+    field(OUT,  "$(DEVICE):Sys-CurrentLimQ4-RB.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:CurrentLimQ4-RB_d"){
+record(calcout, "$(DEVICE):Sys-CurrentLimQ4-RB_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MinCurrent-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MinCurrent-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:CurrentLimQ4-RB.DISA")
+    field(INPA, "$(DEVICE):Sys-MinCurrent-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MinCurrent-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-CurrentLimQ4-RB.DISA")
 }
-record(calcout, "$(DEVICE):Sys:CurrentLimQ4-SP_eslo"){
+record(calcout, "$(DEVICE):Sys-CurrentLimQ4-SP_eslo"){
     field(CALC, "A/-4000.")
-    field(INPA, "$(DEVICE):Sys:MinCurrent-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MinCurrent-Mon CP MSS")
     field(EGU,  "A")
-    field(OUT,  "$(DEVICE):Sys:CurrentLimQ4-SP.ESLO MSS")
+    field(OUT,  "$(DEVICE):Sys-CurrentLimQ4-SP.ESLO MSS")
 }
-record(calcout, "$(DEVICE):Sys:CurrentLimQ4-SP_d"){
+record(calcout, "$(DEVICE):Sys-CurrentLimQ4-SP_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MinCurrent-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MinCurrent-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:CurrentLimQ4-SP.DISA")
-    field(FLNK, "$(DEVICE):Sys:CurrentLimQ4-SP_L")
+    field(INPA, "$(DEVICE):Sys-MinCurrent-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MinCurrent-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-CurrentLimQ4-SP.DISA")
+    field(FLNK, "$(DEVICE):Sys-CurrentLimQ4-SP_L")
 }
-record(ao, "$(DEVICE):Sys:CurrentLimQ4-SP_L"){
+record(ao, "$(DEVICE):Sys-CurrentLimQ4-SP_L"){
     field(DTYP, "Soft Channel")
     field(OMSL, "closed_loop")
-    field(DOL,  "$(DEVICE):Sys:MinCurrent-Mon")
-    field(OUT,  "$(DEVICE):Sys:CurrentLimQ4-SP.DRVL")
+    field(DOL,  "$(DEVICE):Sys-MinCurrent-Mon")
+    field(OUT,  "$(DEVICE):Sys-CurrentLimQ4-SP.DRVL")
 }
-record(ai, "$(DEVICE):Sys:CurrentLimQ4-RB"){
+record(ai, "$(DEVICE):Sys-CurrentLimQ4-RB"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "System current limit Q4")
@@ -1561,9 +1561,9 @@ record(ai, "$(DEVICE):Sys:CurrentLimQ4-RB"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysCurrentLimQ4($(DEVICE),:Sys:CurrentLimQ4-RB)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysCurrentLimQ4($(DEVICE),:Sys-CurrentLimQ4-RB)  $(PORT)")
 }
-record(ao, "$(DEVICE):Sys:CurrentLimQ4-SP"){
+record(ao, "$(DEVICE):Sys-CurrentLimQ4-SP"){
     field(DESC, "System current limit Q4")
     field(DTYP, "stream")
     field(EGU,  "A")
@@ -1574,56 +1574,56 @@ record(ao, "$(DEVICE):Sys:CurrentLimQ4-SP"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto setSysCurrentLimQ4($(DEVICE),:Sys:CurrentLimQ4-SP)  $(PORT)")
-    field(FLNK, "$(DEVICE):Sys:CurrentLimQ4-RB")
+    field(OUT,  "@TopCon.proto setSysCurrentLimQ4($(DEVICE),:Sys-CurrentLimQ4-SP)  $(PORT)")
+    field(FLNK, "$(DEVICE):Sys-CurrentLimQ4-RB")
 }
 
-record(longin, "$(DEVICE):Sys:PwrLimQ4-RB_err"){
+record(longin, "$(DEVICE):Sys-PwrLimQ4-RB_err"){
     field(DESC, "System power limit Q4")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$(DEVICE):Sys:PwrLimQ4-SP_err"){
+record(longin, "$(DEVICE):Sys-PwrLimQ4-SP_err"){
     field(DESC, "System power limit Q4")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(calcout, "$(DEVICE):Sys:PwrLimQ4-RB_eslo"){
+record(calcout, "$(DEVICE):Sys-PwrLimQ4-RB_eslo"){
     field(CALC, "A/-4000.")
-    field(INPA, "$(DEVICE):Sys:MinPwr-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MinPwr-Mon CP MSS")
     field(EGU,  "kW")
-    field(OUT,  "$(DEVICE):Sys:PwrLimQ4-RB.ESLO")
+    field(OUT,  "$(DEVICE):Sys-PwrLimQ4-RB.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:PwrLimQ4-RB_d"){
+record(calcout, "$(DEVICE):Sys-PwrLimQ4-RB_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MinPwr-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MinPwr-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:PwrLimQ4-RB.DISA")
+    field(INPA, "$(DEVICE):Sys-MinPwr-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MinPwr-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-PwrLimQ4-RB.DISA")
 }
-record(calcout, "$(DEVICE):Sys:PwrLimQ4-SP_eslo"){
+record(calcout, "$(DEVICE):Sys-PwrLimQ4-SP_eslo"){
     field(CALC, "A/-4000.")
-    field(INPA, "$(DEVICE):Sys:MinPwr-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MinPwr-Mon CP MSS")
     field(EGU,  "kW")
-    field(OUT,  "$(DEVICE):Sys:PwrLimQ4-SP.ESLO MSS")
+    field(OUT,  "$(DEVICE):Sys-PwrLimQ4-SP.ESLO MSS")
 }
-record(calcout, "$(DEVICE):Sys:PwrLimQ4-SP_d"){
+record(calcout, "$(DEVICE):Sys-PwrLimQ4-SP_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MinPwr-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MinPwr-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:PwrLimQ4-SP.DISA")
-    field(FLNK, "$(DEVICE):Sys:PwrLimQ4-SP_L")
+    field(INPA, "$(DEVICE):Sys-MinPwr-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MinPwr-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-PwrLimQ4-SP.DISA")
+    field(FLNK, "$(DEVICE):Sys-PwrLimQ4-SP_L")
 }
-record(ao, "$(DEVICE):Sys:PwrLimQ4-SP_L"){
+record(ao, "$(DEVICE):Sys-PwrLimQ4-SP_L"){
     field(DTYP, "Soft Channel")
     field(OMSL, "closed_loop")
-    field(DOL,  "$(DEVICE):Sys:MinPwr-Mon")
-    field(OUT,  "$(DEVICE):Sys:PwrLimQ4-SP.DRVL")
+    field(DOL,  "$(DEVICE):Sys-MinPwr-Mon")
+    field(OUT,  "$(DEVICE):Sys-PwrLimQ4-SP.DRVL")
 }
-record(ai, "$(DEVICE):Sys:PwrLimQ4-RB"){
+record(ai, "$(DEVICE):Sys-PwrLimQ4-RB"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "System power limit Q4")
@@ -1638,9 +1638,9 @@ record(ai, "$(DEVICE):Sys:PwrLimQ4-RB"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysPwrLimQ4($(DEVICE),:Sys:PwrLimQ4-RB)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysPwrLimQ4($(DEVICE),:Sys-PwrLimQ4-RB)  $(PORT)")
 }
-record(ao, "$(DEVICE):Sys:PwrLimQ4-SP"){
+record(ao, "$(DEVICE):Sys-PwrLimQ4-SP"){
     field(DESC, "System power limit Q4")
     field(DTYP, "stream")
     field(EGU,  "kW")
@@ -1651,56 +1651,56 @@ record(ao, "$(DEVICE):Sys:PwrLimQ4-SP"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto setSysPwrLimQ4($(DEVICE),:Sys:PwrLimQ4-SP)  $(PORT)")
-    field(FLNK, "$(DEVICE):Sys:PwrLimQ4-RB")
+    field(OUT,  "@TopCon.proto setSysPwrLimQ4($(DEVICE),:Sys-PwrLimQ4-SP)  $(PORT)")
+    field(FLNK, "$(DEVICE):Sys-PwrLimQ4-RB")
 }
 
-record(longin, "$(DEVICE):Sys:PwrPreset-RB_err"){
+record(longin, "$(DEVICE):Sys-PwrPreset-RB_err"){
     field(DESC, "System power preset Q1")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$(DEVICE):Sys:PwrPreset-SP_err"){
+record(longin, "$(DEVICE):Sys-PwrPreset-SP_err"){
     field(DESC, "System power preset Q1")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(calcout, "$(DEVICE):Sys:PwrPreset-RB_eslo"){
+record(calcout, "$(DEVICE):Sys-PwrPreset-RB_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxPwr-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxPwr-Mon CP MSS")
     field(EGU,  "kW")
-    field(OUT,  "$(DEVICE):Sys:PwrPreset-RB.ESLO")
+    field(OUT,  "$(DEVICE):Sys-PwrPreset-RB.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:PwrPreset-RB_d"){
+record(calcout, "$(DEVICE):Sys-PwrPreset-RB_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxPwr-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxPwr-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:PwrPreset-RB.DISA")
+    field(INPA, "$(DEVICE):Sys-MaxPwr-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxPwr-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-PwrPreset-RB.DISA")
 }
-record(calcout, "$(DEVICE):Sys:PwrPreset-SP_eslo"){
+record(calcout, "$(DEVICE):Sys-PwrPreset-SP_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxPwr-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxPwr-Mon CP MSS")
     field(EGU,  "kW")
-    field(OUT,  "$(DEVICE):Sys:PwrPreset-SP.ESLO MSS")
+    field(OUT,  "$(DEVICE):Sys-PwrPreset-SP.ESLO MSS")
 }
-record(calcout, "$(DEVICE):Sys:PwrPreset-SP_d"){
+record(calcout, "$(DEVICE):Sys-PwrPreset-SP_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxPwr-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxPwr-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:PwrPreset-SP.DISA")
-    field(FLNK, "$(DEVICE):Sys:PwrPreset-SP_H")
+    field(INPA, "$(DEVICE):Sys-MaxPwr-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxPwr-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-PwrPreset-SP.DISA")
+    field(FLNK, "$(DEVICE):Sys-PwrPreset-SP_H")
 }
-record(ao, "$(DEVICE):Sys:PwrPreset-SP_H"){
+record(ao, "$(DEVICE):Sys-PwrPreset-SP_H"){
     field(DTYP, "Soft Channel")
     field(OMSL, "closed_loop")
-    field(DOL,  "$(DEVICE):Sys:MaxPwr-Mon")
-    field(OUT,  "$(DEVICE):Sys:PwrPreset-SP.DRVH")
+    field(DOL,  "$(DEVICE):Sys-MaxPwr-Mon")
+    field(OUT,  "$(DEVICE):Sys-PwrPreset-SP.DRVH")
 }
-record(ai, "$(DEVICE):Sys:PwrPreset-RB"){
+record(ai, "$(DEVICE):Sys-PwrPreset-RB"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "System power preset Q1")
@@ -1715,9 +1715,9 @@ record(ai, "$(DEVICE):Sys:PwrPreset-RB"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysPwrPreset($(DEVICE),:Sys:PwrPreset-RB)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysPwrPreset($(DEVICE),:Sys-PwrPreset-RB)  $(PORT)")
 }
-record(ao, "$(DEVICE):Sys:PwrPreset-SP"){
+record(ao, "$(DEVICE):Sys-PwrPreset-SP"){
     field(DESC, "System power preset Q1")
     field(DTYP, "stream")
     field(EGU,  "kW")
@@ -1728,56 +1728,56 @@ record(ao, "$(DEVICE):Sys:PwrPreset-SP"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto setSysPwrPreset($(DEVICE),:Sys:PwrPreset-SP)  $(PORT)")
-    field(FLNK, "$(DEVICE):Sys:PwrPreset-RB")
+    field(OUT,  "@TopCon.proto setSysPwrPreset($(DEVICE),:Sys-PwrPreset-SP)  $(PORT)")
+    field(FLNK, "$(DEVICE):Sys-PwrPreset-RB")
 }
 
-record(longin, "$(DEVICE):Sys:ResPreset-RB_err"){
+record(longin, "$(DEVICE):Sys-ResPreset-RB_err"){
     field(DESC, "System resistence preset")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$(DEVICE):Sys:ResPreset-SP_err"){
+record(longin, "$(DEVICE):Sys-ResPreset-SP_err"){
     field(DESC, "System resistence preset")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(calcout, "$(DEVICE):Sys:ResPreset-RB_eslo"){
+record(calcout, "$(DEVICE):Sys-ResPreset-RB_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:NomIntrnRes-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-NomIntrnRes-Mon CP MSS")
     field(EGU,  "mOhms")
-    field(OUT,  "$(DEVICE):Sys:ResPreset-RB.ESLO")
+    field(OUT,  "$(DEVICE):Sys-ResPreset-RB.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:ResPreset-RB_d"){
+record(calcout, "$(DEVICE):Sys-ResPreset-RB_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:NomIntrnRes-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:NomIntrnRes-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:ResPreset-RB.DISA")
+    field(INPA, "$(DEVICE):Sys-NomIntrnRes-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-NomIntrnRes-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-ResPreset-RB.DISA")
 }
-record(calcout, "$(DEVICE):Sys:ResPreset-SP_eslo"){
+record(calcout, "$(DEVICE):Sys-ResPreset-SP_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:NomIntrnRes-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-NomIntrnRes-Mon CP MSS")
     field(EGU,  "mOhms")
-    field(OUT,  "$(DEVICE):Sys:ResPreset-SP.ESLO MSS")
+    field(OUT,  "$(DEVICE):Sys-ResPreset-SP.ESLO MSS")
 }
-record(calcout, "$(DEVICE):Sys:ResPreset-SP_d"){
+record(calcout, "$(DEVICE):Sys-ResPreset-SP_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:NomIntrnRes-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:NomIntrnRes-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:ResPreset-SP.DISA")
-    field(FLNK, "$(DEVICE):Sys:ResPreset-SP_H")
+    field(INPA, "$(DEVICE):Sys-NomIntrnRes-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-NomIntrnRes-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-ResPreset-SP.DISA")
+    field(FLNK, "$(DEVICE):Sys-ResPreset-SP_H")
 }
-record(ao, "$(DEVICE):Sys:ResPreset-SP_H"){
+record(ao, "$(DEVICE):Sys-ResPreset-SP_H"){
     field(DTYP, "Soft Channel")
     field(OMSL, "closed_loop")
-    field(DOL,  "$(DEVICE):Sys:NomIntrnRes-Mon")
-    field(OUT,  "$(DEVICE):Sys:ResPreset-SP.DRVH")
+    field(DOL,  "$(DEVICE):Sys-NomIntrnRes-Mon")
+    field(OUT,  "$(DEVICE):Sys-ResPreset-SP.DRVH")
 }
-record(ai, "$(DEVICE):Sys:ResPreset-RB"){
+record(ai, "$(DEVICE):Sys-ResPreset-RB"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "System resistence preset")
@@ -1792,9 +1792,9 @@ record(ai, "$(DEVICE):Sys:ResPreset-RB"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysResPreset($(DEVICE),:Sys:ResPreset-RB)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysResPreset($(DEVICE),:Sys-ResPreset-RB)  $(PORT)")
 }
-record(ao, "$(DEVICE):Sys:ResPreset-SP"){
+record(ao, "$(DEVICE):Sys-ResPreset-SP"){
     field(DESC, "System resistence preset")
     field(DTYP, "stream")
     field(EGU,  "mOhms")
@@ -1805,8 +1805,8 @@ record(ao, "$(DEVICE):Sys:ResPreset-SP"){
     field(DISA, "1")
     field(DISV, "1")
     field(DISS, "INVALID")
-    field(OUT,  "@TopCon.proto setSysResPreset($(DEVICE),:Sys:ResPreset-SP)  $(PORT)")
-    field(FLNK, "$(DEVICE):Sys:ResPreset-RB")
+    field(OUT,  "@TopCon.proto setSysResPreset($(DEVICE),:Sys-ResPreset-SP)  $(PORT)")
+    field(FLNK, "$(DEVICE):Sys-ResPreset-RB")
 }
 
 record(longin, "$(DEVICE):StartupVoltSlope-RB_err"){
@@ -2045,27 +2045,27 @@ record(seq, "$(DEVICE):CurrentSlope_init"){
     field(LNK1, "$(DEVICE):CurrentSlope-SP.DISA")
 }
 
-record(longin, "$(DEVICE):Sys:OutVolt-Mon_err"){
+record(longin, "$(DEVICE):Sys-OutVolt-Mon_err"){
     field(DESC, "System out voltage")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(calcout, "$(DEVICE):Sys:OutVolt-Mon_eslo"){
+record(calcout, "$(DEVICE):Sys-OutVolt-Mon_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon CP MSS")
     field(EGU,  "V")
-    field(OUT,  "$(DEVICE):Sys:OutVolt-Mon.ESLO")
+    field(OUT,  "$(DEVICE):Sys-OutVolt-Mon.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:OutVolt-Mon_d"){
+record(calcout, "$(DEVICE):Sys-OutVolt-Mon_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxVolt-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxVolt-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:OutVolt-Mon.DISA")
+    field(INPA, "$(DEVICE):Sys-MaxVolt-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxVolt-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-OutVolt-Mon.DISA")
 }
 
-record(ai, "$(DEVICE):Sys:OutVolt-Mon"){
+record(ai, "$(DEVICE):Sys-OutVolt-Mon"){
     field(PINI, "NO")
     field(SCAN, "5 second")
     field(DESC, "System out voltage")
@@ -2080,29 +2080,29 @@ record(ai, "$(DEVICE):Sys:OutVolt-Mon"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysOutVolt($(DEVICE),:Sys:OutVolt-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysOutVolt($(DEVICE),:Sys-OutVolt-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:OutCurrent-Mon_err"){
+record(longin, "$(DEVICE):Sys-OutCurrent-Mon_err"){
     field(DESC, "System out current")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(calcout, "$(DEVICE):Sys:OutCurrent-Mon_eslo"){
+record(calcout, "$(DEVICE):Sys-OutCurrent-Mon_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxCurrent-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxCurrent-Mon CP MSS")
     field(EGU,  "A")
-    field(OUT,  "$(DEVICE):Sys:OutCurrent-Mon.ESLO")
+    field(OUT,  "$(DEVICE):Sys-OutCurrent-Mon.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:OutCurrent-Mon_d"){
+record(calcout, "$(DEVICE):Sys-OutCurrent-Mon_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxCurrent-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxCurrent-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:OutCurrent-Mon.DISA")
+    field(INPA, "$(DEVICE):Sys-MaxCurrent-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxCurrent-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-OutCurrent-Mon.DISA")
 }
-record(ai, "$(DEVICE):Sys:OutCurrent-Mon"){
+record(ai, "$(DEVICE):Sys-OutCurrent-Mon"){
     field(PINI, "NO")
     field(SCAN, "5 second")
     field(DESC, "System out current")
@@ -2117,29 +2117,29 @@ record(ai, "$(DEVICE):Sys:OutCurrent-Mon"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysOutCurrent($(DEVICE),:Sys:OutCurrent-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysOutCurrent($(DEVICE),:Sys-OutCurrent-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:OutPwr-Mon_err"){
+record(longin, "$(DEVICE):Sys-OutPwr-Mon_err"){
     field(DESC, "System out power")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(calcout, "$(DEVICE):Sys:OutPwr-Mon_eslo"){
+record(calcout, "$(DEVICE):Sys-OutPwr-Mon_eslo"){
     field(CALC, "A/4000.")
-    field(INPA, "$(DEVICE):Sys:MaxPwr-Mon CP MSS")
+    field(INPA, "$(DEVICE):Sys-MaxPwr-Mon CP MSS")
     field(EGU,  "kW")
-    field(OUT,  "$(DEVICE):Sys:OutPwr-Mon.ESLO")
+    field(OUT,  "$(DEVICE):Sys-OutPwr-Mon.ESLO")
 }
-record(calcout, "$(DEVICE):Sys:OutPwr-Mon_d"){
+record(calcout, "$(DEVICE):Sys-OutPwr-Mon_d"){
     field(CALC, "A#0") # If != NO_ALARM
-    field(INPA, "$(DEVICE):Sys:MaxPwr-Mon.SEVR CP")
-    field(INPB, "$(DEVICE):Sys:MaxPwr-Mon CP")
-    field(OUT,  "$(DEVICE):Sys:OutPwr-Mon.DISA")
+    field(INPA, "$(DEVICE):Sys-MaxPwr-Mon.SEVR CP")
+    field(INPB, "$(DEVICE):Sys-MaxPwr-Mon CP")
+    field(OUT,  "$(DEVICE):Sys-OutPwr-Mon.DISA")
 }
-record(ai, "$(DEVICE):Sys:OutPwr-Mon"){
+record(ai, "$(DEVICE):Sys-OutPwr-Mon"){
     field(PINI, "NO")
     field(SCAN, "5 second")
     field(DESC, "System out power")
@@ -2154,17 +2154,17 @@ record(ai, "$(DEVICE):Sys:OutPwr-Mon"){
     field(DISV, "1")
     field(DISS, "INVALID")
 
-    field(INP,  "@TopCon.proto getSysOutPwr($(DEVICE),:Sys:OutPwr-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysOutPwr($(DEVICE),:Sys-OutPwr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:MaxVolt-Mon_err"){
+record(longin, "$(DEVICE):Sys-MaxVolt-Mon_err"){
     field(DESC, "Maximum system voltage")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(ai, "$(DEVICE):Sys:MaxVolt-Mon"){
+record(ai, "$(DEVICE):Sys-MaxVolt-Mon"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "Maximum system voltage")
@@ -2176,17 +2176,17 @@ record(ai, "$(DEVICE):Sys:MaxVolt-Mon"){
     field(EOFF, "0")
     field(ESLO, "1")
 
-    field(INP,  "@TopCon.proto getSysMaxVolt($(DEVICE),:Sys:MaxVolt-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysMaxVolt($(DEVICE),:Sys-MaxVolt-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:MaxCurrent-Mon_err"){
+record(longin, "$(DEVICE):Sys-MaxCurrent-Mon_err"){
     field(DESC, "Maximum system current (Q1)")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(ai, "$(DEVICE):Sys:MaxCurrent-Mon"){
+record(ai, "$(DEVICE):Sys-MaxCurrent-Mon"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "Maximum system current (Q1)")
@@ -2198,17 +2198,17 @@ record(ai, "$(DEVICE):Sys:MaxCurrent-Mon"){
     field(EOFF, "0")
     field(ESLO, "1")
 
-    field(INP,  "@TopCon.proto getSysMaxCurrent($(DEVICE),:Sys:MaxCurrent-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysMaxCurrent($(DEVICE),:Sys-MaxCurrent-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:MaxPwr-Mon_err"){
+record(longin, "$(DEVICE):Sys-MaxPwr-Mon_err"){
     field(DESC, "Maximum system power (Q1)")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(ai, "$(DEVICE):Sys:MaxPwr-Mon"){
+record(ai, "$(DEVICE):Sys-MaxPwr-Mon"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "Maximum system power (Q1)")
@@ -2220,17 +2220,17 @@ record(ai, "$(DEVICE):Sys:MaxPwr-Mon"){
     field(EOFF, "0")
     field(ESLO, "1")
 
-    field(INP,  "@TopCon.proto getSysMaxPwr($(DEVICE),:Sys:MaxPwr-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysMaxPwr($(DEVICE),:Sys-MaxPwr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:MinVolt-Mon_err"){
+record(longin, "$(DEVICE):Sys-MinVolt-Mon_err"){
     field(DESC, "Minimum system voltage")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(ai, "$(DEVICE):Sys:MinVolt-Mon"){
+record(ai, "$(DEVICE):Sys-MinVolt-Mon"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "Minimum system voltage")
@@ -2242,17 +2242,17 @@ record(ai, "$(DEVICE):Sys:MinVolt-Mon"){
     field(EOFF, "0")
     field(ESLO, "1")
 
-    field(INP,  "@TopCon.proto getSysMinVolt($(DEVICE),:Sys:MinVolt-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysMinVolt($(DEVICE),:Sys-MinVolt-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:MinCurrent-Mon_err"){
+record(longin, "$(DEVICE):Sys-MinCurrent-Mon_err"){
     field(DESC, "Minimum system current (Q4)")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(ai, "$(DEVICE):Sys:MinCurrent-Mon"){
+record(ai, "$(DEVICE):Sys-MinCurrent-Mon"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "Minimum system current (Q4)")
@@ -2264,17 +2264,17 @@ record(ai, "$(DEVICE):Sys:MinCurrent-Mon"){
     field(EOFF, "0")
     field(ESLO, "1")
 
-    field(INP,  "@TopCon.proto getSysMinCurrent($(DEVICE),:Sys:MinCurrent-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysMinCurrent($(DEVICE),:Sys-MinCurrent-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:MinPwr-Mon_err"){
+record(longin, "$(DEVICE):Sys-MinPwr-Mon_err"){
     field(DESC, "Minimum system power (Q4)")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(ai, "$(DEVICE):Sys:MinPwr-Mon"){
+record(ai, "$(DEVICE):Sys-MinPwr-Mon"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "Minimum system power (Q4)")
@@ -2286,17 +2286,17 @@ record(ai, "$(DEVICE):Sys:MinPwr-Mon"){
     field(EOFF, "0")
     field(ESLO, "1")
 
-    field(INP,  "@TopCon.proto getSysMinPwr($(DEVICE),:Sys:MinPwr-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysMinPwr($(DEVICE),:Sys-MinPwr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys:NomIntrnRes-Mon_err"){
+record(longin, "$(DEVICE):Sys-NomIntrnRes-Mon_err"){
     field(DESC, "Nom. system internal resistence")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(ai, "$(DEVICE):Sys:NomIntrnRes-Mon"){
+record(ai, "$(DEVICE):Sys-NomIntrnRes-Mon"){
     field(PINI, "YES")
     field(SCAN, "Passive")
     field(DESC, "Nom. system internal resistence")
@@ -2308,5 +2308,5 @@ record(ai, "$(DEVICE):Sys:NomIntrnRes-Mon"){
     field(EOFF, "0")
     field(ESLO, "1")
 
-    field(INP,  "@TopCon.proto getSysNomIntrnRes($(DEVICE),:Sys:NomIntrnRes-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysNomIntrnRes($(DEVICE),:Sys-NomIntrnRes-Mon)  $(PORT)")
 }

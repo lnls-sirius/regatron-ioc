@@ -86,11 +86,7 @@ rega = [
        {'M':True, 'PV':'PA-RaPSB07:SI-DCLink-SFA2SDP1'},
     ]}
 ]
-#j_t = jinja2.Template('''
-#    device:
-#{% for l in link %}      {{ l }}
-#{% endfor %}
-#''')
+
 if __name__ == '__main__':
     link = []
     for d in rega:
@@ -102,12 +98,10 @@ if __name__ == '__main__':
                  port += 1
                  item['PORT'] = 'P{}'.format(port)
                  s_ports += s_port.safe_substitute(DEVICE='/dev/tty_dgrp_{}_0'.format(port), **item)
-                 #link.append('- /dev/tty_dgrp_{}_0:/dev/tty_dgrp_{}_0'.format(port, port))
                  asyn_dbs += asyn_db.safe_substitute(**item)
                  dbs += db.safe_substitute(**item)
                  if item['M'] == True:
                      m_dbs += m_db.safe_substitute(**item)
-             #print(j_t.render(link=link))
              f.write(s_ports)
              f.write(dbs)
              f.write(m_dbs)

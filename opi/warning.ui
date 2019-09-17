@@ -22,7 +22,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrn-Mon</string>
+        <string>ca://${P}:Sys-StdWarnIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -49,7 +49,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -71,7 +71,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnLogin-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnLogin-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -84,7 +84,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnT-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnT-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -94,7 +94,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnOutVolt-Mon</string>
+        <string>ca://${P}:Sys-StdWarnOutVolt-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -121,7 +121,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -143,7 +143,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnModulator-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnIntrnMod-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -156,7 +156,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnConf-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnConf-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -166,7 +166,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnConf-Mon</string>
+        <string>ca://${P}:Sys-StdWarnConf-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -193,7 +193,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -212,7 +212,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnModulator-Mon</string>
+        <string>ca://${P}:Sys-StdWarnIntrnMod-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -239,7 +239,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -258,7 +258,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnComm-Mon</string>
+        <string>ca://${P}:Sys-StdWarnComm-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -285,7 +285,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -307,7 +307,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADOvrRng2-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnAD2Ovr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -320,7 +320,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnComm-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnComm-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -330,7 +330,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnT-Mon</string>
+        <string>ca://${P}:Sys-StdWarnT-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -357,7 +357,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -376,7 +376,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADOvrRng1-Mon</string>
+        <string>ca://${P}:Sys-StdWarnAD1Ovr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -403,7 +403,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -425,7 +425,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnOutCurrent-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnOutCurrent-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -435,7 +435,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnConf2-Mon</string>
+        <string>ca://${P}:Sys-StdWarnConf2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -462,7 +462,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -484,7 +484,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnConf2-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnConf2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -497,7 +497,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnPDSP-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnIntrnPDSP-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -507,7 +507,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnMisc-Mon</string>
+        <string>ca://${P}:Sys-StdWarnMisc-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -534,7 +534,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -553,7 +553,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADUndrRng2-Mon</string>
+        <string>ca://${P}:Sys-StdWarnAD2Undr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -580,7 +580,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -599,7 +599,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADUndrRng1-Mon</string>
+        <string>ca://${P}:Sys-StdWarnAD1Undr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -626,7 +626,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -648,7 +648,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnOutVolt-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnOutVolt-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -658,7 +658,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnSupply-Mon</string>
+        <string>ca://${P}:Sys-StdWarnSupply-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -685,7 +685,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -707,7 +707,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnSupply-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnSupply-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -717,7 +717,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADOvrRng2-Mon</string>
+        <string>ca://${P}:Sys-StdWarnAD2Ovr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -744,7 +744,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -766,7 +766,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADOvrRng1-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnAD1Ovr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -779,7 +779,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnMisc-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnMisc-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -789,7 +789,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnLogin-Mon</string>
+        <string>ca://${P}:Sys-StdWarnLogin-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -816,7 +816,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -838,7 +838,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADUndrRng1-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnAD1Undr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -851,7 +851,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADUndrRng2-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnAD2Undr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -864,7 +864,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrn-Mon.DESC</string>
+        <string>ca://${P}:Sys-StdWarnIntrn-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -874,7 +874,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnPDSP-Mon</string>
+        <string>ca://${P}:Sys-StdWarnIntrnPDSP-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -901,7 +901,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -920,7 +920,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnOutCurrent-Mon</string>
+        <string>ca://${P}:Sys-StdWarnOutCurrent-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -947,7 +947,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -968,7 +968,7 @@
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>ca://${P}:Sys:StdWarnGroup-Mon</string>
+          <string>ca://${P}:Sys-StdWarnGroup-Mon</string>
          </property>
          <property name="onColor" stdset="0">
           <color>
@@ -995,7 +995,7 @@
            <string>Supply</string>
            <string>T</string>
            <string>Comm</string>
-           <string>Intrn (Modulator)</string>
+           <string>Intrn (Mod)</string>
            <string>Intrn (AD OvrRng 1)</string>
            <string>Intrn (AD OvrRng 2)</string>
            <string>Intrn (AD UndrRng 1)</string>
@@ -1032,7 +1032,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnOutCurrent-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnOutCurrent-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1045,7 +1045,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnConf-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnConf-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1058,7 +1058,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADUndrRng1-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnAD1Undr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1071,7 +1071,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnPDSP-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnIntrnPDSP-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1084,7 +1084,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnModulator-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnIntrnMod-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1097,7 +1097,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrn-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnIntrn-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1110,7 +1110,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnConf2-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnConf2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1123,7 +1123,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnT-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnT-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1136,7 +1136,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADOvrRng1-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnAD1Ovr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1149,7 +1149,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADUndrRng2-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnAD2Undr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1162,7 +1162,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrnADOvrRng2-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnAD2Ovr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1175,7 +1175,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnSupply-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnSupply-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1188,7 +1188,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnComm-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnComm-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1201,7 +1201,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnOutVolt-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnOutVolt-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1214,7 +1214,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnLogin-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnLogin-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1227,7 +1227,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnMisc-Mon.PROC</string>
+        <string>ca://${P}:Sys-StdWarnMisc-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -1284,7 +1284,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrn-Mon</string>
+        <string>ca://${P}:Sys-StdWarnIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1318,7 +1318,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1337,7 +1337,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCSystem-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnIBCSystem-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1364,7 +1364,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1383,7 +1383,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCMisc-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnIBCMisc-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1410,7 +1410,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1429,7 +1429,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrn-Mon</string>
+        <string>ca://${P}:Sys-StdWarnIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1463,7 +1463,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1485,7 +1485,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCSystem-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCSystem-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1495,7 +1495,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCInverter2-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnIBCInverter2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1522,7 +1522,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1541,7 +1541,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnSupply2-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1568,7 +1568,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1590,7 +1590,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCInverter-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCInverter-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1603,7 +1603,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCInverter2-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCInverter2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1616,7 +1616,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCMisc-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCMisc-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1629,7 +1629,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnSupply2-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1642,7 +1642,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnConf3-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnConf3-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1655,7 +1655,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnComm2-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnComm2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1668,7 +1668,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnSupply2-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1678,7 +1678,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnComm3-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnComm3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1705,7 +1705,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1724,7 +1724,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnConf3-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnConf3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1751,7 +1751,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1770,7 +1770,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnSupply2-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1797,7 +1797,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1816,7 +1816,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCSuppply-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnIBCSuppply-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1843,7 +1843,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1865,7 +1865,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnComm3-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnComm3-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1875,7 +1875,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCComm-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnIBCComm-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1902,7 +1902,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1921,7 +1921,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIntrn2-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnIntrn2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -1948,7 +1948,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -1970,7 +1970,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIntrn2-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnIntrn2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -1980,7 +1980,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnComm2-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnComm2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2007,7 +2007,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2028,7 +2028,7 @@
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>ca://${P}:Sys:StdWarnGroup-Mon</string>
+          <string>ca://${P}:Sys-StdWarnGroup-Mon</string>
          </property>
          <property name="onColor" stdset="0">
           <color>
@@ -2092,7 +2092,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:StdWarnIntrn-Mon</string>
+        <string>ca://${P}:Sys-StdWarnIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2126,7 +2126,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2148,7 +2148,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCComm-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCComm-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2158,7 +2158,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCInverter-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnIBCInverter-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2185,7 +2185,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2207,7 +2207,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCPwr-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCPwr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2220,7 +2220,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCSuppply-Mon.DESC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCSuppply-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2230,7 +2230,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCPwr-Mon</string>
+        <string>ca://${P}:Sys-ExtWarnIBCPwr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2257,7 +2257,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2276,7 +2276,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCSystem-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCSystem-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2289,7 +2289,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCSuppply-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCSuppply-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2302,7 +2302,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCComm-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCComm-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2315,7 +2315,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCPwr-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCPwr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2328,7 +2328,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCInverter-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCInverter-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2341,7 +2341,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCMisc-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCMisc-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2354,7 +2354,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIBCInverter2-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnIBCInverter2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2367,7 +2367,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnSupply2-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnSupply2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2380,7 +2380,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnSupply2-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnSupply2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2393,7 +2393,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnConf3-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnConf3-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2406,7 +2406,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnComm3-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnComm3-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2419,7 +2419,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnIntrn2-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnIntrn2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2432,7 +2432,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Sys:ExtWarnComm2-Mon.PROC</string>
+        <string>ca://${P}:Sys-ExtWarnComm2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -2518,7 +2518,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Warn Sys '0.5' Std</string>
+      <string>./proc-err_warn.sh ${P} Warn Sys '0.5' Std</string>
      </property>
     </widget>
    </item>
@@ -2532,7 +2532,7 @@
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>ca://${P}:Mod:StdWarnGroup-Mon</string>
+          <string>ca://${P}:Mod-StdWarnGroup-Mon</string>
          </property>
          <property name="onColor" stdset="0">
           <color>
@@ -2559,7 +2559,7 @@
            <string>Supply</string>
            <string>T</string>
            <string>Comm</string>
-           <string>Intrn (Modulator)</string>
+           <string>Intrn (Mod)</string>
            <string>Intrn (AD OvrRng 1)</string>
            <string>Intrn (AD OvrRng 2)</string>
            <string>Intrn (AD UndrRng 1)</string>
@@ -2596,7 +2596,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrn-Mon</string>
+        <string>ca://${P}:Mod-StdWarnIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2623,7 +2623,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2645,7 +2645,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrn-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnIntrn-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2655,7 +2655,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnSupply-Mon</string>
+        <string>ca://${P}:Mod-StdWarnSupply-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2682,7 +2682,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2704,7 +2704,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnSupply-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnSupply-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2714,7 +2714,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnPDSP-Mon</string>
+        <string>ca://${P}:Mod-StdWarnIntrnPDSP-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2741,7 +2741,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2763,7 +2763,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnPDSP-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnIntrnPDSP-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2773,7 +2773,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutCurrent-Mon</string>
+        <string>ca://${P}:Mod-StdWarnOutCurrent-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2800,7 +2800,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2822,7 +2822,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutCurrent-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnOutCurrent-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2832,7 +2832,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutVolt-Mon</string>
+        <string>ca://${P}:Mod-StdWarnOutVolt-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2859,7 +2859,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2881,7 +2881,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutVolt-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnOutVolt-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2891,7 +2891,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnT-Mon</string>
+        <string>ca://${P}:Mod-StdWarnT-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2918,7 +2918,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2940,7 +2940,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnT-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnT-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -2950,7 +2950,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnComm-Mon</string>
+        <string>ca://${P}:Mod-StdWarnComm-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -2977,7 +2977,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -2999,7 +2999,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnComm-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnComm-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3009,7 +3009,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnModulator-Mon</string>
+        <string>ca://${P}:Mod-StdWarnIntrnMod-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3036,7 +3036,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3058,7 +3058,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnModulator-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnIntrnMod-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3068,7 +3068,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADOvrRng1-Mon</string>
+        <string>ca://${P}:Mod-StdWarnAD1Ovr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3095,7 +3095,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3117,7 +3117,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADOvrRng1-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnAD1Ovr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3127,7 +3127,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADOvrRng2-Mon</string>
+        <string>ca://${P}:Mod-StdWarnAD2Ovr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3154,7 +3154,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3176,7 +3176,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADOvrRng2-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnAD2Ovr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3186,7 +3186,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADUndrRng1-Mon</string>
+        <string>ca://${P}:Mod-StdWarnAD1Undr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3213,7 +3213,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3235,7 +3235,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADUndrRng1-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnAD1Undr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3245,7 +3245,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADUndrRng2-Mon</string>
+        <string>ca://${P}:Mod-StdWarnAD2Undr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3272,7 +3272,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3294,7 +3294,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADUndrRng2-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnAD2Undr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3304,7 +3304,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnLogin-Mon</string>
+        <string>ca://${P}:Mod-StdWarnLogin-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3331,7 +3331,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3353,7 +3353,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnLogin-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnLogin-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3363,7 +3363,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnConf-Mon</string>
+        <string>ca://${P}:Mod-StdWarnConf-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3390,7 +3390,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3412,7 +3412,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnConf-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnConf-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3422,7 +3422,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnConf2-Mon</string>
+        <string>ca://${P}:Mod-StdWarnConf2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3449,7 +3449,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3471,7 +3471,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnConf2-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnConf2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3481,7 +3481,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnMisc-Mon</string>
+        <string>ca://${P}:Mod-StdWarnMisc-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3508,7 +3508,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3530,7 +3530,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnMisc-Mon.DESC</string>
+        <string>ca://${P}:Mod-StdWarnMisc-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3540,7 +3540,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrn-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnIntrn-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3553,7 +3553,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnPDSP-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnIntrnPDSP-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3566,7 +3566,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutCurrent-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnOutCurrent-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3579,7 +3579,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnOutVolt-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnOutVolt-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3592,7 +3592,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnSupply-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnSupply-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3605,7 +3605,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnT-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnT-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3618,7 +3618,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnComm-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnComm-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3631,7 +3631,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnModulator-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnIntrnMod-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3644,7 +3644,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADOvrRng1-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnAD1Ovr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3657,7 +3657,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADOvrRng2-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnAD2Ovr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3670,7 +3670,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADUndrRng1-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnAD1Undr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3683,7 +3683,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrnADUndrRng2-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnAD2Undr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3696,7 +3696,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnLogin-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnLogin-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3709,7 +3709,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnConf-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnConf-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3722,7 +3722,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnConf2-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnConf2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3735,7 +3735,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnMisc-Mon.PROC</string>
+        <string>ca://${P}:Mod-StdWarnMisc-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -3756,7 +3756,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Warn Mod '0.5' Std</string>
+      <string>./proc-err_warn.sh ${P} Warn Mod '0.5' Std</string>
      </property>
     </widget>
    </item>
@@ -3768,7 +3768,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSuppply-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnIBCSuppply-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3795,7 +3795,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3817,7 +3817,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSuppply-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCSuppply-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3829,7 +3829,7 @@
           <string/>
          </property>
          <property name="channel" stdset="0">
-          <string>ca://${P}:Mod:StdWarnGroup-Mon</string>
+          <string>ca://${P}:Mod-StdWarnGroup-Mon</string>
          </property>
          <property name="onColor" stdset="0">
           <color>
@@ -3893,7 +3893,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSystem-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnIBCSystem-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3920,7 +3920,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -3942,7 +3942,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSystem-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCSystem-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -3952,7 +3952,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCComm-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnIBCComm-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -3979,7 +3979,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4001,7 +4001,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCComm-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCComm-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4011,7 +4011,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCPwr-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnIBCPwr-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4038,7 +4038,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4060,7 +4060,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCPwr-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCPwr-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4070,7 +4070,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCInverter-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnIBCInverter-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4097,7 +4097,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4119,7 +4119,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCInverter-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCInverter-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4129,7 +4129,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCMisc-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnIBCMisc-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4156,7 +4156,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4178,7 +4178,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCMisc-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCMisc-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4188,7 +4188,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCInverter2-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnIBCInverter2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4215,7 +4215,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4237,7 +4237,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCInverter2-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCInverter2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4247,7 +4247,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrn-Mon</string>
+        <string>ca://${P}:Mod-StdWarnIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4281,7 +4281,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4300,7 +4300,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrn-Mon</string>
+        <string>ca://${P}:Mod-StdWarnIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4334,7 +4334,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4353,7 +4353,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:StdWarnIntrn-Mon</string>
+        <string>ca://${P}:Mod-StdWarnIntrn-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4387,7 +4387,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4406,7 +4406,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnSupply2-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4433,7 +4433,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4455,7 +4455,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnSupply2-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4465,7 +4465,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnSupply2-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnSupply2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4492,7 +4492,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4514,7 +4514,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnSupply2-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnSupply2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4524,7 +4524,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnConf3-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnConf3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4551,7 +4551,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4573,7 +4573,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnConf3-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnConf3-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4583,7 +4583,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnComm3-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnComm3-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4610,7 +4610,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4632,7 +4632,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnComm3-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnComm3-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4642,7 +4642,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIntrn2-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnIntrn2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4669,7 +4669,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4691,7 +4691,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIntrn2-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnIntrn2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4701,7 +4701,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnComm2-Mon</string>
+        <string>ca://${P}:Mod-ExtWarnComm2-Mon</string>
        </property>
        <property name="onColor" stdset="0">
         <color>
@@ -4728,7 +4728,7 @@
          <string>Supply</string>
          <string>T</string>
          <string>Comm</string>
-         <string>Intrn (Modulator)</string>
+         <string>Intrn (Mod)</string>
          <string>Intrn (AD OvrRng 1)</string>
          <string>Intrn (AD OvrRng 2)</string>
          <string>Intrn (AD UndrRng 1)</string>
@@ -4750,7 +4750,7 @@
         <bool>false</bool>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnComm2-Mon.DESC</string>
+        <string>ca://${P}:Mod-ExtWarnComm2-Mon.DESC</string>
        </property>
       </widget>
      </item>
@@ -4760,7 +4760,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnSupply2-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnSupply2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4773,7 +4773,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCComm-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCComm-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4786,7 +4786,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnSupply2-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnSupply2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4799,7 +4799,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCInverter2-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCInverter2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4812,7 +4812,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSuppply-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCSuppply-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4825,7 +4825,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCSystem-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCSystem-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4838,7 +4838,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCPwr-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCPwr-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4851,7 +4851,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCMisc-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCMisc-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4864,7 +4864,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnConf3-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnConf3-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4877,7 +4877,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIBCInverter-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnIBCInverter-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4890,7 +4890,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnIntrn2-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnIntrn2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4903,7 +4903,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnComm3-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnComm3-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4916,7 +4916,7 @@
         <string/>
        </property>
        <property name="channel" stdset="0">
-        <string>ca://${P}:Mod:ExtWarnComm2-Mon.PROC</string>
+        <string>ca://${P}:Mod-ExtWarnComm2-Mon.PROC</string>
        </property>
        <property name="pressValue" stdset="0">
         <string>1</string>
@@ -4937,7 +4937,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh '${P}' Warn Mod '0.5' Ext</string>
+      <string>./proc-err_warn.sh '${P}' Warn Mod '0.5' Ext</string>
      </property>
     </widget>
    </item>
@@ -4953,7 +4953,7 @@
       <bool>true</bool>
      </property>
      <property name="command" stdset="0">
-      <string>./proc-error_warn.sh ${P} Warn Sys '0.5' Ext</string>
+      <string>./proc-err_warn.sh ${P} Warn Sys '0.5' Ext</string>
      </property>
     </widget>
    </item>

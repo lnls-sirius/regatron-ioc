@@ -27,7 +27,7 @@ dipole = [
 quadrupole = [
     'PA-RaPSA01:PS-DCLink-QFAP',
     'PA-RaPSA01:PS-DCLink-QFB',
-    'PA-RaPSA03:PS-DCLink-QDAP12'
+    'PA-RaPSA03:PS-DCLink-QDAP12',
     'PA-RaPSA04:PS-DCLink-QDB',
     'PA-RaPSA06:PS-DCLink-Q12AA',
     'PA-RaPSA06:PS-DCLink-Q12BB',

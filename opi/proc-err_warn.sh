@@ -26,7 +26,7 @@ if [ $5 = 'Std' ]; then
     caput ${1}:${3}:Std${2}InternalADunderrange2-Mon.PROC 1;   sleep ${4};
     caput ${1}:${3}:Std${2}Configuration-Mon.PROC 1;           sleep ${4};
     caput ${1}:${3}:Std${2}Supply-Mon.PROC 1;                  sleep ${4};
-    caput ${1}:${3}:Std${2}InternalModulator-Mon.PROC 1;       sleep ${4};
+    caput ${1}:${3}:Std${2}InternalMod-Mon.PROC 1;       sleep ${4};
     caput ${1}:${3}:Std${2}Login-Mon.PROC 1;                   sleep ${4};
     caput ${1}:${3}:Std${2}InternalADunderrange1-Mon.PROC 1;   sleep ${4};
     caput ${1}:${3}:Std${2}Configuration2-Mon.PROC 1;          sleep ${4};

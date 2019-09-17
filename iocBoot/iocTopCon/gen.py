@@ -32,11 +32,11 @@ asynSetOption("${PORT}", 0, "stop", "1")
 ''')
 
 db = Template('''
-dbLoadRecords("db/TopCon.db",       "DEVICE=${PV}, PORT=${PORT}")''')
-asyn_db = Template('''
-dbLoadRecords("db/asynRecord.db",   "P=${PV},R=,PORT=${PÒRT},ADDR=,IMAX=,OMAX=")''')
+dbLoadRecords("db/TopCon.db",       "DEVICE=${PV},PORT=${PORT}")''')
 m_db = Template('''
-dbLoadRecords("db/TopConMaster.db", "DEVICE=${PV}, PORT=${PORT}")''')
+dbLoadRecords("db/TopConMaster.db", "DEVICE=${PV},PORT=${PORT}")''')
+asyn_db = Template('''
+dbLoadRecords("db/asynRecord.db",   "P=${PV},R=,PORT=${PORT},ADDR=,IMAX=,OMAX=")''')
 
 rega = [
     {'file':'st-dipoles.cmd', 'items':[
@@ -89,11 +89,11 @@ rega = [
 
 if __name__ == '__main__':
     link = []
+    port = 0
     for d in rega:
         with open(d['file'], 'w+') as f:
              f.write(header)
              s_ports, dbs, m_dbs, asyn_dbs = '','','',''
-             port = 0
              for item in d['items']:
                  port += 1
                  item['PORT'] = 'P{}'.format(port)

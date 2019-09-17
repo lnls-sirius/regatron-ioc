@@ -72,7 +72,7 @@ def get_overview_detail(name):
 
 class Launcher(Display):
     def __init__(self, parent=None, macros=None, **kwargs):
-        super().__init__(parent=parent, ui_filename='launch_.ui')
+        super().__init__(parent=parent, ui_filename='launch.ui')
 
         grid_layout = QGridLayout()
         self.scrollAreaWidgetContents.setLayout(grid_layout)

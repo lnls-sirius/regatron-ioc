@@ -1,0 +1,15 @@
+[Unit]
+Description=Regatron Sextupoles
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/VBoxManage startvm "Regatron Sextupoles" --type headless
+ExecStop=/usr/bin/VBoxManage controlvm "Regatron Sextupoles" poweroff
+RemainAfterExit=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

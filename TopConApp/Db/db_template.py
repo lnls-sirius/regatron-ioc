@@ -18,7 +18,7 @@ record(longin, "$(DEVICE):SelIdx-Mon"){
 }
 '''
 err =  Template('''
-record(longin, "$$(DEVICE):${pv}_error"){
+record(longin, "$$(DEVICE):${pv}_err"){
     field(DESC, "${DESC}")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
@@ -69,14 +69,14 @@ record(ao, "$$(DEVICE):${pv}"){
 }
 ''')
 loop_analog = Template('''
-record(longin, "$$(DEVICE):${pv}-RB_error"){
+record(longin, "$$(DEVICE):${pv}-RB_err"){
     field(DESC, "${DESC}")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$$(DEVICE):${pv}-SP_error"){
+record(longin, "$$(DEVICE):${pv}-SP_err"){
     field(DESC, "${DESC}")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
@@ -129,14 +129,14 @@ record(seq, "$$(DEVICE):${pv}_init"){
 }
 ''')
 loop_analog_ref = Template('''
-record(longin, "$$(DEVICE):${pv}-RB_error"){
+record(longin, "$$(DEVICE):${pv}-RB_err"){
     field(DESC, "${DESC}")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(PHAS, "0")
     field(VAL,  "0")
 }
-record(longin, "$$(DEVICE):${pv}-SP_error"){
+record(longin, "$$(DEVICE):${pv}-SP_err"){
     field(DESC, "${DESC}")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")

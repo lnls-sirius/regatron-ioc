@@ -221,6 +221,7 @@ MAPPING = [
     # Device
     {'r':'sint16_r', 'pv':'IGBTT-Mon',          'proto':'getIGBTTemp',     'addr':0x005007, 'DESC':'IGBT temperature',      'EGU':'C', 'ESLO': 25./4000., 'LINR':'LINEAR', 'SCAN':'10 second'},
     {'r':'sint16_r', 'pv':'RectifierT-Mon',     'proto':'getRectfierTemp', 'addr':0x00500F, 'DESC':'Rectifier temperature', 'EGU':'C', 'ESLO': 25./4000., 'LINR':'LINEAR', 'SCAN':'10 second'},
+    {'r':'sint16_r', 'pv':'PCBT-Mon',           'proto':'getPcbTemp',      'addr':0x301018, 'DESC':'PCB temperature',       'EGU':'C', 'ESLO': 25./4000., 'LINR':'LINEAR', 'SCAN':'10 second'},
 
     # ------------- Module Values -------------
     {'r':'sint16_r', 'pv':'Mod-MaxVolt-Mon',     'proto':'getModMaxVolt'     ,'addr':0x005100, 'DESC':'Maximum module voltage',          'EGU':'V',     'PINI':'YES'},

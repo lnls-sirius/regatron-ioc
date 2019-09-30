@@ -2149,6 +2149,28 @@ record(ai, "$(DEVICE):RectifierT-Mon"){
     field(INP,  "@TopCon.proto getRectfierTemp($(DEVICE),:RectifierT-Mon)  $(PORT)")
 }
 
+record(longin, "$(DEVICE):PCBT-Mon_err"){
+    field(DESC, "PCB temperature")
+    field(DTYP, "Soft Channel")
+    field(PINI, "YES")
+    field(VAL,  "0")
+}
+
+record(ai, "$(DEVICE):PCBT-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "10 second")
+    field(DESC, "PCB temperature")
+    field(DTYP, "stream")
+    field(EGU,  "C")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "LINEAR")
+    field(EOFF, "0")
+    field(ESLO, "0.00625")
+
+    field(INP,  "@TopCon.proto getPcbTemp($(DEVICE),:PCBT-Mon)  $(PORT)")
+}
+
 record(longin, "$(DEVICE):Mod-MaxVolt-Mon_err"){
     field(DESC, "Maximum module voltage")
     field(DTYP, "Soft Channel")

@@ -19,11 +19,12 @@ TopCon_DBD += calcSupport.dbd
 TopCon_DBD += asyn.dbd
 TopCon_DBD += stream.dbd
 TopCon_DBD += drvAsynSerialPort.dbd
- 
+TopCon_DBD += caPutLog.dbd
+
 TopCon_LIBS += stream
 TopCon_LIBS += asyn
 TopCon_LIBS += calc
-
+TopCon_LIBS += caPutLog
 
 # TopCon_registerRecordDeviceDriver.cpp derives from TopCon.dbd
 TopCon_SRCS += TopCon_registerRecordDeviceDriver.cpp

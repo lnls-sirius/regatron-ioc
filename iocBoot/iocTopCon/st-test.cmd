@@ -35,4 +35,4 @@ dbLoadRecords("db/asynRecord.db",   "P=Tc2,R=,PORT=P02,ADDR=,IMAX=,OMAX=")
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 
-#var streamDebug 1
+var streamDebug 1

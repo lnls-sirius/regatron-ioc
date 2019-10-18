@@ -1,15 +1,11 @@
 #!../../bin/linux-x86_64/TopCon
-
-## You may have to change TopCon to something else
-## everywhere it appears in this file
-
 < envPaths
+
 epicsEnvSet("EPICS_IOC_LOG_INET", "0.0.0.0")
 epicsEnvSet("EPICS_IOC_LOG_PORT", "7011")
 
 cd "${TOP}"
 
-## Register all support components
 dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
 asSetFilename("${TOP}/log/Security.as")
@@ -102,5 +98,7 @@ dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA07:PS-DCLink-Q34B,R=,PORT=P25,ADD
 dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA07:PS-DCLink-Q34C,R=,PORT=P26,ADDR=,IMAX=,OMAX=")
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
+
 caPutLogInit "0.0.0.0" 2
+
 #var streamDebug 1

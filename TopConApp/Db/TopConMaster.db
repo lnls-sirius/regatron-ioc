@@ -448,14 +448,14 @@ record(longin, "$(DEVICE):Sys-ExtWarnIBCPwr-Mon"){
     field(INP,  "@TopCon.proto getSysExtWarnGroupK($(DEVICE),:Sys-ExtWarnIBCPwr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCInv-Mon_err"){
     field(DESC, "Ext warning group L")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCInv-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group L")
@@ -463,7 +463,7 @@ record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupL($(DEVICE),:Sys-ExtWarnIBCInverter-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupL($(DEVICE),:Sys-ExtWarnIBCInv-Mon)  $(PORT)")
 }
 
 record(longin, "$(DEVICE):Sys-ExtWarnIBCMisc-Mon_err"){
@@ -484,14 +484,14 @@ record(longin, "$(DEVICE):Sys-ExtWarnIBCMisc-Mon"){
     field(INP,  "@TopCon.proto getSysExtWarnGroupM($(DEVICE),:Sys-ExtWarnIBCMisc-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCInv2-Mon_err"){
     field(DESC, "Ext warning group N")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtWarnIBCInv2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext warning group N")
@@ -499,7 +499,7 @@ record(longin, "$(DEVICE):Sys-ExtWarnIBCInverter2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtWarnGroupN($(DEVICE),:Sys-ExtWarnIBCInverter2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtWarnGroupN($(DEVICE),:Sys-ExtWarnIBCInv2-Mon)  $(PORT)")
 }
 
 record(longin, "$(DEVICE):Sys-ExtWarnSupply2-Mon_err"){
@@ -1006,14 +1006,14 @@ record(longin, "$(DEVICE):Sys-ExtErrIBCPwr-Mon"){
     field(INP,  "@TopCon.proto getSysExtErrGroupK($(DEVICE),:Sys-ExtErrIBCPwr-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys-ExtErrIBCInverter-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCInv-Mon_err"){
     field(DESC, "Ext err group L")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys-ExtErrIBCInverter-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCInv-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group L")
@@ -1021,7 +1021,7 @@ record(longin, "$(DEVICE):Sys-ExtErrIBCInverter-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupL($(DEVICE),:Sys-ExtErrIBCInverter-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupL($(DEVICE),:Sys-ExtErrIBCInv-Mon)  $(PORT)")
 }
 
 record(longin, "$(DEVICE):Sys-ExtErrIBCMisc-Mon_err"){
@@ -1042,14 +1042,14 @@ record(longin, "$(DEVICE):Sys-ExtErrIBCMisc-Mon"){
     field(INP,  "@TopCon.proto getSysExtErrGroupM($(DEVICE),:Sys-ExtErrIBCMisc-Mon)  $(PORT)")
 }
 
-record(longin, "$(DEVICE):Sys-ExtErrIBCInverter2-Mon_err"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCInv2-Mon_err"){
     field(DESC, "Ext err group N")
     field(DTYP, "Soft Channel")
     field(PINI, "YES")
     field(VAL,  "0")
 }
 
-record(longin, "$(DEVICE):Sys-ExtErrIBCInverter2-Mon"){
+record(longin, "$(DEVICE):Sys-ExtErrIBCInv2-Mon"){
     field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Ext err group N")
@@ -1057,7 +1057,7 @@ record(longin, "$(DEVICE):Sys-ExtErrIBCInverter2-Mon"){
     field(EGU,  "")
     field(PHAS, "0")
 
-    field(INP,  "@TopCon.proto getSysExtErrGroupN($(DEVICE),:Sys-ExtErrIBCInverter2-Mon)  $(PORT)")
+    field(INP,  "@TopCon.proto getSysExtErrGroupN($(DEVICE),:Sys-ExtErrIBCInv2-Mon)  $(PORT)")
 }
 
 record(longin, "$(DEVICE):Sys-ExtErrSupply2-Mon_err"){

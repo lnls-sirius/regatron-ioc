@@ -19,6 +19,7 @@ TopCon_DBD += calcSupport.dbd
 TopCon_DBD += asyn.dbd
 TopCon_DBD += stream.dbd
 TopCon_DBD += drvAsynSerialPort.dbd
+TopCon_DBD += drvAsynIPPort.dbd
 TopCon_DBD += caPutLog.dbd
 
 TopCon_LIBS += stream

@@ -78,13 +78,13 @@ rega = [
        {'M':True, 'PV':'PA-RaPSB03:PS-DCLink-SFB0'},
        {'M':True, 'PV':'PA-RaPSB08:PS-DCLink-SFB1'},
        {'M':True, 'PV':'PA-RaPSB10:PS-DCLink-SFB2'},
-       {'M':True, 'PV':'PA-RaPSB04:SI-DCLink-SDA12'},
-       {'M':True, 'PV':'PA-RaPSB01:SI-DCLink-SDAP0'},
-       {'M':True, 'PV':'PA-RaPSB03:SI-DCLink-SFAP0'},
-       {'M':True, 'PV':'PA-RaPSB10:SI-DCLink-SFP12'},
-       {'M':True, 'PV':'PA-RaPSB08:SI-DCLink-SDP23'},
-       {'M':True, 'PV':'PA-RaPSB05:SI-DCLink-SDA3SFA1'},
-       {'M':True, 'PV':'PA-RaPSB07:SI-DCLink-SFA2SDP1'},
+       {'M':True, 'PV':'PA-RaPSB04:PS-DCLink-SDA12'},
+       {'M':True, 'PV':'PA-RaPSB01:PS-DCLink-SDAP0'},
+       {'M':True, 'PV':'PA-RaPSB03:PS-DCLink-SFAP0'},
+       {'M':True, 'PV':'PA-RaPSB10:PS-DCLink-SFP12'},
+       {'M':True, 'PV':'PA-RaPSB08:PS-DCLink-SDP23'},
+       {'M':True, 'PV':'PA-RaPSB05:PS-DCLink-SDA3SFA1'},
+       {'M':True, 'PV':'PA-RaPSB07:PS-DCLink-SFA2SDP1'},
     ]}
 ]
 

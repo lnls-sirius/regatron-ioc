@@ -25,11 +25,7 @@ caPutLogInit "0.0.0.0" 2
 ''')
 
 s_port = Template('''
-drvAsynSerialPortConfigure("${PORT}", "${DEVICE}")
-asynSetOption("${PORT}", 0, "baud", "38400")
-asynSetOption("${PORT}", 0, "bits", "8")
-asynSetOption("${PORT}", 0, "parity", "none")
-asynSetOption("${PORT}", 0, "stop", "1")
+drvAsynIPPortConfigure("${PORT}","unix://${UNIX}")
 ''')
 
 db = Template('''
@@ -61,11 +57,11 @@ rega = [
     {'file':'st-quadrupoles.cmd', 'items':[
        {'M':True,  'PV':'PA-RaPSA01:PS-DCLink-QFAP'},
        {'M':True,  'PV':'PA-RaPSA01:PS-DCLink-QFB'},
-       {'M':True,  'PV':'PA-RaPSA03:PS-DCLink-QDAP12'},
+       {'M':True,  'PV':'PA-RaPSA03:PS-DCLink-QDAP'},
        {'M':True,  'PV':'PA-RaPSA04:PS-DCLink-QDB'},
-       {'M':True,  'PV':'PA-RaPSA06:PS-DCLink-Q12AA'},
-       {'M':False, 'PV':'PA-RaPSA06:PS-DCLink-Q12BB'},
-       {'M':False, 'PV':'PA-RaPSA06:PS-DCLink-Q12CC'},
+       {'M':True,  'PV':'PA-RaPSA06:PS-DCLink-Q12A'},
+       {'M':False, 'PV':'PA-RaPSA06:PS-DCLink-Q12B'},
+       {'M':False, 'PV':'PA-RaPSA06:PS-DCLink-Q12C'},
        {'M':True,  'PV':'PA-RaPSA07:PS-DCLink-Q34A'},
        {'M':False, 'PV':'PA-RaPSA07:PS-DCLink-Q34B'},
        {'M':False, 'PV':'PA-RaPSA07:PS-DCLink-Q34C'},
@@ -98,7 +94,7 @@ if __name__ == '__main__':
              for item in d['items']:
                  port += 1
                  item['PORT'] = 'P{}'.format(port)
-                 s_ports += s_port.safe_substitute(DEVICE='/dev/tty_dgrp_{}_0'.format(port), **item)
+                 s_ports += s_port.safe_substitute(UNIX='/var/tmp/{}'.format(port), **item)
                  asyn_dbs += asyn_db.safe_substitute(**item)
                  dbs += db.safe_substitute(**item)
                  if item['M'] == True:

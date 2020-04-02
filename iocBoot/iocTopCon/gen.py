@@ -25,7 +25,8 @@ caPutLogInit "0.0.0.0" 2
 ''')
 
 s_port = Template('''
-drvAsynIPPortConfigure("${PORT}","unix://${UNIX}")
+# DIGI Real Port -> /dev/ttyD${UNIX}
+drvAsynIPPortConfigure("${PORT}","unix:///var/tmp/REGD${UNIX}")
 ''')
 
 db = Template('''
@@ -94,7 +95,7 @@ if __name__ == '__main__':
              for item in d['items']:
                  port += 1
                  item['PORT'] = 'P{}'.format(port)
-                 s_ports += s_port.safe_substitute(UNIX='/var/tmp/{}'.format(port), **item)
+                 s_ports += s_port.safe_substitute(UNIX='{:02}'.format(port), **item)
                  asyn_dbs += asyn_db.safe_substitute(**item)
                  dbs += db.safe_substitute(**item)
                  if item['M'] == True:

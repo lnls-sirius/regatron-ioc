@@ -10,101 +10,53 @@ dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
 asSetFilename("${TOP}/log/Security.as")
 
-drvAsynSerialPortConfigure("P1", "/dev/tty_dgrp_1_0")
-asynSetOption("P1", 0, "baud", "38400")
-asynSetOption("P1", 0, "bits", "8")
-asynSetOption("P1", 0, "parity", "none")
-asynSetOption("P1", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD01
+drvAsynIPPortConfigure("P1","unix:///var/tmp/REGD01")
 
-drvAsynSerialPortConfigure("P2", "/dev/tty_dgrp_2_0")
-asynSetOption("P2", 0, "baud", "38400")
-asynSetOption("P2", 0, "bits", "8")
-asynSetOption("P2", 0, "parity", "none")
-asynSetOption("P2", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD02
+drvAsynIPPortConfigure("P2","unix:///var/tmp/REGD02")
 
-drvAsynSerialPortConfigure("P3", "/dev/tty_dgrp_3_0")
-asynSetOption("P3", 0, "baud", "38400")
-asynSetOption("P3", 0, "bits", "8")
-asynSetOption("P3", 0, "parity", "none")
-asynSetOption("P3", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD03
+drvAsynIPPortConfigure("P3","unix:///var/tmp/REGD03")
 
-drvAsynSerialPortConfigure("P4", "/dev/tty_dgrp_4_0")
-asynSetOption("P4", 0, "baud", "38400")
-asynSetOption("P4", 0, "bits", "8")
-asynSetOption("P4", 0, "parity", "none")
-asynSetOption("P4", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD04
+drvAsynIPPortConfigure("P4","unix:///var/tmp/REGD04")
 
-drvAsynSerialPortConfigure("P5", "/dev/tty_dgrp_5_0")
-asynSetOption("P5", 0, "baud", "38400")
-asynSetOption("P5", 0, "bits", "8")
-asynSetOption("P5", 0, "parity", "none")
-asynSetOption("P5", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD05
+drvAsynIPPortConfigure("P5","unix:///var/tmp/REGD05")
 
-drvAsynSerialPortConfigure("P6", "/dev/tty_dgrp_6_0")
-asynSetOption("P6", 0, "baud", "38400")
-asynSetOption("P6", 0, "bits", "8")
-asynSetOption("P6", 0, "parity", "none")
-asynSetOption("P6", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD06
+drvAsynIPPortConfigure("P6","unix:///var/tmp/REGD06")
 
-drvAsynSerialPortConfigure("P7", "/dev/tty_dgrp_7_0")
-asynSetOption("P7", 0, "baud", "38400")
-asynSetOption("P7", 0, "bits", "8")
-asynSetOption("P7", 0, "parity", "none")
-asynSetOption("P7", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD07
+drvAsynIPPortConfigure("P7","unix:///var/tmp/REGD07")
 
-drvAsynSerialPortConfigure("P8", "/dev/tty_dgrp_8_0")
-asynSetOption("P8", 0, "baud", "38400")
-asynSetOption("P8", 0, "bits", "8")
-asynSetOption("P8", 0, "parity", "none")
-asynSetOption("P8", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD08
+drvAsynIPPortConfigure("P8","unix:///var/tmp/REGD08")
 
-drvAsynSerialPortConfigure("P9", "/dev/tty_dgrp_9_0")
-asynSetOption("P9", 0, "baud", "38400")
-asynSetOption("P9", 0, "bits", "8")
-asynSetOption("P9", 0, "parity", "none")
-asynSetOption("P9", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD09
+drvAsynIPPortConfigure("P9","unix:///var/tmp/REGD09")
 
-drvAsynSerialPortConfigure("P10", "/dev/tty_dgrp_10_0")
-asynSetOption("P10", 0, "baud", "38400")
-asynSetOption("P10", 0, "bits", "8")
-asynSetOption("P10", 0, "parity", "none")
-asynSetOption("P10", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD10
+drvAsynIPPortConfigure("P10","unix:///var/tmp/REGD10")
 
-drvAsynSerialPortConfigure("P11", "/dev/tty_dgrp_11_0")
-asynSetOption("P11", 0, "baud", "38400")
-asynSetOption("P11", 0, "bits", "8")
-asynSetOption("P11", 0, "parity", "none")
-asynSetOption("P11", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD11
+drvAsynIPPortConfigure("P11","unix:///var/tmp/REGD11")
 
-drvAsynSerialPortConfigure("P12", "/dev/tty_dgrp_12_0")
-asynSetOption("P12", 0, "baud", "38400")
-asynSetOption("P12", 0, "bits", "8")
-asynSetOption("P12", 0, "parity", "none")
-asynSetOption("P12", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD12
+drvAsynIPPortConfigure("P12","unix:///var/tmp/REGD12")
 
-drvAsynSerialPortConfigure("P13", "/dev/tty_dgrp_13_0")
-asynSetOption("P13", 0, "baud", "38400")
-asynSetOption("P13", 0, "bits", "8")
-asynSetOption("P13", 0, "parity", "none")
-asynSetOption("P13", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD13
+drvAsynIPPortConfigure("P13","unix:///var/tmp/REGD13")
 
-drvAsynSerialPortConfigure("P14", "/dev/tty_dgrp_14_0")
-asynSetOption("P14", 0, "baud", "38400")
-asynSetOption("P14", 0, "bits", "8")
-asynSetOption("P14", 0, "parity", "none")
-asynSetOption("P14", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD14
+drvAsynIPPortConfigure("P14","unix:///var/tmp/REGD14")
 
-drvAsynSerialPortConfigure("P15", "/dev/tty_dgrp_15_0")
-asynSetOption("P15", 0, "baud", "38400")
-asynSetOption("P15", 0, "bits", "8")
-asynSetOption("P15", 0, "parity", "none")
-asynSetOption("P15", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD15
+drvAsynIPPortConfigure("P15","unix:///var/tmp/REGD15")
 
-drvAsynSerialPortConfigure("P16", "/dev/tty_dgrp_16_0")
-asynSetOption("P16", 0, "baud", "38400")
-asynSetOption("P16", 0, "bits", "8")
-asynSetOption("P16", 0, "parity", "none")
-asynSetOption("P16", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD16
+drvAsynIPPortConfigure("P16","unix:///var/tmp/REGD16")
 
 dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSD01:PS-DCLink-1A,PORT=P1")
 dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSD01:PS-DCLink-1B,PORT=P2")

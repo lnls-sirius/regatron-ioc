@@ -1,7 +1,7 @@
 STREAM_PROTOCOL_PATH=$(TOP)/db
-CALC=/opt/epics-R3.15.6/modules/synApps/calc-R3-7-1
+CALC=/opt/epics-R3.15.6/modules/synApps/calc-R3-7-3
 ASYN=/opt/epics-R3.15.6/modules/asyn4-35
-STREAM=/opt/epics-R3.15.6/modules/StreamDevice-2.8.8
+STREAM=/opt/epics-R3.15.6/modules/StreamDevice-2.8.9
 CAPUTLOG=/opt/epics-R3.15.6/modules/caPutLog-R3.6
 EPICS_BASE=/opt/epics-R3.15.6/base
 

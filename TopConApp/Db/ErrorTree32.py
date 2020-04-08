@@ -215,7 +215,7 @@ def renderT_ErrorTree(tree, proto):
 
 
 if __name__ == "__main__":
-    proto = "@reg.proto"
+    proto = "@Regatron.proto"
     regs = [
         {"file": "SysWarn.db", "entries": sys_warn},
         {"file": "ModWarn.db", "entries": mod_warn},

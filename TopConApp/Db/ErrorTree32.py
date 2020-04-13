@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from string import Template
-from Common import PROTOCOL, FTVL, wf_db, item_db
+from Common import PROTOCOL, FTVL, wf_db, item_long_db, DEFAULTS
 
 std_values = [
     "Internal",
@@ -170,14 +170,19 @@ sys = {
 }
 
 
-def renderT_ErrorTree(tree, proto):
+def renderT_ErrorTree(entries):
     db = ""
     n = 0
-    params = tree["params"]
-    items = tree["items"]
-    db += wf_db.safe_substitute(proto=proto, type=FTVL.DOUBLE, nelm="66", **params)
-    for item in items:
-        db += item_db.safe_substitute(wf=params["pv"], n=str(n), **item)
+    kwargs = DEFAULTS.copy()
+    kwargs.update(entries["params"])
+
+    db += wf_db.safe_substitute(proto=PROTOCOL, type=FTVL.DOUBLE, nelm="66", **kwargs)
+    for item in entries["items"]:
+        params = DEFAULTS.copy()
+        params.update(item)
+        params["wf"] = entries["params"]["pv"]
+
+        db += item_long_db.safe_substitute(n=str(n), **params)
         n += 1
     return db
 
@@ -189,5 +194,5 @@ if __name__ == "__main__":
     ]
     for reg in regs:
         with open(reg["file"], "w+") as _f:
-            db = renderT_ErrorTree(reg["entries"], proto=PROTOCOL)
+            db = renderT_ErrorTree(reg["entries"])
             _f.write(db)

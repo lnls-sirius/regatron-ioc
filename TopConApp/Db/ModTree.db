@@ -2,9 +2,10 @@
 record(waveform, "$(D):Mod-Tree"){
     field(SCAN, "")
     field(DTYP, "stream")
-    field(INP,  "Regatron.proto getArray(getModTree) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getArray(getModTree) $(PORT) $(A)")
     field(FTVL, "DOUBLE")
     field(NELM, "66")
+    field(PRIO, "LOW")
 }
 
 record(longin, "$(D):Mod-StdErrGroup-Mon"){

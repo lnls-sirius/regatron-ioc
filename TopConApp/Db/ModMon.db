@@ -1,0 +1,72 @@
+
+record(waveform, "$(D):Mod-Mon"){
+    field(SCAN, "")
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getArray(getSysReadings) $(PORT) $(A)")
+    field(FTVL, "DOUBLE")
+    field(NELM, "5")
+    field(PRIO, "LOW")
+}
+
+record(longin, "$(D):Mod-OutVolt-Mon"){
+    field(INP,  "$(D):Mod-Mon[0] CP MSS")
+    field(DESC, "Module out voltage")
+}
+
+record(longin, "$(D):Mod-OutCurrent-Mon"){
+    field(INP,  "$(D):Mod-Mon[1] CP MSS")
+    field(DESC, "Module out current")
+}
+
+record(longin, "$(D):Mod-OutPwr-Mon"){
+    field(INP,  "$(D):Mod-Mon[2] CP MSS")
+    field(DESC, "Module out power")
+}
+
+record(longin, "$(D):Mod-ResPreset"){
+    field(INP,  "$(D):Mod-Mon[3] CP MSS")
+    field(DESC, "Module resistence preset")
+}
+
+record(mbbi, "$(D):Mod-State-Mon") {
+    field(PINI, "NO")
+    field(SCAN, "Passive")
+    field(PHAS, "0")
+    field(DESC, "Module state")
+
+    field(ZRST, "")
+    field(ONST, "")
+    field(TWST, "POWERUP")
+    field(THST, "")
+    field(FRST, "READY")
+    field(FVST, "")
+    field(SXST, "")
+    field(SVST, "")
+    field(EIST, "RUN")
+    field(NIST, "")
+    field(TEST, "WARN")
+    field(ELST, "")
+    field(TVST, "ERROR")
+    field(TTST, "")
+    field(FTST, "STOP")
+    field(FFST, "")
+
+    field(ZRSV, "")
+    field(ONSV, "")
+    field(TWSV, "")
+    field(THSV, "")
+    field(FRSV, "")
+    field(FVSV, "")
+    field(SXSV, "")
+    field(SVSV, "")
+    field(EISV, "")
+    field(NISV, "")
+    field(TESV, "")
+    field(ELSV, "")
+    field(TVSV, "")
+    field(TTSV, "")
+    field(FTSV, "")
+    field(FFSV, "")
+
+    field(INP,  "$(D):Mod-Mon[4] CP MSS")
+}

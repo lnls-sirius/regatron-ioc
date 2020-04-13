@@ -7,9 +7,9 @@ record(waveform, "${pv}"){
     field(PINI, "YES")
     field(SCAN, "${scan}")
     field(DTYP, "stream")
-    field(INP,  "${proto} ${func} $(PORT) $(A)")
+    field(INP,  "${proto} getTree32(${func}) $(PORT) $(A)")
     field(FTVL, "DOUBLE")
-    field(NELM, "33")
+    field(NELM, "66")
 }
 """
 )
@@ -41,10 +41,44 @@ std_values = [
     "Miscellaneous",
 ]
 
-# Warning Monitoring
-mod_warn = {
-    "params": {"pv": "$(D):Mod-Warn", "func": "getModWarnTree", "scan": ""},
+
+# Erring Monitoring
+mod = {
+    "params": {"pv": "$(D):Mod-Tree", "func": "getModTree", "scan": ""},
     "items": [
+        {"pv": "$(D):Mod-StdErrGroup-Mon", "desc": "Std warn group"},
+        {"pv": "$(D):Mod-StdErrIntrn-Mon", "desc": "Std warn group 0",},
+        {"pv": "$(D):Mod-StdErrIntrnPDSP-Mon", "desc": "Std warn group 1",},
+        {"pv": "$(D):Mod-StdErrOutCurrent-Mon", "desc": "Std warn group 2",},
+        {"pv": "$(D):Mod-StdErrOutVolt-Mon", "desc": "Std warn group 3",},
+        {"pv": "$(D):Mod-StdErrSupply-Mon", "desc": "Std warn group 4",},
+        {"pv": "$(D):Mod-StdErrT-Mon", "desc": "Std warn group 5"},
+        {"pv": "$(D):Mod-StdErrComm-Mon", "desc": "Std warn group 6",},
+        {"pv": "$(D):Mod-StdErrIntrnMod-Mon", "desc": "Std warn group 7",},
+        {"pv": "$(D):Mod-StdErrAD1Ovr-Mon", "desc": "Std warn group 8",},
+        {"pv": "$(D):Mod-StdErrAD2Ovr-Mon", "desc": "Std warn group 9",},
+        {"pv": "$(D):Mod-StdErrAD1Undr-Mon", "desc": "Std warn group A",},
+        {"pv": "$(D):Mod-StdErrAD2Undr-Mon", "desc": "Std warn group B",},
+        {"pv": "$(D):Mod-StdErrLogin-Mon", "desc": "Std warn group C",},
+        {"pv": "$(D):Mod-StdErrConf-Mon", "desc": "Std warn group D",},
+        {"pv": "$(D):Mod-StdErrConf2-Mon", "desc": "Std warn group E",},
+        {"pv": "$(D):Mod-StdErrMisc-Mon", "desc": "Std warn group F",},
+        {"pv": "$(D):Mod-ExtErrIBCSystem-Mon", "desc": "Ext warn group G",},
+        {"pv": "$(D):Mod-ExtErrIBCSuppply-Mon", "desc": "Ext warn group H",},
+        {"pv": "$(D):Mod-ExtErrIBCComm-Mon", "desc": "Ext warn group J",},
+        {"pv": "$(D):Mod-ExtErrIBCPwr-Mon", "desc": "Ext warn group K",},
+        {"pv": "$(D):Mod-ExtErrIBCInv-Mon", "desc": "Ext warn group L",},
+        {"pv": "$(D):Mod-ExtErrIBCMisc-Mon", "desc": "Ext warn group M",},
+        {"pv": "$(D):Mod-ExtErrIBCInv2-Mon", "desc": "Ext warn group N",},
+        {"pv": "$(D):Mod-ExtErrP-Mon", "desc": "not used",},
+        {"pv": "$(D):Mod-ExtErrQ-Mon", "desc": "not used",},
+        {"pv": "$(D):Mod-ExtErrR-Mon", "desc": "not used",},
+        {"pv": "$(D):Mod-ExtErrSupply2-Mon", "desc": "Ext warn group S",},
+        {"pv": "$(D):Mod-ExtErrLogin2-Mon", "desc": "Ext warn group T",},
+        {"pv": "$(D):Mod-ExtErrConf3-Mon", "desc": "Ext warn group U",},
+        {"pv": "$(D):Mod-ExtErrComm3-Mon", "desc": "Ext warn group V",},
+        {"pv": "$(D):Mod-ExtErrIntrn2-Mon", "desc": "Ext warn group W",},
+        {"pv": "$(D):Mod-ExtErrComm2-Mon", "desc": "Ext warn group X",},
         {"pv": "$(D):Mod-StdWarnGroup-Mon", "desc": "Std warn group"},
         {"pv": "$(D):Mod-StdWarnIntrn-Mon", "desc": "Std warn group 0",},
         {"pv": "$(D):Mod-StdWarnIntrnPDSP-Mon", "desc": "Std warn group 1",},
@@ -81,10 +115,44 @@ mod_warn = {
     ],
 }
 
-# Warning Monitoring
-sys_warn = {
-    "params": {"pv": "$(D):Sys-Warn", "func": "getSysWarnTree", "scan": ""},
+
+# Error Monitoring
+sys = {
+    "params": {"pv": "$(D):Sys-Tree", "func": "getSysTree", "scan": ""},
     "items": [
+        {"pv": "$(D):Sys-StdErrGroup-Mon", "desc": "Std warn group"},
+        {"pv": "$(D):Sys-StdErrIntrn-Mon", "desc": "Std warn group 0",},
+        {"pv": "$(D):Sys-StdErrIntrnPDSP-Mon", "desc": "Std warn group 1",},
+        {"pv": "$(D):Sys-StdErrOutCurrent-Mon", "desc": "Std warn group 2",},
+        {"pv": "$(D):Sys-StdErrOutVolt-Mon", "desc": "Std warn group 3",},
+        {"pv": "$(D):Sys-StdErrSupply-Mon", "desc": "Std warn group 4",},
+        {"pv": "$(D):Sys-StdErrT-Mon", "desc": "Std warn group 5"},
+        {"pv": "$(D):Sys-StdErrComm-Mon", "desc": "Std warn group 6",},
+        {"pv": "$(D):Sys-StdErrIntrnMod-Mon", "desc": "Std warn group 7",},
+        {"pv": "$(D):Sys-StdErrAD1Ovr-Mon", "desc": "Std warn group 8",},
+        {"pv": "$(D):Sys-StdErrAD2Ovr-Mon", "desc": "Std warn group 9",},
+        {"pv": "$(D):Sys-StdErrAD1Undr-Mon", "desc": "Std warn group A",},
+        {"pv": "$(D):Sys-StdErrAD2Undr-Mon", "desc": "Std warn group B",},
+        {"pv": "$(D):Sys-StdErrLogin-Mon", "desc": "Std warn group C",},
+        {"pv": "$(D):Sys-StdErrConf-Mon", "desc": "Std warn group D",},
+        {"pv": "$(D):Sys-StdErrConf2-Mon", "desc": "Std warn group E",},
+        {"pv": "$(D):Sys-StdErrMisc-Mon", "desc": "Std warn group F",},
+        {"pv": "$(D):Sys-ExtErrIBCSystem-Mon", "desc": "Ext warn group G",},
+        {"pv": "$(D):Sys-ExtErrIBCSuppply-Mon", "desc": "Ext warn group H",},
+        {"pv": "$(D):Sys-ExtErrIBCComm-Mon", "desc": "Ext warn group J",},
+        {"pv": "$(D):Sys-ExtErrIBCPwr-Mon", "desc": "Ext warn group K",},
+        {"pv": "$(D):Sys-ExtErrIBCInv-Mon", "desc": "Ext warn group L",},
+        {"pv": "$(D):Sys-ExtErrIBCMisc-Mon", "desc": "Ext warn group M",},
+        {"pv": "$(D):Sys-ExtErrIBCInv2-Mon", "desc": "Ext warn group N",},
+        {"pv": "$(D):Sys-ExtErrP-Mon", "desc": "not used",},
+        {"pv": "$(D):Sys-ExtErrQ-Mon", "desc": "not used",},
+        {"pv": "$(D):Sys-ExtErrR-Mon", "desc": "not used",},
+        {"pv": "$(D):Sys-ExtErrSupply2-Mon", "desc": "Ext warn group S",},
+        {"pv": "$(D):Sys-ExtErrLogin2-Mon", "desc": "Ext warn group T",},
+        {"pv": "$(D):Sys-ExtErrConf3-Mon", "desc": "Ext warn group U",},
+        {"pv": "$(D):Sys-ExtErrComm3-Mon", "desc": "Ext warn group V",},
+        {"pv": "$(D):Sys-ExtErrIntrn2-Mon", "desc": "Ext warn group W",},
+        {"pv": "$(D):Sys-ExtErrComm2-Mon", "desc": "Ext warn group X",},
         {"pv": "$(D):Sys-StdWarnGroup-Mon", "desc": "Std warn group"},
         {"pv": "$(D):Sys-StdWarnIntrn-Mon", "desc": "Std warn group 0",},
         {"pv": "$(D):Sys-StdWarnIntrnPDSP-Mon", "desc": "Std warn group 1",},
@@ -121,86 +189,6 @@ sys_warn = {
     ],
 }
 
-# Erring Monitoring
-mod_err = {
-    "params": {"pv": "$(D):Mod-Err", "func": "getModErrTree", "scan": ""},
-    "items": [
-        {"pv": "$(D):Mod-StdErrGroup-Mon", "desc": "Std warn group"},
-        {"pv": "$(D):Mod-StdErrIntrn-Mon", "desc": "Std warn group 0",},
-        {"pv": "$(D):Mod-StdErrIntrnPDSP-Mon", "desc": "Std warn group 1",},
-        {"pv": "$(D):Mod-StdErrOutCurrent-Mon", "desc": "Std warn group 2",},
-        {"pv": "$(D):Mod-StdErrOutVolt-Mon", "desc": "Std warn group 3",},
-        {"pv": "$(D):Mod-StdErrSupply-Mon", "desc": "Std warn group 4",},
-        {"pv": "$(D):Mod-StdErrT-Mon", "desc": "Std warn group 5"},
-        {"pv": "$(D):Mod-StdErrComm-Mon", "desc": "Std warn group 6",},
-        {"pv": "$(D):Mod-StdErrIntrnMod-Mon", "desc": "Std warn group 7",},
-        {"pv": "$(D):Mod-StdErrAD1Ovr-Mon", "desc": "Std warn group 8",},
-        {"pv": "$(D):Mod-StdErrAD2Ovr-Mon", "desc": "Std warn group 9",},
-        {"pv": "$(D):Mod-StdErrAD1Undr-Mon", "desc": "Std warn group A",},
-        {"pv": "$(D):Mod-StdErrAD2Undr-Mon", "desc": "Std warn group B",},
-        {"pv": "$(D):Mod-StdErrLogin-Mon", "desc": "Std warn group C",},
-        {"pv": "$(D):Mod-StdErrConf-Mon", "desc": "Std warn group D",},
-        {"pv": "$(D):Mod-StdErrConf2-Mon", "desc": "Std warn group E",},
-        {"pv": "$(D):Mod-StdErrMisc-Mon", "desc": "Std warn group F",},
-        {"pv": "$(D):Mod-ExtErrIBCSystem-Mon", "desc": "Ext warn group G",},
-        {"pv": "$(D):Mod-ExtErrIBCSuppply-Mon", "desc": "Ext warn group H",},
-        {"pv": "$(D):Mod-ExtErrIBCComm-Mon", "desc": "Ext warn group J",},
-        {"pv": "$(D):Mod-ExtErrIBCPwr-Mon", "desc": "Ext warn group K",},
-        {"pv": "$(D):Mod-ExtErrIBCInv-Mon", "desc": "Ext warn group L",},
-        {"pv": "$(D):Mod-ExtErrIBCMisc-Mon", "desc": "Ext warn group M",},
-        {"pv": "$(D):Mod-ExtErrIBCInv2-Mon", "desc": "Ext warn group N",},
-        {"pv": "$(D):Mod-ExtErrP-Mon", "desc": "not used",},
-        {"pv": "$(D):Mod-ExtErrQ-Mon", "desc": "not used",},
-        {"pv": "$(D):Mod-ExtErrR-Mon", "desc": "not used",},
-        {"pv": "$(D):Mod-ExtErrSupply2-Mon", "desc": "Ext warn group S",},
-        {"pv": "$(D):Mod-ExtErrLogin2-Mon", "desc": "Ext warn group T",},
-        {"pv": "$(D):Mod-ExtErrConf3-Mon", "desc": "Ext warn group U",},
-        {"pv": "$(D):Mod-ExtErrComm3-Mon", "desc": "Ext warn group V",},
-        {"pv": "$(D):Mod-ExtErrIntrn2-Mon", "desc": "Ext warn group W",},
-        {"pv": "$(D):Mod-ExtErrComm2-Mon", "desc": "Ext warn group X",},
-    ],
-}
-
-# Error Monitoring
-sys_err = {
-    "params": {"pv": "$(D):Sys-Err", "func": "getSysErrTree", "scan": ""},
-    "items": [
-        {"pv": "$(D):Sys-StdErrGroup-Mon", "desc": "Std warn group"},
-        {"pv": "$(D):Sys-StdErrIntrn-Mon", "desc": "Std warn group 0",},
-        {"pv": "$(D):Sys-StdErrIntrnPDSP-Mon", "desc": "Std warn group 1",},
-        {"pv": "$(D):Sys-StdErrOutCurrent-Mon", "desc": "Std warn group 2",},
-        {"pv": "$(D):Sys-StdErrOutVolt-Mon", "desc": "Std warn group 3",},
-        {"pv": "$(D):Sys-StdErrSupply-Mon", "desc": "Std warn group 4",},
-        {"pv": "$(D):Sys-StdErrT-Mon", "desc": "Std warn group 5"},
-        {"pv": "$(D):Sys-StdErrComm-Mon", "desc": "Std warn group 6",},
-        {"pv": "$(D):Sys-StdErrIntrnMod-Mon", "desc": "Std warn group 7",},
-        {"pv": "$(D):Sys-StdErrAD1Ovr-Mon", "desc": "Std warn group 8",},
-        {"pv": "$(D):Sys-StdErrAD2Ovr-Mon", "desc": "Std warn group 9",},
-        {"pv": "$(D):Sys-StdErrAD1Undr-Mon", "desc": "Std warn group A",},
-        {"pv": "$(D):Sys-StdErrAD2Undr-Mon", "desc": "Std warn group B",},
-        {"pv": "$(D):Sys-StdErrLogin-Mon", "desc": "Std warn group C",},
-        {"pv": "$(D):Sys-StdErrConf-Mon", "desc": "Std warn group D",},
-        {"pv": "$(D):Sys-StdErrConf2-Mon", "desc": "Std warn group E",},
-        {"pv": "$(D):Sys-StdErrMisc-Mon", "desc": "Std warn group F",},
-        {"pv": "$(D):Sys-ExtErrIBCSystem-Mon", "desc": "Ext warn group G",},
-        {"pv": "$(D):Sys-ExtErrIBCSuppply-Mon", "desc": "Ext warn group H",},
-        {"pv": "$(D):Sys-ExtErrIBCComm-Mon", "desc": "Ext warn group J",},
-        {"pv": "$(D):Sys-ExtErrIBCPwr-Mon", "desc": "Ext warn group K",},
-        {"pv": "$(D):Sys-ExtErrIBCInv-Mon", "desc": "Ext warn group L",},
-        {"pv": "$(D):Sys-ExtErrIBCMisc-Mon", "desc": "Ext warn group M",},
-        {"pv": "$(D):Sys-ExtErrIBCInv2-Mon", "desc": "Ext warn group N",},
-        {"pv": "$(D):Sys-ExtErrP-Mon", "desc": "not used",},
-        {"pv": "$(D):Sys-ExtErrQ-Mon", "desc": "not used",},
-        {"pv": "$(D):Sys-ExtErrR-Mon", "desc": "not used",},
-        {"pv": "$(D):Sys-ExtErrSupply2-Mon", "desc": "Ext warn group S",},
-        {"pv": "$(D):Sys-ExtErrLogin2-Mon", "desc": "Ext warn group T",},
-        {"pv": "$(D):Sys-ExtErrConf3-Mon", "desc": "Ext warn group U",},
-        {"pv": "$(D):Sys-ExtErrComm3-Mon", "desc": "Ext warn group V",},
-        {"pv": "$(D):Sys-ExtErrIntrn2-Mon", "desc": "Ext warn group W",},
-        {"pv": "$(D):Sys-ExtErrComm2-Mon", "desc": "Ext warn group X",},
-    ],
-}
-
 
 def renderT_ErrorTree(tree, proto):
     db = ""
@@ -217,10 +205,8 @@ def renderT_ErrorTree(tree, proto):
 if __name__ == "__main__":
     proto = "@Regatron.proto"
     regs = [
-        {"file": "SysWarn.db", "entries": sys_warn},
-        {"file": "ModWarn.db", "entries": mod_warn},
-        {"file": "SysErr.db", "entries": sys_err},
-        {"file": "ModErr.db", "entries": mod_err},
+        {"file": "SysTree.db", "entries": sys},
+        {"file": "ModTree.db", "entries": mod},
     ]
     for reg in regs:
         with open(reg["file"], "w+") as _f:

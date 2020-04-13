@@ -1,17 +1,4 @@
+Terminator = CR;
 
-getSysErrTree {
-
-}
-
-getSysWarnTree{
-
-}
-
-getModWarnTree{
-
-}
-
-getModErrTree {
-
-}
+getTree32 { separator=','; out "\$1"; in  "[%f]"; }
 

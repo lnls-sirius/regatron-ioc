@@ -1,26 +1,6 @@
 #!/usr/bin/env python3
 from string import Template
-
-wf_db = Template(
-    """
-record(waveform, "${pv}"){
-    field(PINI, "YES")
-    field(SCAN, "${scan}")
-    field(DTYP, "stream")
-    field(INP,  "${proto} getTree32(${func}) $(PORT) $(A)")
-    field(FTVL, "DOUBLE")
-    field(NELM, "66")
-}
-"""
-)
-item_db = Template(
-    """
-record(longin, "${pv}"){
-    field(INP,  "${wf}[${n}] CP MSS")
-    field(DESC, "${desc}")
-}
-"""
-)
+from Common import PROTOCOL, FTVL, wf_db, item_db
 
 std_values = [
     "Internal",
@@ -44,7 +24,7 @@ std_values = [
 
 # Erring Monitoring
 mod = {
-    "params": {"pv": "$(D):Mod-Tree", "func": "getModTree", "scan": ""},
+    "params": {"pv": "$(D):Mod-Tree", "param": "getModTree", "scan": ""},
     "items": [
         {"pv": "$(D):Mod-StdErrGroup-Mon", "desc": "Std warn group"},
         {"pv": "$(D):Mod-StdErrIntrn-Mon", "desc": "Std warn group 0",},
@@ -118,7 +98,7 @@ mod = {
 
 # Error Monitoring
 sys = {
-    "params": {"pv": "$(D):Sys-Tree", "func": "getSysTree", "scan": ""},
+    "params": {"pv": "$(D):Sys-Tree", "param": "getSysTree", "scan": ""},
     "items": [
         {"pv": "$(D):Sys-StdErrGroup-Mon", "desc": "Std warn group"},
         {"pv": "$(D):Sys-StdErrIntrn-Mon", "desc": "Std warn group 0",},
@@ -195,7 +175,7 @@ def renderT_ErrorTree(tree, proto):
     n = 0
     params = tree["params"]
     items = tree["items"]
-    db += wf_db.safe_substitute(proto=proto, **params)
+    db += wf_db.safe_substitute(proto=proto, type=FTVL.DOUBLE, nelm="66", **params)
     for item in items:
         db += item_db.safe_substitute(wf=params["pv"], n=str(n), **item)
         n += 1
@@ -203,12 +183,11 @@ def renderT_ErrorTree(tree, proto):
 
 
 if __name__ == "__main__":
-    proto = "@Regatron.proto"
     regs = [
         {"file": "SysTree.db", "entries": sys},
         {"file": "ModTree.db", "entries": mod},
     ]
     for reg in regs:
         with open(reg["file"], "w+") as _f:
-            db = renderT_ErrorTree(reg["entries"], proto=proto)
+            db = renderT_ErrorTree(reg["entries"], proto=PROTOCOL)
             _f.write(db)

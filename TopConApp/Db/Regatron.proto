@@ -1,4 +1,32 @@
 Terminator = CR;
 
-getTree32 { separator=','; out "\$1"; in  "[%f]"; }
+#  // [IGBT,Rectfier,PCB]
+#  getTemperatures
+#  // [Voltage,Current,Power,Res,State]
+#  getModReadings
+#  getSysReadings
+#  // [..Error,..Warning] T_ErrorTree32
+#  getModTree
+#  getSysTree
+#  // [..ErrorTree, ..WarnTree]\n
+getArray{ separator=','; out "\$1"; in  "\$1 [%f]"; }
+
+#  getModuleId
+#  getControlMode
+#  getControlInput
+#  getDCLinkVoltage
+#  getPrimaryCurrent
+getFloat{ out "\$1"; in  "\$1 %f"; }
+
+#  getDSPVersion
+#  getDLLVersion
+#  getBootloaderVersion
+#  getModulatorVersion
+#  getPheripherieVersion
+getString{ out "\$1"; in  "\$1 %s"; }
+
+#  cmdStoreParam
+#  cmdClearErrors
+cmd{ out "\$1"; in  "\$1 ACK"; }
+
 

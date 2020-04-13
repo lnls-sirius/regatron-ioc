@@ -1,0 +1,338 @@
+
+record(waveform, "$(D):Sys-Tree"){
+    field(SCAN, "")
+    field(DTYP, "stream")
+    field(INP,  "Regatron.proto getArray(getSysTree) $(PORT) $(A)")
+    field(FTVL, "DOUBLE")
+    field(NELM, "66")
+}
+
+record(longin, "$(D):Sys-StdErrGroup-Mon"){
+    field(INP,  "$(D):Sys-Tree[0] CP MSS")
+    field(DESC, "Std warn group")
+}
+
+record(longin, "$(D):Sys-StdErrIntrn-Mon"){
+    field(INP,  "$(D):Sys-Tree[1] CP MSS")
+    field(DESC, "Std warn group 0")
+}
+
+record(longin, "$(D):Sys-StdErrIntrnPDSP-Mon"){
+    field(INP,  "$(D):Sys-Tree[2] CP MSS")
+    field(DESC, "Std warn group 1")
+}
+
+record(longin, "$(D):Sys-StdErrOutCurrent-Mon"){
+    field(INP,  "$(D):Sys-Tree[3] CP MSS")
+    field(DESC, "Std warn group 2")
+}
+
+record(longin, "$(D):Sys-StdErrOutVolt-Mon"){
+    field(INP,  "$(D):Sys-Tree[4] CP MSS")
+    field(DESC, "Std warn group 3")
+}
+
+record(longin, "$(D):Sys-StdErrSupply-Mon"){
+    field(INP,  "$(D):Sys-Tree[5] CP MSS")
+    field(DESC, "Std warn group 4")
+}
+
+record(longin, "$(D):Sys-StdErrT-Mon"){
+    field(INP,  "$(D):Sys-Tree[6] CP MSS")
+    field(DESC, "Std warn group 5")
+}
+
+record(longin, "$(D):Sys-StdErrComm-Mon"){
+    field(INP,  "$(D):Sys-Tree[7] CP MSS")
+    field(DESC, "Std warn group 6")
+}
+
+record(longin, "$(D):Sys-StdErrIntrnMod-Mon"){
+    field(INP,  "$(D):Sys-Tree[8] CP MSS")
+    field(DESC, "Std warn group 7")
+}
+
+record(longin, "$(D):Sys-StdErrAD1Ovr-Mon"){
+    field(INP,  "$(D):Sys-Tree[9] CP MSS")
+    field(DESC, "Std warn group 8")
+}
+
+record(longin, "$(D):Sys-StdErrAD2Ovr-Mon"){
+    field(INP,  "$(D):Sys-Tree[10] CP MSS")
+    field(DESC, "Std warn group 9")
+}
+
+record(longin, "$(D):Sys-StdErrAD1Undr-Mon"){
+    field(INP,  "$(D):Sys-Tree[11] CP MSS")
+    field(DESC, "Std warn group A")
+}
+
+record(longin, "$(D):Sys-StdErrAD2Undr-Mon"){
+    field(INP,  "$(D):Sys-Tree[12] CP MSS")
+    field(DESC, "Std warn group B")
+}
+
+record(longin, "$(D):Sys-StdErrLogin-Mon"){
+    field(INP,  "$(D):Sys-Tree[13] CP MSS")
+    field(DESC, "Std warn group C")
+}
+
+record(longin, "$(D):Sys-StdErrConf-Mon"){
+    field(INP,  "$(D):Sys-Tree[14] CP MSS")
+    field(DESC, "Std warn group D")
+}
+
+record(longin, "$(D):Sys-StdErrConf2-Mon"){
+    field(INP,  "$(D):Sys-Tree[15] CP MSS")
+    field(DESC, "Std warn group E")
+}
+
+record(longin, "$(D):Sys-StdErrMisc-Mon"){
+    field(INP,  "$(D):Sys-Tree[16] CP MSS")
+    field(DESC, "Std warn group F")
+}
+
+record(longin, "$(D):Sys-ExtErrIBCSystem-Mon"){
+    field(INP,  "$(D):Sys-Tree[17] CP MSS")
+    field(DESC, "Ext warn group G")
+}
+
+record(longin, "$(D):Sys-ExtErrIBCSuppply-Mon"){
+    field(INP,  "$(D):Sys-Tree[18] CP MSS")
+    field(DESC, "Ext warn group H")
+}
+
+record(longin, "$(D):Sys-ExtErrIBCComm-Mon"){
+    field(INP,  "$(D):Sys-Tree[19] CP MSS")
+    field(DESC, "Ext warn group J")
+}
+
+record(longin, "$(D):Sys-ExtErrIBCPwr-Mon"){
+    field(INP,  "$(D):Sys-Tree[20] CP MSS")
+    field(DESC, "Ext warn group K")
+}
+
+record(longin, "$(D):Sys-ExtErrIBCInv-Mon"){
+    field(INP,  "$(D):Sys-Tree[21] CP MSS")
+    field(DESC, "Ext warn group L")
+}
+
+record(longin, "$(D):Sys-ExtErrIBCMisc-Mon"){
+    field(INP,  "$(D):Sys-Tree[22] CP MSS")
+    field(DESC, "Ext warn group M")
+}
+
+record(longin, "$(D):Sys-ExtErrIBCInv2-Mon"){
+    field(INP,  "$(D):Sys-Tree[23] CP MSS")
+    field(DESC, "Ext warn group N")
+}
+
+record(longin, "$(D):Sys-ExtErrP-Mon"){
+    field(INP,  "$(D):Sys-Tree[24] CP MSS")
+    field(DESC, "not used")
+}
+
+record(longin, "$(D):Sys-ExtErrQ-Mon"){
+    field(INP,  "$(D):Sys-Tree[25] CP MSS")
+    field(DESC, "not used")
+}
+
+record(longin, "$(D):Sys-ExtErrR-Mon"){
+    field(INP,  "$(D):Sys-Tree[26] CP MSS")
+    field(DESC, "not used")
+}
+
+record(longin, "$(D):Sys-ExtErrSupply2-Mon"){
+    field(INP,  "$(D):Sys-Tree[27] CP MSS")
+    field(DESC, "Ext warn group S")
+}
+
+record(longin, "$(D):Sys-ExtErrLogin2-Mon"){
+    field(INP,  "$(D):Sys-Tree[28] CP MSS")
+    field(DESC, "Ext warn group T")
+}
+
+record(longin, "$(D):Sys-ExtErrConf3-Mon"){
+    field(INP,  "$(D):Sys-Tree[29] CP MSS")
+    field(DESC, "Ext warn group U")
+}
+
+record(longin, "$(D):Sys-ExtErrComm3-Mon"){
+    field(INP,  "$(D):Sys-Tree[30] CP MSS")
+    field(DESC, "Ext warn group V")
+}
+
+record(longin, "$(D):Sys-ExtErrIntrn2-Mon"){
+    field(INP,  "$(D):Sys-Tree[31] CP MSS")
+    field(DESC, "Ext warn group W")
+}
+
+record(longin, "$(D):Sys-ExtErrComm2-Mon"){
+    field(INP,  "$(D):Sys-Tree[32] CP MSS")
+    field(DESC, "Ext warn group X")
+}
+
+record(longin, "$(D):Sys-StdWarnGroup-Mon"){
+    field(INP,  "$(D):Sys-Tree[33] CP MSS")
+    field(DESC, "Std warn group")
+}
+
+record(longin, "$(D):Sys-StdWarnIntrn-Mon"){
+    field(INP,  "$(D):Sys-Tree[34] CP MSS")
+    field(DESC, "Std warn group 0")
+}
+
+record(longin, "$(D):Sys-StdWarnIntrnPDSP-Mon"){
+    field(INP,  "$(D):Sys-Tree[35] CP MSS")
+    field(DESC, "Std warn group 1")
+}
+
+record(longin, "$(D):Sys-StdWarnOutCurrent-Mon"){
+    field(INP,  "$(D):Sys-Tree[36] CP MSS")
+    field(DESC, "Std warn group 2")
+}
+
+record(longin, "$(D):Sys-StdWarnOutVolt-Mon"){
+    field(INP,  "$(D):Sys-Tree[37] CP MSS")
+    field(DESC, "Std warn group 3")
+}
+
+record(longin, "$(D):Sys-StdWarnSupply-Mon"){
+    field(INP,  "$(D):Sys-Tree[38] CP MSS")
+    field(DESC, "Std warn group 4")
+}
+
+record(longin, "$(D):Sys-StdWarnT-Mon"){
+    field(INP,  "$(D):Sys-Tree[39] CP MSS")
+    field(DESC, "Std warn group 5")
+}
+
+record(longin, "$(D):Sys-StdWarnComm-Mon"){
+    field(INP,  "$(D):Sys-Tree[40] CP MSS")
+    field(DESC, "Std warn group 6")
+}
+
+record(longin, "$(D):Sys-StdWarnIntrnMod-Mon"){
+    field(INP,  "$(D):Sys-Tree[41] CP MSS")
+    field(DESC, "Std warn group 7")
+}
+
+record(longin, "$(D):Sys-StdWarnAD1Ovr-Mon"){
+    field(INP,  "$(D):Sys-Tree[42] CP MSS")
+    field(DESC, "Std warn group 8")
+}
+
+record(longin, "$(D):Sys-StdWarnAD2Ovr-Mon"){
+    field(INP,  "$(D):Sys-Tree[43] CP MSS")
+    field(DESC, "Std warn group 9")
+}
+
+record(longin, "$(D):Sys-StdWarnAD1Undr-Mon"){
+    field(INP,  "$(D):Sys-Tree[44] CP MSS")
+    field(DESC, "Std warn group A")
+}
+
+record(longin, "$(D):Sys-StdWarnAD2Undr-Mon"){
+    field(INP,  "$(D):Sys-Tree[45] CP MSS")
+    field(DESC, "Std warn group B")
+}
+
+record(longin, "$(D):Sys-StdWarnLogin-Mon"){
+    field(INP,  "$(D):Sys-Tree[46] CP MSS")
+    field(DESC, "Std warn group C")
+}
+
+record(longin, "$(D):Sys-StdWarnConf-Mon"){
+    field(INP,  "$(D):Sys-Tree[47] CP MSS")
+    field(DESC, "Std warn group D")
+}
+
+record(longin, "$(D):Sys-StdWarnConf2-Mon"){
+    field(INP,  "$(D):Sys-Tree[48] CP MSS")
+    field(DESC, "Std warn group E")
+}
+
+record(longin, "$(D):Sys-StdWarnMisc-Mon"){
+    field(INP,  "$(D):Sys-Tree[49] CP MSS")
+    field(DESC, "Std warn group F")
+}
+
+record(longin, "$(D):Sys-ExtWarnIBCSystem-Mon"){
+    field(INP,  "$(D):Sys-Tree[50] CP MSS")
+    field(DESC, "Ext warn group G")
+}
+
+record(longin, "$(D):Sys-ExtWarnIBCSuppply-Mon"){
+    field(INP,  "$(D):Sys-Tree[51] CP MSS")
+    field(DESC, "Ext warn group H")
+}
+
+record(longin, "$(D):Sys-ExtWarnIBCComm-Mon"){
+    field(INP,  "$(D):Sys-Tree[52] CP MSS")
+    field(DESC, "Ext warn group J")
+}
+
+record(longin, "$(D):Sys-ExtWarnIBCPwr-Mon"){
+    field(INP,  "$(D):Sys-Tree[53] CP MSS")
+    field(DESC, "Ext warn group K")
+}
+
+record(longin, "$(D):Sys-ExtWarnIBCInv-Mon"){
+    field(INP,  "$(D):Sys-Tree[54] CP MSS")
+    field(DESC, "Ext warn group L")
+}
+
+record(longin, "$(D):Sys-ExtWarnIBCMisc-Mon"){
+    field(INP,  "$(D):Sys-Tree[55] CP MSS")
+    field(DESC, "Ext warn group M")
+}
+
+record(longin, "$(D):Sys-ExtWarnIBCInv2-Mon"){
+    field(INP,  "$(D):Sys-Tree[56] CP MSS")
+    field(DESC, "Ext warn group N")
+}
+
+record(longin, "$(D):Sys-ExtWarnP-Mon"){
+    field(INP,  "$(D):Sys-Tree[57] CP MSS")
+    field(DESC, "not used")
+}
+
+record(longin, "$(D):Sys-ExtWarnQ-Mon"){
+    field(INP,  "$(D):Sys-Tree[58] CP MSS")
+    field(DESC, "not used")
+}
+
+record(longin, "$(D):Sys-ExtWarnR-Mon"){
+    field(INP,  "$(D):Sys-Tree[59] CP MSS")
+    field(DESC, "not used")
+}
+
+record(longin, "$(D):Sys-ExtWarnSupply2-Mon"){
+    field(INP,  "$(D):Sys-Tree[60] CP MSS")
+    field(DESC, "Ext warn group S")
+}
+
+record(longin, "$(D):Sys-ExtWarnLogin2-Mon"){
+    field(INP,  "$(D):Sys-Tree[61] CP MSS")
+    field(DESC, "Ext warn group T")
+}
+
+record(longin, "$(D):Sys-ExtWarnConf3-Mon"){
+    field(INP,  "$(D):Sys-Tree[62] CP MSS")
+    field(DESC, "Ext warn group U")
+}
+
+record(longin, "$(D):Sys-ExtWarnComm3-Mon"){
+    field(INP,  "$(D):Sys-Tree[63] CP MSS")
+    field(DESC, "Ext warn group V")
+}
+
+record(longin, "$(D):Sys-ExtWarnIntrn2-Mon"){
+    field(INP,  "$(D):Sys-Tree[64] CP MSS")
+    field(DESC, "Ext warn group W")
+}
+
+record(longin, "$(D):Sys-ExtWarnComm2-Mon"){
+    field(INP,  "$(D):Sys-Tree[65] CP MSS")
+    field(DESC, "Ext warn group X")
+}

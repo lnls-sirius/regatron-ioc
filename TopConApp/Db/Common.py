@@ -2,6 +2,7 @@ from string import Template
 
 PROTOCOL = "@Regatron.proto"
 DEFAULTS = {
+    "proto": PROTOCOL,
     "zrst": "",
     "onst": "",
     "twst": "",
@@ -144,6 +145,86 @@ record(mbbi, "${pv}") {
     field(FFSV, "${ffsv}")
 
     field(INP,  "${wf}[${n}] CP MSS")
+}
+"""
+)
+
+mbbi_db = Template(
+    """
+record(mbbi, "${pv}") {
+    field(PINI, "${pini}")
+    field(SCAN, "${scan}")
+    field(PHAS, "${phas}")
+    field(DESC, "${desc}")
+
+    field(ZRST, "${zrst}")
+    field(ONST, "${onst}")
+    field(TWST, "${twst}")
+    field(THST, "${thst}")
+    field(FRST, "${frst}")
+    field(FVST, "${fvst}")
+    field(SXST, "${sxst}")
+    field(SVST, "${svst}")
+    field(EIST, "${eist}")
+    field(NIST, "${nist}")
+    field(TEST, "${test}")
+    field(ELST, "${elst}")
+    field(TVST, "${tvst}")
+    field(TTST, "${ttst}")
+    field(FTST, "${ftst}")
+    field(FFST, "${ffst}")
+
+    field(ZRSV, "${zrsv}")
+    field(ONSV, "${onsv}")
+    field(TWSV, "${twsv}")
+    field(THSV, "${thsv}")
+    field(FRSV, "${frsv}")
+    field(FVSV, "${fvsv}")
+    field(SXSV, "${sxsv}")
+    field(SVSV, "${svsv}")
+    field(EISV, "${eisv}")
+    field(NISV, "${nisv}")
+    field(TESV, "${tesv}")
+    field(ELSV, "${elsv}")
+    field(TVSV, "${tvsv}")
+    field(TTSV, "${ttsv}")
+    field(FTSV, "${ftsv}")
+    field(FFSV, "${ffsv}")
+
+    field(DTYP, "stream")
+    field(INP,  "${proto} getFloat(${param}) $(PORT) $(A)")
+}
+"""
+)
+stringin_db = Template(
+    """
+record(stringin, "${pv}"){
+    field(PINI, "${pini}")
+    field(SCAN, "${scan}")
+    field(DESC, "${desc}")
+    field(PHAS, "${phas}")
+
+    field(DTYP, "stream")
+    field(INP,  "${proto} getString(${param}) $(PORT) $(A)")
+}
+"""
+)
+
+ai_db = Template(
+    """
+record(ai, "${pv}"){
+    field(PINI, "${pini}")
+    field(SCAN, "${scan}")
+    field(DESC, "${desc}")
+    field(EGU,  "${egu}")
+    field(PREC, "${prec}")
+    field(PHAS, "${phas}")
+    field(LINR, "${linr}")
+    field(EOFF, "${eoff}")
+    field(ESLO, "${eslo}")
+
+    field(DTYP, "stream")
+    field(INP,  "${proto} getFloat(${param}) $(PORT) $(A)")
 }
 """
 )

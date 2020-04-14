@@ -8,24 +8,60 @@ record(waveform, "$(D):Mod-Mon"){
     field(PRIO, "LOW")
 }
 
-record(longin, "$(D):Mod-OutVolt-Mon"){
-    field(INP,  "$(D):Mod-Mon[0] CP MSS")
+record(ai, "$(D):Mod-OutVolt-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "Passive")
     field(DESC, "Module out voltage")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+
+    field(INP,  "$(D):Mod-Mon[0] CP MSS")
 }
 
-record(longin, "$(D):Mod-OutCurrent-Mon"){
-    field(INP,  "$(D):Mod-Mon[1] CP MSS")
+record(ai, "$(D):Mod-OutCurrent-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "Passive")
     field(DESC, "Module out current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+
+    field(INP,  "$(D):Mod-Mon[1] CP MSS")
 }
 
-record(longin, "$(D):Mod-OutPwr-Mon"){
-    field(INP,  "$(D):Mod-Mon[2] CP MSS")
+record(ai, "$(D):Mod-OutPwr-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "Passive")
     field(DESC, "Module out power")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+
+    field(INP,  "$(D):Mod-Mon[2] CP MSS")
 }
 
-record(longin, "$(D):Mod-ResPreset"){
-    field(INP,  "$(D):Mod-Mon[3] CP MSS")
+record(ai, "$(D):Mod-ResPreset-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "Passive")
     field(DESC, "Module resistence preset")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+
+    field(INP,  "$(D):Mod-Mon[3] CP MSS")
 }
 
 record(mbbi, "$(D):Mod-State-Mon") {
@@ -69,4 +105,48 @@ record(mbbi, "$(D):Mod-State-Mon") {
     field(FFSV, "")
 
     field(INP,  "$(D):Mod-Mon[4] CP MSS")
+}
+
+record(mbbi, "$(D):Mod-ControlMode-Mon") {
+    field(PINI, "NO")
+    field(SCAN, "10 second")
+    field(PHAS, "0")
+    field(DESC, "Module control mode")
+
+    field(ZRST, "Constant Voltage")
+    field(ONST, "Constant Current")
+    field(TWST, "Constant Pwr")
+    field(THST, "Usense limit active")
+    field(FRST, "Psense limit active")
+    field(FVST, "Current derating active")
+    field(SXST, "")
+    field(SVST, "")
+    field(EIST, "")
+    field(NIST, "")
+    field(TEST, "")
+    field(ELST, "")
+    field(TVST, "")
+    field(TTST, "")
+    field(FTST, "")
+    field(FFST, "")
+
+    field(ZRSV, "")
+    field(ONSV, "")
+    field(TWSV, "")
+    field(THSV, "")
+    field(FRSV, "")
+    field(FVSV, "")
+    field(SXSV, "")
+    field(SVSV, "")
+    field(EISV, "")
+    field(NISV, "")
+    field(TESV, "")
+    field(ELSV, "")
+    field(TVSV, "")
+    field(TTSV, "")
+    field(FTSV, "")
+    field(FFSV, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getModControlMode) $(PORT) $(A)")
 }

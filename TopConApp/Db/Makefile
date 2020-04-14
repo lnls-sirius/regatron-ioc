@@ -10,18 +10,23 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
-DB += TopCon.db
-DB += TopCon.proto
-DB += TopConMaster.db
+
+DB += Regatron.proto
+
+DB += Generic.db
+DB += ModMon.db
+DB += ModTree.db
+DB += SysMon.db
+DB += SysTree.db
+DB += TempMon.db
+
 DB += $(ASYN)/db/asynRecord.db
 
 include $(TOP)/configure/RULES
 
 db:
-	python3 ./generate.py
+	./ErrorTree32.py
+	./Monitor.py
 
 clean distclean:
-	find . -name '*.pyc' -exec rm --force {} +
-	find . -name '*.pyo' -exec rm --force {} +
-	find . -name '*~'    -exec rm --force {} +
-	find . -name '__pycache__'  -exec rm -rd --force {} +
+	./clean.sh

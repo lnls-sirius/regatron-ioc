@@ -1,0 +1,51 @@
+
+record(waveform, "$(D):T-Mon"){
+    field(SCAN, "")
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getArray(getTemperatures) $(PORT) $(A)")
+    field(FTVL, "DOUBLE")
+    field(NELM, "3")
+    field(PRIO, "LOW")
+}
+
+record(ai, "$(D):IGBTT-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "Passive")
+    field(DESC, "IGBT temperature")
+    field(EGU,  "C")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+
+    field(INP,  "$(D):T-Mon[0] CP MSS")
+}
+
+record(ai, "$(D):RectifierT-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "Passive")
+    field(DESC, "Rectifier temperature")
+    field(EGU,  "C")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+
+    field(INP,  "$(D):T-Mon[1] CP MSS")
+}
+
+record(ai, "$(D):PCBT-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "Passive")
+    field(DESC, "PCB temperature")
+    field(EGU,  "C")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+
+    field(INP,  "$(D):T-Mon[2] CP MSS")
+}

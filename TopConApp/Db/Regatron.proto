@@ -12,7 +12,8 @@ Terminator = CR;
 getArray{ separator=','; out "\$1"; in  "\$1 [%f]"; }
 
 #  getModuleId
-#  getControlMode
+#  getModControlMode
+#  getSysControlMode
 #  getControlInput
 #  getDCLinkVoltage
 #  getPrimaryCurrent

@@ -24,7 +24,13 @@ std_values = [
 
 # Erring Monitoring
 mod = {
-    "params": {"pv": "$(D):Mod-Tree", "param": "getModTree", "scan": ""},
+    "params": {
+        "pv": "$(D):Mod-Tree",
+        "param": "getModTree",
+        "scan": "",
+        "type": FTVL.DOUBLE,
+        "nelm": "66",
+    },
     "items": [
         {"pv": "$(D):Mod-StdErrGroup-Mon", "desc": "Std warn group"},
         {"pv": "$(D):Mod-StdErrIntrn-Mon", "desc": "Std warn group 0",},
@@ -98,7 +104,13 @@ mod = {
 
 # Error Monitoring
 sys = {
-    "params": {"pv": "$(D):Sys-Tree", "param": "getSysTree", "scan": ""},
+    "params": {
+        "pv": "$(D):Sys-Tree",
+        "param": "getSysTree",
+        "scan": "",
+        "type": FTVL.DOUBLE,
+        "nelm": "66",
+    },
     "items": [
         {"pv": "$(D):Sys-StdErrGroup-Mon", "desc": "Std warn group"},
         {"pv": "$(D):Sys-StdErrIntrn-Mon", "desc": "Std warn group 0",},
@@ -176,7 +188,7 @@ def renderT_ErrorTree(entries):
     kwargs = DEFAULTS.copy()
     kwargs.update(entries["params"])
 
-    db += wf_db.safe_substitute(proto=PROTOCOL, type=FTVL.DOUBLE, nelm="66", **kwargs)
+    db += wf_db.safe_substitute(**kwargs)
     for item in entries["items"]:
         params = DEFAULTS.copy()
         params.update(item)

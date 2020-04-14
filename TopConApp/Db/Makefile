@@ -25,8 +25,7 @@ DB += $(ASYN)/db/asynRecord.db
 include $(TOP)/configure/RULES
 
 db:
-	./ErrorTree32.py
-	./Monitor.py
+	./Generate.py
 
 clean distclean:
 	./clean.sh

@@ -1,0 +1,24 @@
+
+record(bo, "$(D):Save-Cmd"){
+    field(DESC, "Save settings to non-volatile memory")
+    field(ONAM, "")
+    field(ZNAM, "")
+    field(DISA, "1")
+    field(DISV, "0")
+    field(DISS, "INVALID")
+    
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto cmd(cmdStoreParam) $(PORT) $(A)")
+}
+
+record(bo, "$(D):Clear-Cmd"){
+    field(DESC, "Clear Errors and/or warnings")
+    field(ONAM, "")
+    field(ZNAM, "")
+    field(DISA, "1")
+    field(DISV, "0")
+    field(DISS, "INVALID")
+    
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto cmd(cmdClearErrors) $(PORT) $(A)")
+}

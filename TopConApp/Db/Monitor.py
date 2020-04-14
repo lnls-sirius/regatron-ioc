@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-from Common import (
-    DEFAULTS,
-    FTVL,
-    PROTOCOL,
-    ai_db,
-    item_ai_db,
-    item_long_db,
-    item_mbbi_db,
-    mbbi_db,
-    stringin_db,
-    wf_db,
-)
+from Common import FTVL
 
-mod = [
+mod_mon = [
     {
         "params": {
             "pv": "$(D):Mod-Mon",
@@ -59,9 +48,24 @@ mod = [
         "scan": "10 second",
     },
 ]
+sys_get_set = []
 
+sys_cmd = [
+    {
+        "pv": "$(D):Save-Cmd",
+        "desc": "Save settings to non-volatile memory",
+        "type": "bo_cmd",
+        "param": "cmdStoreParam",
+    },
+    {
+        "pv": "$(D):Clear-Cmd",
+        "desc": "Clear Errors and/or warnings",
+        "type": "bo_cmd",
+        "param": "cmdClearErrors",
+    },
+]
 
-sys = [
+sys_mon = [
     {
         "params": {
             "pv": "$(D):Sys-Mon",
@@ -126,7 +130,7 @@ temp = {
 }
 
 
-individual = [
+generic_mon = [
     {
         "pv": "$(D):ActiveInterface-Mon",
         "desc": "Active interface",
@@ -189,58 +193,3 @@ individual = [
         "type": "stringin",
     },
 ]
-
-
-def renderWfMon(entries):
-    params = DEFAULTS.copy()
-    params.update(entries["params"])
-    n = 0
-    db = ""
-    db += wf_db.safe_substitute(**params)
-    for item in entries["items"]:
-        kwargs = DEFAULTS.copy()
-        kwargs.update(item)
-
-        if item.get("type", False) == "mbbi":
-            db += item_mbbi_db.safe_substitute(wf=params["pv"], n=str(n), **kwargs)
-        else:
-            db += item_ai_db.safe_substitute(wf=params["pv"], n=str(n), **kwargs)
-        n += 1
-    return db
-
-
-def renderMon(entries):
-    db = ""
-    if type(entries) == list:
-        for e in entries:
-            db += renderMon(e)
-        return db
-
-    # Consider entries as a single dict
-    if "items" in entries:  # If so ... It's a waveform
-        db += renderWfMon(entries)
-    else:
-        params = DEFAULTS.copy()
-        params.update(entries)
-
-        if entries.get("type", False) == "mbbi":
-            db += mbbi_db.safe_substitute(**params)
-        elif entries.get("type", False) == "stringin":
-            db += stringin_db.safe_substitute(**params)
-        else:
-            db += ai_db.safe_substitute(**params)
-
-    return db
-
-
-if __name__ == "__main__":
-    regs = [
-        {"file": "SysMon.db", "entries": sys},
-        {"file": "ModMon.db", "entries": mod},
-        {"file": "TempMon.db", "entries": temp},
-        {"file": "Generic.db", "entries": individual},
-    ]
-    for reg in regs:
-        with open(reg["file"], "w+") as _f:
-            db = renderMon(reg["entries"])
-            _f.write(db)

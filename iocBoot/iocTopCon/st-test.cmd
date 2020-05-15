@@ -1,23 +1,31 @@
-#../../bin/linux-x86_64/TopCon
-
-## You may have to change TopCon to something else
-## everywhere it appears in this file
-
+#!../../bin/linux-x86_64/TopCon
 < envPaths
+
+epicsEnvSet("EPICS_IOC_LOG_INET", "0.0.0.0")
+epicsEnvSet("EPICS_IOC_LOG_PORT", "7011")
 
 cd "${TOP}"
 
-## Register all support components
 dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
+asSetFilename("${TOP}/log/Security.as")
 
-drvAsynIPPortConfigure("P01", "unix:///var/run/reg/test.socket")
+# DIGI Real Port -> /dev/ttyD00
+drvAsynIPPortConfigure("P0","unix:///var/tmp/REGD00")
 
-dbLoadRecords("db/TopCon.db",       "DEVICE=Tc, PORT=P01")
-dbLoadRecords("db/TopConMaster.db", "DEVICE=Tc, PORT=P01")
-dbLoadRecords("db/asynRecord.db",   "P=Tc,R=,PORT=P01,ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/GenericCmd.db",    "D=RegTest,P=P0")
+dbLoadRecords("db/GenericGetSet.db", "D=RegTest,P=P0")
+dbLoadRecords("db/GenericMon.db",    "D=RegTest,P=P0")
+dbLoadRecords("db/TempMon.db",       "D=RegTest,P=P0")
+dbLoadRecords("db/ModMon.db",        "D=RegTest,P=P0")
+dbLoadRecords("db/ModTree.db",       "D=RegTest,P=P0")
+
+dbLoadRecords("db/SysMon.db",        "D=RegTest,P=P0")
+dbLoadRecords("db/SysTree.db",       "D=RegTest,P=P0")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 
-var streamDebug 1
+caPutLogInit "0.0.0.0" 2
+
+#var streamDebug 1

@@ -194,22 +194,6 @@ dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD05:PS-DCLink-3A,P=P13")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD07:PS-DCLink-4A,P=P15")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD07:PS-DCLink-4A,P=P15")
 
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD01:PS-DCLink-1A,R=,P=P1,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD01:PS-DCLink-1B,R=,P=P2,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD03:PS-DCLink-2A,R=,P=P3,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD03:PS-DCLink-2B,R=,P=P4,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD01:PS-DCLink-3A,R=,P=P5,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD01:PS-DCLink-3B,R=,P=P6,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD03:PS-DCLink-4A,R=,P=P7,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD03:PS-DCLink-4B,R=,P=P8,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD05:PS-DCLink-1A,R=,P=P9,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD05:PS-DCLink-1B,R=,P=P10,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD07:PS-DCLink-2A,R=,P=P11,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD07:PS-DCLink-2B,R=,P=P12,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD05:PS-DCLink-3A,R=,P=P13,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD05:PS-DCLink-3B,R=,P=P14,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD07:PS-DCLink-4A,R=,P=P15,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSD07:PS-DCLink-4B,R=,P=P16,ADDR=,IMAX=,OMAX=")
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 

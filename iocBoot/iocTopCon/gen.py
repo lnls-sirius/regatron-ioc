@@ -46,6 +46,9 @@ dbLoadRecords("db/SysTree.db",       "D=${PV},P=${P}")
 ''')
 
 rega = [
+    {'file':'st-test.cmd', 'items':[
+       {'M':True, 'PV':'RegTest'},
+    ]},
     {'file':'st-dipoles.cmd', 'items':[
        {'M':True,  'PV':'PA-RaPSD01:PS-DCLink-1A'},
        {'M':False, 'PV':'PA-RaPSD01:PS-DCLink-1B'},
@@ -102,13 +105,13 @@ if __name__ == '__main__':
              f.write(header)
              s_ports, dbs, m_dbs, asyn_dbs = '','','',''
              for item in d['items']:
-                 port += 1
                  item['P'] = 'P{}'.format(port)
                  s_ports += s_port.safe_substitute(UNIX='{:02}'.format(port), **item)
-                 asyn_dbs += asyn_db.safe_substitute(**item)
+                 #asyn_dbs += asyn_db.safe_substitute(**item)
                  dbs += module_db.safe_substitute(**item)
                  if item['M'] == True:
                      m_dbs += system_db.safe_substitute(**item)
+                 port += 1
              f.write(s_ports)
              f.write(dbs)
              f.write(m_dbs)

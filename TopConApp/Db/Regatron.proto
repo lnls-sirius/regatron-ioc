@@ -20,6 +20,7 @@ getArray{ separator=','; out "\$1"; in  "\$1 [%f]"; }
 #  getPrimaryCurrent
 #  getSysControlMode
 getFloat{ out "\$1"; in  "\$1 %f"; }
+getInt{ out "\$1"; in  "\$1 %i"; }
 
 #  getAutoReconnect
 #  getBootloaderVersion
@@ -35,5 +36,6 @@ getString{ out "\$1"; in  "\$1 %s"; }
 cmd{ out "\$1"; in  "\$1 ACK"; }
 
 #  setAutoReconnect
-setFloat{ out "\$1"; in  "\$1 ACK"; }
+setFloat{ out "\$1 %f"; in  "\$1 ACK"; }
+setInt{ out "\$1 %i"; in  "\$1 ACK"; }
 

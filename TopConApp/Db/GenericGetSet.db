@@ -7,7 +7,7 @@ record(bi, "$(D):AutoReconnect-RB"){
     field(ONAM, "Enable")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getAutoReconnect) $(P)")
+    field(INP,  "@Regatron.proto getInt(getAutoReconnect) $(P)")
 }
 record(bo, "$(D):AutoReconnect-SP"){
     field(PINI, "NO")
@@ -17,6 +17,6 @@ record(bo, "$(D):AutoReconnect-SP"){
     field(ONAM, "Enable")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setFloat(setAutoReconnect) $(P)")
+    field(OUT,  "@Regatron.proto setInt(setAutoReconnect) $(P)")
     field(FLNK, "$(D):AutoReconnect-RB")
 }

@@ -22,7 +22,7 @@ mod_mon = [
             {
                 "pv": "$(D):Mod-State-Mon",
                 "desc": "Module state",
-                "type": "mbbi",
+                "type": TemplateType.MBBI,
                 "onst": "",
                 "twst": "POWERUP",
                 "frst": "READY",

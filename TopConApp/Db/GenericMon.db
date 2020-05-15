@@ -40,7 +40,7 @@ record(mbbi, "$(D):ActiveInterface-Mon") {
     field(FFSV, "")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getControlInput) $(P)")
+    field(INP,  "@Regatron.proto getInt(getControlInput) $(P)")
 }
 
 record(ai, "$(D):DCLinkVolt-Mon"){

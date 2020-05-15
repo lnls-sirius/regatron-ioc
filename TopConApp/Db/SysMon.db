@@ -131,5 +131,5 @@ record(mbbi, "$(D):Sys-ControlMode-Mon") {
     field(FFSV, "")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getSysControlMode) $(P)")
+    field(INP,  "@Regatron.proto getInt(getSysControlMode) $(P)")
 }

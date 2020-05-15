@@ -193,7 +193,7 @@ record(mbbi, "${pv}") {
     field(FFSV, "${ffsv}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getFloat(${param}) $(P)")
+    field(INP,  "${proto} getInt(${param}) $(P)")
 }
 """
 )
@@ -257,7 +257,7 @@ record(bi, "${pv}-RB"){
     field(ONAM, "${onam}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getFloat(get${param}) $(P)")
+    field(INP,  "${proto} getInt(get${param}) $(P)")
 }
 record(bo, "${pv}-SP"){
     field(PINI, "NO")
@@ -267,7 +267,7 @@ record(bo, "${pv}-SP"){
     field(ONAM, "${onam}")
 
     field(DTYP, "stream")
-    field(OUT,  "${proto} setFloat(set${param}) $(P)")
+    field(OUT,  "${proto} setInt(set${param}) $(P)")
     field(FLNK, "${pv}-RB")
 }
 """

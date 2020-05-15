@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-from Common import FTVL
+from Common import FTVL, TemplateType
 
 mod_mon = [
     {
         "params": {
             "pv": "$(D):Mod-Mon",
             "param": "getSysReadings",
-            "scan": "",
+            "scan": "5 second",
             "nelm": "5",
             "type": FTVL.DOUBLE,
         },
@@ -49,7 +49,6 @@ mod_mon = [
     },
 ]
 sys_get_set = []
-
 sys_cmd = [
     {
         "pv": "$(D):Save-Cmd",
@@ -70,7 +69,7 @@ sys_mon = [
         "params": {
             "pv": "$(D):Sys-Mon",
             "param": "getSysReadings",
-            "scan": "",
+            "scan": "5 second",
             "nelm": "5",
             "type": FTVL.DOUBLE,
         },
@@ -114,7 +113,7 @@ sys_mon = [
 ]
 
 
-temp = {
+temperature = {
     "params": {
         "pv": "$(D):T-Mon",
         "param": "getTemperatures",
@@ -161,35 +160,61 @@ generic_mon = [
         "pv": "$(D):DSPVer-Mon",
         "desc": "DSP Firmware Version",
         "param": "getDSPVersion",
-        "scan": "10 second",
+        "scan": "60 second",
         "type": "stringin",
     },
     {
         "pv": "$(D):ModulatorVer-Mon",
         "desc": "Modulator Version",
         "param": "getModulatorVersion",
-        "scan": "10 second",
+        "scan": "60 second",
         "type": "stringin",
     },
     {
         "pv": "$(D):PheripherieVer-Mon",
         "desc": "Pheripherie Version",
         "param": "getPheripherieVersion",
-        "scan": "10 second",
+        "scan": "60 second",
         "type": "stringin",
     },
     {
         "pv": "$(D):BootloaderVer-Mon",
         "desc": "Bootloader Version",
         "param": "getBootloaderVersion",
-        "scan": "10 second",
+        "scan": "60 second",
         "type": "stringin",
     },
     {
         "pv": "$(D):DLLVer-Mon",
         "desc": "DLL Version",
         "param": "getDLLVersion",
-        "scan": "10 second",
+        "scan": "60 second",
         "type": "stringin",
+    },
+]
+
+generic_cmd = [
+    {
+        "pv": "$(D):Connect-Cmd",
+        "desc": "Attempt to connect to the device",
+        "type": "bo_cmd",
+        "param": "cmdConnect",
+    },
+    {
+        "pv": "$(D):Disconnect-Cmd",
+        "desc": "Disconnect from device",
+        "type": "bo_cmd",
+        "param": "cmdDisconnect",
+    },
+]
+
+generic_get_set = [
+    {
+        "pv": "$(D):AutoReconnect",
+        "desc": "Enable/Disable auto reconnect to device",
+        "type": TemplateType.BINARY_GET_SET,
+        "param": "AutoReconnect",
+        "onam": "Enable",
+        "znam": "Disable",
     },
 ]

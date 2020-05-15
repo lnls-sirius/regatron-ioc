@@ -10,8 +10,20 @@ from Common import (
     mbbi_db,
     stringin_db,
     wf_db,
+    long_get_set_db,
+    binary_get_set_db,
+    TemplateType,
 )
-from Monitor import generic_mon, mod_mon, sys_mon, sys_cmd, sys_get_set, temp
+from Records import (
+    generic_cmd,
+    generic_get_set,
+    generic_mon,
+    mod_mon,
+    sys_cmd,
+    sys_get_set,
+    sys_mon,
+    temperature,
+)
 from ErrorTree32 import sys as sys_tree, mod as mod_tree
 
 
@@ -25,9 +37,9 @@ def renderWfMon(entries):
         kwargs = DEFAULTS.copy()
         kwargs.update(item)
 
-        if item.get("type", False) == "mbbi":
+        if item.get("type", False) == TemplateType.MBBI:
             db += item_mbbi_db.safe_substitute(wf=params["pv"], n=str(n), **kwargs)
-        elif item.get("type", False) == "longin":
+        elif item.get("type", False) == TemplateType.LONG_IN:
             db += item_long_db.safe_substitute(wf=params["pv"], n=str(n), **kwargs)
         else:
             db += item_ai_db.safe_substitute(wf=params["pv"], n=str(n), **kwargs)
@@ -35,11 +47,11 @@ def renderWfMon(entries):
     return db
 
 
-def renderMon(entries):
+def renderRecord(entries):
     db = ""
     if type(entries) == list:
         for e in entries:
-            db += renderMon(e)
+            db += renderRecord(e)
         return db
 
     # Consider entries as a single dict
@@ -48,12 +60,16 @@ def renderMon(entries):
     else:
         params = DEFAULTS.copy()
         params.update(entries)
-        if entries.get("type", False) == "mbbi":
+        if entries.get("type", False) == TemplateType.MBBI:
             db += mbbi_db.safe_substitute(**params)
-        elif entries.get("type", False) == "bo_cmd":
+        elif entries.get("type", False) == TemplateType.BO_CMD:
             db += bo_cmd_db.safe_substitute(**params)
-        elif entries.get("type", False) == "stringin":
+        elif entries.get("type", False) == TemplateType.STRING_IN:
             db += stringin_db.safe_substitute(**params)
+        elif entries.get("type", False) == TemplateType.LONG_GET_SET:
+            db += long_get_set_db.safe_substitute(**params)
+        elif entries.get("type", False) == TemplateType.BINARY_GET_SET:
+            db += binary_get_set_db.safe_substitute(**params)
         else:
             db += ai_db.safe_substitute(**params)
 
@@ -62,6 +78,8 @@ def renderMon(entries):
 
 if __name__ == "__main__":
     regs = [
+        {"file": "GenericCmd.db", "entries": generic_cmd},
+        {"file": "GenericGetSet.db", "entries": generic_get_set},
         {"file": "GenericMon.db", "entries": generic_mon},
         {"file": "ModMon.db", "entries": mod_mon},
         {"file": "ModTree.db", "entries": mod_tree},
@@ -69,9 +87,9 @@ if __name__ == "__main__":
         {"file": "SysGetSet.db", "entries": sys_get_set},
         {"file": "SysMon.db", "entries": sys_mon},
         {"file": "SysTree.db", "entries": sys_tree},
-        {"file": "TempMon.db", "entries": temp},
+        {"file": "TempMon.db", "entries": temperature},
     ]
     for reg in regs:
         with open(reg["file"], "w+") as _f:
-            db = renderMon(reg["entries"])
+            db = renderRecord(reg["entries"])
             _f.write(db)

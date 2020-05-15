@@ -75,7 +75,7 @@ record(ai, "$(D):PrimaryCurr-Mon"){
 
 record(stringin, "$(D):DSPVer-Mon"){
     field(PINI, "NO")
-    field(SCAN, "10 second")
+    field(SCAN, "60 second")
     field(DESC, "DSP Firmware Version")
     field(PHAS, "0")
 
@@ -85,7 +85,7 @@ record(stringin, "$(D):DSPVer-Mon"){
 
 record(stringin, "$(D):ModulatorVer-Mon"){
     field(PINI, "NO")
-    field(SCAN, "10 second")
+    field(SCAN, "60 second")
     field(DESC, "Modulator Version")
     field(PHAS, "0")
 
@@ -95,7 +95,7 @@ record(stringin, "$(D):ModulatorVer-Mon"){
 
 record(stringin, "$(D):PheripherieVer-Mon"){
     field(PINI, "NO")
-    field(SCAN, "10 second")
+    field(SCAN, "60 second")
     field(DESC, "Pheripherie Version")
     field(PHAS, "0")
 
@@ -105,7 +105,7 @@ record(stringin, "$(D):PheripherieVer-Mon"){
 
 record(stringin, "$(D):BootloaderVer-Mon"){
     field(PINI, "NO")
-    field(SCAN, "10 second")
+    field(SCAN, "60 second")
     field(DESC, "Bootloader Version")
     field(PHAS, "0")
 
@@ -115,7 +115,7 @@ record(stringin, "$(D):BootloaderVer-Mon"){
 
 record(stringin, "$(D):DLLVer-Mon"){
     field(PINI, "NO")
-    field(SCAN, "10 second")
+    field(SCAN, "60 second")
     field(DESC, "DLL Version")
     field(PHAS, "0")
 

@@ -14,8 +14,11 @@ include $(TOP)/configure/CONFIG
 DB += Regatron.proto
 
 DB += Generic.db
+DB += GenericMon.db
 DB += ModMon.db
 DB += ModTree.db
+DB += SysCmd.db
+DB += SysGetSet.db
 DB += SysMon.db
 DB += SysTree.db
 DB += TempMon.db

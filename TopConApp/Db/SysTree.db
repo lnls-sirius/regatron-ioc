@@ -2,7 +2,7 @@
 record(waveform, "$(D):Sys-Tree"){
     field(SCAN, "30 second")
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getArray(getSysTree) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getArray(getSysTree) $(P) $(A)")
     field(FTVL, "DOUBLE")
     field(NELM, "66")
     field(PRIO, "LOW")

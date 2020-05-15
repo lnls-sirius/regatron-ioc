@@ -8,7 +8,7 @@ record(bo, "$(D):Connect-Cmd"){
     field(DISS, "INVALID")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto cmd(cmdConnect) $(PORT) $(A)")
+    field(OUT,  "@Regatron.proto cmd(cmdConnect) $(P) $(A)")
 }
 
 record(bo, "$(D):Disconnect-Cmd"){
@@ -20,5 +20,5 @@ record(bo, "$(D):Disconnect-Cmd"){
     field(DISS, "INVALID")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto cmd(cmdDisconnect) $(PORT) $(A)")
+    field(OUT,  "@Regatron.proto cmd(cmdDisconnect) $(P) $(A)")
 }

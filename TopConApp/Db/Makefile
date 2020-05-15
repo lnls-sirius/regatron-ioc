@@ -13,7 +13,8 @@ include $(TOP)/configure/CONFIG
 
 DB += Regatron.proto
 
-DB += Generic.db
+DB += GenericCmd.db
+DB += GenericGetSet.db
 DB += GenericMon.db
 DB += ModMon.db
 DB += ModTree.db
@@ -23,7 +24,7 @@ DB += SysMon.db
 DB += SysTree.db
 DB += TempMon.db
 
-DB += $(ASYN)/db/asynRecord.db
+#DB += $(ASYN)/db/asynRecord.db
 
 include $(TOP)/configure/RULES
 

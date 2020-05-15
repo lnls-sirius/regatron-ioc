@@ -40,7 +40,7 @@ record(mbbi, "$(D):ActiveInterface-Mon") {
     field(FFSV, "")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getControlInput) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getFloat(getControlInput) $(P) $(A)")
 }
 
 record(ai, "$(D):DCLinkVolt-Mon"){
@@ -55,7 +55,7 @@ record(ai, "$(D):DCLinkVolt-Mon"){
     field(ESLO, "1")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getDCLinkVoltage) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getFloat(getDCLinkVoltage) $(P) $(A)")
 }
 
 record(ai, "$(D):PrimaryCurr-Mon"){
@@ -70,7 +70,7 @@ record(ai, "$(D):PrimaryCurr-Mon"){
     field(ESLO, "1")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getPrimaryCurrent) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getFloat(getPrimaryCurrent) $(P) $(A)")
 }
 
 record(stringin, "$(D):DSPVer-Mon"){
@@ -80,7 +80,7 @@ record(stringin, "$(D):DSPVer-Mon"){
     field(PHAS, "0")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getString(getDSPVersion) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getString(getDSPVersion) $(P) $(A)")
 }
 
 record(stringin, "$(D):ModulatorVer-Mon"){
@@ -90,7 +90,7 @@ record(stringin, "$(D):ModulatorVer-Mon"){
     field(PHAS, "0")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getString(getModulatorVersion) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getString(getModulatorVersion) $(P) $(A)")
 }
 
 record(stringin, "$(D):PheripherieVer-Mon"){
@@ -100,7 +100,7 @@ record(stringin, "$(D):PheripherieVer-Mon"){
     field(PHAS, "0")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getString(getPheripherieVersion) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getString(getPheripherieVersion) $(P) $(A)")
 }
 
 record(stringin, "$(D):BootloaderVer-Mon"){
@@ -110,7 +110,7 @@ record(stringin, "$(D):BootloaderVer-Mon"){
     field(PHAS, "0")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getString(getBootloaderVersion) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getString(getBootloaderVersion) $(P) $(A)")
 }
 
 record(stringin, "$(D):DLLVer-Mon"){
@@ -120,5 +120,5 @@ record(stringin, "$(D):DLLVer-Mon"){
     field(PHAS, "0")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getString(getDLLVersion) $(PORT) $(A)")
+    field(INP,  "@Regatron.proto getString(getDLLVersion) $(P) $(A)")
 }

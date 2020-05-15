@@ -1,6 +1,6 @@
 
 record(waveform, "$(D):Mod-Tree"){
-    field(SCAN, "")
+    field(SCAN, "30 second")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getModTree) $(PORT) $(A)")
     field(FTVL, "DOUBLE")
@@ -9,331 +9,331 @@ record(waveform, "$(D):Mod-Tree"){
 }
 
 record(longin, "$(D):Mod-StdErrGroup-Mon"){
-    field(INP,  "$(D):Mod-Tree[0] CP MSS")
-    field(DESC, "Std warn group")
+     field(INP,  "$(D):Mod-Tree[0] CP MSS")
+     field(DESC, "Std warn group")
 }
 
 record(longin, "$(D):Mod-StdErrIntrn-Mon"){
-    field(INP,  "$(D):Mod-Tree[1] CP MSS")
-    field(DESC, "Std warn group 0")
+     field(INP,  "$(D):Mod-Tree[1] CP MSS")
+     field(DESC, "Std warn group 0")
 }
 
 record(longin, "$(D):Mod-StdErrIntrnPDSP-Mon"){
-    field(INP,  "$(D):Mod-Tree[2] CP MSS")
-    field(DESC, "Std warn group 1")
+     field(INP,  "$(D):Mod-Tree[2] CP MSS")
+     field(DESC, "Std warn group 1")
 }
 
 record(longin, "$(D):Mod-StdErrOutCurrent-Mon"){
-    field(INP,  "$(D):Mod-Tree[3] CP MSS")
-    field(DESC, "Std warn group 2")
+     field(INP,  "$(D):Mod-Tree[3] CP MSS")
+     field(DESC, "Std warn group 2")
 }
 
 record(longin, "$(D):Mod-StdErrOutVolt-Mon"){
-    field(INP,  "$(D):Mod-Tree[4] CP MSS")
-    field(DESC, "Std warn group 3")
+     field(INP,  "$(D):Mod-Tree[4] CP MSS")
+     field(DESC, "Std warn group 3")
 }
 
 record(longin, "$(D):Mod-StdErrSupply-Mon"){
-    field(INP,  "$(D):Mod-Tree[5] CP MSS")
-    field(DESC, "Std warn group 4")
+     field(INP,  "$(D):Mod-Tree[5] CP MSS")
+     field(DESC, "Std warn group 4")
 }
 
 record(longin, "$(D):Mod-StdErrT-Mon"){
-    field(INP,  "$(D):Mod-Tree[6] CP MSS")
-    field(DESC, "Std warn group 5")
+     field(INP,  "$(D):Mod-Tree[6] CP MSS")
+     field(DESC, "Std warn group 5")
 }
 
 record(longin, "$(D):Mod-StdErrComm-Mon"){
-    field(INP,  "$(D):Mod-Tree[7] CP MSS")
-    field(DESC, "Std warn group 6")
+     field(INP,  "$(D):Mod-Tree[7] CP MSS")
+     field(DESC, "Std warn group 6")
 }
 
 record(longin, "$(D):Mod-StdErrIntrnMod-Mon"){
-    field(INP,  "$(D):Mod-Tree[8] CP MSS")
-    field(DESC, "Std warn group 7")
+     field(INP,  "$(D):Mod-Tree[8] CP MSS")
+     field(DESC, "Std warn group 7")
 }
 
 record(longin, "$(D):Mod-StdErrAD1Ovr-Mon"){
-    field(INP,  "$(D):Mod-Tree[9] CP MSS")
-    field(DESC, "Std warn group 8")
+     field(INP,  "$(D):Mod-Tree[9] CP MSS")
+     field(DESC, "Std warn group 8")
 }
 
 record(longin, "$(D):Mod-StdErrAD2Ovr-Mon"){
-    field(INP,  "$(D):Mod-Tree[10] CP MSS")
-    field(DESC, "Std warn group 9")
+     field(INP,  "$(D):Mod-Tree[10] CP MSS")
+     field(DESC, "Std warn group 9")
 }
 
 record(longin, "$(D):Mod-StdErrAD1Undr-Mon"){
-    field(INP,  "$(D):Mod-Tree[11] CP MSS")
-    field(DESC, "Std warn group A")
+     field(INP,  "$(D):Mod-Tree[11] CP MSS")
+     field(DESC, "Std warn group A")
 }
 
 record(longin, "$(D):Mod-StdErrAD2Undr-Mon"){
-    field(INP,  "$(D):Mod-Tree[12] CP MSS")
-    field(DESC, "Std warn group B")
+     field(INP,  "$(D):Mod-Tree[12] CP MSS")
+     field(DESC, "Std warn group B")
 }
 
 record(longin, "$(D):Mod-StdErrLogin-Mon"){
-    field(INP,  "$(D):Mod-Tree[13] CP MSS")
-    field(DESC, "Std warn group C")
+     field(INP,  "$(D):Mod-Tree[13] CP MSS")
+     field(DESC, "Std warn group C")
 }
 
 record(longin, "$(D):Mod-StdErrConf-Mon"){
-    field(INP,  "$(D):Mod-Tree[14] CP MSS")
-    field(DESC, "Std warn group D")
+     field(INP,  "$(D):Mod-Tree[14] CP MSS")
+     field(DESC, "Std warn group D")
 }
 
 record(longin, "$(D):Mod-StdErrConf2-Mon"){
-    field(INP,  "$(D):Mod-Tree[15] CP MSS")
-    field(DESC, "Std warn group E")
+     field(INP,  "$(D):Mod-Tree[15] CP MSS")
+     field(DESC, "Std warn group E")
 }
 
 record(longin, "$(D):Mod-StdErrMisc-Mon"){
-    field(INP,  "$(D):Mod-Tree[16] CP MSS")
-    field(DESC, "Std warn group F")
+     field(INP,  "$(D):Mod-Tree[16] CP MSS")
+     field(DESC, "Std warn group F")
 }
 
 record(longin, "$(D):Mod-ExtErrIBCSystem-Mon"){
-    field(INP,  "$(D):Mod-Tree[17] CP MSS")
-    field(DESC, "Ext warn group G")
+     field(INP,  "$(D):Mod-Tree[17] CP MSS")
+     field(DESC, "Ext warn group G")
 }
 
 record(longin, "$(D):Mod-ExtErrIBCSuppply-Mon"){
-    field(INP,  "$(D):Mod-Tree[18] CP MSS")
-    field(DESC, "Ext warn group H")
+     field(INP,  "$(D):Mod-Tree[18] CP MSS")
+     field(DESC, "Ext warn group H")
 }
 
 record(longin, "$(D):Mod-ExtErrIBCComm-Mon"){
-    field(INP,  "$(D):Mod-Tree[19] CP MSS")
-    field(DESC, "Ext warn group J")
+     field(INP,  "$(D):Mod-Tree[19] CP MSS")
+     field(DESC, "Ext warn group J")
 }
 
 record(longin, "$(D):Mod-ExtErrIBCPwr-Mon"){
-    field(INP,  "$(D):Mod-Tree[20] CP MSS")
-    field(DESC, "Ext warn group K")
+     field(INP,  "$(D):Mod-Tree[20] CP MSS")
+     field(DESC, "Ext warn group K")
 }
 
 record(longin, "$(D):Mod-ExtErrIBCInv-Mon"){
-    field(INP,  "$(D):Mod-Tree[21] CP MSS")
-    field(DESC, "Ext warn group L")
+     field(INP,  "$(D):Mod-Tree[21] CP MSS")
+     field(DESC, "Ext warn group L")
 }
 
 record(longin, "$(D):Mod-ExtErrIBCMisc-Mon"){
-    field(INP,  "$(D):Mod-Tree[22] CP MSS")
-    field(DESC, "Ext warn group M")
+     field(INP,  "$(D):Mod-Tree[22] CP MSS")
+     field(DESC, "Ext warn group M")
 }
 
 record(longin, "$(D):Mod-ExtErrIBCInv2-Mon"){
-    field(INP,  "$(D):Mod-Tree[23] CP MSS")
-    field(DESC, "Ext warn group N")
+     field(INP,  "$(D):Mod-Tree[23] CP MSS")
+     field(DESC, "Ext warn group N")
 }
 
 record(longin, "$(D):Mod-ExtErrP-Mon"){
-    field(INP,  "$(D):Mod-Tree[24] CP MSS")
-    field(DESC, "not used")
+     field(INP,  "$(D):Mod-Tree[24] CP MSS")
+     field(DESC, "not used")
 }
 
 record(longin, "$(D):Mod-ExtErrQ-Mon"){
-    field(INP,  "$(D):Mod-Tree[25] CP MSS")
-    field(DESC, "not used")
+     field(INP,  "$(D):Mod-Tree[25] CP MSS")
+     field(DESC, "not used")
 }
 
 record(longin, "$(D):Mod-ExtErrR-Mon"){
-    field(INP,  "$(D):Mod-Tree[26] CP MSS")
-    field(DESC, "not used")
+     field(INP,  "$(D):Mod-Tree[26] CP MSS")
+     field(DESC, "not used")
 }
 
 record(longin, "$(D):Mod-ExtErrSupply2-Mon"){
-    field(INP,  "$(D):Mod-Tree[27] CP MSS")
-    field(DESC, "Ext warn group S")
+     field(INP,  "$(D):Mod-Tree[27] CP MSS")
+     field(DESC, "Ext warn group S")
 }
 
 record(longin, "$(D):Mod-ExtErrLogin2-Mon"){
-    field(INP,  "$(D):Mod-Tree[28] CP MSS")
-    field(DESC, "Ext warn group T")
+     field(INP,  "$(D):Mod-Tree[28] CP MSS")
+     field(DESC, "Ext warn group T")
 }
 
 record(longin, "$(D):Mod-ExtErrConf3-Mon"){
-    field(INP,  "$(D):Mod-Tree[29] CP MSS")
-    field(DESC, "Ext warn group U")
+     field(INP,  "$(D):Mod-Tree[29] CP MSS")
+     field(DESC, "Ext warn group U")
 }
 
 record(longin, "$(D):Mod-ExtErrComm3-Mon"){
-    field(INP,  "$(D):Mod-Tree[30] CP MSS")
-    field(DESC, "Ext warn group V")
+     field(INP,  "$(D):Mod-Tree[30] CP MSS")
+     field(DESC, "Ext warn group V")
 }
 
 record(longin, "$(D):Mod-ExtErrIntrn2-Mon"){
-    field(INP,  "$(D):Mod-Tree[31] CP MSS")
-    field(DESC, "Ext warn group W")
+     field(INP,  "$(D):Mod-Tree[31] CP MSS")
+     field(DESC, "Ext warn group W")
 }
 
 record(longin, "$(D):Mod-ExtErrComm2-Mon"){
-    field(INP,  "$(D):Mod-Tree[32] CP MSS")
-    field(DESC, "Ext warn group X")
+     field(INP,  "$(D):Mod-Tree[32] CP MSS")
+     field(DESC, "Ext warn group X")
 }
 
 record(longin, "$(D):Mod-StdWarnGroup-Mon"){
-    field(INP,  "$(D):Mod-Tree[33] CP MSS")
-    field(DESC, "Std warn group")
+     field(INP,  "$(D):Mod-Tree[33] CP MSS")
+     field(DESC, "Std warn group")
 }
 
 record(longin, "$(D):Mod-StdWarnIntrn-Mon"){
-    field(INP,  "$(D):Mod-Tree[34] CP MSS")
-    field(DESC, "Std warn group 0")
+     field(INP,  "$(D):Mod-Tree[34] CP MSS")
+     field(DESC, "Std warn group 0")
 }
 
 record(longin, "$(D):Mod-StdWarnIntrnPDSP-Mon"){
-    field(INP,  "$(D):Mod-Tree[35] CP MSS")
-    field(DESC, "Std warn group 1")
+     field(INP,  "$(D):Mod-Tree[35] CP MSS")
+     field(DESC, "Std warn group 1")
 }
 
 record(longin, "$(D):Mod-StdWarnOutCurrent-Mon"){
-    field(INP,  "$(D):Mod-Tree[36] CP MSS")
-    field(DESC, "Std warn group 2")
+     field(INP,  "$(D):Mod-Tree[36] CP MSS")
+     field(DESC, "Std warn group 2")
 }
 
 record(longin, "$(D):Mod-StdWarnOutVolt-Mon"){
-    field(INP,  "$(D):Mod-Tree[37] CP MSS")
-    field(DESC, "Std warn group 3")
+     field(INP,  "$(D):Mod-Tree[37] CP MSS")
+     field(DESC, "Std warn group 3")
 }
 
 record(longin, "$(D):Mod-StdWarnSupply-Mon"){
-    field(INP,  "$(D):Mod-Tree[38] CP MSS")
-    field(DESC, "Std warn group 4")
+     field(INP,  "$(D):Mod-Tree[38] CP MSS")
+     field(DESC, "Std warn group 4")
 }
 
 record(longin, "$(D):Mod-StdWarnT-Mon"){
-    field(INP,  "$(D):Mod-Tree[39] CP MSS")
-    field(DESC, "Std warn group 5")
+     field(INP,  "$(D):Mod-Tree[39] CP MSS")
+     field(DESC, "Std warn group 5")
 }
 
 record(longin, "$(D):Mod-StdWarnComm-Mon"){
-    field(INP,  "$(D):Mod-Tree[40] CP MSS")
-    field(DESC, "Std warn group 6")
+     field(INP,  "$(D):Mod-Tree[40] CP MSS")
+     field(DESC, "Std warn group 6")
 }
 
 record(longin, "$(D):Mod-StdWarnIntrnMod-Mon"){
-    field(INP,  "$(D):Mod-Tree[41] CP MSS")
-    field(DESC, "Std warn group 7")
+     field(INP,  "$(D):Mod-Tree[41] CP MSS")
+     field(DESC, "Std warn group 7")
 }
 
 record(longin, "$(D):Mod-StdWarnAD1Ovr-Mon"){
-    field(INP,  "$(D):Mod-Tree[42] CP MSS")
-    field(DESC, "Std warn group 8")
+     field(INP,  "$(D):Mod-Tree[42] CP MSS")
+     field(DESC, "Std warn group 8")
 }
 
 record(longin, "$(D):Mod-StdWarnAD2Ovr-Mon"){
-    field(INP,  "$(D):Mod-Tree[43] CP MSS")
-    field(DESC, "Std warn group 9")
+     field(INP,  "$(D):Mod-Tree[43] CP MSS")
+     field(DESC, "Std warn group 9")
 }
 
 record(longin, "$(D):Mod-StdWarnAD1Undr-Mon"){
-    field(INP,  "$(D):Mod-Tree[44] CP MSS")
-    field(DESC, "Std warn group A")
+     field(INP,  "$(D):Mod-Tree[44] CP MSS")
+     field(DESC, "Std warn group A")
 }
 
 record(longin, "$(D):Mod-StdWarnAD2Undr-Mon"){
-    field(INP,  "$(D):Mod-Tree[45] CP MSS")
-    field(DESC, "Std warn group B")
+     field(INP,  "$(D):Mod-Tree[45] CP MSS")
+     field(DESC, "Std warn group B")
 }
 
 record(longin, "$(D):Mod-StdWarnLogin-Mon"){
-    field(INP,  "$(D):Mod-Tree[46] CP MSS")
-    field(DESC, "Std warn group C")
+     field(INP,  "$(D):Mod-Tree[46] CP MSS")
+     field(DESC, "Std warn group C")
 }
 
 record(longin, "$(D):Mod-StdWarnConf-Mon"){
-    field(INP,  "$(D):Mod-Tree[47] CP MSS")
-    field(DESC, "Std warn group D")
+     field(INP,  "$(D):Mod-Tree[47] CP MSS")
+     field(DESC, "Std warn group D")
 }
 
 record(longin, "$(D):Mod-StdWarnConf2-Mon"){
-    field(INP,  "$(D):Mod-Tree[48] CP MSS")
-    field(DESC, "Std warn group E")
+     field(INP,  "$(D):Mod-Tree[48] CP MSS")
+     field(DESC, "Std warn group E")
 }
 
 record(longin, "$(D):Mod-StdWarnMisc-Mon"){
-    field(INP,  "$(D):Mod-Tree[49] CP MSS")
-    field(DESC, "Std warn group F")
+     field(INP,  "$(D):Mod-Tree[49] CP MSS")
+     field(DESC, "Std warn group F")
 }
 
 record(longin, "$(D):Mod-ExtWarnIBCSystem-Mon"){
-    field(INP,  "$(D):Mod-Tree[50] CP MSS")
-    field(DESC, "Ext warn group G")
+     field(INP,  "$(D):Mod-Tree[50] CP MSS")
+     field(DESC, "Ext warn group G")
 }
 
 record(longin, "$(D):Mod-ExtWarnIBCSuppply-Mon"){
-    field(INP,  "$(D):Mod-Tree[51] CP MSS")
-    field(DESC, "Ext warn group H")
+     field(INP,  "$(D):Mod-Tree[51] CP MSS")
+     field(DESC, "Ext warn group H")
 }
 
 record(longin, "$(D):Mod-ExtWarnIBCComm-Mon"){
-    field(INP,  "$(D):Mod-Tree[52] CP MSS")
-    field(DESC, "Ext warn group J")
+     field(INP,  "$(D):Mod-Tree[52] CP MSS")
+     field(DESC, "Ext warn group J")
 }
 
 record(longin, "$(D):Mod-ExtWarnIBCPwr-Mon"){
-    field(INP,  "$(D):Mod-Tree[53] CP MSS")
-    field(DESC, "Ext warn group K")
+     field(INP,  "$(D):Mod-Tree[53] CP MSS")
+     field(DESC, "Ext warn group K")
 }
 
 record(longin, "$(D):Mod-ExtWarnIBCInv-Mon"){
-    field(INP,  "$(D):Mod-Tree[54] CP MSS")
-    field(DESC, "Ext warn group L")
+     field(INP,  "$(D):Mod-Tree[54] CP MSS")
+     field(DESC, "Ext warn group L")
 }
 
 record(longin, "$(D):Mod-ExtWarnIBCMisc-Mon"){
-    field(INP,  "$(D):Mod-Tree[55] CP MSS")
-    field(DESC, "Ext warn group M")
+     field(INP,  "$(D):Mod-Tree[55] CP MSS")
+     field(DESC, "Ext warn group M")
 }
 
 record(longin, "$(D):Mod-ExtWarnIBCInv2-Mon"){
-    field(INP,  "$(D):Mod-Tree[56] CP MSS")
-    field(DESC, "Ext warn group N")
+     field(INP,  "$(D):Mod-Tree[56] CP MSS")
+     field(DESC, "Ext warn group N")
 }
 
 record(longin, "$(D):Mod-ExtWarnP-Mon"){
-    field(INP,  "$(D):Mod-Tree[57] CP MSS")
-    field(DESC, "not used")
+     field(INP,  "$(D):Mod-Tree[57] CP MSS")
+     field(DESC, "not used")
 }
 
 record(longin, "$(D):Mod-ExtWarnQ-Mon"){
-    field(INP,  "$(D):Mod-Tree[58] CP MSS")
-    field(DESC, "not used")
+     field(INP,  "$(D):Mod-Tree[58] CP MSS")
+     field(DESC, "not used")
 }
 
 record(longin, "$(D):Mod-ExtWarnR-Mon"){
-    field(INP,  "$(D):Mod-Tree[59] CP MSS")
-    field(DESC, "not used")
+     field(INP,  "$(D):Mod-Tree[59] CP MSS")
+     field(DESC, "not used")
 }
 
 record(longin, "$(D):Mod-ExtWarnSupply2-Mon"){
-    field(INP,  "$(D):Mod-Tree[60] CP MSS")
-    field(DESC, "Ext warn group S")
+     field(INP,  "$(D):Mod-Tree[60] CP MSS")
+     field(DESC, "Ext warn group S")
 }
 
 record(longin, "$(D):Mod-ExtWarnLogin2-Mon"){
-    field(INP,  "$(D):Mod-Tree[61] CP MSS")
-    field(DESC, "Ext warn group T")
+     field(INP,  "$(D):Mod-Tree[61] CP MSS")
+     field(DESC, "Ext warn group T")
 }
 
 record(longin, "$(D):Mod-ExtWarnConf3-Mon"){
-    field(INP,  "$(D):Mod-Tree[62] CP MSS")
-    field(DESC, "Ext warn group U")
+     field(INP,  "$(D):Mod-Tree[62] CP MSS")
+     field(DESC, "Ext warn group U")
 }
 
 record(longin, "$(D):Mod-ExtWarnComm3-Mon"){
-    field(INP,  "$(D):Mod-Tree[63] CP MSS")
-    field(DESC, "Ext warn group V")
+     field(INP,  "$(D):Mod-Tree[63] CP MSS")
+     field(DESC, "Ext warn group V")
 }
 
 record(longin, "$(D):Mod-ExtWarnIntrn2-Mon"){
-    field(INP,  "$(D):Mod-Tree[64] CP MSS")
-    field(DESC, "Ext warn group W")
+     field(INP,  "$(D):Mod-Tree[64] CP MSS")
+     field(DESC, "Ext warn group W")
 }
 
 record(longin, "$(D):Mod-ExtWarnComm2-Mon"){
-    field(INP,  "$(D):Mod-Tree[65] CP MSS")
-    field(DESC, "Ext warn group X")
+     field(INP,  "$(D):Mod-Tree[65] CP MSS")
+     field(DESC, "Ext warn group X")
 }

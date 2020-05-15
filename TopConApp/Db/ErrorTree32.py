@@ -1,6 +1,8 @@
 from string import Template
 from Common import PROTOCOL, FTVL, wf_db, item_long_db
 
+# Error and Warning Tree specifics
+
 std_values = [
     "Internal",
     "Internal PDSP",
@@ -27,7 +29,7 @@ mod = {
     "params": {
         "pv": "$(D):Mod-Tree",
         "param": "getModTree",
-        "scan": "",
+        "scan": "30 second",
         "type": FTVL.DOUBLE,
         "nelm": "66",
     },
@@ -336,7 +338,7 @@ sys = {
     "params": {
         "pv": "$(D):Sys-Tree",
         "param": "getSysTree",
-        "scan": "",
+        "scan": "30 second",
         "type": FTVL.DOUBLE,
         "nelm": "66",
     },

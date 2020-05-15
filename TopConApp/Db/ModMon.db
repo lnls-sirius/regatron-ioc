@@ -1,6 +1,6 @@
 
 record(waveform, "$(D):Mod-Mon"){
-    field(SCAN, "")
+    field(SCAN, "5 second")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getSysReadings) $(PORT) $(A)")
     field(FTVL, "DOUBLE")

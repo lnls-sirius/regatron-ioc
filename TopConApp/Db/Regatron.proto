@@ -11,23 +11,28 @@ Terminator = CR;
 #  // [..ErrorTree, ..WarnTree]\n
 getArray{ separator=','; out "\$1"; in  "\$1 [%f]"; }
 
-#  getModuleId
-#  getModControlMode
-#  getSysControlMode
+#  getAutoReconnect
 #  getControlInput
 #  getDCLinkVoltage
+#  getModControlMode
+#  getModuleId
 #  getPrimaryCurrent
+#  getSysControlMode
 getFloat{ out "\$1"; in  "\$1 %f"; }
 
-#  getDSPVersion
-#  getDLLVersion
+#  getAutoReconnect
 #  getBootloaderVersion
+#  getDLLVersion
+#  getDSPVersion
 #  getModulatorVersion
 #  getPheripherieVersion
 getString{ out "\$1"; in  "\$1 %s"; }
 
-#  cmdStoreParam
 #  cmdClearErrors
+#  cmdConnect
+#  cmdStoreParam
 cmd{ out "\$1"; in  "\$1 ACK"; }
 
+#  setAutoReconnect
+setFloat{ out "\$1"; in  "\$1 ACK"; }
 

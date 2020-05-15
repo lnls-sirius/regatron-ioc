@@ -73,7 +73,7 @@ wf_db = Template(
 record(waveform, "${pv}"){
     field(SCAN, "${scan}")
     field(DTYP, "stream")
-    field(INP,  "${proto} getArray(${param}) $(P) $(A)")
+    field(INP,  "${proto} getArray(${param}) $(P)")
     field(FTVL, "${type}")
     field(NELM, "${nelm}")
     field(PRIO, "${prio}")
@@ -196,7 +196,7 @@ record(mbbi, "${pv}") {
     field(FFSV, "${ffsv}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getFloat(${param}) $(P) $(A)")
+    field(INP,  "${proto} getFloat(${param}) $(P)")
 }
 """
 )
@@ -209,7 +209,7 @@ record(stringin, "${pv}"){
     field(PHAS, "${phas}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getString(${param}) $(P) $(A)")
+    field(INP,  "${proto} getString(${param}) $(P)")
 }
 """
 )
@@ -228,7 +228,7 @@ record(ai, "${pv}"){
     field(ESLO, "${eslo}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getFloat(${param}) $(P) $(A)")
+    field(INP,  "${proto} getFloat(${param}) $(P)")
 }
 """
 )
@@ -244,7 +244,7 @@ record(bo, "${pv}"){
     field(DISS, "INVALID")
 
     field(DTYP, "stream")
-    field(OUT,  "${proto} cmd(${param}) $(P) $(A)")
+    field(OUT,  "${proto} cmd(${param}) $(P)")
 }
 """
 )
@@ -260,7 +260,7 @@ record(bi, "${pv}-RB"){
     field(ONAM, "${onam}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getFloat(get${param}) $(P) $(A)")
+    field(INP,  "${proto} getFloat(get${param}) $(P)")
 }
 record(bo, "${pv}-SP"){
     field(PINI, "NO")
@@ -270,7 +270,7 @@ record(bo, "${pv}-SP"){
     field(ONAM, "${onam}")
 
     field(DTYP, "stream")
-    field(OUT,  "${proto} setFloat(set${param}) $(P) $(A)")
+    field(OUT,  "${proto} setFloat(set${param}) $(P)")
     field(FLNK, "${pv}-RB")
 }
 """
@@ -288,7 +288,7 @@ record(ai, "${pv}-RB"){
     field(ESLO, "${eslo}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getFloat(get${param}) $(P) $(A)")
+    field(INP,  "${proto} getFloat(get${param}) $(P)")
 }
 record(ao, "${pv}-SP"){
     field(PINI, "NO")
@@ -301,7 +301,7 @@ record(ao, "${pv}-SP"){
     field(ESLO, "${eslo}")
 
     field(DTYP, "stream")
-    field(OUT,  "${proto} setFloat(set${param}) $(P) $(A)")
+    field(OUT,  "${proto} setFloat(set${param}) $(P)")
     field(FLNK, "${pv}-RB")
 }
 """

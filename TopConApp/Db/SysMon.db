@@ -2,7 +2,7 @@
 record(waveform, "$(D):Sys-Mon"){
     field(SCAN, "5 second")
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getArray(getSysReadings) $(P) $(A)")
+    field(INP,  "@Regatron.proto getArray(getSysReadings) $(P)")
     field(FTVL, "DOUBLE")
     field(NELM, "5")
     field(PRIO, "LOW")
@@ -148,5 +148,5 @@ record(mbbi, "$(D):Sys-ControlMode-Mon") {
     field(FFSV, "")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getSysControlMode) $(P) $(A)")
+    field(INP,  "@Regatron.proto getFloat(getSysControlMode) $(P)")
 }

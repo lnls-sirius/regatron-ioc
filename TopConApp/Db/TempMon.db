@@ -2,7 +2,7 @@
 record(waveform, "$(D):T-Mon"){
     field(SCAN, "")
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getArray(getTemperatures) $(P) $(A)")
+    field(INP,  "@Regatron.proto getArray(getTemperatures) $(P)")
     field(FTVL, "DOUBLE")
     field(NELM, "3")
     field(PRIO, "LOW")

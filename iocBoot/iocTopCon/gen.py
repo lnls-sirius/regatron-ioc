@@ -26,15 +26,24 @@ caPutLogInit "0.0.0.0" 2
 
 s_port = Template('''
 # DIGI Real Port -> /dev/ttyD${UNIX}
-drvAsynIPPortConfigure("${PORT}","unix:///var/tmp/REGD${UNIX}")
+drvAsynIPPortConfigure("${P}","unix:///var/tmp/REGD${UNIX}")
 ''')
 
-db = Template('''
-dbLoadRecords("db/TopCon.db",       "DEVICE=${PV},PORT=${PORT}")''')
-m_db = Template('''
-dbLoadRecords("db/TopConMaster.db", "DEVICE=${PV},PORT=${PORT}")''')
 asyn_db = Template('''
-dbLoadRecords("db/asynRecord.db",   "P=${PV},R=,PORT=${PORT},ADDR=,IMAX=,OMAX=")''')
+dbLoadRecords("db/asynRecord.db",   "P=${PV},R=,P=${P},ADDR=,IMAX=,OMAX=")''')
+
+module_db = Template('''
+dbLoadRecords("db/GenericCmd.db",    "D=${PV},P=${P}")
+dbLoadRecords("db/GenericGetSet.db", "D=${PV},P=${P}")
+dbLoadRecords("db/GenericMon.db",    "D=${PV},P=${P}")
+dbLoadRecords("db/TempMon.db",       "D=${PV},P=${P}")
+dbLoadRecords("db/ModMon.db",        "D=${PV},P=${P}")
+dbLoadRecords("db/ModTree.db",       "D=${PV},P=${P}")
+''')
+system_db = Template('''
+dbLoadRecords("db/SysMon.db",        "D=${PV},P=${P}")
+dbLoadRecords("db/SysTree.db",       "D=${PV},P=${P}")
+''')
 
 rega = [
     {'file':'st-dipoles.cmd', 'items':[
@@ -94,12 +103,12 @@ if __name__ == '__main__':
              s_ports, dbs, m_dbs, asyn_dbs = '','','',''
              for item in d['items']:
                  port += 1
-                 item['PORT'] = 'P{}'.format(port)
+                 item['P'] = 'P{}'.format(port)
                  s_ports += s_port.safe_substitute(UNIX='{:02}'.format(port), **item)
                  asyn_dbs += asyn_db.safe_substitute(**item)
-                 dbs += db.safe_substitute(**item)
+                 dbs += module_db.safe_substitute(**item)
                  if item['M'] == True:
-                     m_dbs += m_db.safe_substitute(**item)
+                     m_dbs += system_db.safe_substitute(**item)
              f.write(s_ports)
              f.write(dbs)
              f.write(m_dbs)

@@ -9,43 +9,31 @@ record(waveform, "$(D):T-Mon"){
 }
 
 record(ai, "$(D):IGBTT-Mon"){
-    field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "IGBT temperature")
     field(EGU,  "C")
     field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
+    field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):T-Mon[0] CP MSS")
+    field(INP,  "$(D):T-Mon.VAL[0] CP MSS")
 }
 
 record(ai, "$(D):RectifierT-Mon"){
-    field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "Rectifier temperature")
     field(EGU,  "C")
     field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
+    field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):T-Mon[1] CP MSS")
+    field(INP,  "$(D):T-Mon.VAL[1] CP MSS")
 }
 
 record(ai, "$(D):PCBT-Mon"){
-    field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "PCB temperature")
     field(EGU,  "C")
     field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
+    field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):T-Mon[2] CP MSS")
+    field(INP,  "$(D):T-Mon.VAL[2] CP MSS")
 }

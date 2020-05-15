@@ -83,25 +83,23 @@ record(waveform, "${pv}"){
 item_ai_db = Template(
     """
 record(ai, "${pv}"){
-    field(PINI, "${pini}")
-    field(SCAN, "${scan}")
+    field(SCAN, "Passive")
     field(DESC, "${desc}")
     field(EGU,  "${egu}")
     field(PREC, "${prec}")
-    field(PHAS, "${phas}")
-    field(LINR, "${linr}")
-    field(EOFF, "${eoff}")
-    field(ESLO, "${eslo}")
+    field(DTYP, "Soft Channel")
 
-    field(INP,  "${wf}[${n}] CP MSS")
+    field(INP,  "${wf}.VAL[${n}] CP MSS")
 }
 """
 )
 item_long_db = Template(
     """
 record(longin, "${pv}"){
-     field(INP,  "${wf}[${n}] CP MSS")
-     field(DESC, "${desc}")
+    field(SCAN, "Passive")
+    field(INP,  "${wf}.VAL[${n}] CP MSS")
+    field(DESC, "${desc}")
+    field(DTYP, "Soft Channel")
 }
 """
 )
@@ -109,10 +107,9 @@ record(longin, "${pv}"){
 item_mbbi_db = Template(
     """
 record(mbbi, "${pv}") {
-    field(PINI, "${pini}")
-    field(SCAN, "${scan}")
-    field(PHAS, "${phas}")
+    field(SCAN, "Passive")
     field(DESC, "${desc}")
+    field(DTYP, "Soft Channel")
 
     field(ZRST, "${zrst}")
     field(ONST, "${onst}")
@@ -148,7 +145,7 @@ record(mbbi, "${pv}") {
     field(FTSV, "${ftsv}")
     field(FFSV, "${ffsv}")
 
-    field(INP,  "${wf}[${n}] CP MSS")
+    field(INP,  "${wf}.VAL[${n}] CP MSS")
 }
 """
 )

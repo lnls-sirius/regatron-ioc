@@ -9,66 +9,49 @@ record(waveform, "$(D):Sys-Mon"){
 }
 
 record(ai, "$(D):Sys-OutVolt-Mon"){
-    field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "System out voltage")
     field(EGU,  "V")
     field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
+    field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-Mon[0] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[0] CP MSS")
 }
 
 record(ai, "$(D):Sys-OutCurrent-Mon"){
-    field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "System out current")
     field(EGU,  "A")
     field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
+    field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-Mon[1] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[1] CP MSS")
 }
 
 record(ai, "$(D):Sys-OutPwr-Mon"){
-    field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "System out power")
     field(EGU,  "kW")
     field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
+    field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-Mon[2] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[2] CP MSS")
 }
 
 record(ai, "$(D):Sys-ResPreset-Mon"){
-    field(PINI, "NO")
     field(SCAN, "Passive")
     field(DESC, "System resistence preset")
     field(EGU,  "mOhm")
     field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
+    field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-Mon[3] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[3] CP MSS")
 }
 
 record(mbbi, "$(D):Sys-State-Mon") {
-    field(PINI, "NO")
     field(SCAN, "Passive")
-    field(PHAS, "0")
     field(DESC, "System state")
+    field(DTYP, "Soft Channel")
 
     field(ZRST, "")
     field(ONST, "")
@@ -104,7 +87,7 @@ record(mbbi, "$(D):Sys-State-Mon") {
     field(FTSV, "")
     field(FFSV, "")
 
-    field(INP,  "$(D):Sys-Mon[4] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[4] CP MSS")
 }
 
 record(mbbi, "$(D):Sys-ControlMode-Mon") {

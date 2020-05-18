@@ -25,7 +25,6 @@ dbLoadRecords("db/GenericMon.db",    "D=RegTest,P=P0")
 #dbLoadRecords("db/SysMon.db",        "D=RegTest,P=P0")
 #dbLoadRecords("db/SysTree.db",       "D=RegTest,P=P0") # OK
 
-
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 

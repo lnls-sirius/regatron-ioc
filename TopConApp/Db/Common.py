@@ -272,7 +272,7 @@ record(bo, "${pv}-SP"){
 }
 """
 )
-long_get_set_db = Template(
+analog_get_set_db = Template(
     """
 record(ai, "${pv}-RB"){
     field(SCAN, "${scan}")
@@ -303,12 +303,44 @@ record(ao, "${pv}-SP"){
 }
 """
 )
+long_get_set_db = Template(
+    """
+record(longin, "${pv}-RB"){
+    field(SCAN, "${scan}")
+    field(DESC, "${desc}")
+    field(EGU,  "${egu}")
+    field(PREC, "${prec}")
+    field(PHAS, "${phas}")
+    field(LINR, "${linr}")
+    field(EOFF, "${eoff}")
+    field(ESLO, "${eslo}")
+
+    field(DTYP, "stream")
+    field(INP,  "${proto} getInt(get${param}) $(PORT) $(A)")
+}
+record(longout, "${pv}-SP"){
+    field(PINI, "NO")
+    field(DESC, "${desc}")
+    field(EGU,  "${egu}")
+    field(PREC, "${prec}")
+    field(PHAS, "${phas}")
+    field(LINR, "${linr}")
+    field(EOFF, "${eoff}")
+    field(ESLO, "${eslo}")
+
+    field(DTYP, "stream")
+    field(OUT,  "${proto} setInt(set${param}) $(PORT) $(A)")
+    field(FLNK, "${pv}-RB")
+}
+"""
+)
 
 
 class TemplateType(object):
     BO_CMD = "bo_cmd"
     LONG_GET_SET = "long_get_set"
     BINARY_GET_SET = "binary_get_set"
+    ANALOG_GET_SET = "analog_get_set"
     LONG_IN = "longin"
     MBBI = "mbbi"
     STRING_IN = "stringin"

@@ -12,6 +12,7 @@ from Common import (
     wf_db,
     long_get_set_db,
     binary_get_set_db,
+    analog_get_set_db,
     TemplateType,
 )
 from Records import (
@@ -70,6 +71,8 @@ def renderRecord(entries):
             db += long_get_set_db.safe_substitute(**params)
         elif entries.get("type", False) == TemplateType.BINARY_GET_SET:
             db += binary_get_set_db.safe_substitute(**params)
+        elif entries.get("type", False) == TemplateType.ANALOG_GET_SET:
+            db += analog_get_set_db.safe_substitute(**params)
         else:
             db += ai_db.safe_substitute(**params)
 

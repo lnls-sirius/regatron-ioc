@@ -48,7 +48,38 @@ mod_mon = [
         "scan": "10 second",
     },
 ]
-sys_get_set = []
+
+sys_get_set = [
+    {
+        "pv": "$(D):SysCurrentRef",
+        "desc": "Reference val. for current",
+        "type": TemplateType.ANALOG_GET_SET,
+        "param": "SysCurrentRef",
+        "egu": "A",
+    },
+    {
+        "pv": "$(D):SysVoltageRef",
+        "desc": "Reference val. for voltage",
+        "type": TemplateType.ANALOG_GET_SET,
+        "param": "SysVoltageRef",
+        "egu": "V",
+    },
+    {
+        "pv": "$(D):SysResistanceRef",
+        "desc": "Reference val. for resistance",
+        "type": TemplateType.ANALOG_GET_SET,
+        "param": "SysResistanceRef",
+        "egu": "mOhm",
+    },
+    {
+        "pv": "$(D):SysPowerRef",
+        "desc": "Reference val. for power",
+        "type": TemplateType.ANALOG_GET_SET,
+        "param": "SysPowerRef",
+        "egu": "kW",
+    },
+]
+
 sys_cmd = [
     {
         "pv": "$(D):Save-Cmd",

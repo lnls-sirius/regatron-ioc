@@ -306,17 +306,13 @@ record(ao, "${pv}-SP"){
 long_get_set_db = Template(
     """
 record(longin, "${pv}-RB"){
-    field(SCAN, "${scan}")
     field(DESC, "${desc}")
     field(EGU,  "${egu}")
     field(PREC, "${prec}")
     field(PHAS, "${phas}")
-    field(LINR, "${linr}")
-    field(EOFF, "${eoff}")
-    field(ESLO, "${eslo}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getInt(get${param}) $(PORT) $(A)")
+    field(INP,  "${proto} getInt(get${param}) $(PORT)")
 }
 record(longout, "${pv}-SP"){
     field(PINI, "NO")
@@ -325,11 +321,9 @@ record(longout, "${pv}-SP"){
     field(PREC, "${prec}")
     field(PHAS, "${phas}")
     field(LINR, "${linr}")
-    field(EOFF, "${eoff}")
-    field(ESLO, "${eslo}")
 
     field(DTYP, "stream")
-    field(OUT,  "${proto} setInt(set${param}) $(PORT) $(A)")
+    field(OUT,  "${proto} setInt(set${param}) $(PORT)")
     field(FLNK, "${pv}-RB")
 }
 """

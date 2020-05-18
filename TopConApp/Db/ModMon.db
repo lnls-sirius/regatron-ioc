@@ -2,7 +2,7 @@
 record(waveform, "$(D):Mod-Mon"){
     field(SCAN, "5 second")
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getArray(getSysReadings) $(P)")
+    field(INP,  "@Regatron.proto getArray(getModReadings) $(P)")
     field(FTVL, "DOUBLE")
     field(NELM, "5")
     field(PRIO, "LOW")

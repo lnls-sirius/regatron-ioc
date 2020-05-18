@@ -1,5 +1,5 @@
 
-record(ai, "$(D):SysCurrentRef-RB"){
+record(ai, "$(D):Sys-CurrentRef-RB"){
     field(SCAN, "Passive")
     field(DESC, "Reference val. for current")
     field(EGU,  "A")
@@ -12,7 +12,7 @@ record(ai, "$(D):SysCurrentRef-RB"){
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getSysCurrentRef) $(P)")
 }
-record(ao, "$(D):SysCurrentRef-SP"){
+record(ao, "$(D):Sys-CurrentRef-SP"){
     field(PINI, "NO")
     field(DESC, "Reference val. for current")
     field(EGU,  "A")
@@ -24,10 +24,10 @@ record(ao, "$(D):SysCurrentRef-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysCurrentRef) $(P)")
-    field(FLNK, "$(D):SysCurrentRef-RB")
+    field(FLNK, "$(D):Sys-CurrentRef-RB")
 }
 
-record(ai, "$(D):SysVoltageRef-RB"){
+record(ai, "$(D):Sys-VoltageRef-RB"){
     field(SCAN, "Passive")
     field(DESC, "Reference val. for voltage")
     field(EGU,  "V")
@@ -40,7 +40,7 @@ record(ai, "$(D):SysVoltageRef-RB"){
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getSysVoltageRef) $(P)")
 }
-record(ao, "$(D):SysVoltageRef-SP"){
+record(ao, "$(D):Sys-VoltageRef-SP"){
     field(PINI, "NO")
     field(DESC, "Reference val. for voltage")
     field(EGU,  "V")
@@ -52,10 +52,10 @@ record(ao, "$(D):SysVoltageRef-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysVoltageRef) $(P)")
-    field(FLNK, "$(D):SysVoltageRef-RB")
+    field(FLNK, "$(D):Sys-VoltageRef-RB")
 }
 
-record(ai, "$(D):SysResistanceRef-RB"){
+record(ai, "$(D):Sys-ResistanceRef-RB"){
     field(SCAN, "Passive")
     field(DESC, "Reference val. for resistance")
     field(EGU,  "mOhm")
@@ -68,7 +68,7 @@ record(ai, "$(D):SysResistanceRef-RB"){
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getSysResistanceRef) $(P)")
 }
-record(ao, "$(D):SysResistanceRef-SP"){
+record(ao, "$(D):Sys-ResistanceRef-SP"){
     field(PINI, "NO")
     field(DESC, "Reference val. for resistance")
     field(EGU,  "mOhm")
@@ -80,10 +80,10 @@ record(ao, "$(D):SysResistanceRef-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysResistanceRef) $(P)")
-    field(FLNK, "$(D):SysResistanceRef-RB")
+    field(FLNK, "$(D):Sys-ResistanceRef-RB")
 }
 
-record(ai, "$(D):SysPowerRef-RB"){
+record(ai, "$(D):Sys-PwrRef-RB"){
     field(SCAN, "Passive")
     field(DESC, "Reference val. for power")
     field(EGU,  "kW")
@@ -96,7 +96,7 @@ record(ai, "$(D):SysPowerRef-RB"){
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getSysPowerRef) $(P)")
 }
-record(ao, "$(D):SysPowerRef-SP"){
+record(ao, "$(D):Sys-PwrRef-SP"){
     field(PINI, "NO")
     field(DESC, "Reference val. for power")
     field(EGU,  "kW")
@@ -108,5 +108,5 @@ record(ao, "$(D):SysPowerRef-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysPowerRef) $(P)")
-    field(FLNK, "$(D):SysPowerRef-RB")
+    field(FLNK, "$(D):Sys-PwrRef-RB")
 }

@@ -5,7 +5,7 @@ mod_mon = [
     {
         "params": {
             "pv": "$(D):Mod-Mon",
-            "param": "getSysReadings",
+            "param": "getModReadings",
             "scan": "5 second",
             "nelm": "5",
             "type": FTVL.DOUBLE,
@@ -51,28 +51,28 @@ mod_mon = [
 
 sys_get_set = [
     {
-        "pv": "$(D):SysCurrentRef",
+        "pv": "$(D):Sys-CurrentRef",
         "desc": "Reference val. for current",
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysCurrentRef",
         "egu": "A",
     },
     {
-        "pv": "$(D):SysVoltageRef",
+        "pv": "$(D):Sys-VoltageRef",
         "desc": "Reference val. for voltage",
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysVoltageRef",
         "egu": "V",
     },
     {
-        "pv": "$(D):SysResistanceRef",
+        "pv": "$(D):Sys-ResistanceRef",
         "desc": "Reference val. for resistance",
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysResistanceRef",
         "egu": "mOhm",
     },
     {
-        "pv": "$(D):SysPowerRef",
+        "pv": "$(D):Sys-PwrRef",
         "desc": "Reference val. for power",
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysPowerRef",

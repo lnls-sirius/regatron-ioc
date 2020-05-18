@@ -48,7 +48,9 @@ mod_mon = [
         "scan": "10 second",
     },
 ]
-sys_get_set = []
+sys_get_set = [
+
+]
 sys_cmd = [
     {
         "pv": "$(D):Save-Cmd",
@@ -117,7 +119,7 @@ temperature = {
     "params": {
         "pv": "$(D):T-Mon",
         "param": "getTemperatures",
-        "scan": "",
+        "scan": "5 second",
         "nelm": "3",
         "type": FTVL.DOUBLE,
     },

@@ -26,7 +26,7 @@ caPutLogInit "0.0.0.0" 2
 
 s_port = Template('''
 # DIGI Real Port -> /dev/ttyD${UNIX}
-drvAsynIPPortConfigure("${P}","unix:///var/tmp/REGD${UNIX}")
+drvAsynIPPortConfigure("${P}","unix:///var/tmp/REG${UNIX}")
 ''')
 
 asyn_db = Template('''
@@ -41,6 +41,7 @@ dbLoadRecords("db/ModMon.db",        "D=${PV},P=${P}")
 dbLoadRecords("db/ModTree.db",       "D=${PV},P=${P}")
 ''')
 system_db = Template('''
+dbLoadRecords("db/SysGetSet.db",     "D=${PV},P=${P}")
 dbLoadRecords("db/SysMon.db",        "D=${PV},P=${P}")
 dbLoadRecords("db/SysTree.db",       "D=${PV},P=${P}")
 ''')

@@ -4,8 +4,31 @@ from Common import FTVL, TemplateType
 mod_mon = [
     {
         "params": {
+            "pv": "$(D):ModMinMaxNom-Mon",
+            "param": "getModMinMaxNom",
+            "scan": "30 second",
+            "nelm": "12",
+            "type": FTVL.DOUBLE,
+        },
+        "items": [
+            {"pv": "$(D):Mod-MinVolt-Mon", "desc": "Physical voltage", "egu": "V"},
+            {"pv": "$(D):Mod-MinCurrent-Mon", "desc": "Physical current", "egu": "A"},
+            {"pv": "$(D):Mod-MinPwr-Mon", "desc": "Physical power", "egu": "kW"},
+            {"pv": "$(D):Mod-MinRes-Mon", "desc": "Physical resistance", "egu": "mOhm"},
+            {"pv": "$(D):Mod-MaxVolt-Mon", "desc": "Physical voltage", "egu": "V"},
+            {"pv": "$(D):Mod-MaxCurrent-Mon", "desc": "Physical current", "egu": "A"},
+            {"pv": "$(D):Mod-MaxPwr-Mon", "desc": "Physical power", "egu": "kW"},
+            {"pv": "$(D):Mod-MaxRes-Mon", "desc": "Physical resistance", "egu": "mOhm"},
+            {"pv": "$(D):Mod-MonVolt-Mon", "desc": "Physical voltage", "egu": "V"},
+            {"pv": "$(D):Mod-MonCurrent-Mon", "desc": "Physical current", "egu": "A"},
+            {"pv": "$(D):Mod-MonPwr-Mon", "desc": "Physical power", "egu": "kW"},
+            {"pv": "$(D):Mod-MonRes-Mon", "desc": "Physical resistance", "egu": "mOhm"},
+        ],
+    },
+    {
+        "params": {
             "pv": "$(D):Mod-Mon",
-            "param": "getSysReadings",
+            "param": "getModReadings",
             "scan": "5 second",
             "nelm": "5",
             "type": FTVL.DOUBLE,
@@ -96,6 +119,29 @@ sys_cmd = [
 ]
 
 sys_mon = [
+    {
+        "params": {
+            "pv": "$(D):SysMinMaxNom-Mon",
+            "param": "getSysMinMaxNom",
+            "scan": "30 second",
+            "nelm": "12",
+            "type": FTVL.DOUBLE,
+        },
+        "items": [
+            {"pv": "$(D):Sys-MinVolt-Mon", "desc": "Physical voltage", "egu": "V"},
+            {"pv": "$(D):Sys-MinCurrent-Mon", "desc": "Physical current", "egu": "A"},
+            {"pv": "$(D):Sys-MinPwr-Mon", "desc": "Physical power", "egu": "kW"},
+            {"pv": "$(D):Sys-MinRes-Mon", "desc": "Physical resistance", "egu": "mOhm"},
+            {"pv": "$(D):Sys-MaxVolt-Mon", "desc": "Physical voltage", "egu": "V"},
+            {"pv": "$(D):Sys-MaxCurrent-Mon", "desc": "Physical current", "egu": "A"},
+            {"pv": "$(D):Sys-MaxPwr-Mon", "desc": "Physical power", "egu": "kW"},
+            {"pv": "$(D):Sys-MaxRes-Mon", "desc": "Physical resistance", "egu": "mOhm"},
+            {"pv": "$(D):Sys-MonVolt-Mon", "desc": "Physical voltage", "egu": "V"},
+            {"pv": "$(D):Sys-MonCurrent-Mon", "desc": "Physical current", "egu": "A"},
+            {"pv": "$(D):Sys-MonPwr-Mon", "desc": "Physical power", "egu": "kW"},
+            {"pv": "$(D):Sys-MonRes-Mon", "desc": "Physical resistance", "egu": "mOhm"},
+        ],
+    },
     {
         "params": {
             "pv": "$(D):Sys-Mon",

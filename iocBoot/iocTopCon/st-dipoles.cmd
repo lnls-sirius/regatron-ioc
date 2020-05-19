@@ -11,52 +11,52 @@ TopCon_registerRecordDeviceDriver pdbbase
 asSetFilename("${TOP}/log/Security.as")
 
 # DIGI Real Port -> /dev/ttyD01
-drvAsynIPPortConfigure("P1","unix:///var/tmp/REGD01")
+drvAsynIPPortConfigure("P1","unix:///var/tmp/REG01")
 
 # DIGI Real Port -> /dev/ttyD02
-drvAsynIPPortConfigure("P2","unix:///var/tmp/REGD02")
+drvAsynIPPortConfigure("P2","unix:///var/tmp/REG02")
 
 # DIGI Real Port -> /dev/ttyD03
-drvAsynIPPortConfigure("P3","unix:///var/tmp/REGD03")
+drvAsynIPPortConfigure("P3","unix:///var/tmp/REG03")
 
 # DIGI Real Port -> /dev/ttyD04
-drvAsynIPPortConfigure("P4","unix:///var/tmp/REGD04")
+drvAsynIPPortConfigure("P4","unix:///var/tmp/REG04")
 
 # DIGI Real Port -> /dev/ttyD05
-drvAsynIPPortConfigure("P5","unix:///var/tmp/REGD05")
+drvAsynIPPortConfigure("P5","unix:///var/tmp/REG05")
 
 # DIGI Real Port -> /dev/ttyD06
-drvAsynIPPortConfigure("P6","unix:///var/tmp/REGD06")
+drvAsynIPPortConfigure("P6","unix:///var/tmp/REG06")
 
 # DIGI Real Port -> /dev/ttyD07
-drvAsynIPPortConfigure("P7","unix:///var/tmp/REGD07")
+drvAsynIPPortConfigure("P7","unix:///var/tmp/REG07")
 
 # DIGI Real Port -> /dev/ttyD08
-drvAsynIPPortConfigure("P8","unix:///var/tmp/REGD08")
+drvAsynIPPortConfigure("P8","unix:///var/tmp/REG08")
 
 # DIGI Real Port -> /dev/ttyD09
-drvAsynIPPortConfigure("P9","unix:///var/tmp/REGD09")
+drvAsynIPPortConfigure("P9","unix:///var/tmp/REG09")
 
 # DIGI Real Port -> /dev/ttyD10
-drvAsynIPPortConfigure("P10","unix:///var/tmp/REGD10")
+drvAsynIPPortConfigure("P10","unix:///var/tmp/REG10")
 
 # DIGI Real Port -> /dev/ttyD11
-drvAsynIPPortConfigure("P11","unix:///var/tmp/REGD11")
+drvAsynIPPortConfigure("P11","unix:///var/tmp/REG11")
 
 # DIGI Real Port -> /dev/ttyD12
-drvAsynIPPortConfigure("P12","unix:///var/tmp/REGD12")
+drvAsynIPPortConfigure("P12","unix:///var/tmp/REG12")
 
 # DIGI Real Port -> /dev/ttyD13
-drvAsynIPPortConfigure("P13","unix:///var/tmp/REGD13")
+drvAsynIPPortConfigure("P13","unix:///var/tmp/REG13")
 
 # DIGI Real Port -> /dev/ttyD14
-drvAsynIPPortConfigure("P14","unix:///var/tmp/REGD14")
+drvAsynIPPortConfigure("P14","unix:///var/tmp/REG14")
 
 # DIGI Real Port -> /dev/ttyD15
-drvAsynIPPortConfigure("P15","unix:///var/tmp/REGD15")
+drvAsynIPPortConfigure("P15","unix:///var/tmp/REG15")
 
 # DIGI Real Port -> /dev/ttyD16
-drvAsynIPPortConfigure("P16","unix:///var/tmp/REGD16")
+drvAsynIPPortConfigure("P16","unix:///var/tmp/REG16")
 
 dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSD01:PS-DCLink-1A,P=P1")
 dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSD01:PS-DCLink-1A,P=P1")
@@ -170,27 +170,43 @@ dbLoadRecords("db/TempMon.db",       "D=PA-RaPSD07:PS-DCLink-4B,P=P16")
 dbLoadRecords("db/ModMon.db",        "D=PA-RaPSD07:PS-DCLink-4B,P=P16")
 dbLoadRecords("db/ModTree.db",       "D=PA-RaPSD07:PS-DCLink-4B,P=P16")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSD01:PS-DCLink-1A,P=P1")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSD01:PS-DCLink-1A,P=P1")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD01:PS-DCLink-1A,P=P1")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD01:PS-DCLink-1A,P=P1")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSD03:PS-DCLink-2A,P=P3")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSD03:PS-DCLink-2A,P=P3")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD03:PS-DCLink-2A,P=P3")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD03:PS-DCLink-2A,P=P3")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSD01:PS-DCLink-3A,P=P5")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSD01:PS-DCLink-3A,P=P5")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD01:PS-DCLink-3A,P=P5")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD01:PS-DCLink-3A,P=P5")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSD03:PS-DCLink-4A,P=P7")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSD03:PS-DCLink-4A,P=P7")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD03:PS-DCLink-4A,P=P7")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD03:PS-DCLink-4A,P=P7")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSD05:PS-DCLink-1A,P=P9")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSD05:PS-DCLink-1A,P=P9")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD05:PS-DCLink-1A,P=P9")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD05:PS-DCLink-1A,P=P9")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSD07:PS-DCLink-2A,P=P11")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSD07:PS-DCLink-2A,P=P11")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD07:PS-DCLink-2A,P=P11")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD07:PS-DCLink-2A,P=P11")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSD05:PS-DCLink-3A,P=P13")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSD05:PS-DCLink-3A,P=P13")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD05:PS-DCLink-3A,P=P13")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD05:PS-DCLink-3A,P=P13")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSD07:PS-DCLink-4A,P=P15")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSD07:PS-DCLink-4A,P=P15")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSD07:PS-DCLink-4A,P=P15")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSD07:PS-DCLink-4A,P=P15")
 

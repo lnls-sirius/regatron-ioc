@@ -10,7 +10,7 @@ record(waveform, "$(D):Sys-MinMaxNom-Mon"){
 
 record(ai, "$(D):Sys-MinVolt-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical voltage")
+    field(DESC, "Voltage Min")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -20,7 +20,7 @@ record(ai, "$(D):Sys-MinVolt-Mon"){
 
 record(ai, "$(D):Sys-MinCurrent-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical current")
+    field(DESC, "Current Min")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -30,7 +30,7 @@ record(ai, "$(D):Sys-MinCurrent-Mon"){
 
 record(ai, "$(D):Sys-MinPwr-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical power")
+    field(DESC, "Power Min")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -40,7 +40,7 @@ record(ai, "$(D):Sys-MinPwr-Mon"){
 
 record(ai, "$(D):Sys-MinRes-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical resistance")
+    field(DESC, "Resistance Min")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -50,7 +50,7 @@ record(ai, "$(D):Sys-MinRes-Mon"){
 
 record(ai, "$(D):Sys-MaxVolt-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical voltage")
+    field(DESC, "Voltage Max")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -60,7 +60,7 @@ record(ai, "$(D):Sys-MaxVolt-Mon"){
 
 record(ai, "$(D):Sys-MaxCurrent-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical current")
+    field(DESC, "Current Max")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -70,7 +70,7 @@ record(ai, "$(D):Sys-MaxCurrent-Mon"){
 
 record(ai, "$(D):Sys-MaxPwr-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical power")
+    field(DESC, "Power Max")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -80,7 +80,7 @@ record(ai, "$(D):Sys-MaxPwr-Mon"){
 
 record(ai, "$(D):Sys-MaxRes-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical resistance")
+    field(DESC, "Resistance Max")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -88,9 +88,9 @@ record(ai, "$(D):Sys-MaxRes-Mon"){
     field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[7] CP MSS")
 }
 
-record(ai, "$(D):Sys-MonVolt-Mon"){
+record(ai, "$(D):Sys-NomVolt-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical voltage")
+    field(DESC, "Voltage Nominal")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -98,9 +98,9 @@ record(ai, "$(D):Sys-MonVolt-Mon"){
     field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[8] CP MSS")
 }
 
-record(ai, "$(D):Sys-MonCurrent-Mon"){
+record(ai, "$(D):Sys-NomCurrent-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical current")
+    field(DESC, "Current Nominal")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -108,9 +108,9 @@ record(ai, "$(D):Sys-MonCurrent-Mon"){
     field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[9] CP MSS")
 }
 
-record(ai, "$(D):Sys-MonPwr-Mon"){
+record(ai, "$(D):Sys-NomPwr-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical power")
+    field(DESC, "Power Nominal")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
@@ -118,9 +118,9 @@ record(ai, "$(D):Sys-MonPwr-Mon"){
     field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[10] CP MSS")
 }
 
-record(ai, "$(D):Sys-MonRes-Mon"){
+record(ai, "$(D):Sys-NomRes-Mon"){
     field(SCAN, "Passive")
-    field(DESC, "Physical resistance")
+    field(DESC, "Resistance Nominal")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")

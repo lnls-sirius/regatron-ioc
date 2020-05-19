@@ -34,7 +34,7 @@ mod = {
         "nelm": "66",
     },
     "items": [
-        {"pv": "$(D):Mod-ErrGroup-Mon", "desc": "Std warn group", "type": "longin",},
+        {"pv": "$(D):Mod-ErrGroup-Mon", "desc": "Mod Std + Ext error group", "type": "longin",},
         {
             "pv": "$(D):Mod-StdErrIntrn-Mon",
             "desc": "Std warn group 0",
@@ -180,8 +180,8 @@ mod = {
             "type": "longin",
         },
         {
-            "pv": "$(D):Mod-StdWarnGroup-Mon",
-            "desc": "Std warn group",
+            "pv": "$(D):Mod-WarnGroup-Mon",
+            "desc": "Mod Std + Ext warn group",
             "type": "longin",
         },
         {
@@ -343,7 +343,7 @@ sys = {
         "nelm": "66",
     },
     "items": [
-        {"pv": "$(D):Sys-ErrGroup-Mon", "desc": "Std warn group", "type": "longin",},
+        {"pv": "$(D):Sys-ErrGroup-Mon", "desc": "Sys Std + Ext error group", "type": "longin",},
         {
             "pv": "$(D):Sys-StdErrIntrn-Mon",
             "desc": "Std warn group 0",
@@ -489,8 +489,8 @@ sys = {
             "type": "longin",
         },
         {
-            "pv": "$(D):Sys-StdWarnGroup-Mon",
-            "desc": "Std warn group",
+            "pv": "$(D):Sys-WarnGroup-Mon",
+            "desc": "System Std + Ext warn group",
             "type": "longin",
         },
         {

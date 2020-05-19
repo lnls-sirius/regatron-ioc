@@ -11,7 +11,7 @@ record(waveform, "$(D):Mod-Tree"){
 record(longin, "$(D):Mod-ErrGroup-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[0] CP MSS")
-    field(DESC, "Std warn group")
+    field(DESC, "Mod Std + Ext error group")
     field(DTYP, "Soft Channel")
 }
 
@@ -239,10 +239,10 @@ record(longin, "$(D):Mod-ExtErrComm2-Mon"){
     field(DTYP, "Soft Channel")
 }
 
-record(longin, "$(D):Mod-StdWarnGroup-Mon"){
+record(longin, "$(D):Mod-WarnGroup-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[33] CP MSS")
-    field(DESC, "Std warn group")
+    field(DESC, "Mod Std + Ext warn group")
     field(DTYP, "Soft Channel")
 }
 

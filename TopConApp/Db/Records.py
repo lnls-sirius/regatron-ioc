@@ -4,7 +4,7 @@ from Common import FTVL, TemplateType
 mod_mon = [
     {
         "params": {
-            "pv": "$(D):ModMinMaxNom-Mon",
+            "pv": "$(D):Mod-MinMaxNom-Mon",
             "param": "getModMinMaxNom",
             "scan": "30 second",
             "nelm": "12",
@@ -127,7 +127,7 @@ sys_cmd = [
 sys_mon = [
     {
         "params": {
-            "pv": "$(D):SysMinMaxNom-Mon",
+            "pv": "$(D):Sys-MinMaxNom-Mon",
             "param": "getSysMinMaxNom",
             "scan": "30 second",
             "nelm": "12",

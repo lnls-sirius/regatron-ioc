@@ -1,4 +1,133 @@
 
+record(waveform, "$(D):Sys-MinMaxNom-Mon"){
+    field(SCAN, "30 second")
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getArray(getSysMinMaxNom) $(P)")
+    field(FTVL, "DOUBLE")
+    field(NELM, "12")
+    field(PRIO, "LOW")
+}
+
+record(ai, "$(D):Sys-MinVolt-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical voltage")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[0] CP MSS")
+}
+
+record(ai, "$(D):Sys-MinCurrent-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[1] CP MSS")
+}
+
+record(ai, "$(D):Sys-MinPwr-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical power")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[2] CP MSS")
+}
+
+record(ai, "$(D):Sys-MinRes-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical resistance")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[3] CP MSS")
+}
+
+record(ai, "$(D):Sys-MaxVolt-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical voltage")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[4] CP MSS")
+}
+
+record(ai, "$(D):Sys-MaxCurrent-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[5] CP MSS")
+}
+
+record(ai, "$(D):Sys-MaxPwr-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical power")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[6] CP MSS")
+}
+
+record(ai, "$(D):Sys-MaxRes-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical resistance")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[7] CP MSS")
+}
+
+record(ai, "$(D):Sys-MonVolt-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical voltage")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[8] CP MSS")
+}
+
+record(ai, "$(D):Sys-MonCurrent-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[9] CP MSS")
+}
+
+record(ai, "$(D):Sys-MonPwr-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical power")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[10] CP MSS")
+}
+
+record(ai, "$(D):Sys-MonRes-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Physical resistance")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[11] CP MSS")
+}
+
 record(waveform, "$(D):Sys-Mon"){
     field(SCAN, "5 second")
     field(DTYP, "stream")

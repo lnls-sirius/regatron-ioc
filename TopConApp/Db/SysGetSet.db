@@ -29,6 +29,30 @@ record(ao, "$(D):Sys-CurrentRef-SP"){
     field(FLNK, "$(D):Sys-CurrentRef-RB")
 }
 
+record(bi, "$(D):Sys-OutVoltEnbl-RB"){
+    field(SCAN, "Passive")
+    field(DESC, "Enable/Disable output voltage")
+    field(PHAS, "0")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(PRIO, "HIGH")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getInt(getSysOutVoltEnable) $(P)")
+}
+record(bo, "$(D):Sys-OutVoltEnbl-SP"){
+    field(PINI, "NO")
+    field(DESC, "Enable/Disable output voltage")
+    field(PHAS, "0")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(PRIO, "HIGH")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setInt(setSysOutVoltEnable) $(P)")
+    field(FLNK, "$(D):Sys-OutVoltEnbl-RB")
+}
+
 record(ai, "$(D):Sys-VoltageRef-RB"){
     field(SCAN, "Passive")
     field(DESC, "Reference val. for voltage")

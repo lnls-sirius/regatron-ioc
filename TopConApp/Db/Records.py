@@ -82,6 +82,15 @@ sys_get_set = [
         "prio": "HIGH",
     },
     {
+        "pv": "$(D):Sys-OutVoltEnbl",
+        "desc": "Enable/Disable output voltage",
+        "type": TemplateType.BINARY_GET_SET,
+        "znam": "Disable",
+        "onam": "Enable",
+        "param": "SysOutVoltEnable",
+        "prio": "HIGH",
+    },
+    {
         "pv": "$(D):Sys-VoltageRef",
         "desc": "Reference val. for voltage",
         "type": TemplateType.ANALOG_GET_SET,

@@ -238,6 +238,7 @@ record(bo, "${pv}"){
     field(ZNAM, "${znam}")
     field(DISA, "${disa}")
     field(DISV, "${disv}")
+    field(PRIO, "${prio}")
     field(DISS, "INVALID")
 
     field(DTYP, "stream")
@@ -255,6 +256,7 @@ record(bi, "${pv}-RB"){
     field(PHAS, "${phas}")
     field(ZNAM, "${znam}")
     field(ONAM, "${onam}")
+    field(PRIO, "${prio}")
 
     field(DTYP, "stream")
     field(INP,  "${proto} getInt(get${param}) $(P)")
@@ -265,6 +267,7 @@ record(bo, "${pv}-SP"){
     field(PHAS, "${phas}")
     field(ZNAM, "${znam}")
     field(ONAM, "${onam}")
+    field(PRIO, "${prio}")
 
     field(DTYP, "stream")
     field(OUT,  "${proto} setInt(set${param}) $(P)")
@@ -283,6 +286,7 @@ record(ai, "${pv}-RB"){
     field(LINR, "${linr}")
     field(EOFF, "${eoff}")
     field(ESLO, "${eslo}")
+    field(PRIO, "${prio}")
 
     field(DTYP, "stream")
     field(INP,  "${proto} getFloat(get${param}) $(P)")
@@ -296,6 +300,7 @@ record(ao, "${pv}-SP"){
     field(LINR, "${linr}")
     field(EOFF, "${eoff}")
     field(ESLO, "${eslo}")
+    field(PRIO, "${prio}")
 
     field(DTYP, "stream")
     field(OUT,  "${proto} setFloat(set${param}) $(P)")
@@ -310,6 +315,7 @@ record(longin, "${pv}-RB"){
     field(EGU,  "${egu}")
     field(PREC, "${prec}")
     field(PHAS, "${phas}")
+    field(PRIO, "${prio}")
 
     field(DTYP, "stream")
     field(INP,  "${proto} getInt(get${param}) $(PORT)")
@@ -321,6 +327,7 @@ record(longout, "${pv}-SP"){
     field(PREC, "${prec}")
     field(PHAS, "${phas}")
     field(LINR, "${linr}")
+    field(PRIO, "${prio}")
 
     field(DTYP, "stream")
     field(OUT,  "${proto} setInt(set${param}) $(PORT)")

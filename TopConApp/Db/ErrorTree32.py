@@ -34,7 +34,7 @@ mod = {
         "nelm": "66",
     },
     "items": [
-        {"pv": "$(D):Mod-StdErrGroup-Mon", "desc": "Std warn group", "type": "longin"},
+        {"pv": "$(D):Mod-ErrGroup-Mon", "desc": "Std warn group", "type": "longin",},
         {
             "pv": "$(D):Mod-StdErrIntrn-Mon",
             "desc": "Std warn group 0",
@@ -343,7 +343,7 @@ sys = {
         "nelm": "66",
     },
     "items": [
-        {"pv": "$(D):Sys-StdErrGroup-Mon", "desc": "Std warn group", "type": "longin",},
+        {"pv": "$(D):Sys-ErrGroup-Mon", "desc": "Std warn group", "type": "longin",},
         {
             "pv": "$(D):Sys-StdErrIntrn-Mon",
             "desc": "Std warn group 0",

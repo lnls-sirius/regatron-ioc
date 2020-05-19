@@ -41,6 +41,7 @@ dbLoadRecords("db/ModMon.db",        "D=${PV},P=${P}")
 dbLoadRecords("db/ModTree.db",       "D=${PV},P=${P}")
 ''')
 system_db = Template('''
+dbLoadRecords("db/SysCmd.db",        "D=${PV},P=${P}")
 dbLoadRecords("db/SysGetSet.db",     "D=${PV},P=${P}")
 dbLoadRecords("db/SysMon.db",        "D=${PV},P=${P}")
 dbLoadRecords("db/SysTree.db",       "D=${PV},P=${P}")

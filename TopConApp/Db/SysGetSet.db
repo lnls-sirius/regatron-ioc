@@ -8,6 +8,7 @@ record(ai, "$(D):Sys-CurrentRef-RB"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(PRIO, "HIGH")
 
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getSysCurrentRef) $(P)")
@@ -21,6 +22,7 @@ record(ao, "$(D):Sys-CurrentRef-SP"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(PRIO, "HIGH")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysCurrentRef) $(P)")
@@ -36,6 +38,7 @@ record(ai, "$(D):Sys-VoltageRef-RB"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(PRIO, "HIGH")
 
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getSysVoltageRef) $(P)")
@@ -49,6 +52,7 @@ record(ao, "$(D):Sys-VoltageRef-SP"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(PRIO, "HIGH")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysVoltageRef) $(P)")
@@ -64,6 +68,7 @@ record(ai, "$(D):Sys-ResistanceRef-RB"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(PRIO, "HIGH")
 
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getSysResistanceRef) $(P)")
@@ -77,6 +82,7 @@ record(ao, "$(D):Sys-ResistanceRef-SP"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(PRIO, "HIGH")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysResistanceRef) $(P)")
@@ -92,6 +98,7 @@ record(ai, "$(D):Sys-PwrRef-RB"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(PRIO, "HIGH")
 
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getSysPowerRef) $(P)")
@@ -105,6 +112,7 @@ record(ao, "$(D):Sys-PwrRef-SP"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(PRIO, "HIGH")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysPowerRef) $(P)")

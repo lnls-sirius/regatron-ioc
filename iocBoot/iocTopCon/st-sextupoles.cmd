@@ -150,58 +150,72 @@ dbLoadRecords("db/TempMon.db",       "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P40")
 dbLoadRecords("db/ModMon.db",        "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P40")
 dbLoadRecords("db/ModTree.db",       "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P40")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB01:PS-DCLink-SDB0,P=P27")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB01:PS-DCLink-SDB0,P=P27")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB01:PS-DCLink-SDB0,P=P27")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB01:PS-DCLink-SDB0,P=P27")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB04:PS-DCLink-SDB1,P=P28")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB04:PS-DCLink-SDB1,P=P28")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB04:PS-DCLink-SDB1,P=P28")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB04:PS-DCLink-SDB1,P=P28")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB05:PS-DCLink-SDB2,P=P29")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB05:PS-DCLink-SDB2,P=P29")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB05:PS-DCLink-SDB2,P=P29")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB05:PS-DCLink-SDB2,P=P29")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB07:PS-DCLink-SDB3,P=P30")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB07:PS-DCLink-SDB3,P=P30")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB07:PS-DCLink-SDB3,P=P30")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB07:PS-DCLink-SDB3,P=P30")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB03:PS-DCLink-SFB0,P=P31")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB03:PS-DCLink-SFB0,P=P31")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB03:PS-DCLink-SFB0,P=P31")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB03:PS-DCLink-SFB0,P=P31")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB08:PS-DCLink-SFB1,P=P32")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB08:PS-DCLink-SFB1,P=P32")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB08:PS-DCLink-SFB1,P=P32")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB08:PS-DCLink-SFB1,P=P32")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB10:PS-DCLink-SFB2,P=P33")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB10:PS-DCLink-SFB2,P=P33")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB10:PS-DCLink-SFB2,P=P33")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB10:PS-DCLink-SFB2,P=P33")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB04:PS-DCLink-SDA12,P=P34")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB04:PS-DCLink-SDA12,P=P34")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB04:PS-DCLink-SDA12,P=P34")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB04:PS-DCLink-SDA12,P=P34")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB01:PS-DCLink-SDAP0,P=P35")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB01:PS-DCLink-SDAP0,P=P35")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB01:PS-DCLink-SDAP0,P=P35")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB01:PS-DCLink-SDAP0,P=P35")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB03:PS-DCLink-SFAP0,P=P36")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB03:PS-DCLink-SFAP0,P=P36")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB03:PS-DCLink-SFAP0,P=P36")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB03:PS-DCLink-SFAP0,P=P36")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB10:PS-DCLink-SFP12,P=P37")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB10:PS-DCLink-SFP12,P=P37")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB10:PS-DCLink-SFP12,P=P37")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB10:PS-DCLink-SFP12,P=P37")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB08:PS-DCLink-SDP23,P=P38")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB08:PS-DCLink-SDP23,P=P38")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB08:PS-DCLink-SDP23,P=P38")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB08:PS-DCLink-SDP23,P=P38")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB05:PS-DCLink-SDA3SFA1,P=P39")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB05:PS-DCLink-SDA3SFA1,P=P39")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB05:PS-DCLink-SDA3SFA1,P=P39")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB05:PS-DCLink-SDA3SFA1,P=P39")
 
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P40")
 dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P40")
 dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P40")
 dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P40")

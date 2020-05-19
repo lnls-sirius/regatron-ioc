@@ -15,14 +15,15 @@ drvAsynIPPortConfigure("P0","unix:///var/tmp/REG00")
 
 dbLoadRecords("db/GenericCmd.db",    "D=RegTest,P=P0")
 dbLoadRecords("db/GenericGetSet.db", "D=RegTest,P=P0")
-#dbLoadRecords("db/GenericMon.db",    "D=RegTest,P=P0")
-#dbLoadRecords("db/TempMon.db",       "D=RegTest,P=P0")
-#dbLoadRecords("db/ModMon.db",        "D=RegTest,P=P0")
-#dbLoadRecords("db/ModTree.db",       "D=RegTest,P=P0")
+dbLoadRecords("db/GenericMon.db",    "D=RegTest,P=P0")
+dbLoadRecords("db/TempMon.db",       "D=RegTest,P=P0")
+dbLoadRecords("db/ModMon.db",        "D=RegTest,P=P0")
+dbLoadRecords("db/ModTree.db",       "D=RegTest,P=P0")
 
+dbLoadRecords("db/SysCmd.db",        "D=RegTest,P=P0")
 dbLoadRecords("db/SysGetSet.db",     "D=RegTest,P=P0")
-#dbLoadRecords("db/SysMon.db",        "D=RegTest,P=P0")
-#dbLoadRecords("db/SysTree.db",       "D=RegTest,P=P0")
+dbLoadRecords("db/SysMon.db",        "D=RegTest,P=P0")
+dbLoadRecords("db/SysTree.db",       "D=RegTest,P=P0")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

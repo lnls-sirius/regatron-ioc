@@ -56,6 +56,7 @@ sys_get_set = [
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysCurrentRef",
         "egu": "A",
+        "prio": "HIGH",
     },
     {
         "pv": "$(D):Sys-VoltageRef",
@@ -63,6 +64,7 @@ sys_get_set = [
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysVoltageRef",
         "egu": "V",
+        "prio": "HIGH",
     },
     {
         "pv": "$(D):Sys-ResistanceRef",
@@ -70,6 +72,7 @@ sys_get_set = [
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysResistanceRef",
         "egu": "mOhm",
+        "prio": "HIGH",
     },
     {
         "pv": "$(D):Sys-PwrRef",
@@ -77,6 +80,7 @@ sys_get_set = [
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysPowerRef",
         "egu": "kW",
+        "prio": "HIGH",
     },
 ]
 
@@ -86,12 +90,14 @@ sys_cmd = [
         "desc": "Save settings to non-volatile memory",
         "type": "bo_cmd",
         "param": "cmdStoreParam",
+        "prio": "HIGH",
     },
     {
         "pv": "$(D):Clear-Cmd",
         "desc": "Clear Errors and/or warnings",
         "type": "bo_cmd",
         "param": "cmdClearErrors",
+        "prio": "HIGH",
     },
 ]
 
@@ -164,6 +170,7 @@ generic_mon = [
     {
         "pv": "$(D):ActiveInterface-Mon",
         "desc": "Active interface",
+        "scan": "60 second",
         "type": "mbbi",
         "param": "getControlInput",
         "zrst": "Analog/Digital Inputs",
@@ -230,12 +237,14 @@ generic_cmd = [
         "desc": "Attempt to connect to the device",
         "type": "bo_cmd",
         "param": "cmdConnect",
+        "prio": "HIGH",
     },
     {
         "pv": "$(D):Disconnect-Cmd",
         "desc": "Disconnect from device",
         "type": "bo_cmd",
         "param": "cmdDisconnect",
+        "prio": "HIGH",
     },
 ]
 
@@ -247,5 +256,6 @@ generic_get_set = [
         "param": "AutoReconnect",
         "onam": "Enable",
         "znam": "Disable",
+        "prio": "HIGH",
     },
 ]

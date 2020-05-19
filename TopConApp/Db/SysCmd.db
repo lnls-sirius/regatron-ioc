@@ -5,6 +5,7 @@ record(bo, "$(D):Save-Cmd"){
     field(ZNAM, "")
     field(DISA, "1")
     field(DISV, "0")
+    field(PRIO, "HIGH")
     field(DISS, "INVALID")
 
     field(DTYP, "stream")
@@ -17,6 +18,7 @@ record(bo, "$(D):Clear-Cmd"){
     field(ZNAM, "")
     field(DISA, "1")
     field(DISV, "0")
+    field(PRIO, "HIGH")
     field(DISS, "INVALID")
 
     field(DTYP, "stream")

@@ -7,6 +7,7 @@ record(bo, "$(D):Connect-Cmd"){
     field(DISV, "0")
     field(PRIO, "HIGH")
     field(DISS, "INVALID")
+    field(FLNK, "")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdConnect) $(P)")
@@ -20,6 +21,7 @@ record(bo, "$(D):Disconnect-Cmd"){
     field(DISV, "0")
     field(PRIO, "HIGH")
     field(DISS, "INVALID")
+    field(FLNK, "")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdDisconnect) $(P)")

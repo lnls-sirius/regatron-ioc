@@ -126,13 +126,13 @@ sys_get_set = [
         "items": [
             {
                 "pv": "$(D):Sys-StartupVoltSlope-RB",
-                "desc": "Applied to set values when enabling output volt",
+                "desc": "Set values when enabling output volt",
                 "egu": "s",
                 "prec": "5",
             },
             {
                 "pv": "$(D):Sys-VoltSlope-RB",
-                "desc": "Applied to set values when they are changed",
+                "desc": "Set values when they are changed",
                 "egu": "s",
                 "prec": "5",
             },
@@ -140,7 +140,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-StartupVoltSlope-SP",
-        "desc": "Applied to set values when enabling output volt",
+        "desc": "Set values when enabling output volt",
         "type": TemplateType.ANALOG_SET,
         "param": "setStartupVoltageRampSeconds",
         "drvh": "1.6",
@@ -151,7 +151,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-VoltSlope-SP",
-        "desc": "Applied to set values when they are changed",
+        "desc": "Set values when they are changed",
         "type": TemplateType.ANALOG_SET,
         "param": "setVoltageRampSeconds",
         "drvh": "1.6",
@@ -180,13 +180,13 @@ sys_get_set = [
         "items": [
             {
                 "pv": "$(D):Sys-StartupCurrSlope-RB",
-                "desc": "Applied to set values when enabling output volt",
+                "desc": "Set values when enabling output volt",
                 "egu": "s",
                 "prec": "5",
             },
             {
                 "pv": "$(D):Sys-CurrSlope-RB",
-                "desc": "Applied to set values when they are changed",
+                "desc": "Set values when they are changed",
                 "egu": "s",
                 "prec": "5",
             },
@@ -194,7 +194,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-StartupCurrSlope-SP",
-        "desc": "Applied to set values when enabling output volt",
+        "desc": "Set values when enabling output volt",
         "type": TemplateType.ANALOG_SET,
         "param": "setStartupCurrentRampSeconds",
         "drvh": "1.6",
@@ -205,7 +205,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-CurrSlope-SP",
-        "desc": "Applied to set values when they are changed",
+        "desc": "Set values when they are changed",
         "type": TemplateType.ANALOG_SET,
         "param": "setCurrentRampSeconds",
         "drvh": "1.6",

@@ -224,6 +224,7 @@ record(ai, "${pv}"){
     field(LINR, "${linr}")
     field(EOFF, "${eoff}")
     field(ESLO, "${eslo}")
+    field(FLNK, "${flnk}")
 
     field(DTYP, "stream")
     field(INP,  "${proto} getFloat(${param}) $(P)")
@@ -241,6 +242,7 @@ record(bo, "${pv}"){
     field(DISV, "${disv}")
     field(PRIO, "${prio}")
     field(DISS, "INVALID")
+    field(FLNK, "${flnk}")
 
     field(DTYP, "stream")
     field(OUT,  "${proto} cmd(${param}) $(P)")

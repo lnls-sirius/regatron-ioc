@@ -53,6 +53,7 @@ record(ai, "$(D):DCLinkVolt-Mon"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(FLNK, "")
 
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getDCLinkVoltage) $(P)")
@@ -68,6 +69,7 @@ record(ai, "$(D):PrimaryCurr-Mon"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
+    field(FLNK, "")
 
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getFloat(getPrimaryCurrent) $(P)")

@@ -2,17 +2,6 @@
 
 from Common import (
     DEFAULTS,
-    ai_db,
-    bo_cmd_db,
-    item_ai_db,
-    item_long_db,
-    item_mbbi_db,
-    mbbi_db,
-    stringin_db,
-    wf_db,
-    long_get_set_db,
-    binary_get_set_db,
-    analog_get_set_db,
     TemplateType,
 )
 from Records import (
@@ -33,17 +22,14 @@ def renderWfMon(entries):
     params.update(entries["params"])
     n = 0
     db = ""
-    db += wf_db.safe_substitute(**params)
+    db += TemplateType.WF_DB.safe_substitute(**params)
     for item in entries["items"]:
         kwargs = DEFAULTS.copy()
         kwargs.update(item)
-
-        if item.get("type", False) == TemplateType.MBBI:
-            db += item_mbbi_db.safe_substitute(wf=params["pv"], n=str(n), **kwargs)
-        elif item.get("type", False) == TemplateType.LONG_IN:
-            db += item_long_db.safe_substitute(wf=params["pv"], n=str(n), **kwargs)
-        else:
-            db += item_ai_db.safe_substitute(wf=params["pv"], n=str(n), **kwargs)
+        kwargs["wf"] = params["pv"]
+        kwargs["n"] = str(n)
+        template = item.get("type", TemplateType.ANALOG_ITEM)
+        db += template.safe_substitute(**kwargs)
         n += 1
     return db
 
@@ -61,20 +47,8 @@ def renderRecord(entries):
     else:
         params = DEFAULTS.copy()
         params.update(entries)
-        if entries.get("type", False) == TemplateType.MBBI:
-            db += mbbi_db.safe_substitute(**params)
-        elif entries.get("type", False) == TemplateType.BO_CMD:
-            db += bo_cmd_db.safe_substitute(**params)
-        elif entries.get("type", False) == TemplateType.STRING_IN:
-            db += stringin_db.safe_substitute(**params)
-        elif entries.get("type", False) == TemplateType.LONG_GET_SET:
-            db += long_get_set_db.safe_substitute(**params)
-        elif entries.get("type", False) == TemplateType.BINARY_GET_SET:
-            db += binary_get_set_db.safe_substitute(**params)
-        elif entries.get("type", False) == TemplateType.ANALOG_GET_SET:
-            db += analog_get_set_db.safe_substitute(**params)
-        else:
-            db += ai_db.safe_substitute(**params)
+        template = entries.get("type", TemplateType.ANALOG_GET)
+        db += template.safe_substitute(**params)
 
     return db
 

@@ -4,54 +4,55 @@ from string import Template
 
 PROTOCOL = "@Regatron.proto"
 DEFAULTS = {
-    "proto": PROTOCOL,
-    "zrst": "",
-    "onst": "",
-    "twst": "",
-    "thst": "",
-    "frst": "",
-    "fvst": "",
-    "sxst": "",
-    "svst": "",
-    "eist": "",
-    "nist": "",
-    "test": "",
-    "elst": "",
-    "tvst": "",
-    "ttst": "",
-    "ftst": "",
-    "ffst": "",
-    "zrsv": "",
-    "onsv": "",
-    "twsv": "",
-    "thsv": "",
-    "frsv": "",
-    "fvsv": "",
-    "sxsv": "",
-    "svsv": "",
-    "eisv": "",
-    "nisv": "",
-    "tesv": "",
-    "elsv": "",
-    "tvsv": "",
-    "ttsv": "",
-    "ftsv": "",
-    "ffsv": "",
-    "phas": "0",
-    "eoff": "0",
-    "eslo": "1",
+    "disa": "1",
+    "disv": "0",
     "drvh": "0",
     "drvl": "0",
-    "linr": "NO CONVERSION",
-    "disv": "0",
-    "disa": "1",
     "egu": "",
-    "prec": "2",
-    "scan": "Passive",
-    "pini": "NO",
-    "prio": "LOW",
+    "eist": "",
+    "eisv": "",
+    "elst": "",
+    "elsv": "",
+    "eoff": "0",
+    "eslo": "1",
+    "ffst": "",
+    "ffsv": "",
+    "flnk": "",
+    "frst": "",
+    "frsv": "",
+    "ftst": "",
+    "ftsv": "",
+    "fvst": "",
+    "fvsv": "",
+    "linr": "NO CONVERSION",
+    "nist": "",
+    "nisv": "",
     "onam": "",
+    "onst": "",
+    "onsv": "",
+    "phas": "0",
+    "pini": "NO",
+    "prec": "2",
+    "prio": "LOW",
+    "proto": PROTOCOL,
+    "scan": "Passive",
+    "svst": "",
+    "svsv": "",
+    "sxst": "",
+    "sxsv": "",
+    "test": "",
+    "tesv": "",
+    "thst": "",
+    "thsv": "",
+    "ttst": "",
+    "ttsv": "",
+    "tvst": "",
+    "tvsv": "",
+    "twst": "",
+    "twsv": "",
     "znam": "",
+    "zrst": "",
+    "zrsv": "",
 }
 
 
@@ -74,7 +75,7 @@ record(waveform, "${pv}"){
     field(SCAN, "${scan}")
     field(DTYP, "stream")
     field(INP,  "${proto} getArray(${param}) $(P)")
-    field(FTVL, "${type}")
+    field(FTVL, "${ftvl}")
     field(NELM, "${nelm}")
     field(PRIO, "${prio}")
 }
@@ -275,6 +276,27 @@ record(bo, "${pv}-SP"){
 }
 """
 )
+analog_set_db = Template(
+    """
+record(ao, "${pv}"){
+    field(PINI, "NO")
+    field(DESC, "${desc}")
+    field(EGU,  "${egu}")
+    field(PREC, "${prec}")
+    field(PHAS, "${phas}")
+    field(LINR, "${linr}")
+    field(EOFF, "${eoff}")
+    field(ESLO, "${eslo}")
+    field(PRIO, "${prio}")
+    field(DRVH, "${drvh}")
+    field(DRVL, "${drvl}")
+
+    field(DTYP, "stream")
+    field(OUT,  "${proto} setFloat(${param}) $(P)")
+    field(FLNK, "${flnk}")
+}
+"""
+)
 analog_get_set_db = Template(
     """
 record(ai, "${pv}-RB"){
@@ -301,6 +323,8 @@ record(ao, "${pv}-SP"){
     field(EOFF, "${eoff}")
     field(ESLO, "${eslo}")
     field(PRIO, "${prio}")
+    field(DRVH, "${drvh}")
+    field(DRVL, "${drvl}")
 
     field(DTYP, "stream")
     field(OUT,  "${proto} setFloat(set${param}) $(P)")
@@ -338,20 +362,15 @@ record(longout, "${pv}-SP"){
 
 
 class TemplateType(object):
-    BO_CMD = "bo_cmd"
-    LONG_GET_SET = "long_get_set"
-    BINARY_GET_SET = "binary_get_set"
-    ANALOG_GET_SET = "analog_get_set"
-    LONG_IN = "longin"
-    MBBI = "mbbi"
-    STRING_IN = "stringin"
-
-    @classmethod
-    def getTemplate(template) -> Template:
-        # @todo: !fixme!
-        # BO_CMD = "bo_cmd"
-        # LONG_GET_SET = "long_get_set"
-        # LONG_IN = "longin"
-        # MBBI = "mbbi"
-        # STRING_IN = "stringin"
-        pass
+    ANALOG_GET = ai_db
+    ANALOG_GET_SET = analog_get_set_db
+    ANALOG_ITEM = item_ai_db
+    ANALOG_SET = analog_set_db
+    BINARY_GET_SET = binary_get_set_db
+    BO_CMD = bo_cmd_db
+    LONG_GET_SET = long_get_set_db
+    LONG_IN_ITEM = item_long_db
+    MBBI = mbbi_db
+    MBBI_ITEM = item_mbbi_db
+    STRING_IN = stringin_db
+    WF_DB = wf_db

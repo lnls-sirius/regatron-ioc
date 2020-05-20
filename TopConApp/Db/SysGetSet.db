@@ -55,6 +55,14 @@ record(bo, "$(D):Sys-OutVoltEnbl-SP"){
     field(FLNK, "$(D):Sys-OutVoltEnbl-RB")
 }
 
+record(bi, "$(D):Sys-OutVoltEnbl_proc"){
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(PRIO, "LOW")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "$(D):Sys-OutVoltEnbl-RB")
+}
+
 record(ai, "$(D):Sys-VoltageRef-RB"){
     field(SCAN, "Passive")
     field(DESC, "Reference val. for voltage")
@@ -151,6 +159,14 @@ record(ao, "$(D):Sys-PwrRef-SP"){
     field(FLNK, "$(D):Sys-PwrRef-RB")
 }
 
+record(bi, "$(D):Sys-VoltSlopeWf-Mon_proc"){
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(PRIO, "LOW")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "$(D):Sys-VoltSlopeWf-Mon")
+}
+
 record(waveform, "$(D):Sys-VoltSlopeWf-Mon"){
     field(SCAN, "Passive")
     field(DTYP, "stream")
@@ -228,6 +244,14 @@ record(bo, "$(D):Sys-WriteVoltSlope-Cmd"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdWriteVoltageRamp) $(P)")
+}
+
+record(bi, "$(D):Sys-CurrSlopeWf-Mon_proc"){
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(PRIO, "LOW")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "$(D):Sys-CurrSlopeWf-Mon")
 }
 
 record(waveform, "$(D):Sys-CurrSlopeWf-Mon"){

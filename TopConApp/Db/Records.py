@@ -91,6 +91,13 @@ sys_get_set = [
         "prio": "HIGH",
     },
     {
+        "pv": "$(D):Sys-OutVoltEnbl_proc",
+        "type": TemplateType.BINARY_FLNK,
+        "prio": "LOW",
+        "flnk": "$(D):Sys-OutVoltEnbl-RB",
+        "scan": "60 second",
+    },
+    {
         "pv": "$(D):Sys-VoltageRef",
         "desc": "Reference val. for voltage",
         "type": TemplateType.ANALOG_GET_SET,
@@ -113,6 +120,13 @@ sys_get_set = [
         "param": "SysPowerRef",
         "egu": "kW",
         "prio": "HIGH",
+    },
+    {
+        "pv": "$(D):Sys-VoltSlopeWf-Mon_proc",
+        "type": TemplateType.BINARY_FLNK,
+        "prio": "LOW",
+        "flnk": "$(D):Sys-VoltSlopeWf-Mon",
+        "scan": "60 second",
     },
     {
         "params": {
@@ -167,6 +181,13 @@ sys_get_set = [
         "param": "cmdWriteVoltageRamp",
         "prio": "HIGH",
         "flnk": "$(D):Sys-VoltSlopeWf-Mon",
+    },
+    {
+        "pv": "$(D):Sys-CurrSlopeWf-Mon_proc",
+        "type": TemplateType.BINARY_FLNK,
+        "prio": "LOW",
+        "flnk": "$(D):Sys-CurrSlopeWf-Mon",
+        "scan": "60 second",
     },
     {
         "params": {

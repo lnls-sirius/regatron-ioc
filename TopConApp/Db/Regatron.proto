@@ -1,0 +1,41 @@
+Terminator = "\n";
+ReplyTimeout = 15000;
+
+#  // [IGBT,Rectfier,PCB]
+#  getTemperatures
+#  // [Voltage,Current,Power,Res,State]
+#  getModReadings
+#  getSysReadings
+#  // [..Error,..Warning] T_ErrorTree32
+#  getModTree
+#  getSysTree
+#  // [..ErrorTree, ..WarnTree]\n
+getArray{ separator=','; out "\$1"; in  "\$1 [%f]"; }
+
+#  getAutoReconnect
+#  getControlInput
+#  getDCLinkVoltage
+#  getModControlMode
+#  getModuleId
+#  getPrimaryCurrent
+#  getSysControlMode
+getFloat{ out "\$1"; in  "\$1 %f"; }
+getInt{ out "\$1"; in  "\$1 %i"; }
+
+#  getAutoReconnect
+#  getBootloaderVersion
+#  getDLLVersion
+#  getDSPVersion
+#  getModulatorVersion
+#  getPheripherieVersion
+getString{ out "\$1"; in  "\$1 %s"; }
+
+#  cmdClearErrors
+#  cmdConnect
+#  cmdStoreParam
+cmd{ out "\$1"; in  "\$1 ACK"; }
+
+#  setAutoReconnect
+setFloat{ out "\$1 %f"; in  "\$1 ACK"; }
+setInt{ out "\$1 %i"; in  "\$1 ACK"; }
+

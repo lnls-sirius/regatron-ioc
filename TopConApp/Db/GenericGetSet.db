@@ -1,0 +1,24 @@
+
+record(bi, "$(D):AutoReconnect-RB"){
+    field(SCAN, "Passive")
+    field(DESC, "Enable/Disable auto reconnect to device")
+    field(PHAS, "0")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(PRIO, "HIGH")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getInt(getAutoReconnect) $(P)")
+}
+record(bo, "$(D):AutoReconnect-SP"){
+    field(PINI, "NO")
+    field(DESC, "Enable/Disable auto reconnect to device")
+    field(PHAS, "0")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+    field(PRIO, "HIGH")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setInt(setAutoReconnect) $(P)")
+    field(FLNK, "$(D):AutoReconnect-RB")
+}

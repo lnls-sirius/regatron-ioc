@@ -1,0 +1,26 @@
+
+record(bo, "$(D):Connect-Cmd"){
+    field(DESC, "Attempt to connect to the device")
+    field(ONAM, "")
+    field(ZNAM, "")
+    field(DISA, "1")
+    field(DISV, "0")
+    field(PRIO, "HIGH")
+    field(DISS, "INVALID")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto cmd(cmdConnect) $(P)")
+}
+
+record(bo, "$(D):Disconnect-Cmd"){
+    field(DESC, "Disconnect from device")
+    field(ONAM, "")
+    field(ZNAM, "")
+    field(DISA, "1")
+    field(DISV, "0")
+    field(PRIO, "HIGH")
+    field(DISS, "INVALID")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto cmd(cmdDisconnect) $(P)")
+}

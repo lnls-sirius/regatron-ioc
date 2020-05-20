@@ -164,7 +164,7 @@ record(ai, "$(D):Sys-StartupVoltSlope-RB"){
     field(SCAN, "Passive")
     field(DESC, "Applied to set values when enabling output volt")
     field(EGU,  "s")
-    field(PREC, "2")
+    field(PREC, "5")
     field(DTYP, "Soft Channel")
 
     field(INP,  "$(D):Sys-VoltSlope-Wf.VAL[0] CP MSS")
@@ -174,7 +174,7 @@ record(ai, "$(D):Sys-VoltSlope-RB"){
     field(SCAN, "Passive")
     field(DESC, "Applied to set values when they are changed")
     field(EGU,  "s")
-    field(PREC, "2")
+    field(PREC, "5")
     field(DTYP, "Soft Channel")
 
     field(INP,  "$(D):Sys-VoltSlope-Wf.VAL[1] CP MSS")
@@ -184,7 +184,7 @@ record(ao, "$(D):Sys-StartupVoltSlope-SP"){
     field(PINI, "NO")
     field(DESC, "Applied to set values when enabling output volt")
     field(EGU,  "s")
-    field(PREC, "2")
+    field(PREC, "5")
     field(PHAS, "0")
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
@@ -202,7 +202,7 @@ record(ao, "$(D):Sys-VoltSlope-SP"){
     field(PINI, "NO")
     field(DESC, "Applied to set values when they are changed")
     field(EGU,  "s")
-    field(PREC, "2")
+    field(PREC, "5")
     field(PHAS, "0")
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
@@ -227,4 +227,82 @@ record(bo, "$(D):Sys-WriteVoltSlope-Cmd"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdWriteVoltageRamp) $(P)")
+}
+
+record(waveform, "$(D):Sys-CurrSlope-Wf"){
+    field(SCAN, "Passive")
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getArray(getCurrentRampSlope) $(P)")
+    field(FTVL, "DOUBLE")
+    field(NELM, "2")
+    field(PRIO, "HIGH")
+}
+
+record(ai, "$(D):Sys-StartupCurrSlope-RB"){
+    field(SCAN, "Passive")
+    field(DESC, "Applied to set values when enabling output volt")
+    field(EGU,  "s")
+    field(PREC, "5")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-CurrSlope-Wf.VAL[0] CP MSS")
+}
+
+record(ai, "$(D):Sys-CurrSlope-RB"){
+    field(SCAN, "Passive")
+    field(DESC, "Applied to set values when they are changed")
+    field(EGU,  "s")
+    field(PREC, "5")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-CurrSlope-Wf.VAL[1] CP MSS")
+}
+
+record(ao, "$(D):Sys-StartupCurrSlope-SP"){
+    field(PINI, "NO")
+    field(DESC, "Applied to set values when enabling output volt")
+    field(EGU,  "s")
+    field(PREC, "5")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+    field(DRVH, "1.6")
+    field(DRVL, "0.00005")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setFloat(setStartupCurrentRampSeconds) $(P)")
+    field(FLNK, "")
+}
+
+record(ao, "$(D):Sys-CurrSlope-SP"){
+    field(PINI, "NO")
+    field(DESC, "Applied to set values when they are changed")
+    field(EGU,  "s")
+    field(PREC, "5")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+    field(DRVH, "1.6")
+    field(DRVL, "0.00005")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setFloat(setCurrentRampSeconds) $(P)")
+    field(FLNK, "")
+}
+
+record(bo, "$(D):Sys-WriteCurrSlope-Cmd"){
+    field(DESC, "Apply voltage slope settings")
+    field(ONAM, "")
+    field(ZNAM, "")
+    field(DISA, "1")
+    field(DISV, "0")
+    field(PRIO, "HIGH")
+    field(DISS, "INVALID")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto cmd(cmdWriteCurrentRamp) $(P)")
 }

@@ -151,7 +151,7 @@ record(ao, "$(D):Sys-PwrRef-SP"){
     field(FLNK, "$(D):Sys-PwrRef-RB")
 }
 
-record(waveform, "$(D):Sys-VoltSlope-Wf"){
+record(waveform, "$(D):Sys-VoltSlopeWf-Mon"){
     field(SCAN, "Passive")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getVoltageRampSlope) $(P)")
@@ -167,7 +167,7 @@ record(ai, "$(D):Sys-StartupVoltSlope-RB"){
     field(PREC, "5")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-VoltSlope-Wf.VAL[0] CP MSS")
+    field(INP,  "$(D):Sys-VoltSlopeWf-Mon.VAL[0] CP MSS")
 }
 
 record(ai, "$(D):Sys-VoltSlope-RB"){
@@ -177,7 +177,7 @@ record(ai, "$(D):Sys-VoltSlope-RB"){
     field(PREC, "5")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-VoltSlope-Wf.VAL[1] CP MSS")
+    field(INP,  "$(D):Sys-VoltSlopeWf-Mon.VAL[1] CP MSS")
 }
 
 record(ao, "$(D):Sys-StartupVoltSlope-SP"){
@@ -224,13 +224,13 @@ record(bo, "$(D):Sys-WriteVoltSlope-Cmd"){
     field(DISV, "0")
     field(PRIO, "HIGH")
     field(DISS, "INVALID")
-    field(FLNK, "$(D):Sys-VoltSlope-Wf")
+    field(FLNK, "$(D):Sys-VoltSlopeWf-Mon")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdWriteVoltageRamp) $(P)")
 }
 
-record(waveform, "$(D):Sys-CurrSlope-Wf"){
+record(waveform, "$(D):Sys-CurrSlopeWf-Mon"){
     field(SCAN, "Passive")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getCurrentRampSlope) $(P)")
@@ -246,7 +246,7 @@ record(ai, "$(D):Sys-StartupCurrSlope-RB"){
     field(PREC, "5")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-CurrSlope-Wf.VAL[0] CP MSS")
+    field(INP,  "$(D):Sys-CurrSlopeWf-Mon.VAL[0] CP MSS")
 }
 
 record(ai, "$(D):Sys-CurrSlope-RB"){
@@ -256,7 +256,7 @@ record(ai, "$(D):Sys-CurrSlope-RB"){
     field(PREC, "5")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-CurrSlope-Wf.VAL[1] CP MSS")
+    field(INP,  "$(D):Sys-CurrSlopeWf-Mon.VAL[1] CP MSS")
 }
 
 record(ao, "$(D):Sys-StartupCurrSlope-SP"){
@@ -303,7 +303,7 @@ record(bo, "$(D):Sys-WriteCurrSlope-Cmd"){
     field(DISV, "0")
     field(PRIO, "HIGH")
     field(DISS, "INVALID")
-    field(FLNK, "$(D):Sys-CurrSlope-Wf")
+    field(FLNK, "$(D):Sys-CurrSlopeWf-Mon")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdWriteCurrentRamp) $(P)")

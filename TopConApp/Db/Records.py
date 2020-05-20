@@ -116,7 +116,7 @@ sys_get_set = [
     },
     {
         "params": {
-            "pv": "$(D):Sys-VoltSlope-Wf",
+            "pv": "$(D):Sys-VoltSlopeWf-Mon",
             "param": "getVoltageRampSlope",
             "scan": "Passive",
             "nelm": "2",
@@ -166,11 +166,11 @@ sys_get_set = [
         "type": TemplateType.BO_CMD,
         "param": "cmdWriteVoltageRamp",
         "prio": "HIGH",
-        "flnk": "$(D):Sys-VoltSlope-Wf",
+        "flnk": "$(D):Sys-VoltSlopeWf-Mon",
     },
     {
         "params": {
-            "pv": "$(D):Sys-CurrSlope-Wf",
+            "pv": "$(D):Sys-CurrSlopeWf-Mon",
             "param": "getCurrentRampSlope",
             "scan": "Passive",
             "nelm": "2",
@@ -220,7 +220,7 @@ sys_get_set = [
         "type": TemplateType.BO_CMD,
         "param": "cmdWriteCurrentRamp",
         "prio": "HIGH",
-        "flnk": "$(D):Sys-CurrSlope-Wf",
+        "flnk": "$(D):Sys-CurrSlopeWf-Mon",
     },
 ]
 

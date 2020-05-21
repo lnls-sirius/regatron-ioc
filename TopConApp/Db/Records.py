@@ -70,13 +70,11 @@ mod_mon = [
         "fvst": "Current derating active",
         "scan": "10 second",
     },
-]
-mod_get_set = [
     {
         "pv": "$(D):Mod-VoltageRef-Mon",
         "desc": "Reference val. for voltage",
         "type": TemplateType.ANALOG_GET,
-        "param": "ModVoltageRef",
+        "param": "getModVoltageRef",
         "egu": "V",
         "prio": "HIGH",
         "scan": "60 second",
@@ -85,7 +83,7 @@ mod_get_set = [
         "pv": "$(D):Mod-CurrentRef-Mon",
         "desc": "Reference val. for current",
         "type": TemplateType.ANALOG_GET,
-        "param": "ModCurrentRef",
+        "param": "getModCurrentRef",
         "egu": "A",
         "prio": "HIGH",
         "scan": "60 second",
@@ -94,7 +92,7 @@ mod_get_set = [
         "pv": "$(D):Mod-ResistanceRef-Mon",
         "desc": "Reference val. for resistance",
         "type": TemplateType.ANALOG_GET,
-        "param": "ModResistanceRef",
+        "param": "getModResistanceRef",
         "egu": "mOhm",
         "prio": "HIGH",
         "scan": "60 second",
@@ -103,12 +101,13 @@ mod_get_set = [
         "pv": "$(D):Mod-PwrRef-Mon",
         "desc": "Reference val. for power",
         "type": TemplateType.ANALOG_GET,
-        "param": "ModPowerRef",
+        "param": "getModPowerRef",
         "egu": "kW",
         "prio": "HIGH",
         "scan": "60 second",
     },
 ]
+mod_get_set = []
 sys_get_set = [
     {
         "pv": "$(D):Sys-OutVoltEnbl",
@@ -118,12 +117,6 @@ sys_get_set = [
         "onam": "Enable",
         "param": "SysOutVoltEnable",
         "prio": "HIGH",
-    },
-    {
-        "pv": "$(D):Sys-OutVoltEnbl_proc",
-        "type": TemplateType.BINARY_FLNK,
-        "prio": "LOW",
-        "flnk": "$(D):Sys-OutVoltEnbl-RB",
         "scan": "60 second",
     },
     {
@@ -133,6 +126,7 @@ sys_get_set = [
         "param": "SysVoltageRef",
         "egu": "V",
         "prio": "HIGH",
+        "scan": "60 second",
     },
     {
         "pv": "$(D):Sys-CurrentRef",
@@ -141,6 +135,7 @@ sys_get_set = [
         "param": "SysCurrentRef",
         "egu": "A",
         "prio": "HIGH",
+        "scan": "60 second",
     },
     {
         "pv": "$(D):Sys-ResistanceRef",
@@ -149,6 +144,7 @@ sys_get_set = [
         "param": "SysResistanceRef",
         "egu": "mOhm",
         "prio": "HIGH",
+        "scan": "60 second",
     },
     {
         "pv": "$(D):Sys-PwrRef",
@@ -157,6 +153,7 @@ sys_get_set = [
         "param": "SysPowerRef",
         "egu": "kW",
         "prio": "HIGH",
+        "scan": "60 second",
     },
     {
         "pv": "$(D):Sys-VoltSlopeWf-Mon_proc",
@@ -478,5 +475,6 @@ generic_get_set = [
         "onam": "Enable",
         "znam": "Disable",
         "prio": "HIGH",
+        "scan": "60 second",
     },
 ]

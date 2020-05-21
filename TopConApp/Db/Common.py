@@ -260,12 +260,12 @@ record(bi, "${pv}"){
     field(DTYP, "Soft Channel")
     field(FLNK, "${flnk}")
 }
-""")
+"""
+)
 
 binary_get_set_db = Template(
     """
 record(bi, "${pv}-RB"){
-    field(SCAN, "${scan}")
     field(DESC, "${desc}")
     field(PHAS, "${phas}")
     field(ZNAM, "${znam}")
@@ -285,6 +285,13 @@ record(bo, "${pv}-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "${proto} setInt(set${param}) $(P)")
+    field(FLNK, "${pv}-RB")
+}
+record(bi, "${pv}_proc"){
+    field(SCAN, "${scan}")
+    field(PHAS, "${phas}")
+    field(PRIO, "${prio}")
+    field(DTYP, "Soft Channel")
     field(FLNK, "${pv}-RB")
 }
 """
@@ -313,7 +320,6 @@ record(ao, "${pv}"){
 analog_get_set_db = Template(
     """
 record(ai, "${pv}-RB"){
-    field(SCAN, "${scan}")
     field(DESC, "${desc}")
     field(EGU,  "${egu}")
     field(PREC, "${prec}")
@@ -343,6 +349,13 @@ record(ao, "${pv}-SP"){
     field(OUT,  "${proto} setFloat(set${param}) $(P)")
     field(FLNK, "${pv}-RB")
 }
+record(bi, "${pv}_proc"){
+    field(SCAN, "${scan}")
+    field(PHAS, "${phas}")
+    field(PRIO, "${prio}")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "${pv}-RB")
+}
 """
 )
 long_get_set_db = Template(
@@ -368,6 +381,13 @@ record(longout, "${pv}-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "${proto} setInt(set${param}) $(PORT)")
+    field(FLNK, "${pv}-RB")
+}
+record(bi, "${pv}_proc"){
+    field(SCAN, "${scan}")
+    field(PHAS, "${phas}")
+    field(PRIO, "${prio}")
+    field(DTYP, "Soft Channel")
     field(FLNK, "${pv}-RB")
 }
 """

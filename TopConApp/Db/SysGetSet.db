@@ -1,38 +1,5 @@
 
-record(ai, "$(D):Sys-CurrentRef-RB"){
-    field(SCAN, "Passive")
-    field(DESC, "Reference val. for current")
-    field(EGU,  "A")
-    field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
-    field(PRIO, "HIGH")
-
-    field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getSysCurrentRef) $(P)")
-}
-record(ao, "$(D):Sys-CurrentRef-SP"){
-    field(PINI, "NO")
-    field(DESC, "Reference val. for current")
-    field(EGU,  "A")
-    field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
-    field(PRIO, "HIGH")
-    field(DRVH, "0")
-    field(DRVL, "0")
-
-    field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setFloat(setSysCurrentRef) $(P)")
-    field(FLNK, "$(D):Sys-CurrentRef-RB")
-}
-
 record(bi, "$(D):Sys-OutVoltEnbl-RB"){
-    field(SCAN, "Passive")
     field(DESC, "Enable/Disable output voltage")
     field(PHAS, "0")
     field(ZNAM, "Disable")
@@ -54,17 +21,15 @@ record(bo, "$(D):Sys-OutVoltEnbl-SP"){
     field(OUT,  "@Regatron.proto setInt(setSysOutVoltEnable) $(P)")
     field(FLNK, "$(D):Sys-OutVoltEnbl-RB")
 }
-
 record(bi, "$(D):Sys-OutVoltEnbl_proc"){
     field(SCAN, "60 second")
     field(PHAS, "0")
-    field(PRIO, "LOW")
+    field(PRIO, "HIGH")
     field(DTYP, "Soft Channel")
     field(FLNK, "$(D):Sys-OutVoltEnbl-RB")
 }
 
 record(ai, "$(D):Sys-VoltageRef-RB"){
-    field(SCAN, "Passive")
     field(DESC, "Reference val. for voltage")
     field(EGU,  "V")
     field(PREC, "2")
@@ -94,9 +59,53 @@ record(ao, "$(D):Sys-VoltageRef-SP"){
     field(OUT,  "@Regatron.proto setFloat(setSysVoltageRef) $(P)")
     field(FLNK, "$(D):Sys-VoltageRef-RB")
 }
+record(bi, "$(D):Sys-VoltageRef_proc"){
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(PRIO, "HIGH")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "$(D):Sys-VoltageRef-RB")
+}
+
+record(ai, "$(D):Sys-CurrentRef-RB"){
+    field(DESC, "Reference val. for current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getSysCurrentRef) $(P)")
+}
+record(ao, "$(D):Sys-CurrentRef-SP"){
+    field(PINI, "NO")
+    field(DESC, "Reference val. for current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+    field(DRVH, "0")
+    field(DRVL, "0")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setFloat(setSysCurrentRef) $(P)")
+    field(FLNK, "$(D):Sys-CurrentRef-RB")
+}
+record(bi, "$(D):Sys-CurrentRef_proc"){
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(PRIO, "HIGH")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "$(D):Sys-CurrentRef-RB")
+}
 
 record(ai, "$(D):Sys-ResistanceRef-RB"){
-    field(SCAN, "Passive")
     field(DESC, "Reference val. for resistance")
     field(EGU,  "mOhm")
     field(PREC, "2")
@@ -126,9 +135,15 @@ record(ao, "$(D):Sys-ResistanceRef-SP"){
     field(OUT,  "@Regatron.proto setFloat(setSysResistanceRef) $(P)")
     field(FLNK, "$(D):Sys-ResistanceRef-RB")
 }
+record(bi, "$(D):Sys-ResistanceRef_proc"){
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(PRIO, "HIGH")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "$(D):Sys-ResistanceRef-RB")
+}
 
 record(ai, "$(D):Sys-PwrRef-RB"){
-    field(SCAN, "Passive")
     field(DESC, "Reference val. for power")
     field(EGU,  "kW")
     field(PREC, "2")
@@ -156,6 +171,13 @@ record(ao, "$(D):Sys-PwrRef-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSysPowerRef) $(P)")
+    field(FLNK, "$(D):Sys-PwrRef-RB")
+}
+record(bi, "$(D):Sys-PwrRef_proc"){
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(PRIO, "HIGH")
+    field(DTYP, "Soft Channel")
     field(FLNK, "$(D):Sys-PwrRef-RB")
 }
 

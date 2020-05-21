@@ -262,3 +262,67 @@ record(mbbi, "$(D):Mod-ControlMode-Mon") {
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getInt(getModControlMode) $(P)")
 }
+
+record(ai, "$(D):Mod-VoltageRef-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Reference val. for voltage")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getModVoltageRef) $(P)")
+}
+
+record(ai, "$(D):Mod-CurrentRef-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Reference val. for current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getModCurrentRef) $(P)")
+}
+
+record(ai, "$(D):Mod-ResistanceRef-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Reference val. for resistance")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getModResistanceRef) $(P)")
+}
+
+record(ai, "$(D):Mod-PwrRef-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Reference val. for power")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getModPowerRef) $(P)")
+}

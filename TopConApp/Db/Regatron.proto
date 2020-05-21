@@ -1,5 +1,7 @@
 Terminator = "\n";
-ReplyTimeout = 20000;
+
+LockTimeout = 15000;
+ReplyTimeout = 12000;
 
 #  // [IGBT,Rectfier,PCB]
 #  getTemperatures

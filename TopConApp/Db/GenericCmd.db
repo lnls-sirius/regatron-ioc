@@ -26,3 +26,17 @@ record(bo, "$(D):Disconnect-Cmd"){
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdDisconnect) $(P)")
 }
+
+record(bo, "$(D):ReadErrors-Cmd"){
+    field(DESC, "Read Errors from TC")
+    field(ONAM, "")
+    field(ZNAM, "")
+    field(DISA, "1")
+    field(DISV, "0")
+    field(PRIO, "HIGH")
+    field(DISS, "INVALID")
+    field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto cmd(cmdReadErrors) $(P)")
+}

@@ -464,6 +464,13 @@ generic_cmd = [
         "param": "cmdDisconnect",
         "prio": "HIGH",
     },
+    {
+        "pv": "$(D):ReadErrors-Cmd",
+        "desc": "Read Errors from TC",
+        "type": TemplateType.BO_CMD,
+        "param": "cmdReadErrors",
+        "prio": "HIGH",
+    },
 ]
 
 generic_get_set = [

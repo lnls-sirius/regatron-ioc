@@ -1,30 +1,13 @@
-version: '3.3'
+version: '3.7'
 services:
   ioc:
-    image: lnlscon/cons-topcon:v1.0
+    image: lnlscon/cons-topcon:devel-v1.0
+    command: sleep infinity
+    build: .
     hostname: ioc
-#   deploy:
-#     mode: replicated
-#     replicas: 1
-#   networks:
-#     - regatron_network 
-    network_mode: host
     environment:
-      - PORT=20111
-    dns:
-      - 10.0.0.71
-      - 10.0.0.72
-    devices:
-      - "/dev/tty0100:/dev/tty0100"
-      - "/dev/tty0200:/dev/tty0200"
+      - CMD=st-test.cmd
+    volumes:
+      - "./TopConApp/Db/:/opt/cons-topcon/db:rw"
+      - "./socket/:/var/run/reg/:rw"
 
-#   logging:
-#     driver: "json-file"
-#     options:
-#       max-file: 10
-#       max-size: 10m
-
-#networks:
-# regatron_network:
-#   external:
-#     name: "host"

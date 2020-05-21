@@ -10,92 +10,136 @@ dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
 asSetFilename("${TOP}/log/Security.as")
 
-drvAsynSerialPortConfigure("P17", "/dev/tty_dgrp_17_0")
-asynSetOption("P17", 0, "baud", "38400")
-asynSetOption("P17", 0, "bits", "8")
-asynSetOption("P17", 0, "parity", "none")
-asynSetOption("P17", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD17
+drvAsynIPPortConfigure("P17","unix:///var/tmp/REG17")
 
-drvAsynSerialPortConfigure("P18", "/dev/tty_dgrp_18_0")
-asynSetOption("P18", 0, "baud", "38400")
-asynSetOption("P18", 0, "bits", "8")
-asynSetOption("P18", 0, "parity", "none")
-asynSetOption("P18", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD18
+drvAsynIPPortConfigure("P18","unix:///var/tmp/REG18")
 
-drvAsynSerialPortConfigure("P19", "/dev/tty_dgrp_19_0")
-asynSetOption("P19", 0, "baud", "38400")
-asynSetOption("P19", 0, "bits", "8")
-asynSetOption("P19", 0, "parity", "none")
-asynSetOption("P19", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD19
+drvAsynIPPortConfigure("P19","unix:///var/tmp/REG19")
 
-drvAsynSerialPortConfigure("P20", "/dev/tty_dgrp_20_0")
-asynSetOption("P20", 0, "baud", "38400")
-asynSetOption("P20", 0, "bits", "8")
-asynSetOption("P20", 0, "parity", "none")
-asynSetOption("P20", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD20
+drvAsynIPPortConfigure("P20","unix:///var/tmp/REG20")
 
-drvAsynSerialPortConfigure("P21", "/dev/tty_dgrp_21_0")
-asynSetOption("P21", 0, "baud", "38400")
-asynSetOption("P21", 0, "bits", "8")
-asynSetOption("P21", 0, "parity", "none")
-asynSetOption("P21", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD21
+drvAsynIPPortConfigure("P21","unix:///var/tmp/REG21")
 
-drvAsynSerialPortConfigure("P22", "/dev/tty_dgrp_22_0")
-asynSetOption("P22", 0, "baud", "38400")
-asynSetOption("P22", 0, "bits", "8")
-asynSetOption("P22", 0, "parity", "none")
-asynSetOption("P22", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD22
+drvAsynIPPortConfigure("P22","unix:///var/tmp/REG22")
 
-drvAsynSerialPortConfigure("P23", "/dev/tty_dgrp_23_0")
-asynSetOption("P23", 0, "baud", "38400")
-asynSetOption("P23", 0, "bits", "8")
-asynSetOption("P23", 0, "parity", "none")
-asynSetOption("P23", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD23
+drvAsynIPPortConfigure("P23","unix:///var/tmp/REG23")
 
-drvAsynSerialPortConfigure("P24", "/dev/tty_dgrp_24_0")
-asynSetOption("P24", 0, "baud", "38400")
-asynSetOption("P24", 0, "bits", "8")
-asynSetOption("P24", 0, "parity", "none")
-asynSetOption("P24", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD24
+drvAsynIPPortConfigure("P24","unix:///var/tmp/REG24")
 
-drvAsynSerialPortConfigure("P25", "/dev/tty_dgrp_25_0")
-asynSetOption("P25", 0, "baud", "38400")
-asynSetOption("P25", 0, "bits", "8")
-asynSetOption("P25", 0, "parity", "none")
-asynSetOption("P25", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD25
+drvAsynIPPortConfigure("P25","unix:///var/tmp/REG25")
 
-drvAsynSerialPortConfigure("P26", "/dev/tty_dgrp_26_0")
-asynSetOption("P26", 0, "baud", "38400")
-asynSetOption("P26", 0, "bits", "8")
-asynSetOption("P26", 0, "parity", "none")
-asynSetOption("P26", 0, "stop", "1")
+# DIGI Real Port -> /dev/ttyD26
+drvAsynIPPortConfigure("P26","unix:///var/tmp/REG26")
 
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA01:PS-DCLink-QFAP,PORT=P17")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA01:PS-DCLink-QFB,PORT=P18")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA03:PS-DCLink-QDAP12,PORT=P19")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA04:PS-DCLink-QDB,PORT=P20")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA06:PS-DCLink-Q12AA,PORT=P21")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA06:PS-DCLink-Q12BB,PORT=P22")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA06:PS-DCLink-Q12CC,PORT=P23")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA07:PS-DCLink-Q34A,PORT=P24")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA07:PS-DCLink-Q34B,PORT=P25")
-dbLoadRecords("db/TopCon.db",       "DEVICE=PA-RaPSA07:PS-DCLink-Q34C,PORT=P26")
-dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPSA01:PS-DCLink-QFAP,PORT=P17")
-dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPSA01:PS-DCLink-QFB,PORT=P18")
-dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPSA03:PS-DCLink-QDAP12,PORT=P19")
-dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPSA04:PS-DCLink-QDB,PORT=P20")
-dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPSA06:PS-DCLink-Q12AA,PORT=P21")
-dbLoadRecords("db/TopConMaster.db", "DEVICE=PA-RaPSA07:PS-DCLink-Q34A,PORT=P24")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA01:PS-DCLink-QFAP,R=,PORT=P17,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA01:PS-DCLink-QFB,R=,PORT=P18,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA03:PS-DCLink-QDAP12,R=,PORT=P19,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA04:PS-DCLink-QDB,R=,PORT=P20,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA06:PS-DCLink-Q12AA,R=,PORT=P21,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA06:PS-DCLink-Q12BB,R=,PORT=P22,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA06:PS-DCLink-Q12CC,R=,PORT=P23,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA07:PS-DCLink-Q34A,R=,PORT=P24,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA07:PS-DCLink-Q34B,R=,PORT=P25,ADDR=,IMAX=,OMAX=")
-dbLoadRecords("db/asynRecord.db",   "P=PA-RaPSA07:PS-DCLink-Q34C,R=,PORT=P26,ADDR=,IMAX=,OMAX=")
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA06:PS-DCLink-Q12B,P=P22")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA06:PS-DCLink-Q12B,P=P22")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA06:PS-DCLink-Q12B,P=P22")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA06:PS-DCLink-Q12B,P=P22")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA06:PS-DCLink-Q12B,P=P22")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA06:PS-DCLink-Q12B,P=P22")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA06:PS-DCLink-Q12C,P=P23")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA06:PS-DCLink-Q12C,P=P23")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA06:PS-DCLink-Q12C,P=P23")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA06:PS-DCLink-Q12C,P=P23")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA06:PS-DCLink-Q12C,P=P23")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA06:PS-DCLink-Q12C,P=P23")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA07:PS-DCLink-Q34B,P=P25")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA07:PS-DCLink-Q34B,P=P25")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA07:PS-DCLink-Q34B,P=P25")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA07:PS-DCLink-Q34B,P=P25")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA07:PS-DCLink-Q34B,P=P25")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA07:PS-DCLink-Q34B,P=P25")
+
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA07:PS-DCLink-Q34C,P=P26")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA07:PS-DCLink-Q34C,P=P26")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSA07:PS-DCLink-Q34C,P=P26")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA07:PS-DCLink-Q34C,P=P26")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA07:PS-DCLink-Q34C,P=P26")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA07:PS-DCLink-Q34C,P=P26")
+
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+dbLoadRecords("db/SysMon.db",        "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+dbLoadRecords("db/SysTree.db",       "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
+
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+dbLoadRecords("db/SysMon.db",        "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+dbLoadRecords("db/SysTree.db",       "D=PA-RaPSA01:PS-DCLink-QFB,P=P18")
+
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+dbLoadRecords("db/SysMon.db",        "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+dbLoadRecords("db/SysTree.db",       "D=PA-RaPSA03:PS-DCLink-QDAP,P=P19")
+
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+dbLoadRecords("db/SysMon.db",        "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+dbLoadRecords("db/SysTree.db",       "D=PA-RaPSA04:PS-DCLink-QDB,P=P20")
+
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+dbLoadRecords("db/SysMon.db",        "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+dbLoadRecords("db/SysTree.db",       "D=PA-RaPSA06:PS-DCLink-Q12A,P=P21")
+
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+dbLoadRecords("db/SysMon.db",        "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+dbLoadRecords("db/SysTree.db",       "D=PA-RaPSA07:PS-DCLink-Q34A,P=P24")
+
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 

@@ -1,0 +1,10 @@
+STREAM_PROTOCOL_PATH=${TOP}/db
+CALC=${CALC}
+ASYN=${ASYN}
+STREAM=${STREAM}
+CAPUTLOG=${CAPUTLOG}
+EPICS_BASE=${EPICS_BASE}
+
+-include ${TOP}/../RELEASE.local
+-include ${TOP}/configure/RELEASE.local
+

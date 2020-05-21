@@ -1,0 +1,264 @@
+
+record(waveform, "$(D):Sys-MinMaxNom-Mon"){
+    field(SCAN, "30 second")
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getArray(getSysMinMaxNom) $(P)")
+    field(FTVL, "DOUBLE")
+    field(NELM, "12")
+    field(PRIO, "LOW")
+}
+
+record(ai, "$(D):Sys-MinVolt-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Voltage Min")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[0] CP MSS")
+}
+
+record(ai, "$(D):Sys-MinCurrent-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Current Min")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[1] CP MSS")
+}
+
+record(ai, "$(D):Sys-MinPwr-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Power Min")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[2] CP MSS")
+}
+
+record(ai, "$(D):Sys-MinRes-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Resistance Min")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[3] CP MSS")
+}
+
+record(ai, "$(D):Sys-MaxVolt-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Voltage Max")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[4] CP MSS")
+}
+
+record(ai, "$(D):Sys-MaxCurrent-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Current Max")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[5] CP MSS")
+}
+
+record(ai, "$(D):Sys-MaxPwr-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Power Max")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[6] CP MSS")
+}
+
+record(ai, "$(D):Sys-MaxRes-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Resistance Max")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[7] CP MSS")
+}
+
+record(ai, "$(D):Sys-NomVolt-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Voltage Nominal")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[8] CP MSS")
+}
+
+record(ai, "$(D):Sys-NomCurrent-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Current Nominal")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[9] CP MSS")
+}
+
+record(ai, "$(D):Sys-NomPwr-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Power Nominal")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[10] CP MSS")
+}
+
+record(ai, "$(D):Sys-NomRes-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "Resistance Nominal")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[11] CP MSS")
+}
+
+record(waveform, "$(D):Sys-Mon"){
+    field(SCAN, "5 second")
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getArray(getSysReadings) $(P)")
+    field(FTVL, "DOUBLE")
+    field(NELM, "5")
+    field(PRIO, "LOW")
+}
+
+record(ai, "$(D):Sys-OutVolt-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "System out voltage")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-Mon.VAL[0] CP MSS")
+}
+
+record(ai, "$(D):Sys-OutCurrent-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "System out current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-Mon.VAL[1] CP MSS")
+}
+
+record(ai, "$(D):Sys-OutPwr-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "System out power")
+    field(EGU,  "kW")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-Mon.VAL[2] CP MSS")
+}
+
+record(ai, "$(D):Sys-ResPreset-Mon"){
+    field(SCAN, "Passive")
+    field(DESC, "System resistence preset")
+    field(EGU,  "mOhm")
+    field(PREC, "2")
+    field(DTYP, "Soft Channel")
+
+    field(INP,  "$(D):Sys-Mon.VAL[3] CP MSS")
+}
+
+record(mbbi, "$(D):Sys-State-Mon") {
+    field(SCAN, "Passive")
+    field(DESC, "System state")
+    field(DTYP, "Soft Channel")
+
+    field(ZRST, "")
+    field(ONST, "")
+    field(TWST, "POWERUP")
+    field(THST, "")
+    field(FRST, "READY")
+    field(FVST, "")
+    field(SXST, "")
+    field(SVST, "")
+    field(EIST, "RUN")
+    field(NIST, "")
+    field(TEST, "WARN")
+    field(ELST, "")
+    field(TVST, "ERROR")
+    field(TTST, "")
+    field(FTST, "STOP")
+    field(FFST, "")
+
+    field(ZRSV, "")
+    field(ONSV, "")
+    field(TWSV, "")
+    field(THSV, "")
+    field(FRSV, "")
+    field(FVSV, "")
+    field(SXSV, "")
+    field(SVSV, "")
+    field(EISV, "")
+    field(NISV, "")
+    field(TESV, "")
+    field(ELSV, "")
+    field(TVSV, "")
+    field(TTSV, "")
+    field(FTSV, "")
+    field(FFSV, "")
+
+    field(INP,  "$(D):Sys-Mon.VAL[4] CP MSS")
+}
+
+record(mbbi, "$(D):Sys-ControlMode-Mon") {
+    field(PINI, "NO")
+    field(SCAN, "10 second")
+    field(PHAS, "0")
+    field(DESC, "System control mode")
+
+    field(ZRST, "Constant Voltage")
+    field(ONST, "Constant Current")
+    field(TWST, "Constant Pwr")
+    field(THST, "Usense limit active")
+    field(FRST, "Psense limit active")
+    field(FVST, "Current derating active")
+    field(SXST, "")
+    field(SVST, "")
+    field(EIST, "")
+    field(NIST, "")
+    field(TEST, "")
+    field(ELST, "")
+    field(TVST, "")
+    field(TTST, "")
+    field(FTST, "")
+    field(FFST, "")
+
+    field(ZRSV, "")
+    field(ONSV, "")
+    field(TWSV, "")
+    field(THSV, "")
+    field(FRSV, "")
+    field(FVSV, "")
+    field(SXSV, "")
+    field(SVSV, "")
+    field(EISV, "")
+    field(NISV, "")
+    field(TESV, "")
+    field(ELSV, "")
+    field(TVSV, "")
+    field(TTSV, "")
+    field(FTSV, "")
+    field(FFSV, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getInt(getSysControlMode) $(P)")
+}

@@ -1,0 +1,126 @@
+
+record(mbbi, "$(D):ActiveInterface-Mon") {
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(DESC, "Active interface")
+
+    field(ZRST, "Analog/Digital Inputs")
+    field(ONST, "HMI/HME")
+    field(TWST, "RS232")
+    field(THST, "")
+    field(FRST, "")
+    field(FVST, "")
+    field(SXST, "")
+    field(SVST, "")
+    field(EIST, "")
+    field(NIST, "")
+    field(TEST, "")
+    field(ELST, "")
+    field(TVST, "")
+    field(TTST, "")
+    field(FTST, "")
+    field(FFST, "")
+
+    field(ZRSV, "")
+    field(ONSV, "")
+    field(TWSV, "")
+    field(THSV, "")
+    field(FRSV, "")
+    field(FVSV, "")
+    field(SXSV, "")
+    field(SVSV, "")
+    field(EISV, "")
+    field(NISV, "")
+    field(TESV, "")
+    field(ELSV, "")
+    field(TVSV, "")
+    field(TTSV, "")
+    field(FTSV, "")
+    field(FFSV, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getInt(getControlInput) $(P)")
+}
+
+record(ai, "$(D):DCLinkVolt-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "5 second")
+    field(DESC, "DC link voltage measure")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getDCLinkVoltage) $(P)")
+}
+
+record(ai, "$(D):PrimaryCurr-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "5 second")
+    field(DESC, "Transformer primary current")
+    field(EGU,  "A")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getPrimaryCurrent) $(P)")
+}
+
+record(stringin, "$(D):DSPVer-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "DSP Firmware Version")
+    field(PHAS, "0")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getString(getDSPVersion) $(P)")
+}
+
+record(stringin, "$(D):ModulatorVer-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Modulator Version")
+    field(PHAS, "0")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getString(getModulatorVersion) $(P)")
+}
+
+record(stringin, "$(D):PheripherieVer-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Pheripherie Version")
+    field(PHAS, "0")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getString(getPheripherieVersion) $(P)")
+}
+
+record(stringin, "$(D):BootloaderVer-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Bootloader Version")
+    field(PHAS, "0")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getString(getBootloaderVersion) $(P)")
+}
+
+record(stringin, "$(D):DLLVer-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "DLL Version")
+    field(PHAS, "0")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getString(getDLLVersion) $(P)")
+}

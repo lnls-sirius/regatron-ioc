@@ -5,6 +5,6 @@ STREAM=/opt/epics-R3.15.6/modules/StreamDevice-2.8.8
 CAPUTLOG=/opt/epics-R3.15.6/modules/caPutLog-R3.6
 EPICS_BASE=/opt/epics-R3.15.6/base
 
--include $(TOP)/../RELEASE.local
--include $(TOP)/configure/RELEASE.local
+-include /../RELEASE.local
+-include /configure/RELEASE.local
 

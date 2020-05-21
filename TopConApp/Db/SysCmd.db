@@ -7,6 +7,7 @@ record(bo, "$(D):Save-Cmd"){
     field(DISV, "0")
     field(PRIO, "HIGH")
     field(DISS, "INVALID")
+    field(FLNK, "")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdStoreParam) $(P)")
@@ -20,6 +21,7 @@ record(bo, "$(D):Clear-Cmd"){
     field(DISV, "0")
     field(PRIO, "HIGH")
     field(DISS, "INVALID")
+    field(FLNK, "")
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto cmd(cmdClearErrors) $(P)")

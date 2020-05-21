@@ -120,6 +120,13 @@ sys_get_set = [
         "prio": "HIGH",
     },
     {
+        "pv": "$(D):Sys-OutVoltEnbl_proc",
+        "type": TemplateType.BINARY_FLNK,
+        "prio": "LOW",
+        "flnk": "$(D):Sys-OutVoltEnbl-RB",
+        "scan": "60 second",
+    },
+    {
         "pv": "$(D):Sys-VoltageRef",
         "desc": "Reference val. for voltage",
         "type": TemplateType.ANALOG_GET_SET,
@@ -152,8 +159,15 @@ sys_get_set = [
         "prio": "HIGH",
     },
     {
+        "pv": "$(D):Sys-VoltSlopeWf-Mon_proc",
+        "type": TemplateType.BINARY_FLNK,
+        "prio": "LOW",
+        "flnk": "$(D):Sys-VoltSlopeWf-Mon",
+        "scan": "60 second",
+    },
+    {
         "params": {
-            "pv": "$(D):Sys-VoltSlope-Wf",
+            "pv": "$(D):Sys-VoltSlopeWf-Mon",
             "param": "getVoltageRampSlope",
             "scan": "Passive",
             "nelm": "2",
@@ -163,13 +177,13 @@ sys_get_set = [
         "items": [
             {
                 "pv": "$(D):Sys-StartupVoltSlope-RB",
-                "desc": "Applied to set values when enabling output volt",
+                "desc": "Set values when enabling output volt",
                 "egu": "s",
                 "prec": "5",
             },
             {
                 "pv": "$(D):Sys-VoltSlope-RB",
-                "desc": "Applied to set values when they are changed",
+                "desc": "Set values when they are changed",
                 "egu": "s",
                 "prec": "5",
             },
@@ -177,7 +191,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-StartupVoltSlope-SP",
-        "desc": "Applied to set values when enabling output volt",
+        "desc": "Set values when enabling output volt",
         "type": TemplateType.ANALOG_SET,
         "param": "setStartupVoltageRampSeconds",
         "drvh": "1.6",
@@ -188,7 +202,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-VoltSlope-SP",
-        "desc": "Applied to set values when they are changed",
+        "desc": "Set values when they are changed",
         "type": TemplateType.ANALOG_SET,
         "param": "setVoltageRampSeconds",
         "drvh": "1.6",
@@ -203,11 +217,18 @@ sys_get_set = [
         "type": TemplateType.BO_CMD,
         "param": "cmdWriteVoltageRamp",
         "prio": "HIGH",
-        "flnk": "$(D):Sys-VoltSlope-Wf",
+        "flnk": "$(D):Sys-VoltSlopeWf-Mon",
+    },
+    {
+        "pv": "$(D):Sys-CurrSlopeWf-Mon_proc",
+        "type": TemplateType.BINARY_FLNK,
+        "prio": "LOW",
+        "flnk": "$(D):Sys-CurrSlopeWf-Mon",
+        "scan": "60 second",
     },
     {
         "params": {
-            "pv": "$(D):Sys-CurrSlope-Wf",
+            "pv": "$(D):Sys-CurrSlopeWf-Mon",
             "param": "getCurrentRampSlope",
             "scan": "Passive",
             "nelm": "2",
@@ -217,13 +238,13 @@ sys_get_set = [
         "items": [
             {
                 "pv": "$(D):Sys-StartupCurrSlope-RB",
-                "desc": "Applied to set values when enabling output volt",
+                "desc": "Set values when enabling output volt",
                 "egu": "s",
                 "prec": "5",
             },
             {
                 "pv": "$(D):Sys-CurrSlope-RB",
-                "desc": "Applied to set values when they are changed",
+                "desc": "Set values when they are changed",
                 "egu": "s",
                 "prec": "5",
             },
@@ -231,7 +252,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-StartupCurrSlope-SP",
-        "desc": "Applied to set values when enabling output volt",
+        "desc": "Set values when enabling output volt",
         "type": TemplateType.ANALOG_SET,
         "param": "setStartupCurrentRampSeconds",
         "drvh": "1.6",
@@ -242,7 +263,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-CurrSlope-SP",
-        "desc": "Applied to set values when they are changed",
+        "desc": "Set values when they are changed",
         "type": TemplateType.ANALOG_SET,
         "param": "setCurrentRampSeconds",
         "drvh": "1.6",
@@ -257,7 +278,7 @@ sys_get_set = [
         "type": TemplateType.BO_CMD,
         "param": "cmdWriteCurrentRamp",
         "prio": "HIGH",
-        "flnk": "$(D):Sys-CurrSlope-Wf",
+        "flnk": "$(D):Sys-CurrSlopeWf-Mon",
     },
 ]
 

@@ -13,6 +13,7 @@ record(longin, "$(D):Sys-ErrGroup-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[0] CP MSS")
     field(DESC, "Sys Std + Ext error group")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrIntrn-Mon"){
@@ -20,6 +21,7 @@ record(longin, "$(D):Sys-StdErrIntrn-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[1] CP MSS")
     field(DESC, "Std warn group 0")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrIntrnPDSP-Mon"){
@@ -27,6 +29,7 @@ record(longin, "$(D):Sys-StdErrIntrnPDSP-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[2] CP MSS")
     field(DESC, "Std warn group 1")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrOutCurrent-Mon"){
@@ -34,6 +37,7 @@ record(longin, "$(D):Sys-StdErrOutCurrent-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[3] CP MSS")
     field(DESC, "Std warn group 2")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrOutVolt-Mon"){
@@ -41,6 +45,7 @@ record(longin, "$(D):Sys-StdErrOutVolt-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[4] CP MSS")
     field(DESC, "Std warn group 3")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrSupply-Mon"){
@@ -48,6 +53,7 @@ record(longin, "$(D):Sys-StdErrSupply-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[5] CP MSS")
     field(DESC, "Std warn group 4")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrT-Mon"){
@@ -55,6 +61,7 @@ record(longin, "$(D):Sys-StdErrT-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[6] CP MSS")
     field(DESC, "Std warn group 5")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrComm-Mon"){
@@ -62,6 +69,7 @@ record(longin, "$(D):Sys-StdErrComm-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[7] CP MSS")
     field(DESC, "Std warn group 6")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrIntrnMod-Mon"){
@@ -69,6 +77,7 @@ record(longin, "$(D):Sys-StdErrIntrnMod-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[8] CP MSS")
     field(DESC, "Std warn group 7")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrAD1Ovr-Mon"){
@@ -76,6 +85,7 @@ record(longin, "$(D):Sys-StdErrAD1Ovr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[9] CP MSS")
     field(DESC, "Std warn group 8")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrAD2Ovr-Mon"){
@@ -83,6 +93,7 @@ record(longin, "$(D):Sys-StdErrAD2Ovr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[10] CP MSS")
     field(DESC, "Std warn group 9")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrAD1Undr-Mon"){
@@ -90,6 +101,7 @@ record(longin, "$(D):Sys-StdErrAD1Undr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[11] CP MSS")
     field(DESC, "Std warn group A")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrAD2Undr-Mon"){
@@ -97,6 +109,7 @@ record(longin, "$(D):Sys-StdErrAD2Undr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[12] CP MSS")
     field(DESC, "Std warn group B")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrLogin-Mon"){
@@ -104,6 +117,7 @@ record(longin, "$(D):Sys-StdErrLogin-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[13] CP MSS")
     field(DESC, "Std warn group C")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrConf-Mon"){
@@ -111,6 +125,7 @@ record(longin, "$(D):Sys-StdErrConf-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[14] CP MSS")
     field(DESC, "Std warn group D")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrConf2-Mon"){
@@ -118,6 +133,7 @@ record(longin, "$(D):Sys-StdErrConf2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[15] CP MSS")
     field(DESC, "Std warn group E")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdErrMisc-Mon"){
@@ -125,6 +141,7 @@ record(longin, "$(D):Sys-StdErrMisc-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[16] CP MSS")
     field(DESC, "Std warn group F")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrIBCSystem-Mon"){
@@ -132,6 +149,7 @@ record(longin, "$(D):Sys-ExtErrIBCSystem-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[17] CP MSS")
     field(DESC, "Ext warn group G")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrIBCSuppply-Mon"){
@@ -139,6 +157,7 @@ record(longin, "$(D):Sys-ExtErrIBCSuppply-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[18] CP MSS")
     field(DESC, "Ext warn group H")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrIBCComm-Mon"){
@@ -146,6 +165,7 @@ record(longin, "$(D):Sys-ExtErrIBCComm-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[19] CP MSS")
     field(DESC, "Ext warn group J")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrIBCPwr-Mon"){
@@ -153,6 +173,7 @@ record(longin, "$(D):Sys-ExtErrIBCPwr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[20] CP MSS")
     field(DESC, "Ext warn group K")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrIBCInv-Mon"){
@@ -160,6 +181,7 @@ record(longin, "$(D):Sys-ExtErrIBCInv-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[21] CP MSS")
     field(DESC, "Ext warn group L")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrIBCMisc-Mon"){
@@ -167,6 +189,7 @@ record(longin, "$(D):Sys-ExtErrIBCMisc-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[22] CP MSS")
     field(DESC, "Ext warn group M")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrIBCInv2-Mon"){
@@ -174,6 +197,7 @@ record(longin, "$(D):Sys-ExtErrIBCInv2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[23] CP MSS")
     field(DESC, "Ext warn group N")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrP-Mon"){
@@ -181,6 +205,7 @@ record(longin, "$(D):Sys-ExtErrP-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[24] CP MSS")
     field(DESC, "not used")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrQ-Mon"){
@@ -188,6 +213,7 @@ record(longin, "$(D):Sys-ExtErrQ-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[25] CP MSS")
     field(DESC, "not used")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrR-Mon"){
@@ -195,6 +221,7 @@ record(longin, "$(D):Sys-ExtErrR-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[26] CP MSS")
     field(DESC, "not used")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrSupply2-Mon"){
@@ -202,6 +229,7 @@ record(longin, "$(D):Sys-ExtErrSupply2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[27] CP MSS")
     field(DESC, "Ext warn group S")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrLogin2-Mon"){
@@ -209,6 +237,7 @@ record(longin, "$(D):Sys-ExtErrLogin2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[28] CP MSS")
     field(DESC, "Ext warn group T")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrConf3-Mon"){
@@ -216,6 +245,7 @@ record(longin, "$(D):Sys-ExtErrConf3-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[29] CP MSS")
     field(DESC, "Ext warn group U")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrComm3-Mon"){
@@ -223,6 +253,7 @@ record(longin, "$(D):Sys-ExtErrComm3-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[30] CP MSS")
     field(DESC, "Ext warn group V")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrIntrn2-Mon"){
@@ -230,6 +261,7 @@ record(longin, "$(D):Sys-ExtErrIntrn2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[31] CP MSS")
     field(DESC, "Ext warn group W")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtErrComm2-Mon"){
@@ -237,6 +269,7 @@ record(longin, "$(D):Sys-ExtErrComm2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[32] CP MSS")
     field(DESC, "Ext warn group X")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-WarnGroup-Mon"){
@@ -244,6 +277,7 @@ record(longin, "$(D):Sys-WarnGroup-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[33] CP MSS")
     field(DESC, "System Std + Ext warn group")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnIntrn-Mon"){
@@ -251,6 +285,7 @@ record(longin, "$(D):Sys-StdWarnIntrn-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[34] CP MSS")
     field(DESC, "Std warn group 0")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnIntrnPDSP-Mon"){
@@ -258,6 +293,7 @@ record(longin, "$(D):Sys-StdWarnIntrnPDSP-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[35] CP MSS")
     field(DESC, "Std warn group 1")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnOutCurrent-Mon"){
@@ -265,6 +301,7 @@ record(longin, "$(D):Sys-StdWarnOutCurrent-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[36] CP MSS")
     field(DESC, "Std warn group 2")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnOutVolt-Mon"){
@@ -272,6 +309,7 @@ record(longin, "$(D):Sys-StdWarnOutVolt-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[37] CP MSS")
     field(DESC, "Std warn group 3")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnSupply-Mon"){
@@ -279,6 +317,7 @@ record(longin, "$(D):Sys-StdWarnSupply-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[38] CP MSS")
     field(DESC, "Std warn group 4")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnT-Mon"){
@@ -286,6 +325,7 @@ record(longin, "$(D):Sys-StdWarnT-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[39] CP MSS")
     field(DESC, "Std warn group 5")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnComm-Mon"){
@@ -293,6 +333,7 @@ record(longin, "$(D):Sys-StdWarnComm-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[40] CP MSS")
     field(DESC, "Std warn group 6")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnIntrnMod-Mon"){
@@ -300,6 +341,7 @@ record(longin, "$(D):Sys-StdWarnIntrnMod-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[41] CP MSS")
     field(DESC, "Std warn group 7")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnAD1Ovr-Mon"){
@@ -307,6 +349,7 @@ record(longin, "$(D):Sys-StdWarnAD1Ovr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[42] CP MSS")
     field(DESC, "Std warn group 8")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnAD2Ovr-Mon"){
@@ -314,6 +357,7 @@ record(longin, "$(D):Sys-StdWarnAD2Ovr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[43] CP MSS")
     field(DESC, "Std warn group 9")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnAD1Undr-Mon"){
@@ -321,6 +365,7 @@ record(longin, "$(D):Sys-StdWarnAD1Undr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[44] CP MSS")
     field(DESC, "Std warn group A")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnAD2Undr-Mon"){
@@ -328,6 +373,7 @@ record(longin, "$(D):Sys-StdWarnAD2Undr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[45] CP MSS")
     field(DESC, "Std warn group B")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnLogin-Mon"){
@@ -335,6 +381,7 @@ record(longin, "$(D):Sys-StdWarnLogin-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[46] CP MSS")
     field(DESC, "Std warn group C")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnConf-Mon"){
@@ -342,6 +389,7 @@ record(longin, "$(D):Sys-StdWarnConf-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[47] CP MSS")
     field(DESC, "Std warn group D")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnConf2-Mon"){
@@ -349,6 +397,7 @@ record(longin, "$(D):Sys-StdWarnConf2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[48] CP MSS")
     field(DESC, "Std warn group E")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-StdWarnMisc-Mon"){
@@ -356,6 +405,7 @@ record(longin, "$(D):Sys-StdWarnMisc-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[49] CP MSS")
     field(DESC, "Std warn group F")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnIBCSystem-Mon"){
@@ -363,6 +413,7 @@ record(longin, "$(D):Sys-ExtWarnIBCSystem-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[50] CP MSS")
     field(DESC, "Ext warn group G")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnIBCSuppply-Mon"){
@@ -370,6 +421,7 @@ record(longin, "$(D):Sys-ExtWarnIBCSuppply-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[51] CP MSS")
     field(DESC, "Ext warn group H")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnIBCComm-Mon"){
@@ -377,6 +429,7 @@ record(longin, "$(D):Sys-ExtWarnIBCComm-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[52] CP MSS")
     field(DESC, "Ext warn group J")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnIBCPwr-Mon"){
@@ -384,6 +437,7 @@ record(longin, "$(D):Sys-ExtWarnIBCPwr-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[53] CP MSS")
     field(DESC, "Ext warn group K")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnIBCInv-Mon"){
@@ -391,6 +445,7 @@ record(longin, "$(D):Sys-ExtWarnIBCInv-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[54] CP MSS")
     field(DESC, "Ext warn group L")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnIBCMisc-Mon"){
@@ -398,6 +453,7 @@ record(longin, "$(D):Sys-ExtWarnIBCMisc-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[55] CP MSS")
     field(DESC, "Ext warn group M")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnIBCInv2-Mon"){
@@ -405,6 +461,7 @@ record(longin, "$(D):Sys-ExtWarnIBCInv2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[56] CP MSS")
     field(DESC, "Ext warn group N")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnP-Mon"){
@@ -412,6 +469,7 @@ record(longin, "$(D):Sys-ExtWarnP-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[57] CP MSS")
     field(DESC, "not used")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnQ-Mon"){
@@ -419,6 +477,7 @@ record(longin, "$(D):Sys-ExtWarnQ-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[58] CP MSS")
     field(DESC, "not used")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnR-Mon"){
@@ -426,6 +485,7 @@ record(longin, "$(D):Sys-ExtWarnR-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[59] CP MSS")
     field(DESC, "not used")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnSupply2-Mon"){
@@ -433,6 +493,7 @@ record(longin, "$(D):Sys-ExtWarnSupply2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[60] CP MSS")
     field(DESC, "Ext warn group S")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnLogin2-Mon"){
@@ -440,6 +501,7 @@ record(longin, "$(D):Sys-ExtWarnLogin2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[61] CP MSS")
     field(DESC, "Ext warn group T")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnConf3-Mon"){
@@ -447,6 +509,7 @@ record(longin, "$(D):Sys-ExtWarnConf3-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[62] CP MSS")
     field(DESC, "Ext warn group U")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnComm3-Mon"){
@@ -454,6 +517,7 @@ record(longin, "$(D):Sys-ExtWarnComm3-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[63] CP MSS")
     field(DESC, "Ext warn group V")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnIntrn2-Mon"){
@@ -461,6 +525,7 @@ record(longin, "$(D):Sys-ExtWarnIntrn2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[64] CP MSS")
     field(DESC, "Ext warn group W")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }
 
 record(longin, "$(D):Sys-ExtWarnComm2-Mon"){
@@ -468,4 +533,5 @@ record(longin, "$(D):Sys-ExtWarnComm2-Mon"){
     field(INP,  "$(D):Sys-Tree.VAL[65] CP MSS")
     field(DESC, "Ext warn group X")
     field(DTYP, "Soft Channel")
+    field(EGU, "")
 }

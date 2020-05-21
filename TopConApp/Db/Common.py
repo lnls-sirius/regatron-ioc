@@ -101,6 +101,7 @@ record(longin, "${pv}"){
     field(INP,  "${wf}.VAL[${n}] CP MSS")
     field(DESC, "${desc}")
     field(DTYP, "Soft Channel")
+    field(EGU, "${egu}")
 }
 """
 )
@@ -224,6 +225,7 @@ record(ai, "${pv}"){
     field(LINR, "${linr}")
     field(EOFF, "${eoff}")
     field(ESLO, "${eslo}")
+    field(FLNK, "${flnk}")
 
     field(DTYP, "stream")
     field(INP,  "${proto} getFloat(${param}) $(P)")
@@ -241,6 +243,7 @@ record(bo, "${pv}"){
     field(DISV, "${disv}")
     field(PRIO, "${prio}")
     field(DISS, "INVALID")
+    field(FLNK, "${flnk}")
 
     field(DTYP, "stream")
     field(OUT,  "${proto} cmd(${param}) $(P)")
@@ -248,6 +251,16 @@ record(bo, "${pv}"){
 """
 )
 
+binary_flnk_db = Template(
+    """
+record(bi, "${pv}"){
+    field(SCAN, "${scan}")
+    field(PHAS, "${phas}")
+    field(PRIO, "${prio}")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "${flnk}")
+}
+""")
 
 binary_get_set_db = Template(
     """
@@ -367,6 +380,7 @@ class TemplateType(object):
     ANALOG_ITEM = item_ai_db
     ANALOG_SET = analog_set_db
     BINARY_GET_SET = binary_get_set_db
+    BINARY_FLNK = binary_flnk_db
     BO_CMD = bo_cmd_db
     LONG_GET_SET = long_get_set_db
     LONG_IN_ITEM = item_long_db

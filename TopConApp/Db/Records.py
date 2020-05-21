@@ -71,16 +71,45 @@ mod_mon = [
         "scan": "10 second",
     },
 ]
-
-sys_get_set = [
+mod_get_set = [
     {
-        "pv": "$(D):Sys-CurrentRef",
+        "pv": "$(D):Mod-VoltageRef-Mon",
+        "desc": "Reference val. for voltage",
+        "type": TemplateType.ANALOG_GET,
+        "param": "ModVoltageRef",
+        "egu": "V",
+        "prio": "HIGH",
+        "scan": "60 second",
+    },
+    {
+        "pv": "$(D):Mod-CurrentRef-Mon",
         "desc": "Reference val. for current",
-        "type": TemplateType.ANALOG_GET_SET,
-        "param": "SysCurrentRef",
+        "type": TemplateType.ANALOG_GET,
+        "param": "ModCurrentRef",
         "egu": "A",
         "prio": "HIGH",
+        "scan": "60 second",
     },
+    {
+        "pv": "$(D):Mod-ResistanceRef-Mon",
+        "desc": "Reference val. for resistance",
+        "type": TemplateType.ANALOG_GET,
+        "param": "ModResistanceRef",
+        "egu": "mOhm",
+        "prio": "HIGH",
+        "scan": "60 second",
+    },
+    {
+        "pv": "$(D):Mod-PwrRef-Mon",
+        "desc": "Reference val. for power",
+        "type": TemplateType.ANALOG_GET,
+        "param": "ModPowerRef",
+        "egu": "kW",
+        "prio": "HIGH",
+        "scan": "60 second",
+    },
+]
+sys_get_set = [
     {
         "pv": "$(D):Sys-OutVoltEnbl",
         "desc": "Enable/Disable output voltage",
@@ -96,6 +125,14 @@ sys_get_set = [
         "type": TemplateType.ANALOG_GET_SET,
         "param": "SysVoltageRef",
         "egu": "V",
+        "prio": "HIGH",
+    },
+    {
+        "pv": "$(D):Sys-CurrentRef",
+        "desc": "Reference val. for current",
+        "type": TemplateType.ANALOG_GET_SET,
+        "param": "SysCurrentRef",
+        "egu": "A",
         "prio": "HIGH",
     },
     {

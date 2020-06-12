@@ -2,11 +2,15 @@
 set -e
 
 function digi_init {
-    echo "/usr/bin/dgrp_cfg_node -v -i 4 init ${1} ${2} 1 && ln -s /dev/tty_dgrp_${1}_0 ${3}"
+    set -x
+    /usr/bin/dgrp_cfg_node -v -i 4 init ${1} ${2} 1 && ln -s /dev/tty_dgrp_${1}_0 ${3}
+    set +x
 }
 
 function digi_uninit {
-    echo "/usr/bin/dgrp_cfg_node uninit ${1} ${2} 1 && rm -f ${3}"
+    set -x
+    /usr/bin/dgrp_cfg_node uninit ${1} ${2} 1 && rm -f ${3}
+    set +x
 }
 
 function show_help {

@@ -75,6 +75,16 @@ record(ai, "$(D):PrimaryCurr-Mon"){
     field(INP,  "@Regatron.proto getFloat(getPrimaryCurrent) $(P)")
 }
 
+record(longin, "$(D):ModuleID-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Module ID - switch")
+    field(PHAS, "0")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getInt(getModuleID) $(P)")
+}
+
 record(stringin, "$(D):DSPVer-Mon"){
     field(PINI, "NO")
     field(SCAN, "60 second")

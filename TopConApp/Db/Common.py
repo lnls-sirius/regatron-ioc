@@ -199,6 +199,20 @@ record(mbbi, "${pv}") {
 }
 """
 )
+longin_db = Template(
+    """
+record(longin, "${pv}"){
+    field(PINI, "${pini}")
+    field(SCAN, "${scan}")
+    field(DESC, "${desc}")
+    field(PHAS, "${phas}")
+
+    field(DTYP, "stream")
+    field(INP,  "${proto} getInt(${param}) $(P)")
+}
+"""
+)
+
 stringin_db = Template(
     """
 record(stringin, "${pv}"){
@@ -404,6 +418,7 @@ class TemplateType(object):
     BO_CMD = bo_cmd_db
     LONG_GET_SET = long_get_set_db
     LONG_IN_ITEM = item_long_db
+    LONG_IN = longin_db
     MBBI = mbbi_db
     MBBI_ITEM = item_mbbi_db
     STRING_IN = stringin_db

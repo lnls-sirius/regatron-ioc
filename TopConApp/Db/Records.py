@@ -413,6 +413,13 @@ generic_mon = [
         "scan": "5 second",
     },
     {
+        "pv": "$(D):ModuleID-Mon",
+        "desc": "Module ID - switch",
+        "param": "getModuleID",
+        "scan": "60 second",
+        "type": TemplateType.LONG_IN,
+    },
+    {
         "pv": "$(D):DSPVer-Mon",
         "desc": "DSP Firmware Version",
         "param": "getDSPVersion",

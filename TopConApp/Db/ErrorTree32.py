@@ -710,14 +710,14 @@ sys = [
         ],
     },
     {
-        "pv": "$(D):GeneralError-Mon",
+        "pv": "$(D):GenErr-Mon",
         "desc": "General Error Status",
         "inpa": "$(D):Sys-WarnGroup-Mon",
         "inpb": "$(D):Mod-WarnGroup-Mon",
         "type": TemplateType.ALARM_OR,
     },
     {
-        "pv": "$(D):GeneralWarn-Mon",
+        "pv": "$(D):GenWarn-Mon",
         "desc": "General Warning Status",
         "inpa": "$(D):Sys-ErrGroup-Mon",
         "inpb": "$(D):Mod-ErrGroup-Mon",

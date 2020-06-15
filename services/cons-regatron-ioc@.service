@@ -1,0 +1,19 @@
+[Unit]
+Description=Regatron %i - IOC
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Restart=always
+RestartSec=10
+Type=simple
+
+WorkingDirectory=/opt/cons-topcon/iocBoot/iocTopCon/
+ExecStart=/usr/local/bin/procServ -L - --allow -f --chdir /opt/cons-topcon/iocBoot/iocTopCon/ 202%i ./st-%i.cmd
+
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
+

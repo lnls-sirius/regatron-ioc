@@ -52,27 +52,27 @@ elif [ "${2}" = "${DIPOLES}" ]; then
 
 elif [ "${2}" = "${QUADRUPOLES}" ]; then
     echo "${1} ${QUADRUPOLES} ..."
-    digi_$1 17 10.128.125.117 /dev/ttyD17
-    digi_$1 18 10.128.125.118 /dev/ttyD18
-    digi_$1 19 10.128.125.119 /dev/ttyD19
-    digi_$1 20 10.128.125.120 /dev/ttyD20
-    digi_$1 21 10.128.125.121 /dev/ttyD21
-    digi_$1 22 10.128.125.122 /dev/ttyD22
-    digi_$1 23 10.128.125.123 /dev/ttyD23
-    digi_$1 24 10.128.125.124 /dev/ttyD24
-    digi_$1 25 10.128.125.125 /dev/ttyD25
-    digi_$1 26 10.128.125.126 /dev/ttyD26
+    digi_$1 17 10.128.125.117 /dev/ttyD17 # PA-RaPSA01:PS-DCLink-QFAP
+    digi_$1 18 10.128.125.118 /dev/ttyD18 # PA-RaPSA01:PS-DCLink-QFB
+    digi_$1 19 10.128.125.119 /dev/ttyD19 # PA-RaPSA03:PS-DCLink-QDAP
+    digi_$1 20 10.128.125.120 /dev/ttyD20 # PA-RaPSA04:PS-DCLink-QDB
+    digi_$1 21 10.128.125.121 /dev/ttyD21 # PA-RaPSA06:PS-DCLink-Q13A
+    digi_$1 22 10.128.125.122 /dev/ttyD22 # PA-RaPSA06:PS-DCLink-Q13B
+    digi_$1 23 10.128.125.123 /dev/ttyD23 # PA-RaPSA06:PS-DCLink-Q13C
+    digi_$1 24 10.128.125.124 /dev/ttyD24 # PA-RaPSA07:PS-DCLink-Q24A
+    digi_$1 25 10.128.125.125 /dev/ttyD25 # PA-RaPSA07:PS-DCLink-Q24B
+    digi_$1 26 10.128.125.126 /dev/ttyD26 # PA-RaPSA07:PS-DCLink-Q24C
 
 elif [ "${2}" = "${SEXTUPOLES}" ]; then
     echo "${1} ${SEXTUPOLES} ..."
-    digi_$1 27 10.128.125.127 /dev/ttyD27
-    digi_$1 28 10.128.125.128 /dev/ttyD28
-    digi_$1 29 10.128.125.129 /dev/ttyD29
-    digi_$1 30 10.128.125.130 /dev/ttyD30
-    digi_$1 31 10.128.125.131 /dev/ttyD31
-    digi_$1 32 10.128.125.132 /dev/ttyD32
-    digi_$1 33 10.128.125.133 /dev/ttyD33
-    digi_$1 34 10.128.125.134 /dev/ttyD34
+    digi_$1 27 10.128.125.127 /dev/ttyD27 # 
+    digi_$1 28 10.128.125.128 /dev/ttyD28 # 
+    digi_$1 29 10.128.125.129 /dev/ttyD29 # 
+    digi_$1 30 10.128.125.130 /dev/ttyD30 # 
+    digi_$1 31 10.128.125.131 /dev/ttyD31 # 
+    digi_$1 32 10.128.125.132 /dev/ttyD32 # 
+    digi_$1 33 10.128.125.133 /dev/ttyD33 # 
+    digi_$1 34 10.128.125.134 /dev/ttyD34 # 
     digi_$1 35 10.128.125.135 /dev/ttyD35
     digi_$1 36 10.128.125.136 /dev/ttyD36
     digi_$1 37 10.128.125.137 /dev/ttyD37

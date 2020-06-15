@@ -535,3 +535,17 @@ record(longin, "$(D):Sys-ExtWarnComm2-Mon"){
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
+
+record(calc, "$(D):GenErr-Mon"){
+    field(CALC, "A|B")
+    field(INPA, "$(D):Sys-WarnGroup-Mon CP MSS")
+    field(INPA, "$(D):Mod-WarnGroup-Mon CP MSS")
+    field(DESC, "General Error Status")
+}
+
+record(calc, "$(D):GenWarn-Mon"){
+    field(CALC, "A|B")
+    field(INPA, "$(D):Sys-ErrGroup-Mon CP MSS")
+    field(INPA, "$(D):Mod-ErrGroup-Mon CP MSS")
+    field(DESC, "General Warning Status")
+}

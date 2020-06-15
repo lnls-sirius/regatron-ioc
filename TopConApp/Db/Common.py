@@ -407,12 +407,24 @@ record(bi, "${pv}_proc"){
 """
 )
 
+alarm_or_db = Template(
+    """
+record(calc, "${pv}"){
+    field(CALC, "A|B")
+    field(INPA, "${inpa} CP MSS")
+    field(INPA, "${inpb} CP MSS")
+    field(DESC, "${desc}")
+}
+"""
+)
+
 
 class TemplateType(object):
     ANALOG_GET = ai_db
     ANALOG_GET_SET = analog_get_set_db
     ANALOG_ITEM = item_ai_db
     ANALOG_SET = analog_set_db
+    ALARM_OR = alarm_or_db
     BINARY_GET_SET = binary_get_set_db
     BINARY_FLNK = binary_flnk_db
     BO_CMD = bo_cmd_db

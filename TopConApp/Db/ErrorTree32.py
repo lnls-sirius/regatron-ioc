@@ -367,344 +367,360 @@ mod = {
 
 
 # Error Monitoring
-sys = {
-    "params": {
-        "pv": "$(D):Sys-Tree",
-        "param": "getSysTree",
-        "scan": "30 second",
-        "ftvl": FTVL.DOUBLE,
-        "nelm": "66",
+sys = [
+    {
+        "params": {
+            "pv": "$(D):Sys-Tree",
+            "param": "getSysTree",
+            "scan": "30 second",
+            "ftvl": FTVL.DOUBLE,
+            "nelm": "66",
+        },
+        "items": [
+            {
+                "pv": "$(D):Sys-ErrGroup-Mon",
+                "desc": "Sys Std + Ext error group",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrIntrn-Mon",
+                "desc": "Std warn group 0",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrIntrnPDSP-Mon",
+                "desc": "Std warn group 1",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrOutCurrent-Mon",
+                "desc": "Std warn group 2",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrOutVolt-Mon",
+                "desc": "Std warn group 3",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrSupply-Mon",
+                "desc": "Std warn group 4",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrT-Mon",
+                "desc": "Std warn group 5",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrComm-Mon",
+                "desc": "Std warn group 6",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrIntrnMod-Mon",
+                "desc": "Std warn group 7",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrAD1Ovr-Mon",
+                "desc": "Std warn group 8",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrAD2Ovr-Mon",
+                "desc": "Std warn group 9",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrAD1Undr-Mon",
+                "desc": "Std warn group A",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrAD2Undr-Mon",
+                "desc": "Std warn group B",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrLogin-Mon",
+                "desc": "Std warn group C",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrConf-Mon",
+                "desc": "Std warn group D",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrConf2-Mon",
+                "desc": "Std warn group E",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdErrMisc-Mon",
+                "desc": "Std warn group F",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrIBCSystem-Mon",
+                "desc": "Ext warn group G",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrIBCSuppply-Mon",
+                "desc": "Ext warn group H",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrIBCComm-Mon",
+                "desc": "Ext warn group J",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrIBCPwr-Mon",
+                "desc": "Ext warn group K",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrIBCInv-Mon",
+                "desc": "Ext warn group L",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrIBCMisc-Mon",
+                "desc": "Ext warn group M",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrIBCInv2-Mon",
+                "desc": "Ext warn group N",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrP-Mon",
+                "desc": "not used",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrQ-Mon",
+                "desc": "not used",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrR-Mon",
+                "desc": "not used",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrSupply2-Mon",
+                "desc": "Ext warn group S",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrLogin2-Mon",
+                "desc": "Ext warn group T",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrConf3-Mon",
+                "desc": "Ext warn group U",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrComm3-Mon",
+                "desc": "Ext warn group V",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrIntrn2-Mon",
+                "desc": "Ext warn group W",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtErrComm2-Mon",
+                "desc": "Ext warn group X",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-WarnGroup-Mon",
+                "desc": "System Std + Ext warn group",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnIntrn-Mon",
+                "desc": "Std warn group 0",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnIntrnPDSP-Mon",
+                "desc": "Std warn group 1",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnOutCurrent-Mon",
+                "desc": "Std warn group 2",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnOutVolt-Mon",
+                "desc": "Std warn group 3",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnSupply-Mon",
+                "desc": "Std warn group 4",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnT-Mon",
+                "desc": "Std warn group 5",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnComm-Mon",
+                "desc": "Std warn group 6",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnIntrnMod-Mon",
+                "desc": "Std warn group 7",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnAD1Ovr-Mon",
+                "desc": "Std warn group 8",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnAD2Ovr-Mon",
+                "desc": "Std warn group 9",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnAD1Undr-Mon",
+                "desc": "Std warn group A",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnAD2Undr-Mon",
+                "desc": "Std warn group B",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnLogin-Mon",
+                "desc": "Std warn group C",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnConf-Mon",
+                "desc": "Std warn group D",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnConf2-Mon",
+                "desc": "Std warn group E",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-StdWarnMisc-Mon",
+                "desc": "Std warn group F",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnIBCSystem-Mon",
+                "desc": "Ext warn group G",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnIBCSuppply-Mon",
+                "desc": "Ext warn group H",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnIBCComm-Mon",
+                "desc": "Ext warn group J",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnIBCPwr-Mon",
+                "desc": "Ext warn group K",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnIBCInv-Mon",
+                "desc": "Ext warn group L",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnIBCMisc-Mon",
+                "desc": "Ext warn group M",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnIBCInv2-Mon",
+                "desc": "Ext warn group N",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnP-Mon",
+                "desc": "not used",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnQ-Mon",
+                "desc": "not used",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnR-Mon",
+                "desc": "not used",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnSupply2-Mon",
+                "desc": "Ext warn group S",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnLogin2-Mon",
+                "desc": "Ext warn group T",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnConf3-Mon",
+                "desc": "Ext warn group U",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnComm3-Mon",
+                "desc": "Ext warn group V",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnIntrn2-Mon",
+                "desc": "Ext warn group W",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+            {
+                "pv": "$(D):Sys-ExtWarnComm2-Mon",
+                "desc": "Ext warn group X",
+                "type": TemplateType.LONG_IN_ITEM,
+            },
+        ],
     },
-    "items": [
-        {
-            "pv": "$(D):Sys-ErrGroup-Mon",
-            "desc": "Sys Std + Ext error group",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrIntrn-Mon",
-            "desc": "Std warn group 0",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrIntrnPDSP-Mon",
-            "desc": "Std warn group 1",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrOutCurrent-Mon",
-            "desc": "Std warn group 2",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrOutVolt-Mon",
-            "desc": "Std warn group 3",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrSupply-Mon",
-            "desc": "Std warn group 4",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrT-Mon",
-            "desc": "Std warn group 5",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrComm-Mon",
-            "desc": "Std warn group 6",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrIntrnMod-Mon",
-            "desc": "Std warn group 7",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrAD1Ovr-Mon",
-            "desc": "Std warn group 8",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrAD2Ovr-Mon",
-            "desc": "Std warn group 9",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrAD1Undr-Mon",
-            "desc": "Std warn group A",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrAD2Undr-Mon",
-            "desc": "Std warn group B",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrLogin-Mon",
-            "desc": "Std warn group C",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrConf-Mon",
-            "desc": "Std warn group D",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrConf2-Mon",
-            "desc": "Std warn group E",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdErrMisc-Mon",
-            "desc": "Std warn group F",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrIBCSystem-Mon",
-            "desc": "Ext warn group G",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrIBCSuppply-Mon",
-            "desc": "Ext warn group H",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrIBCComm-Mon",
-            "desc": "Ext warn group J",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrIBCPwr-Mon",
-            "desc": "Ext warn group K",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrIBCInv-Mon",
-            "desc": "Ext warn group L",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrIBCMisc-Mon",
-            "desc": "Ext warn group M",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrIBCInv2-Mon",
-            "desc": "Ext warn group N",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrP-Mon",
-            "desc": "not used",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrQ-Mon",
-            "desc": "not used",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrR-Mon",
-            "desc": "not used",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrSupply2-Mon",
-            "desc": "Ext warn group S",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrLogin2-Mon",
-            "desc": "Ext warn group T",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrConf3-Mon",
-            "desc": "Ext warn group U",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrComm3-Mon",
-            "desc": "Ext warn group V",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrIntrn2-Mon",
-            "desc": "Ext warn group W",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtErrComm2-Mon",
-            "desc": "Ext warn group X",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-WarnGroup-Mon",
-            "desc": "System Std + Ext warn group",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnIntrn-Mon",
-            "desc": "Std warn group 0",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnIntrnPDSP-Mon",
-            "desc": "Std warn group 1",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnOutCurrent-Mon",
-            "desc": "Std warn group 2",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnOutVolt-Mon",
-            "desc": "Std warn group 3",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnSupply-Mon",
-            "desc": "Std warn group 4",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnT-Mon",
-            "desc": "Std warn group 5",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnComm-Mon",
-            "desc": "Std warn group 6",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnIntrnMod-Mon",
-            "desc": "Std warn group 7",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnAD1Ovr-Mon",
-            "desc": "Std warn group 8",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnAD2Ovr-Mon",
-            "desc": "Std warn group 9",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnAD1Undr-Mon",
-            "desc": "Std warn group A",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnAD2Undr-Mon",
-            "desc": "Std warn group B",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnLogin-Mon",
-            "desc": "Std warn group C",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnConf-Mon",
-            "desc": "Std warn group D",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnConf2-Mon",
-            "desc": "Std warn group E",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-StdWarnMisc-Mon",
-            "desc": "Std warn group F",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnIBCSystem-Mon",
-            "desc": "Ext warn group G",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnIBCSuppply-Mon",
-            "desc": "Ext warn group H",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnIBCComm-Mon",
-            "desc": "Ext warn group J",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnIBCPwr-Mon",
-            "desc": "Ext warn group K",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnIBCInv-Mon",
-            "desc": "Ext warn group L",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnIBCMisc-Mon",
-            "desc": "Ext warn group M",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnIBCInv2-Mon",
-            "desc": "Ext warn group N",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnP-Mon",
-            "desc": "not used",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnQ-Mon",
-            "desc": "not used",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnR-Mon",
-            "desc": "not used",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnSupply2-Mon",
-            "desc": "Ext warn group S",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnLogin2-Mon",
-            "desc": "Ext warn group T",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnConf3-Mon",
-            "desc": "Ext warn group U",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnComm3-Mon",
-            "desc": "Ext warn group V",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnIntrn2-Mon",
-            "desc": "Ext warn group W",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-        {
-            "pv": "$(D):Sys-ExtWarnComm2-Mon",
-            "desc": "Ext warn group X",
-            "type": TemplateType.LONG_IN_ITEM,
-        },
-    ],
-}
+    {
+        "pv": "$(D):GeneralError-Mon",
+        "desc": "General Error Status",
+        "inpa": "$(D):Sys-WarnGroup-Mon",
+        "inpb": "$(D):Mod-WarnGroup-Mon",
+        "type": TemplateType.ALARM_OR,
+    },
+    {
+        "pv": "$(D):GeneralWarn-Mon",
+        "desc": "General Warning Status",
+        "inpa": "$(D):Sys-ErrGroup-Mon",
+        "inpb": "$(D):Mod-ErrGroup-Mon",
+        "type": TemplateType.ALARM_OR,
+    },
+]

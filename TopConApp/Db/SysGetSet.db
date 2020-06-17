@@ -234,8 +234,9 @@ record(ai, "$(D):Sys-VoltSlope-RB"){
     field(INP,  "$(D):Sys-VoltSlopeWf-Mon.VAL[3] CP MSS")
 }
 
-record(ao, "$(D):Sys-SlopeVoltMax-Mon"){
+record(ai, "$(D):Sys-SlopeVoltMax-Mon"){
     field(PINI, "NO")
+    field(SCAN, "30 second")
     field(DESC, "Voltage slope max")
     field(EGU,  "V/ms")
     field(PREC, "2")
@@ -243,17 +244,15 @@ record(ao, "$(D):Sys-SlopeVoltMax-Mon"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
-    field(PRIO, "HIGH")
-    field(DRVH, "0")
-    field(DRVL, "0")
+    field(FLNK, "")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setFloat(getSlopeVoltMax) $(P)")
-    field(FLNK, "")
+    field(INP,  "@Regatron.proto getFloat(getSlopeVoltMax) $(P)")
 }
 
-record(ao, "$(D):Sys-SlopeVoltMin-Mon"){
+record(ai, "$(D):Sys-SlopeVoltMin-Mon"){
     field(PINI, "NO")
+    field(SCAN, "30 second")
     field(DESC, "Voltage slope min")
     field(EGU,  "V/ms")
     field(PREC, "2")
@@ -261,13 +260,10 @@ record(ao, "$(D):Sys-SlopeVoltMin-Mon"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
-    field(PRIO, "HIGH")
-    field(DRVH, "0")
-    field(DRVL, "0")
+    field(FLNK, "")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setFloat(getSlopeVoltMin) $(P)")
-    field(FLNK, "")
+    field(INP,  "@Regatron.proto getFloat(getSlopeVoltMin) $(P)")
 }
 
 record(ao, "$(D):Sys-StartupVoltSlope-SP"){
@@ -285,7 +281,23 @@ record(ao, "$(D):Sys-StartupVoltSlope-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSlopeStartupVoltMs) $(P)")
+    field(FLNK, "$(D):Sys-StartupVoltSlope-SP_")
+}
+
+record(ai, "$(D):Sys-StartupVoltSlope-SP_"){
+    field(PINI, "NO")
+    field(SCAN, ".5 second")
+    field(DESC, "Actual setpoint to be sent")
+    field(EGU,  "V/ms")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
     field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getSlopeStartupVoltSp) $(P)")
 }
 
 record(ao, "$(D):Sys-VoltSlope-SP"){
@@ -304,6 +316,22 @@ record(ao, "$(D):Sys-VoltSlope-SP"){
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSlopeVoltMs) $(P)")
     field(FLNK, "")
+}
+
+record(ai, "$(D):Sys-VoltSlope-SP_"){
+    field(PINI, "NO")
+    field(SCAN, ".5 second")
+    field(DESC, "Actual setpoint to be sent")
+    field(EGU,  "V/ms")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getSlopeVoltSp) $(P)")
 }
 
 record(longout, "$(D):Sys-StartupVoltSlopeRaw-SP"){
@@ -401,8 +429,9 @@ record(ai, "$(D):Sys-CurrSlope-RB"){
     field(INP,  "$(D):Sys-CurrSlopeWf-Mon.VAL[3] CP MSS")
 }
 
-record(ao, "$(D):Sys-SlopeCurrMax-Mon"){
+record(ai, "$(D):Sys-SlopeCurrMax-Mon"){
     field(PINI, "NO")
+    field(SCAN, "30 second")
     field(DESC, "Currage slope max")
     field(EGU,  "A/ms")
     field(PREC, "2")
@@ -410,17 +439,15 @@ record(ao, "$(D):Sys-SlopeCurrMax-Mon"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
-    field(PRIO, "HIGH")
-    field(DRVH, "0")
-    field(DRVL, "0")
+    field(FLNK, "")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setFloat(getSlopeCurrentMax) $(P)")
-    field(FLNK, "")
+    field(INP,  "@Regatron.proto getFloat(getSlopeCurrentMax) $(P)")
 }
 
-record(ao, "$(D):Sys-SlopeCurrMin-Mon"){
+record(ai, "$(D):Sys-SlopeCurrMin-Mon"){
     field(PINI, "NO")
+    field(SCAN, "30 second")
     field(DESC, "Currage slope min")
     field(EGU,  "A/ms")
     field(PREC, "2")
@@ -428,13 +455,10 @@ record(ao, "$(D):Sys-SlopeCurrMin-Mon"){
     field(LINR, "NO CONVERSION")
     field(EOFF, "0")
     field(ESLO, "1")
-    field(PRIO, "HIGH")
-    field(DRVH, "0")
-    field(DRVL, "0")
+    field(FLNK, "")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setFloat(getSlopeCurrentMin) $(P)")
-    field(FLNK, "")
+    field(INP,  "@Regatron.proto getFloat(getSlopeCurrentMin) $(P)")
 }
 
 record(ao, "$(D):Sys-StartupCurrSlope-SP"){
@@ -452,7 +476,23 @@ record(ao, "$(D):Sys-StartupCurrSlope-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSlopeStartupCurrentMs) $(P)")
+    field(FLNK, "$(D):Sys-StartupCurrSlope-SP_")
+}
+
+record(ai, "$(D):Sys-StartupCurrSlope-SP_"){
+    field(PINI, "NO")
+    field(SCAN, ".5 second")
+    field(DESC, "Actual setpoint to be sent")
+    field(EGU,  "A/ms")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
     field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getSlopeStartupCurrentSp) $(P)")
 }
 
 record(ao, "$(D):Sys-CurrSlope-SP"){
@@ -470,7 +510,23 @@ record(ao, "$(D):Sys-CurrSlope-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setFloat(setSlopeCurrentMs) $(P)")
+    field(FLNK, "$(D):Sys-CurrSlope-SP_")
+}
+
+record(ai, "$(D):Sys-CurrSlope-SP_"){
+    field(PINI, "NO")
+    field(SCAN, ".5 second")
+    field(DESC, "Actual setpoint to be sent")
+    field(EGU,  "A/ms")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
     field(FLNK, "")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getSlopeCurrentSp) $(P)")
 }
 
 record(longout, "$(D):Sys-StartupCurrSlopeRaw-SP"){

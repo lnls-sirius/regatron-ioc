@@ -6,3 +6,4 @@ configure/O.linux-x86_64/
 db/
 dbd/
 iocBoot/iocTopCon/envPaths
+*.swp

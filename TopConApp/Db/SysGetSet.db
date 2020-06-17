@@ -234,6 +234,42 @@ record(ai, "$(D):Sys-VoltSlope-RB"){
     field(INP,  "$(D):Sys-VoltSlopeWf-Mon.VAL[3] CP MSS")
 }
 
+record(ao, "$(D):Sys-SlopeVoltMax-Mon"){
+    field(PINI, "NO")
+    field(DESC, "Voltage slope max")
+    field(EGU,  "V/ms")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+    field(DRVH, "0")
+    field(DRVL, "0")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setFloat(getSlopeVoltMax) $(P)")
+    field(FLNK, "")
+}
+
+record(ao, "$(D):Sys-SlopeVoltMin-Mon"){
+    field(PINI, "NO")
+    field(DESC, "Voltage slope min")
+    field(EGU,  "V/ms")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+    field(DRVH, "0")
+    field(DRVL, "0")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setFloat(getSlopeVoltMin) $(P)")
+    field(FLNK, "")
+}
+
 record(ao, "$(D):Sys-StartupVoltSlope-SP"){
     field(PINI, "NO")
     field(DESC, "Set values when enabling output volt")
@@ -365,18 +401,40 @@ record(ai, "$(D):Sys-CurrSlope-RB"){
     field(INP,  "$(D):Sys-CurrSlopeWf-Mon.VAL[3] CP MSS")
 }
 
-record(bo, "$(D):Sys-WriteCurrSlope-Cmd"){
-    field(DESC, "Apply current slope settings")
-    field(ONAM, "")
-    field(ZNAM, "")
-    field(DISA, "1")
-    field(DISV, "0")
+record(ao, "$(D):Sys-SlopeCurrMax-Mon"){
+    field(PINI, "NO")
+    field(DESC, "Currage slope max")
+    field(EGU,  "A/ms")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
     field(PRIO, "HIGH")
-    field(DISS, "INVALID")
-    field(FLNK, "$(D):Sys-CurrSlopeWf-Mon")
+    field(DRVH, "0")
+    field(DRVL, "0")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto cmd(cmdSlopeCurrentWrite) $(P)")
+    field(OUT,  "@Regatron.proto setFloat(getSlopeCurrentMax) $(P)")
+    field(FLNK, "")
+}
+
+record(ao, "$(D):Sys-SlopeCurrMin-Mon"){
+    field(PINI, "NO")
+    field(DESC, "Currage slope min")
+    field(EGU,  "A/ms")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+    field(DRVH, "0")
+    field(DRVL, "0")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setFloat(getSlopeCurrentMin) $(P)")
+    field(FLNK, "")
 }
 
 record(ao, "$(D):Sys-StartupCurrSlope-SP"){
@@ -441,4 +499,18 @@ record(longout, "$(D):Sys-CurrSlopeRaw-SP"){
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setInt(setSlopeCurrentRaw) $(P)")
     field(FLNK, "")
+}
+
+record(bo, "$(D):Sys-WriteCurrSlope-Cmd"){
+    field(DESC, "Apply current slope settings")
+    field(ONAM, "")
+    field(ZNAM, "")
+    field(DISA, "1")
+    field(DISV, "0")
+    field(PRIO, "HIGH")
+    field(DISS, "INVALID")
+    field(FLNK, "$(D):Sys-CurrSlopeWf-Mon")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto cmd(cmdSlopeCurrentWrite) $(P)")
 }

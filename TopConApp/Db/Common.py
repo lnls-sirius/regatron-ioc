@@ -310,6 +310,23 @@ record(bi, "${pv}_proc"){
 }
 """
 )
+long_set_db = Template(
+    """
+record(longout, "${pv}"){
+    field(PINI, "NO")
+    field(DESC, "${desc}")
+    field(EGU,  "${egu}")
+    field(PHAS, "${phas}")
+    field(PRIO, "${prio}")
+    field(DRVH, "${drvh}")
+    field(DRVL, "${drvl}")
+
+    field(DTYP, "stream")
+    field(OUT,  "${proto} setInt(${param}) $(P)")
+    field(FLNK, "${flnk}")
+}
+"""
+)
 analog_set_db = Template(
     """
 record(ao, "${pv}"){
@@ -431,6 +448,7 @@ class TemplateType(object):
     LONG_GET_SET = long_get_set_db
     LONG_IN_ITEM = item_long_db
     LONG_IN = longin_db
+    LONG_SET = long_set_db
     MBBI = mbbi_db
     MBBI_ITEM = item_mbbi_db
     STRING_IN = stringin_db

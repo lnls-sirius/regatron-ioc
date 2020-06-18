@@ -69,6 +69,18 @@ class FTVL:
     ENUM = "ENUM"
 
 
+wf_string_db = Template(
+    """
+record(waveform, "${pv}"){
+    field(SCAN, "${scan}")
+    field(DTYP, "stream")
+    field(INP,  "${proto} getStringArray(${param}) $(P)")
+    field(FTVL, "${ftvl}")
+    field(NELM, "${nelm}")
+    field(PRIO, "${prio}")
+}
+"""
+)
 wf_db = Template(
     """
 record(waveform, "${pv}"){
@@ -453,3 +465,4 @@ class TemplateType(object):
     MBBI_ITEM = item_mbbi_db
     STRING_IN = stringin_db
     WF_DB = wf_db
+    WF_STRING_DB = wf_string_db

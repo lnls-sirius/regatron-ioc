@@ -621,6 +621,22 @@ generic_cmd = [
 
 generic_get_set = [
     {
+        "pv": "$(D):ErrorHistory-Mon",
+        "param": "getFlashErrorHistory",
+        "scan": "Passive",
+        "nelm": "300",
+        "ftvl": FTVL.STRING,
+        "prio": "HIGH",
+        "type": TemplateType.WF_STRING_DB,
+    },
+    {
+        "pv": "$(D):ErrorHistoryMax-SP",
+        "desc": "Maximum entries from error history",
+        "type": TemplateType.LONG_SET,
+        "param": "setFlashErrorHistoryMax",
+        "prio": "HIGH",
+    },
+    {
         "pv": "$(D):AutoReconnect",
         "desc": "Enable/Disable auto reconnect to device",
         "type": TemplateType.BINARY_GET_SET,

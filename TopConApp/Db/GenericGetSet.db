@@ -1,4 +1,27 @@
 
+record(waveform, "$(D):ErrorHistory-Mon"){
+    field(SCAN, "Passive")
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getStringArray(getFlashErrorHistory) $(P)")
+    field(FTVL, "STRING")
+    field(NELM, "300")
+    field(PRIO, "HIGH")
+}
+
+record(longout, "$(D):ErrorHistoryMax-SP"){
+    field(PINI, "NO")
+    field(DESC, "Maximum entries from error history")
+    field(EGU,  "")
+    field(PHAS, "0")
+    field(PRIO, "HIGH")
+    field(DRVH, "0")
+    field(DRVL, "0")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setInt(setFlashErrorHistoryMax) $(P)")
+    field(FLNK, "")
+}
+
 record(bi, "$(D):AutoReconnect-RB"){
     field(DESC, "Enable/Disable auto reconnect to device")
     field(PHAS, "0")

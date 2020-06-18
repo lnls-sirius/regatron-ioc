@@ -13,6 +13,7 @@ ReplyTimeout = 12000;
 #  getSysTree
 #  // [..ErrorTree, ..WarnTree]\n
 getArray{ separator=','; out "\$1"; in  "\$1 [%f]"; }
+getStringArray{ separator=','; out "\$1"; in  "\$1 [%s]"; }
 
 #  getAutoReconnect
 #  getControlInput

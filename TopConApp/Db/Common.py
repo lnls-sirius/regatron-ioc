@@ -410,7 +410,7 @@ record(longin, "${pv}-RB"){
     field(PRIO, "${prio}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getInt(get${param}) $(PORT)")
+    field(INP,  "${proto} getInt(get${param}) $(P)")
 }
 record(longout, "${pv}-SP"){
     field(PINI, "NO")
@@ -420,7 +420,7 @@ record(longout, "${pv}-SP"){
     field(PRIO, "${prio}")
 
     field(DTYP, "stream")
-    field(OUT,  "${proto} setInt(set${param}) $(PORT)")
+    field(OUT,  "${proto} setInt(set${param}) $(P)")
     field(FLNK, "${pv}-RB")
 }
 record(bi, "${pv}_proc"){

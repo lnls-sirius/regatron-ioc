@@ -15,7 +15,7 @@ record(longin, "$(D):ErrorHistoryMax-RB"){
     field(PRIO, "HIGH")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getInt(getFlashErrorHistoryMax) $(PORT)")
+    field(INP,  "@Regatron.proto getInt(getFlashErrorHistoryMax) $(P)")
 }
 record(longout, "$(D):ErrorHistoryMax-SP"){
     field(PINI, "NO")
@@ -25,7 +25,7 @@ record(longout, "$(D):ErrorHistoryMax-SP"){
     field(PRIO, "HIGH")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setInt(setFlashErrorHistoryMax) $(PORT)")
+    field(OUT,  "@Regatron.proto setInt(setFlashErrorHistoryMax) $(P)")
     field(FLNK, "$(D):ErrorHistoryMax-RB")
 }
 record(bi, "$(D):ErrorHistoryMax_proc"){

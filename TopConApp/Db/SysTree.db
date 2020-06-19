@@ -27,7 +27,7 @@ record(longin, "$(D):Sys-ErrIntrn-Mon"){
 record(longin, "$(D):Sys-ErrIntrnPDSP-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Sys-Tree.VAL[2] CP MSS")
-    field(DESC, "Error 0 - Internal (PDSP)")
+    field(DESC, "Error 1 - Internal (PDSP)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
@@ -43,7 +43,7 @@ record(longin, "$(D):Sys-ErrOutCurrent-Mon"){
 record(longin, "$(D):Sys-ErrOutVolt-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Sys-Tree.VAL[4] CP MSS")
-    field(DESC, "Error 2 - Out Voltage")
+    field(DESC, "Error 3 - Out Voltage")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }

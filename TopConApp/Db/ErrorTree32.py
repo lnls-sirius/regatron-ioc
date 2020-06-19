@@ -44,7 +44,7 @@ mod = {
         },
         {
             "pv": "$(D):Mod-ErrIntrnPDSP-Mon",
-            "desc": "Error 0 - Internal (PDSP)",
+            "desc": "Error 1 - Internal (PDSP)",
             "type": TemplateType.LONG_IN_ITEM,
         },
         {
@@ -54,7 +54,7 @@ mod = {
         },
         {
             "pv": "$(D):Mod-ErrOutVolt-Mon",
-            "desc": "Error 2 - Out Voltage",
+            "desc": "Error 3 - Out Voltage",
             "type": TemplateType.LONG_IN_ITEM,
         },
         {
@@ -159,7 +159,7 @@ mod = {
         },
         {
             "pv": "$(D):Mod-ErrConf4-Mon",
-            "desc": "err Q - Configuration 4",
+            "desc": "Error Q - Configuration 4",
             "type": TemplateType.LONG_IN_ITEM,
         },
         {
@@ -389,7 +389,7 @@ sys = [
             },
             {
                 "pv": "$(D):Sys-ErrIntrnPDSP-Mon",
-                "desc": "Error 0 - Internal (PDSP)",
+                "desc": "Error 1 - Internal (PDSP)",
                 "type": TemplateType.LONG_IN_ITEM,
             },
             {
@@ -399,7 +399,7 @@ sys = [
             },
             {
                 "pv": "$(D):Sys-ErrOutVolt-Mon",
-                "desc": "Error 2 - Out Voltage",
+                "desc": "Error 3 - Out Voltage",
                 "type": TemplateType.LONG_IN_ITEM,
             },
             {

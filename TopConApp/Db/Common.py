@@ -406,7 +406,6 @@ long_get_set_db = Template(
 record(longin, "${pv}-RB"){
     field(DESC, "${desc}")
     field(EGU,  "${egu}")
-    field(PREC, "${prec}")
     field(PHAS, "${phas}")
     field(PRIO, "${prio}")
 
@@ -417,9 +416,7 @@ record(longout, "${pv}-SP"){
     field(PINI, "NO")
     field(DESC, "${desc}")
     field(EGU,  "${egu}")
-    field(PREC, "${prec}")
     field(PHAS, "${phas}")
-    field(LINR, "${linr}")
     field(PRIO, "${prio}")
 
     field(DTYP, "stream")

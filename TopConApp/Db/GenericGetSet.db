@@ -8,18 +8,32 @@ record(waveform, "$(D):ErrorHistory-Mon"){
     field(PRIO, "HIGH")
 }
 
+record(longin, "$(D):ErrorHistoryMax-RB"){
+    field(DESC, "Maximum entries from error history")
+    field(EGU,  "")
+    field(PHAS, "0")
+    field(PRIO, "HIGH")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getInt(getFlashErrorHistoryMax) $(PORT)")
+}
 record(longout, "$(D):ErrorHistoryMax-SP"){
     field(PINI, "NO")
     field(DESC, "Maximum entries from error history")
     field(EGU,  "")
     field(PHAS, "0")
     field(PRIO, "HIGH")
-    field(DRVH, "0")
-    field(DRVL, "0")
 
     field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setInt(setFlashErrorHistoryMax) $(P)")
-    field(FLNK, "")
+    field(OUT,  "@Regatron.proto setInt(setFlashErrorHistoryMax) $(PORT)")
+    field(FLNK, "$(D):ErrorHistoryMax-RB")
+}
+record(bi, "$(D):ErrorHistoryMax_proc"){
+    field(SCAN, "1 second")
+    field(PHAS, "0")
+    field(PRIO, "HIGH")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "$(D):ErrorHistoryMax-RB")
 }
 
 record(bi, "$(D):AutoReconnect-RB"){

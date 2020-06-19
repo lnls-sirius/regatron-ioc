@@ -630,11 +630,12 @@ generic_get_set = [
         "type": TemplateType.WF_STRING_DB,
     },
     {
-        "pv": "$(D):ErrorHistoryMax-SP",
+        "pv": "$(D):ErrorHistoryMax",
         "desc": "Maximum entries from error history",
-        "type": TemplateType.LONG_SET,
-        "param": "setFlashErrorHistoryMax",
+        "type": TemplateType.LONG_GET_SET,
+        "param": "FlashErrorHistoryMax",
         "prio": "HIGH",
+        "scan": "1 second",
     },
     {
         "pv": "$(D):AutoReconnect",

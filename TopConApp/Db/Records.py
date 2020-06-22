@@ -330,7 +330,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-SlopeCurrMax-Mon",
-        "desc": "Currage slope max",
+        "desc": "Current slope max",
         "type": TemplateType.ANALOG_GET,
         "param": "getSlopeCurrentMax",
         "egu": "A/ms",
@@ -340,7 +340,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-SlopeCurrMin-Mon",
-        "desc": "Currage slope min",
+        "desc": "Current slope min",
         "type": TemplateType.ANALOG_GET,
         "param": "getSlopeCurrentMin",
         "egu": "A/ms",

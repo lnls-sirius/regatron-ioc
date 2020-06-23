@@ -444,8 +444,21 @@ record(calc, "${pv}"){
 """
 )
 
+is_active_db = Template(
+    """
+record(calc, "${pv}"){
+    field(CALC, "A")
+    field(INPA, "${inpa} CP MSS")
+    field(INPB, "${inpb} CP MSS")
+    field(DESC, "${desc}")
+    field(SCAN, "${scan}")
+}
+"""
+)
+
 
 class TemplateType(object):
+    IS_ACTIVE = is_active_db
     ANALOG_GET = ai_db
     ANALOG_GET_SET = analog_get_set_db
     ANALOG_ITEM = item_ai_db

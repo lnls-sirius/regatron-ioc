@@ -134,3 +134,23 @@ record(stringin, "$(D):DLLVer-Mon"){
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getString(getDLLVersion) $(P)")
 }
+
+record(longin, "$(D):OperatingTime-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Actual operating hour counter")
+    field(PHAS, "0")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getInt(getOperatingSeconds) $(P)")
+}
+
+record(longin, "$(D):PowerUpTime-Mon"){
+    field(PINI, "NO")
+    field(SCAN, "60 second")
+    field(DESC, "Operating hour counter at powerup")
+    field(PHAS, "0")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getInt(getPowerupTimeSeconds) $(P)")
+}

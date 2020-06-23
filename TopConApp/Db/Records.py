@@ -593,6 +593,22 @@ generic_mon = [
         "scan": "60 second",
         "type": TemplateType.STRING_IN,
     },
+    {
+        "pv": "$(D):OperatingTime-Mon",
+        "desc": "Actual operating hour counter",
+        "param": "getOperatingSeconds",
+        "scan": "60 second",
+        "type": TemplateType.LONG_IN,
+        "egu": "s",
+    },
+    {
+        "pv": "$(D):PowerUpTime-Mon",
+        "desc": "Operating hour counter at powerup",
+        "param": "getPowerupTimeSeconds",
+        "scan": "60 second",
+        "type": TemplateType.LONG_IN,
+        "egu": "s",
+    },
 ]
 
 generic_cmd = [
@@ -629,6 +645,14 @@ generic_get_set = [
         "prio": "HIGH",
         "type": TemplateType.WF_STRING_DB,
     },
+    # {
+    #     "pv": "$(D):ErrorHistory-Mon_pact",
+    #     "type": TemplateType.IS_ACTIVE,
+    #     "inpa": "$(D):ErrorHistory-Mon.PACT",
+    #     "inpb": "$(D):ErrorHistory-Mon",
+    #     "desc": "Is reading?",
+    #     "scan": "1 second",
+    # },
     {
         "pv": "$(D):ErrorHistoryMax",
         "desc": "Maximum entries from error history",

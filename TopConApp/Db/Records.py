@@ -330,7 +330,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-SlopeCurrMax-Mon",
-        "desc": "Currage slope max",
+        "desc": "Current slope max",
         "type": TemplateType.ANALOG_GET,
         "param": "getSlopeCurrentMax",
         "egu": "A/ms",
@@ -340,7 +340,7 @@ sys_get_set = [
     },
     {
         "pv": "$(D):Sys-SlopeCurrMin-Mon",
-        "desc": "Currage slope min",
+        "desc": "Current slope min",
         "type": TemplateType.ANALOG_GET,
         "param": "getSlopeCurrentMin",
         "egu": "A/ms",
@@ -620,6 +620,23 @@ generic_cmd = [
 ]
 
 generic_get_set = [
+    {
+        "pv": "$(D):ErrorHistory-Mon",
+        "param": "getFlashErrorHistory",
+        "scan": "Passive",
+        "nelm": "300",
+        "ftvl": FTVL.STRING,
+        "prio": "HIGH",
+        "type": TemplateType.WF_STRING_DB,
+    },
+    {
+        "pv": "$(D):ErrorHistoryMax",
+        "desc": "Maximum entries from error history",
+        "type": TemplateType.LONG_GET_SET,
+        "param": "FlashErrorHistoryMax",
+        "prio": "HIGH",
+        "scan": "1 second",
+    },
     {
         "pv": "$(D):AutoReconnect",
         "desc": "Enable/Disable auto reconnect to device",

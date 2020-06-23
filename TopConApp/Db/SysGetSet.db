@@ -432,7 +432,7 @@ record(ai, "$(D):Sys-CurrSlope-RB"){
 record(ai, "$(D):Sys-SlopeCurrMax-Mon"){
     field(PINI, "NO")
     field(SCAN, "30 second")
-    field(DESC, "Currage slope max")
+    field(DESC, "Current slope max")
     field(EGU,  "A/ms")
     field(PREC, "2")
     field(PHAS, "0")
@@ -448,7 +448,7 @@ record(ai, "$(D):Sys-SlopeCurrMax-Mon"){
 record(ai, "$(D):Sys-SlopeCurrMin-Mon"){
     field(PINI, "NO")
     field(SCAN, "30 second")
-    field(DESC, "Currage slope min")
+    field(DESC, "Current slope min")
     field(EGU,  "A/ms")
     field(PREC, "2")
     field(PHAS, "0")

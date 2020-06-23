@@ -11,196 +11,196 @@ record(waveform, "$(D):Mod-Tree"){
 record(longin, "$(D):Mod-ErrGroup-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[0] CP MSS")
-    field(DESC, "Mod Std + Ext error group")
+    field(DESC, "Mod + Ext error group")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrIntrn-Mon"){
+record(longin, "$(D):Mod-ErrIntrn-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[1] CP MSS")
-    field(DESC, "Std warn group 0")
+    field(DESC, "Error 0 - Internal")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrIntrnPDSP-Mon"){
+record(longin, "$(D):Mod-ErrIntrnPDSP-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[2] CP MSS")
-    field(DESC, "Std warn group 1")
+    field(DESC, "Error 1 - Internal (PDSP)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrOutCurrent-Mon"){
+record(longin, "$(D):Mod-ErrOutCurrent-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[3] CP MSS")
-    field(DESC, "Std warn group 2")
+    field(DESC, "Error 2 - Out Current")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrOutVolt-Mon"){
+record(longin, "$(D):Mod-ErrOutVolt-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[4] CP MSS")
-    field(DESC, "Std warn group 3")
+    field(DESC, "Error 3 - Out Voltage")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrSupply-Mon"){
+record(longin, "$(D):Mod-ErrSupply-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[5] CP MSS")
-    field(DESC, "Std warn group 4")
+    field(DESC, "Error 4 - Suppply")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrT-Mon"){
+record(longin, "$(D):Mod-ErrT-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[6] CP MSS")
-    field(DESC, "Std warn group 5")
+    field(DESC, "Error 5 - Temperature")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrComm-Mon"){
+record(longin, "$(D):Mod-ErrComm-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[7] CP MSS")
-    field(DESC, "Std warn group 6")
+    field(DESC, "Error 6 - Communication")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrIntrnMod-Mon"){
+record(longin, "$(D):Mod-ErrIntrnMod-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[8] CP MSS")
-    field(DESC, "Std warn group 7")
+    field(DESC, "Error 7 - Intern (Modulator)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrAD1Ovr-Mon"){
+record(longin, "$(D):Mod-ErrAD1Ovr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[9] CP MSS")
-    field(DESC, "Std warn group 8")
+    field(DESC, "Error 8 - Intern (AD Ovr 1)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrAD2Ovr-Mon"){
+record(longin, "$(D):Mod-ErrAD2Ovr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[10] CP MSS")
-    field(DESC, "Std warn group 9")
+    field(DESC, "Error 9 - Intern (AD Ovr 2)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrAD1Undr-Mon"){
+record(longin, "$(D):Mod-ErrAD1Undr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[11] CP MSS")
-    field(DESC, "Std warn group A")
+    field(DESC, "Error A - Intern (AD Undr 1)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrAD2Undr-Mon"){
+record(longin, "$(D):Mod-ErrAD2Undr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[12] CP MSS")
-    field(DESC, "Std warn group B")
+    field(DESC, "Error B - Intern (AD Undr 2)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrLogin-Mon"){
+record(longin, "$(D):Mod-ErrLogin-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[13] CP MSS")
-    field(DESC, "Std warn group C")
+    field(DESC, "Error C - Login")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrConf-Mon"){
+record(longin, "$(D):Mod-ErrConf-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[14] CP MSS")
-    field(DESC, "Std warn group D")
+    field(DESC, "Error D - Config")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrConf2-Mon"){
+record(longin, "$(D):Mod-ErrConf2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[15] CP MSS")
-    field(DESC, "Std warn group E")
+    field(DESC, "Error E - Config 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdErrMisc-Mon"){
+record(longin, "$(D):Mod-ErrMisc-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[16] CP MSS")
-    field(DESC, "Std warn group F")
+    field(DESC, "Error F - Misc")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrIBCSystem-Mon"){
+record(longin, "$(D):Mod-ErrIBCSystem-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[17] CP MSS")
-    field(DESC, "Ext warn group G")
+    field(DESC, "Error G - IBC System")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrIBCSuppply-Mon"){
+record(longin, "$(D):Mod-ErrIBCSuppply-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[18] CP MSS")
-    field(DESC, "Ext warn group H")
+    field(DESC, "Error H - IBC Supply")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrIBCComm-Mon"){
+record(longin, "$(D):Mod-ErrIBCComm-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[19] CP MSS")
-    field(DESC, "Ext warn group J")
+    field(DESC, "Error J - IBC Comm")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrIBCPwr-Mon"){
+record(longin, "$(D):Mod-ErrIBCPwr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[20] CP MSS")
-    field(DESC, "Ext warn group K")
+    field(DESC, "Error K - IBC Pwr")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrIBCInv-Mon"){
+record(longin, "$(D):Mod-ErrIBCInv-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[21] CP MSS")
-    field(DESC, "Ext warn group L")
+    field(DESC, "Error L - IBC Inverter")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrIBCMisc-Mon"){
+record(longin, "$(D):Mod-ErrIBCMisc-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[22] CP MSS")
-    field(DESC, "Ext warn group M")
+    field(DESC, "Error M - IBC Misc")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrIBCInv2-Mon"){
+record(longin, "$(D):Mod-ErrIBCInv2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[23] CP MSS")
-    field(DESC, "Ext warn group N")
+    field(DESC, "Error N - IBC Inverter 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrP-Mon"){
+record(longin, "$(D):Mod-ErrP-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[24] CP MSS")
     field(DESC, "not used")
@@ -208,66 +208,66 @@ record(longin, "$(D):Mod-ExtErrP-Mon"){
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrQ-Mon"){
+record(longin, "$(D):Mod-ErrConf4-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[25] CP MSS")
-    field(DESC, "not used")
+    field(DESC, "Error Q - Configuration 4")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrR-Mon"){
+record(longin, "$(D):Mod-ErrMisc2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[26] CP MSS")
-    field(DESC, "not used")
+    field(DESC, "Error E - Miscellaneous 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrSupply2-Mon"){
+record(longin, "$(D):Mod-ErrSupply2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[27] CP MSS")
-    field(DESC, "Ext warn group S")
+    field(DESC, "Error S - Supply 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrLogin2-Mon"){
+record(longin, "$(D):Mod-ErrLogin2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[28] CP MSS")
-    field(DESC, "Ext warn group T")
+    field(DESC, "Error T - Login 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrConf3-Mon"){
+record(longin, "$(D):Mod-ErrConf3-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[29] CP MSS")
-    field(DESC, "Ext warn group U")
+    field(DESC, "Error U - Configuration 3")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrComm3-Mon"){
+record(longin, "$(D):Mod-ErrComm3-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[30] CP MSS")
-    field(DESC, "Ext warn group V")
+    field(DESC, "Error V - Communication 3")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrIntrn2-Mon"){
+record(longin, "$(D):Mod-ErrIntrn2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[31] CP MSS")
-    field(DESC, "Ext warn group W")
+    field(DESC, "Error W - Internal 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtErrComm2-Mon"){
+record(longin, "$(D):Mod-ErrComm2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[32] CP MSS")
-    field(DESC, "Ext warn group X")
+    field(DESC, "Error X - Communication 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
@@ -275,196 +275,196 @@ record(longin, "$(D):Mod-ExtErrComm2-Mon"){
 record(longin, "$(D):Mod-WarnGroup-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[33] CP MSS")
-    field(DESC, "Mod Std + Ext warn group")
+    field(DESC, "Mod  +  Warn group")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnIntrn-Mon"){
+record(longin, "$(D):Mod-WarnIntrn-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[34] CP MSS")
-    field(DESC, "Std warn group 0")
+    field(DESC, "Warn 0 - Internal")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnIntrnPDSP-Mon"){
+record(longin, "$(D):Mod-WarnIntrnPDSP-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[35] CP MSS")
-    field(DESC, "Std warn group 1")
+    field(DESC, "Warn 0 - Internal (PDSP)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnOutCurrent-Mon"){
+record(longin, "$(D):Mod-WarnOutCurrent-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[36] CP MSS")
-    field(DESC, "Std warn group 2")
+    field(DESC, "Warn 2 - Out Current")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnOutVolt-Mon"){
+record(longin, "$(D):Mod-WarnOutVolt-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[37] CP MSS")
-    field(DESC, "Std warn group 3")
+    field(DESC, "Warn 2 - Out Voltage")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnSupply-Mon"){
+record(longin, "$(D):Mod-WarnSupply-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[38] CP MSS")
-    field(DESC, "Std warn group 4")
+    field(DESC, "Warn 4 - Suppply")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnT-Mon"){
+record(longin, "$(D):Mod-WarnT-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[39] CP MSS")
-    field(DESC, "Std warn group 5")
+    field(DESC, "Warn 5 - Temperature")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnComm-Mon"){
+record(longin, "$(D):Mod-WarnComm-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[40] CP MSS")
-    field(DESC, "Std warn group 6")
+    field(DESC, "Warn 6 - Communication")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnIntrnMod-Mon"){
+record(longin, "$(D):Mod-WarnIntrnMod-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[41] CP MSS")
-    field(DESC, "Std warn group 7")
+    field(DESC, "Warn 7 - Intern (Modulator)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnAD1Ovr-Mon"){
+record(longin, "$(D):Mod-WarnAD1Ovr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[42] CP MSS")
-    field(DESC, "Std warn group 8")
+    field(DESC, "Warn 8 - Intern (AD Ovr 1)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnAD2Ovr-Mon"){
+record(longin, "$(D):Mod-WarnAD2Ovr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[43] CP MSS")
-    field(DESC, "Std warn group 9")
+    field(DESC, "Warn 9 - Intern (AD Ovr 2)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnAD1Undr-Mon"){
+record(longin, "$(D):Mod-WarnAD1Undr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[44] CP MSS")
-    field(DESC, "Std warn group A")
+    field(DESC, "Warn A - Intern (AD Undr 1)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnAD2Undr-Mon"){
+record(longin, "$(D):Mod-WarnAD2Undr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[45] CP MSS")
-    field(DESC, "Std warn group B")
+    field(DESC, "Warn B - Intern (AD Undr 2)")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnLogin-Mon"){
+record(longin, "$(D):Mod-WarnLogin-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[46] CP MSS")
-    field(DESC, "Std warn group C")
+    field(DESC, "Warn C - Login")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnConf-Mon"){
+record(longin, "$(D):Mod-WarnConf-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[47] CP MSS")
-    field(DESC, "Std warn group D")
+    field(DESC, "Warn D - Config")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnConf2-Mon"){
+record(longin, "$(D):Mod-WarnConf2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[48] CP MSS")
-    field(DESC, "Std warn group E")
+    field(DESC, "Warn E - Config 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-StdWarnMisc-Mon"){
+record(longin, "$(D):Mod-WarnMisc-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[49] CP MSS")
-    field(DESC, "Std warn group F")
+    field(DESC, "Warn F - Misc")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnIBCSystem-Mon"){
+record(longin, "$(D):Mod-WarnIBCSystem-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[50] CP MSS")
-    field(DESC, "Ext warn group G")
+    field(DESC, "Warn G - IBC System")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnIBCSuppply-Mon"){
+record(longin, "$(D):Mod-WarnIBCSuppply-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[51] CP MSS")
-    field(DESC, "Ext warn group H")
+    field(DESC, "Warn H - IBC Supply")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnIBCComm-Mon"){
+record(longin, "$(D):Mod-WarnIBCComm-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[52] CP MSS")
-    field(DESC, "Ext warn group J")
+    field(DESC, "Warn J - IBC Comm")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnIBCPwr-Mon"){
+record(longin, "$(D):Mod-WarnIBCPwr-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[53] CP MSS")
-    field(DESC, "Ext warn group K")
+    field(DESC, "Warn K - IBC Pwr")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnIBCInv-Mon"){
+record(longin, "$(D):Mod-WarnIBCInv-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[54] CP MSS")
-    field(DESC, "Ext warn group L")
+    field(DESC, "Warn L - IBC Inverter")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnIBCMisc-Mon"){
+record(longin, "$(D):Mod-WarnIBCMisc-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[55] CP MSS")
-    field(DESC, "Ext warn group M")
+    field(DESC, "Warn M - IBC Misc")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnIBCInv2-Mon"){
+record(longin, "$(D):Mod-WarnIBCInv2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[56] CP MSS")
-    field(DESC, "Ext warn group N")
+    field(DESC, "Warn N - IBC Inverter 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnP-Mon"){
+record(longin, "$(D):Mod-WarnP-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[57] CP MSS")
     field(DESC, "not used")
@@ -472,66 +472,66 @@ record(longin, "$(D):Mod-ExtWarnP-Mon"){
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnQ-Mon"){
+record(longin, "$(D):Mod-WarnConf4-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[58] CP MSS")
-    field(DESC, "not used")
+    field(DESC, "Warn Q - Configuration 4")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnR-Mon"){
+record(longin, "$(D):Mod-WarnMisc2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[59] CP MSS")
-    field(DESC, "not used")
+    field(DESC, "Warn E - Miscellaneous 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnSupply2-Mon"){
+record(longin, "$(D):Mod-WarnSupply2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[60] CP MSS")
-    field(DESC, "Ext warn group S")
+    field(DESC, "Warn S - Supply 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnLogin2-Mon"){
+record(longin, "$(D):Mod-WarnLogin2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[61] CP MSS")
-    field(DESC, "Ext warn group T")
+    field(DESC, "Warn T - Login 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnConf3-Mon"){
+record(longin, "$(D):Mod-WarnConf3-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[62] CP MSS")
-    field(DESC, "Ext warn group U")
+    field(DESC, "Warn U - Configuration 3")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnComm3-Mon"){
+record(longin, "$(D):Mod-WarnComm3-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[63] CP MSS")
-    field(DESC, "Ext warn group V")
+    field(DESC, "Warn V - Communication 3")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnIntrn2-Mon"){
+record(longin, "$(D):Mod-WarnIntrn2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[64] CP MSS")
-    field(DESC, "Ext warn group W")
+    field(DESC, "Warn W - Internal 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }
 
-record(longin, "$(D):Mod-ExtWarnComm2-Mon"){
+record(longin, "$(D):Mod-WarnComm2-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):Mod-Tree.VAL[65] CP MSS")
-    field(DESC, "Ext warn group X")
+    field(DESC, "Warn X - Communication 2")
     field(DTYP, "Soft Channel")
     field(EGU, "")
 }

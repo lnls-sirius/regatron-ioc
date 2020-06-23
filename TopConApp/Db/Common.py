@@ -69,6 +69,18 @@ class FTVL:
     ENUM = "ENUM"
 
 
+wf_string_db = Template(
+    """
+record(waveform, "${pv}"){
+    field(SCAN, "${scan}")
+    field(DTYP, "stream")
+    field(INP,  "${proto} getStringArray(${param}) $(P)")
+    field(FTVL, "${ftvl}")
+    field(NELM, "${nelm}")
+    field(PRIO, "${prio}")
+}
+"""
+)
 wf_db = Template(
     """
 record(waveform, "${pv}"){
@@ -394,24 +406,21 @@ long_get_set_db = Template(
 record(longin, "${pv}-RB"){
     field(DESC, "${desc}")
     field(EGU,  "${egu}")
-    field(PREC, "${prec}")
     field(PHAS, "${phas}")
     field(PRIO, "${prio}")
 
     field(DTYP, "stream")
-    field(INP,  "${proto} getInt(get${param}) $(PORT)")
+    field(INP,  "${proto} getInt(get${param}) $(P)")
 }
 record(longout, "${pv}-SP"){
     field(PINI, "NO")
     field(DESC, "${desc}")
     field(EGU,  "${egu}")
-    field(PREC, "${prec}")
     field(PHAS, "${phas}")
-    field(LINR, "${linr}")
     field(PRIO, "${prio}")
 
     field(DTYP, "stream")
-    field(OUT,  "${proto} setInt(set${param}) $(PORT)")
+    field(OUT,  "${proto} setInt(set${param}) $(P)")
     field(FLNK, "${pv}-RB")
 }
 record(bi, "${pv}_proc"){
@@ -453,3 +462,4 @@ class TemplateType(object):
     MBBI_ITEM = item_mbbi_db
     STRING_IN = stringin_db
     WF_DB = wf_db
+    WF_STRING_DB = wf_string_db

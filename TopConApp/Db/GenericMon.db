@@ -95,24 +95,24 @@ record(stringin, "$(D):DSPVer-Mon"){
     field(INP,  "@Regatron.proto getString(getDSPVersion) $(P)")
 }
 
-record(stringin, "$(D):ModulatorVer-Mon"){
+record(stringin, "$(D):PLDVer-Mon"){
     field(PINI, "NO")
     field(SCAN, "60 second")
-    field(DESC, "Modulator Version")
+    field(DESC, "PLD Firmware Version")
     field(PHAS, "0")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getString(getModulatorVersion) $(P)")
+    field(INP,  "@Regatron.proto getString(getPLDVersion) $(P)")
 }
 
-record(stringin, "$(D):PheripherieVer-Mon"){
+record(stringin, "$(D):IBCVer-Mon"){
     field(PINI, "NO")
     field(SCAN, "60 second")
-    field(DESC, "Pheripherie Version")
+    field(DESC, "IBC Firmware Version")
     field(PHAS, "0")
 
     field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getString(getPheripherieVersion) $(P)")
+    field(INP,  "@Regatron.proto getString(getIBCVersion) $(P)")
 }
 
 record(stringin, "$(D):BootloaderVer-Mon"){

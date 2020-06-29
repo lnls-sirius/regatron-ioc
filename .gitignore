@@ -7,3 +7,5 @@ db/
 dbd/
 iocBoot/iocTopCon/envPaths
 *.swp
+log/
+services/cons-regatron-test.service

@@ -12,7 +12,7 @@ cons-regatron-ioc@5.service
 ```
 This will control a procServ instance at port 20205 that will use the st-05.cmd file.
 
-The st-05.cmd will then estabilish a connection at 'x.x.x.x:20005'. The IOC will not talk directly to the power supply but with an intermediate software instead.
+The st-05.cmd will then estabilish a connection at 'x.x.x.x:20005'. The IOC will not talk directly to the power supply but with an [intermediate software](https://github.com/lnls-sirius/cons-regatron-interface) instead.
 
 This design choice is due to a limitation of the available proprietary DLL and the awkwardness of running an IOC natively in a Windows environment.
 
@@ -24,13 +24,6 @@ docker build -t lnlscon/cons-topcon:v1.2 -f Dockerfile .
 Cmds of interest:
 ```
 st-dipoles.cmd  st-quadrupoles.cmd  st-sextupoles.cmd
-```
-
-## Drivers
-[Digi Connect Me](https://www.digi.com/support/productdetail?pid=2466&type=drivers)
-```
-1. rpmbuild --rebuild 40002086_Z.src.rpm
-2. rpm -i dgrp-1.9-39.i386.rpm
 ```
 
 ## PV namming

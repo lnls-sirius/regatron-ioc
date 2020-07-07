@@ -9,7 +9,7 @@ RestartSec=10
 Type=simple
 
 WorkingDirectory=/opt/cons-topcon/iocBoot/iocTopCon/
-ExecStart=/usr/local/bin/procServ -L - --allow -f --chdir /opt/cons-topcon/iocBoot/iocTopCon/ 202%i ./st-%i.cmd
+ExecStart=/bin/bash -c '/usr/local/bin/procServ -L - --allow -f --chdir /opt/cons-topcon/iocBoot/iocTopCon/ $(( 20200 + %i )) ./st-%i.cmd'
 
 StandardOutput=syslog
 StandardError=syslog

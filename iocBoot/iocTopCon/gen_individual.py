@@ -27,7 +27,7 @@ caPutLogInit "0.0.0.0" 2
 
 s_port = Template(
     """
-drvAsynIPPortConfigure("${P}","${IP}:200${COM}")
+drvAsynIPPortConfigure("${P}","${IP}:{COM}")
 """
 )
 
@@ -58,62 +58,65 @@ dbLoadRecords("db/SysTree.db",       "D=${PV},P=${P}")
 # fmt: off
 devices = [
     # Dipoles
-    {"M": True, "PV": "PA-RaPSD01:PS-DCLink-1A",  "port": 1},
-    {"M": False, "PV": "PA-RaPSD01:PS-DCLink-1B", "port": 2},
-    {"M": True, "PV": "PA-RaPSD03:PS-DCLink-2A",  "port": 3},
-    {"M": False, "PV": "PA-RaPSD03:PS-DCLink-2B", "port": 4},
-    {"M": True, "PV": "PA-RaPSD01:PS-DCLink-3A",  "port": 5},
-    {"M": False, "PV": "PA-RaPSD01:PS-DCLink-3B", "port": 6},
-    {"M": True, "PV": "PA-RaPSD03:PS-DCLink-4A",  "port": 7},
-    {"M": False, "PV": "PA-RaPSD03:PS-DCLink-4B", "port": 8},
-    {"M": True, "PV": "PA-RaPSD05:PS-DCLink-1A",  "port": 9},
-    {"M": False, "PV": "PA-RaPSD05:PS-DCLink-1B", "port": 10},
-    {"M": True, "PV": "PA-RaPSD07:PS-DCLink-2A",  "port": 11},
-    {"M": False, "PV": "PA-RaPSD07:PS-DCLink-2B", "port": 12},
-    {"M": True, "PV": "PA-RaPSD05:PS-DCLink-3A",  "port": 13},
-    {"M": False, "PV": "PA-RaPSD05:PS-DCLink-3B", "port": 14},
-    {"M": True, "PV": "PA-RaPSD07:PS-DCLink-4A",  "port": 15},
-    {"M": False, "PV": "PA-RaPSD07:PS-DCLink-4B", "port": 16},
+    {"M": True, "PV": "PA-RaPSD01:PS-DCLink-1A",  "port": 101},
+    {"M": False, "PV": "PA-RaPSD01:PS-DCLink-1B", "port": 102},
+    {"M": True, "PV": "PA-RaPSD03:PS-DCLink-2A",  "port": 103},
+    {"M": False, "PV": "PA-RaPSD03:PS-DCLink-2B", "port": 104},
+    {"M": True, "PV": "PA-RaPSD01:PS-DCLink-3A",  "port": 105},
+    {"M": False, "PV": "PA-RaPSD01:PS-DCLink-3B", "port": 106},
+    {"M": True, "PV": "PA-RaPSD03:PS-DCLink-4A",  "port": 107},
+    {"M": False, "PV": "PA-RaPSD03:PS-DCLink-4B", "port": 108},
+    {"M": True, "PV": "PA-RaPSD05:PS-DCLink-1A",  "port": 109},
+    {"M": False, "PV": "PA-RaPSD05:PS-DCLink-1B", "port": 110},
+    {"M": True, "PV": "PA-RaPSD07:PS-DCLink-2A",  "port": 111},
+    {"M": False, "PV": "PA-RaPSD07:PS-DCLink-2B", "port": 112},
+    {"M": True, "PV": "PA-RaPSD05:PS-DCLink-3A",  "port": 113},
+    {"M": False, "PV": "PA-RaPSD05:PS-DCLink-3B", "port": 114},
+    {"M": True, "PV": "PA-RaPSD07:PS-DCLink-4A",  "port": 115},
+    {"M": False, "PV": "PA-RaPSD07:PS-DCLink-4B", "port": 116},
+
     # Quadrupoles
-    {"M": True, "PV": "PA-RaPSA01:PS-DCLink-QFAP",  "port": 17},
-    {"M": True, "PV": "PA-RaPSA01:PS-DCLink-QFB",   "port": 18},
-    {"M": True, "PV": "PA-RaPSA03:PS-DCLink-QDAP",  "port": 19},
-    {"M": True, "PV": "PA-RaPSA04:PS-DCLink-QDB",   "port": 20},
-    {"M": True, "PV": "PA-RaPSA06:PS-DCLink-Q13A",  "port": 21},
-    {"M": False, "PV": "PA-RaPSA06:PS-DCLink-Q13B", "port": 22},
-    {"M": False, "PV": "PA-RaPSA06:PS-DCLink-Q13C", "port": 23},
-    {"M": True, "PV": "PA-RaPSA07:PS-DCLink-Q24A",  "port": 24},
-    {"M": False, "PV": "PA-RaPSA07:PS-DCLink-Q24B", "port": 25},
-    {"M": False, "PV": "PA-RaPSA07:PS-DCLink-Q24C", "port": 26},
+    {"M": True, "PV": "PA-RaPSA01:PS-DCLink-QFAP",  "port": 117},
+    {"M": True, "PV": "PA-RaPSA01:PS-DCLink-QFB",   "port": 118},
+    {"M": True, "PV": "PA-RaPSA03:PS-DCLink-QDAP",  "port": 119},
+    {"M": True, "PV": "PA-RaPSA04:PS-DCLink-QDB",   "port": 120},
+    {"M": True, "PV": "PA-RaPSA06:PS-DCLink-Q13A",  "port": 121},
+    {"M": False, "PV": "PA-RaPSA06:PS-DCLink-Q13B", "port": 122},
+    {"M": False, "PV": "PA-RaPSA06:PS-DCLink-Q13C", "port": 123},
+    {"M": True, "PV": "PA-RaPSA07:PS-DCLink-Q24A",  "port": 124},
+    {"M": False, "PV": "PA-RaPSA07:PS-DCLink-Q24B", "port": 125},
+    {"M": False, "PV": "PA-RaPSA07:PS-DCLink-Q24C", "port": 126},
+
     # Sextupoles
-    {"M": True, "PV": "PA-RaPSB01:PS-DCLink-SDB0",     "port": 27},
-    {"M": True, "PV": "PA-RaPSB04:PS-DCLink-SDB1",     "port": 28},
-    {"M": True, "PV": "PA-RaPSB05:PS-DCLink-SDB2",     "port": 29},
-    {"M": True, "PV": "PA-RaPSB07:PS-DCLink-SDB3",     "port": 30},
-    {"M": True, "PV": "PA-RaPSB03:PS-DCLink-SFB0",     "port": 31},
-    {"M": True, "PV": "PA-RaPSB08:PS-DCLink-SFB1",     "port": 32},
-    {"M": True, "PV": "PA-RaPSB10:PS-DCLink-SFB2",     "port": 33},
-    {"M": True, "PV": "PA-RaPSB04:PS-DCLink-SDA12",    "port": 34},
-    {"M": True, "PV": "PA-RaPSB01:PS-DCLink-SDAP0",    "port": 35},
-    {"M": True, "PV": "PA-RaPSB03:PS-DCLink-SFAP0",    "port": 36},
-    {"M": True, "PV": "PA-RaPSB10:PS-DCLink-SFP12",    "port": 37},
-    {"M": True, "PV": "PA-RaPSB08:PS-DCLink-SDP23",    "port": 38},
-    {"M": True, "PV": "PA-RaPSB05:PS-DCLink-SDA3SFA1", "port": 39},
-    {"M": True, "PV": "PA-RaPSB07:PS-DCLink-SFA2SDP1", "port": 40},
+    {"M": True, "PV": "PA-RaPSB01:PS-DCLink-SDB0",     "port": 127},
+    {"M": True, "PV": "PA-RaPSB04:PS-DCLink-SDB1",     "port": 128},
+    {"M": True, "PV": "PA-RaPSB05:PS-DCLink-SDB2",     "port": 129},
+    {"M": True, "PV": "PA-RaPSB07:PS-DCLink-SDB3",     "port": 130},
+    {"M": True, "PV": "PA-RaPSB03:PS-DCLink-SFB0",     "port": 131},
+    {"M": True, "PV": "PA-RaPSB08:PS-DCLink-SFB1",     "port": 132},
+    {"M": True, "PV": "PA-RaPSB10:PS-DCLink-SFB2",     "port": 133},
+    {"M": True, "PV": "PA-RaPSB04:PS-DCLink-SDA12",    "port": 134},
+    {"M": True, "PV": "PA-RaPSB01:PS-DCLink-SDAP0",    "port": 135},
+    {"M": True, "PV": "PA-RaPSB03:PS-DCLink-SFAP0",    "port": 136},
+    {"M": True, "PV": "PA-RaPSB10:PS-DCLink-SFP12",    "port": 137},
+    {"M": True, "PV": "PA-RaPSB08:PS-DCLink-SDP23",    "port": 138},
+    {"M": True, "PV": "PA-RaPSB05:PS-DCLink-SDA3SFA1", "port": 139},
+    {"M": True, "PV": "PA-RaPSB07:PS-DCLink-SFA2SDP1", "port": 140},
 ]
 # fmt: on
 IP = 'x.x.x.x'
+BASE_COM = 20000
 if __name__ == "__main__":
     link = []
     for device in devices:
         port = device["port"]
-        filename = "st-{:02}.cmd".format(port)
+        filename = "st-{:03}.cmd".format(port)
 
         with open(filename, "w+") as f:
             f.write(header)
             s_ports, dbs, m_dbs, asyn_dbs = "", "", "", ""
             device["P"] = "P{}".format(port)
-            s_ports += s_port.safe_substitute(IP=IP,COM="{:02}".format(port), **device)
+            s_ports += s_port.safe_substitute(IP=IP,COM=str(BASE_COM + port), **device)
             dbs += module_db.safe_substitute(**device)
             if device["M"] == True:
                 m_dbs += system_db.safe_substitute(**device)

@@ -10,35 +10,25 @@ dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
 asSetFilename("${TOP}/log/Security.as")
 
-# DIGI Real Port -> /dev/ttyD17
-drvAsynIPPortConfigure("P17","unix:///var/tmp/REG17")
+drvAsynIPPortConfigure("P17","x.x.x.x:20017")
 
-# DIGI Real Port -> /dev/ttyD18
-drvAsynIPPortConfigure("P18","unix:///var/tmp/REG18")
+drvAsynIPPortConfigure("P18","x.x.x.x:20018")
 
-# DIGI Real Port -> /dev/ttyD19
-drvAsynIPPortConfigure("P19","unix:///var/tmp/REG19")
+drvAsynIPPortConfigure("P19","x.x.x.x:20019")
 
-# DIGI Real Port -> /dev/ttyD20
-drvAsynIPPortConfigure("P20","unix:///var/tmp/REG20")
+drvAsynIPPortConfigure("P20","x.x.x.x:20020")
 
-# DIGI Real Port -> /dev/ttyD21
-drvAsynIPPortConfigure("P21","unix:///var/tmp/REG21")
+drvAsynIPPortConfigure("P21","x.x.x.x:20021")
 
-# DIGI Real Port -> /dev/ttyD22
-drvAsynIPPortConfigure("P22","unix:///var/tmp/REG22")
+drvAsynIPPortConfigure("P22","x.x.x.x:20022")
 
-# DIGI Real Port -> /dev/ttyD23
-drvAsynIPPortConfigure("P23","unix:///var/tmp/REG23")
+drvAsynIPPortConfigure("P23","x.x.x.x:20023")
 
-# DIGI Real Port -> /dev/ttyD24
-drvAsynIPPortConfigure("P24","unix:///var/tmp/REG24")
+drvAsynIPPortConfigure("P24","x.x.x.x:20024")
 
-# DIGI Real Port -> /dev/ttyD25
-drvAsynIPPortConfigure("P25","unix:///var/tmp/REG25")
+drvAsynIPPortConfigure("P25","x.x.x.x:20025")
 
-# DIGI Real Port -> /dev/ttyD26
-drvAsynIPPortConfigure("P26","unix:///var/tmp/REG26")
+drvAsynIPPortConfigure("P26","x.x.x.x:20026")
 
 dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")
 dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSA01:PS-DCLink-QFAP,P=P17")

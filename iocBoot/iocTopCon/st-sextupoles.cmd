@@ -10,47 +10,33 @@ dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
 asSetFilename("${TOP}/log/Security.as")
 
-# DIGI Real Port -> /dev/ttyD27
-drvAsynIPPortConfigure("P27","unix:///var/tmp/REG27")
+drvAsynIPPortConfigure("P27","x.x.x.x:20027")
 
-# DIGI Real Port -> /dev/ttyD28
-drvAsynIPPortConfigure("P28","unix:///var/tmp/REG28")
+drvAsynIPPortConfigure("P28","x.x.x.x:20028")
 
-# DIGI Real Port -> /dev/ttyD29
-drvAsynIPPortConfigure("P29","unix:///var/tmp/REG29")
+drvAsynIPPortConfigure("P29","x.x.x.x:20029")
 
-# DIGI Real Port -> /dev/ttyD30
-drvAsynIPPortConfigure("P30","unix:///var/tmp/REG30")
+drvAsynIPPortConfigure("P30","x.x.x.x:20030")
 
-# DIGI Real Port -> /dev/ttyD31
-drvAsynIPPortConfigure("P31","unix:///var/tmp/REG31")
+drvAsynIPPortConfigure("P31","x.x.x.x:20031")
 
-# DIGI Real Port -> /dev/ttyD32
-drvAsynIPPortConfigure("P32","unix:///var/tmp/REG32")
+drvAsynIPPortConfigure("P32","x.x.x.x:20032")
 
-# DIGI Real Port -> /dev/ttyD33
-drvAsynIPPortConfigure("P33","unix:///var/tmp/REG33")
+drvAsynIPPortConfigure("P33","x.x.x.x:20033")
 
-# DIGI Real Port -> /dev/ttyD34
-drvAsynIPPortConfigure("P34","unix:///var/tmp/REG34")
+drvAsynIPPortConfigure("P34","x.x.x.x:20034")
 
-# DIGI Real Port -> /dev/ttyD35
-drvAsynIPPortConfigure("P35","unix:///var/tmp/REG35")
+drvAsynIPPortConfigure("P35","x.x.x.x:20035")
 
-# DIGI Real Port -> /dev/ttyD36
-drvAsynIPPortConfigure("P36","unix:///var/tmp/REG36")
+drvAsynIPPortConfigure("P36","x.x.x.x:20036")
 
-# DIGI Real Port -> /dev/ttyD37
-drvAsynIPPortConfigure("P37","unix:///var/tmp/REG37")
+drvAsynIPPortConfigure("P37","x.x.x.x:20037")
 
-# DIGI Real Port -> /dev/ttyD38
-drvAsynIPPortConfigure("P38","unix:///var/tmp/REG38")
+drvAsynIPPortConfigure("P38","x.x.x.x:20038")
 
-# DIGI Real Port -> /dev/ttyD39
-drvAsynIPPortConfigure("P39","unix:///var/tmp/REG39")
+drvAsynIPPortConfigure("P39","x.x.x.x:20039")
 
-# DIGI Real Port -> /dev/ttyD40
-drvAsynIPPortConfigure("P40","unix:///var/tmp/REG40")
+drvAsynIPPortConfigure("P40","x.x.x.x:20040")
 
 dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSB01:PS-DCLink-SDB0,P=P27")
 dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSB01:PS-DCLink-SDB0,P=P27")

@@ -104,7 +104,7 @@ devices = [
     {"M": True, "PV": "PA-RaPSB07:PS-DCLink-SFA2SDP1", "port": 140},
 ]
 # fmt: on
-IP = 'x.x.x.x'
+IP = '10.128.123.20'
 BASE_COM = 20000
 if __name__ == "__main__":
     link = []

@@ -10,7 +10,7 @@ dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
 asSetFilename("${TOP}/log/Security.as")
 
-drvAsynIPPortConfigure("P103","x.x.x.x:20103")
+drvAsynIPPortConfigure("P103","10.128.123.20:20103")
 
 dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSD03:PS-DCLink-2A,P=P103")
 dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSD03:PS-DCLink-2A,P=P103")

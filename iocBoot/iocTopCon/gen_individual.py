@@ -27,7 +27,7 @@ caPutLogInit "0.0.0.0" 2
 
 s_port = Template(
     """
-drvAsynIPPortConfigure("${P}","${IP}:{COM}")
+drvAsynIPPortConfigure("${P}","${IP}:${COM}")
 """
 )
 

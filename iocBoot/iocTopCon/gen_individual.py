@@ -27,8 +27,7 @@ caPutLogInit "0.0.0.0" 2
 
 s_port = Template(
     """
-# DIGI Real Port -> /dev/ttyD${UNIX}
-drvAsynIPPortConfigure("${P}","unix:///var/tmp/REG${UNIX}")
+drvAsynIPPortConfigure("${P}","${IP}:200${COM}")
 """
 )
 
@@ -103,7 +102,7 @@ devices = [
     {"M": True, "PV": "PA-RaPSB07:PS-DCLink-SFA2SDP1", "port": 40},
 ]
 # fmt: on
-
+IP = 'x.x.x.x'
 if __name__ == "__main__":
     link = []
     for device in devices:
@@ -114,7 +113,7 @@ if __name__ == "__main__":
             f.write(header)
             s_ports, dbs, m_dbs, asyn_dbs = "", "", "", ""
             device["P"] = "P{}".format(port)
-            s_ports += s_port.safe_substitute(UNIX="{:02}".format(port), **device)
+            s_ports += s_port.safe_substitute(IP=IP,COM="{:02}".format(port), **device)
             dbs += module_db.safe_substitute(**device)
             if device["M"] == True:
                 m_dbs += system_db.safe_substitute(**device)

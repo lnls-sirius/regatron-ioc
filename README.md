@@ -12,7 +12,7 @@ cons-regatron-ioc@5.service
 ```
 This will control a procServ instance at port 20205 that will use the st-05.cmd file.
 
-The st-05.cmd will then estabilish a connection at 'x.x.x.x:20005'. The IOC will not talk directly to the power supply but with an [intermediate software](https://github.com/lnls-sirius/cons-regatron-interface) instead.
+The st-05.cmd will then estabilish a connection at 'x.x.x.x:20005'. The IOC will not talk directly to the power supply but with an [intermediate software](https://github.com/lnls-sirius/cons-regatron-interface) instead. The final release will use docker containers, the grouping is tbd.
 
 This design choice is due to a limitation of the available proprietary DLL and the awkwardness of running an IOC natively in a Windows environment.
 

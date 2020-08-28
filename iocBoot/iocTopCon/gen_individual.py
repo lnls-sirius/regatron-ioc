@@ -2,32 +2,31 @@
 import os
 from string import Template
 
-# import jinja2
-
 header = """#!../../bin/linux-x86_64/TopCon
 < envPaths
 
-epicsEnvSet("EPICS_IOC_LOG_INET", "0.0.0.0")
-epicsEnvSet("EPICS_IOC_LOG_PORT", "7011")
+epicsEnvSet("EPICS_IOC_LOG_INET", "$(EPICS_IOC_LOG_INET)")
+epicsEnvSet("EPICS_IOC_LOG_PORT", "$(EPICS_IOC_LOG_PORT)")
 
 cd "${TOP}"
 
 dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
-asSetFilename("${TOP}/log/Security.as")
+asSetFilename("${TOP}/db/Security.as")
 """
 footer = """
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
+iocLogInit
 
-caPutLogInit "0.0.0.0" 2
+caPutLogInit "$(EPICS_IOC_CAPUTLOG_INET):$(EPICS_IOC_CAPUTLOG_PORT)" 2
 
 #var streamDebug 1
 """
 
 s_port = Template(
     """
-drvAsynIPPortConfigure("${P}","${IP}:${COM}")
+drvAsynIPPortConfigure("${P}","$(REGATRON_INTERFACE_MS_HOST):${COM}")
 """
 )
 
@@ -104,7 +103,6 @@ devices = [
     {"M": True, "PV": "PA-RaPSB07:PS-DCLink-SFA2SDP1", "port": 140},
 ]
 # fmt: on
-IP = '10.128.255.206'
 BASE_COM = 20000
 if __name__ == "__main__":
     link = []
@@ -116,7 +114,7 @@ if __name__ == "__main__":
             f.write(header)
             s_ports, dbs, m_dbs, asyn_dbs = "", "", "", ""
             device["P"] = "P{}".format(port)
-            s_ports += s_port.safe_substitute(IP=IP,COM=str(BASE_COM + port), **device)
+            s_ports += s_port.safe_substitute(COM=str(BASE_COM + port), **device)
             dbs += module_db.safe_substitute(**device)
             if device["M"] == True:
                 m_dbs += system_db.safe_substitute(**device)

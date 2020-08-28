@@ -25,6 +25,14 @@ Cmds of interest:
 ```
 st-dipoles.cmd  st-quadrupoles.cmd  st-sextupoles.cmd
 ```
+Some **environment variables** will change behaviours:
 
+|Env|Default|Desc|
+|---|---|---|
+|EPICS_IOC_CAPUTLOG_INET|0.0.0.0|EPICS Logging Inet (generic)|
+|EPICS_IOC_CAPUTLOG_PORT|7012|EPICS Logging Port (generic)|
+|EPICS_IOC_LOG_INET|0.0.0.0|EPICS Logging Inet (caput)|
+|EPICS_IOC_LOG_PORT|7011|EPICS Logging Port (caput)|
+|REGATRON_INTERFACE_MS_HOST|10.128.255.206|cons-regatron-interface Windows Host|
 ## PV namming
 [lnls/control-system-constants](https://github.com/lnls-sirius/control-system-constants/blob/master/beaglebone/ip-list.txt)

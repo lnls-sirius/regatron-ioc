@@ -1,5 +1,11 @@
 # Regatron TopCon Quadro TC.P series EPICS IOC
 
+In order to update the EPICS db and st.cmd files:
+```bash
+cd ${TOP}/iocBoot/iocTopCon && python gen_individual.py &&\
+    cd ${TOP}/TopConApp/Db && make db &&\
+```
+This action will not be performed by the Dockerfile, it must be done manually in order to keep the git repository in sync with the container.
 ## Usage
 
 The IOC will connect to a TCP socket or a serial port. In order to start the IOC in a per device level, use the service:

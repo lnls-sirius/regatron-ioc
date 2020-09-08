@@ -1,9 +1,23 @@
 version: '3.7'
 services:
-  ioc:
-    image: lnlscon/cons-topcon:devel-v1.0
-    build: .
-    volumes:
-      - "./TopConApp/Db/:/opt/cons-topcon/db:rw"
-      - "./socket/:/var/run/reg/:rw"
+  dipoles:
+    image: lnlscon/cons-topcon:dipoles-v1.0
+    build:
+        context: .
+        dockerfile: Dockerfile
+        target: dipoles
+
+  quadrupoles:
+    image: lnlscon/cons-topcon:quadrupoles-v1.0
+    build:
+        context: .
+        dockerfile: Dockerfile
+        target: quadrupoles
+
+  sextupoles:
+    image: lnlscon/cons-topcon:sextupoles-v1.0
+    build:
+        context: .
+        dockerfile: Dockerfile
+        target: sextupoles
 

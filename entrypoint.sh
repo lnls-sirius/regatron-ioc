@@ -1,10 +1,12 @@
 #!/bin/bash
 echo "###################################################################"
+echo "# ${INFO}"
 echo "# Regatron Interface Windows HOST - ${REGATRON_INTERFACE_MS_HOST}  "
 echo "# ProcServ. Use \"socat - UNIX-CLIENT:<socket>\"                   "
 echo "# TOP: \"${TOP}\""
 echo "###################################################################"
-for cmd in $(ls ${TOP}/iocBoot/iocTopCon/|grep .cmd); do
+for dev in ${DEVS}; do
+        cmd="st-${dev}.cmd"
         iocName="DCLink-Reg-$(echo ${cmd} | sed -e "s/\.cmd//g" -e "s/st-//g")"
         logFile=${TOP}/log/${iocName}.log
         socket_name="${TOP}/sockets/${iocName}.sock"

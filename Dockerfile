@@ -1,6 +1,6 @@
 # Author: Cláudio Ferreira Carneiro
 # LNLS - Brazilian Synchrotron Light Source Laboratory
-FROM  lnlscon/epics-r3.15.8:v1.0
+FROM  lnlscon/epics-r3.15.8:v1.1 as base
 LABEL maintainer="Claudio Carneiro <claudio.carneiro@lnls.br>"
 
 RUN apt-get update && apt-get -y install gettext-base socat procps
@@ -33,8 +33,19 @@ COPY TopConApp     TopConApp
 
 RUN envsubst < configure/RELEASE.tmplt > configure/RELEASE &&\
     make clean; make distclean; \
-    cd ${TOP}/iocBoot/iocTopCon && python gen_individual.py &&\
-    cd ${TOP}/TopConApp/Db && make db &&\
     cd ${TOP} && make
 
 CMD [ "/bin/bash", "/opt/cons-topcon/entrypoint.sh"]
+
+FROM base AS dipoles
+ENV INFO "Regatron DCLinks - DIPOLES"
+ENV DEVS "101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116"
+
+FROM base AS quadrupoles
+ENV INFO "Regatron DCLinks - QUADRUPOLES"
+ENV DEVS "117 118 119 120 121 122 123 124 125 126"
+
+FROM base AS sextupoles
+ENV INFO "Regatron DCLinks - SEXTUPOLES"
+ENV DEVS "127 128 129 130 131 132 133 134 135 136 137 138 139 140"
+

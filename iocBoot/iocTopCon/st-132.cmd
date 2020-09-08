@@ -12,17 +12,17 @@ asSetFilename("${TOP}/db/Security.as")
 
 drvAsynIPPortConfigure("P132","$(REGATRON_INTERFACE_MS_HOST):20132")
 
-dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
-dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
-dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
-dbLoadRecords("db/TempMon.db",       "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
-dbLoadRecords("db/ModMon.db",        "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
-dbLoadRecords("db/ModTree.db",       "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
+dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
+dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
+dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
+dbLoadRecords("db/TempMon.db",       "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
+dbLoadRecords("db/ModMon.db",        "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
+dbLoadRecords("db/ModTree.db",       "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
 
-dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
-dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
-dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
-dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB08:PS-DCLink-SFB1,P=P132")
+dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
+dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
+dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
+dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB04:PS-DCLink-SDA12,P=P132")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

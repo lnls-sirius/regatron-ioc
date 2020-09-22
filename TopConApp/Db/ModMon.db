@@ -1,5 +1,5 @@
 
-record(waveform, "$(D):Mod-MinMaxNom-Mon"){
+record(waveform, "$(D):ModMinMaxNom-Mon"){
     field(SCAN, "30 second")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getModMinMaxNom) $(P)")
@@ -8,127 +8,127 @@ record(waveform, "$(D):Mod-MinMaxNom-Mon"){
     field(PRIO, "LOW")
 }
 
-record(ai, "$(D):Mod-MinVolt-Mon"){
+record(ai, "$(D):ModMinVolt-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Voltage Min")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[0] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[0] CP MSS")
 }
 
-record(ai, "$(D):Mod-MinCurrent-Mon"){
+record(ai, "$(D):ModMinCurrent-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Current Min")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[1] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[1] CP MSS")
 }
 
-record(ai, "$(D):Mod-MinPwr-Mon"){
+record(ai, "$(D):ModMinPwr-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Power Min")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[2] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[2] CP MSS")
 }
 
-record(ai, "$(D):Mod-MinRes-Mon"){
+record(ai, "$(D):ModMinRes-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Resistance Min")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[3] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[3] CP MSS")
 }
 
-record(ai, "$(D):Mod-MaxVolt-Mon"){
+record(ai, "$(D):ModMaxVolt-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Voltage Max")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[4] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[4] CP MSS")
 }
 
-record(ai, "$(D):Mod-MaxCurrent-Mon"){
+record(ai, "$(D):ModMaxCurrent-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Current Max")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[5] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[5] CP MSS")
 }
 
-record(ai, "$(D):Mod-MaxPwr-Mon"){
+record(ai, "$(D):ModMaxPwr-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Power Max")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[6] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[6] CP MSS")
 }
 
-record(ai, "$(D):Mod-MaxRes-Mon"){
+record(ai, "$(D):ModMaxRes-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Resistance Max")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[7] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[7] CP MSS")
 }
 
-record(ai, "$(D):Mod-NomVolt-Mon"){
+record(ai, "$(D):ModNomVolt-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Voltage Nominal")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[8] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[8] CP MSS")
 }
 
-record(ai, "$(D):Mod-NomCurrent-Mon"){
+record(ai, "$(D):ModNomCurrent-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Current Nominal")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[9] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[9] CP MSS")
 }
 
-record(ai, "$(D):Mod-NomPwr-Mon"){
+record(ai, "$(D):ModNomPwr-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Power Nominal")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[10] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[10] CP MSS")
 }
 
-record(ai, "$(D):Mod-NomRes-Mon"){
+record(ai, "$(D):ModNomRes-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Resistance Nominal")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-MinMaxNom-Mon.VAL[11] CP MSS")
+    field(INP,  "$(D):ModMinMaxNom-Mon.VAL[11] CP MSS")
 }
 
-record(waveform, "$(D):Mod-Mon"){
+record(waveform, "$(D):ModMon"){
     field(SCAN, "5 second")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getModReadings) $(P)")
@@ -137,47 +137,47 @@ record(waveform, "$(D):Mod-Mon"){
     field(PRIO, "LOW")
 }
 
-record(ai, "$(D):Mod-OutVolt-Mon"){
+record(ai, "$(D):ModOutVolt-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Module out voltage")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-Mon.VAL[0] CP MSS")
+    field(INP,  "$(D):ModMon.VAL[0] CP MSS")
 }
 
-record(ai, "$(D):Mod-OutCurrent-Mon"){
+record(ai, "$(D):ModOutCurrent-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Module out current")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-Mon.VAL[1] CP MSS")
+    field(INP,  "$(D):ModMon.VAL[1] CP MSS")
 }
 
-record(ai, "$(D):Mod-OutPwr-Mon"){
+record(ai, "$(D):ModOutPwr-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Module out power")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-Mon.VAL[2] CP MSS")
+    field(INP,  "$(D):ModMon.VAL[2] CP MSS")
 }
 
-record(ai, "$(D):Mod-ResPreset-Mon"){
+record(ai, "$(D):ModResPreset-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Module resistence preset")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Mod-Mon.VAL[3] CP MSS")
+    field(INP,  "$(D):ModMon.VAL[3] CP MSS")
 }
 
-record(mbbi, "$(D):Mod-State-Mon") {
+record(mbbi, "$(D):ModState-Mon") {
     field(SCAN, "Passive")
     field(DESC, "Module state")
     field(DTYP, "Soft Channel")
@@ -216,10 +216,10 @@ record(mbbi, "$(D):Mod-State-Mon") {
     field(FTSV, "")
     field(FFSV, "")
 
-    field(INP,  "$(D):Mod-Mon.VAL[4] CP MSS")
+    field(INP,  "$(D):ModMon.VAL[4] CP MSS")
 }
 
-record(mbbi, "$(D):Mod-ControlMode-Mon") {
+record(mbbi, "$(D):ModControlMode-Mon") {
     field(PINI, "NO")
     field(SCAN, "10 second")
     field(PHAS, "0")
@@ -263,7 +263,7 @@ record(mbbi, "$(D):Mod-ControlMode-Mon") {
     field(INP,  "@Regatron.proto getInt(getModControlMode) $(P)")
 }
 
-record(ai, "$(D):Mod-VoltageRef-Mon"){
+record(ai, "$(D):ModVoltageRef-Mon"){
     field(PINI, "NO")
     field(SCAN, "60 second")
     field(DESC, "Reference val. for voltage")
@@ -279,7 +279,7 @@ record(ai, "$(D):Mod-VoltageRef-Mon"){
     field(INP,  "@Regatron.proto getFloat(getModVoltageRef) $(P)")
 }
 
-record(ai, "$(D):Mod-CurrentRef-Mon"){
+record(ai, "$(D):ModCurrentRef-Mon"){
     field(PINI, "NO")
     field(SCAN, "60 second")
     field(DESC, "Reference val. for current")
@@ -295,7 +295,7 @@ record(ai, "$(D):Mod-CurrentRef-Mon"){
     field(INP,  "@Regatron.proto getFloat(getModCurrentRef) $(P)")
 }
 
-record(ai, "$(D):Mod-ResistanceRef-Mon"){
+record(ai, "$(D):ModResistanceRef-Mon"){
     field(PINI, "NO")
     field(SCAN, "60 second")
     field(DESC, "Reference val. for resistance")
@@ -311,7 +311,7 @@ record(ai, "$(D):Mod-ResistanceRef-Mon"){
     field(INP,  "@Regatron.proto getFloat(getModResistanceRef) $(P)")
 }
 
-record(ai, "$(D):Mod-PwrRef-Mon"){
+record(ai, "$(D):ModPwrRef-Mon"){
     field(PINI, "NO")
     field(SCAN, "60 second")
     field(DESC, "Reference val. for power")

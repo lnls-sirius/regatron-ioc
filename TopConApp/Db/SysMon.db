@@ -1,5 +1,5 @@
 
-record(waveform, "$(D):Sys-MinMaxNom-Mon"){
+record(waveform, "$(D):SysMinMaxNom-Mon"){
     field(SCAN, "30 second")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getSysMinMaxNom) $(P)")
@@ -8,127 +8,127 @@ record(waveform, "$(D):Sys-MinMaxNom-Mon"){
     field(PRIO, "LOW")
 }
 
-record(ai, "$(D):Sys-MinVolt-Mon"){
+record(ai, "$(D):SysMinVolt-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Voltage Min")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[0] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[0] CP MSS")
 }
 
-record(ai, "$(D):Sys-MinCurrent-Mon"){
+record(ai, "$(D):SysMinCurrent-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Current Min")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[1] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[1] CP MSS")
 }
 
-record(ai, "$(D):Sys-MinPwr-Mon"){
+record(ai, "$(D):SysMinPwr-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Power Min")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[2] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[2] CP MSS")
 }
 
-record(ai, "$(D):Sys-MinRes-Mon"){
+record(ai, "$(D):SysMinRes-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Resistance Min")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[3] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[3] CP MSS")
 }
 
-record(ai, "$(D):Sys-MaxVolt-Mon"){
+record(ai, "$(D):SysMaxVolt-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Voltage Max")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[4] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[4] CP MSS")
 }
 
-record(ai, "$(D):Sys-MaxCurrent-Mon"){
+record(ai, "$(D):SysMaxCurrent-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Current Max")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[5] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[5] CP MSS")
 }
 
-record(ai, "$(D):Sys-MaxPwr-Mon"){
+record(ai, "$(D):SysMaxPwr-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Power Max")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[6] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[6] CP MSS")
 }
 
-record(ai, "$(D):Sys-MaxRes-Mon"){
+record(ai, "$(D):SysMaxRes-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Resistance Max")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[7] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[7] CP MSS")
 }
 
-record(ai, "$(D):Sys-NomVolt-Mon"){
+record(ai, "$(D):SysNomVolt-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Voltage Nominal")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[8] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[8] CP MSS")
 }
 
-record(ai, "$(D):Sys-NomCurrent-Mon"){
+record(ai, "$(D):SysNomCurrent-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Current Nominal")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[9] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[9] CP MSS")
 }
 
-record(ai, "$(D):Sys-NomPwr-Mon"){
+record(ai, "$(D):SysNomPwr-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Power Nominal")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[10] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[10] CP MSS")
 }
 
-record(ai, "$(D):Sys-NomRes-Mon"){
+record(ai, "$(D):SysNomRes-Mon"){
     field(SCAN, "Passive")
     field(DESC, "Resistance Nominal")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-MinMaxNom-Mon.VAL[11] CP MSS")
+    field(INP,  "$(D):SysMinMaxNom-Mon.VAL[11] CP MSS")
 }
 
-record(waveform, "$(D):Sys-Mon"){
+record(waveform, "$(D):SysMon"){
     field(SCAN, "5 second")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getSysReadings) $(P)")
@@ -137,47 +137,47 @@ record(waveform, "$(D):Sys-Mon"){
     field(PRIO, "LOW")
 }
 
-record(ai, "$(D):Sys-OutVolt-Mon"){
+record(ai, "$(D):SysOutVolt-Mon"){
     field(SCAN, "Passive")
     field(DESC, "System out voltage")
     field(EGU,  "V")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-Mon.VAL[0] CP MSS")
+    field(INP,  "$(D):SysMon.VAL[0] CP MSS")
 }
 
-record(ai, "$(D):Sys-OutCurrent-Mon"){
+record(ai, "$(D):SysOutCurrent-Mon"){
     field(SCAN, "Passive")
     field(DESC, "System out current")
     field(EGU,  "A")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-Mon.VAL[1] CP MSS")
+    field(INP,  "$(D):SysMon.VAL[1] CP MSS")
 }
 
-record(ai, "$(D):Sys-OutPwr-Mon"){
+record(ai, "$(D):SysOutPwr-Mon"){
     field(SCAN, "Passive")
     field(DESC, "System out power")
     field(EGU,  "kW")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-Mon.VAL[2] CP MSS")
+    field(INP,  "$(D):SysMon.VAL[2] CP MSS")
 }
 
-record(ai, "$(D):Sys-ResPreset-Mon"){
+record(ai, "$(D):SysResPreset-Mon"){
     field(SCAN, "Passive")
     field(DESC, "System resistence preset")
     field(EGU,  "mOhm")
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):Sys-Mon.VAL[3] CP MSS")
+    field(INP,  "$(D):SysMon.VAL[3] CP MSS")
 }
 
-record(mbbi, "$(D):Sys-State-Mon") {
+record(mbbi, "$(D):SysState-Mon") {
     field(SCAN, "Passive")
     field(DESC, "System state")
     field(DTYP, "Soft Channel")
@@ -216,10 +216,10 @@ record(mbbi, "$(D):Sys-State-Mon") {
     field(FTSV, "")
     field(FFSV, "")
 
-    field(INP,  "$(D):Sys-Mon.VAL[4] CP MSS")
+    field(INP,  "$(D):SysMon.VAL[4] CP MSS")
 }
 
-record(mbbi, "$(D):Sys-ControlMode-Mon") {
+record(mbbi, "$(D):SysControlMode-Mon") {
     field(PINI, "NO")
     field(SCAN, "10 second")
     field(PHAS, "0")

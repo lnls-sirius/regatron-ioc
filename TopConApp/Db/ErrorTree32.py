@@ -73,7 +73,7 @@ mod = {
             "type": TemplateType.LONG_IN_ITEM,
         },
         {
-            "pv": "$(D):ModErrIntrnModMon",
+            "pv": "$(D):ModErrIntrnMod-Mon",
             "desc": "Error 7 - Intern (Modulator)",
             "type": TemplateType.LONG_IN_ITEM,
         },
@@ -238,7 +238,7 @@ mod = {
             "type": TemplateType.LONG_IN_ITEM,
         },
         {
-            "pv": "$(D):ModWarnIntrnModMon",
+            "pv": "$(D):ModWarnIntrnMod-Mon",
             "desc": "Warn 7 - Intern (Modulator)",
             "type": TemplateType.LONG_IN_ITEM,
         },
@@ -418,7 +418,7 @@ sys = [
                 "type": TemplateType.LONG_IN_ITEM,
             },
             {
-                "pv": "$(D):SysErrIntrnModMon",
+                "pv": "$(D):SysErrIntrnMod-Mon",
                 "desc": "Error 7 - Intern (Modulator)",
                 "type": TemplateType.LONG_IN_ITEM,
             },
@@ -583,7 +583,7 @@ sys = [
                 "type": TemplateType.LONG_IN_ITEM,
             },
             {
-                "pv": "$(D):SysWarnIntrnModMon",
+                "pv": "$(D):SysWarnIntrnMod-Mon",
                 "desc": "Warn 7 - Intern (Modulator)",
                 "type": TemplateType.LONG_IN_ITEM,
             },

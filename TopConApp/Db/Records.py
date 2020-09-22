@@ -27,7 +27,7 @@ mod_mon = [
     },
     {
         "params": {
-            "pv": "$(D):ModMon",
+            "pv": "$(D):Mod-Mon",
             "param": "getModReadings",
             "scan": "5 second",
             "nelm": "5",
@@ -461,7 +461,7 @@ sys_mon = [
     },
     {
         "params": {
-            "pv": "$(D):SysMon",
+            "pv": "$(D):Sys-Mon",
             "param": "getSysReadings",
             "scan": "5 second",
             "nelm": "5",

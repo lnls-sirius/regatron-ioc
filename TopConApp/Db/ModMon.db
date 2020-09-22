@@ -128,7 +128,7 @@ record(ai, "$(D):ModNomRes-Mon"){
     field(INP,  "$(D):ModMinMaxNom-Mon.VAL[11] CP MSS")
 }
 
-record(waveform, "$(D):ModMon"){
+record(waveform, "$(D):Mod-Mon"){
     field(SCAN, "5 second")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getModReadings) $(P)")
@@ -144,7 +144,7 @@ record(ai, "$(D):ModOutVolt-Mon"){
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):ModMon.VAL[0] CP MSS")
+    field(INP,  "$(D):Mod-Mon.VAL[0] CP MSS")
 }
 
 record(ai, "$(D):ModOutCurrent-Mon"){
@@ -154,7 +154,7 @@ record(ai, "$(D):ModOutCurrent-Mon"){
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):ModMon.VAL[1] CP MSS")
+    field(INP,  "$(D):Mod-Mon.VAL[1] CP MSS")
 }
 
 record(ai, "$(D):ModOutPwr-Mon"){
@@ -164,7 +164,7 @@ record(ai, "$(D):ModOutPwr-Mon"){
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):ModMon.VAL[2] CP MSS")
+    field(INP,  "$(D):Mod-Mon.VAL[2] CP MSS")
 }
 
 record(ai, "$(D):ModResPreset-Mon"){
@@ -174,7 +174,7 @@ record(ai, "$(D):ModResPreset-Mon"){
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):ModMon.VAL[3] CP MSS")
+    field(INP,  "$(D):Mod-Mon.VAL[3] CP MSS")
 }
 
 record(mbbi, "$(D):ModState-Mon") {
@@ -216,7 +216,7 @@ record(mbbi, "$(D):ModState-Mon") {
     field(FTSV, "")
     field(FFSV, "")
 
-    field(INP,  "$(D):ModMon.VAL[4] CP MSS")
+    field(INP,  "$(D):Mod-Mon.VAL[4] CP MSS")
 }
 
 record(mbbi, "$(D):ModControlMode-Mon") {

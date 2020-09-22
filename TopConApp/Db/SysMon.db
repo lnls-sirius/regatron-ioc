@@ -128,7 +128,7 @@ record(ai, "$(D):SysNomRes-Mon"){
     field(INP,  "$(D):SysMinMaxNom-Mon.VAL[11] CP MSS")
 }
 
-record(waveform, "$(D):SysMon"){
+record(waveform, "$(D):Sys-Mon"){
     field(SCAN, "5 second")
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getArray(getSysReadings) $(P)")
@@ -144,7 +144,7 @@ record(ai, "$(D):SysOutVolt-Mon"){
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):SysMon.VAL[0] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[0] CP MSS")
 }
 
 record(ai, "$(D):SysOutCurrent-Mon"){
@@ -154,7 +154,7 @@ record(ai, "$(D):SysOutCurrent-Mon"){
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):SysMon.VAL[1] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[1] CP MSS")
 }
 
 record(ai, "$(D):SysOutPwr-Mon"){
@@ -164,7 +164,7 @@ record(ai, "$(D):SysOutPwr-Mon"){
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):SysMon.VAL[2] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[2] CP MSS")
 }
 
 record(ai, "$(D):SysResPreset-Mon"){
@@ -174,7 +174,7 @@ record(ai, "$(D):SysResPreset-Mon"){
     field(PREC, "2")
     field(DTYP, "Soft Channel")
 
-    field(INP,  "$(D):SysMon.VAL[3] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[3] CP MSS")
 }
 
 record(mbbi, "$(D):SysState-Mon") {
@@ -216,7 +216,7 @@ record(mbbi, "$(D):SysState-Mon") {
     field(FTSV, "")
     field(FFSV, "")
 
-    field(INP,  "$(D):SysMon.VAL[4] CP MSS")
+    field(INP,  "$(D):Sys-Mon.VAL[4] CP MSS")
 }
 
 record(mbbi, "$(D):SysControlMode-Mon") {

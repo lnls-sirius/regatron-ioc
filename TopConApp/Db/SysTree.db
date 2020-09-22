@@ -72,7 +72,7 @@ record(longin, "$(D):SysErrComm-Mon"){
     field(EGU, "")
 }
 
-record(longin, "$(D):SysErrIntrnModMon"){
+record(longin, "$(D):SysErrIntrnMod-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):SysTree.VAL[8] CP MSS")
     field(DESC, "Error 7 - Intern (Modulator)")
@@ -336,7 +336,7 @@ record(longin, "$(D):SysWarnComm-Mon"){
     field(EGU, "")
 }
 
-record(longin, "$(D):SysWarnIntrnModMon"){
+record(longin, "$(D):SysWarnIntrnMod-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):SysTree.VAL[41] CP MSS")
     field(DESC, "Warn 7 - Intern (Modulator)")

@@ -72,7 +72,7 @@ record(longin, "$(D):ModErrComm-Mon"){
     field(EGU, "")
 }
 
-record(longin, "$(D):ModErrIntrnModMon"){
+record(longin, "$(D):ModErrIntrnMod-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):ModTree.VAL[8] CP MSS")
     field(DESC, "Error 7 - Intern (Modulator)")
@@ -336,7 +336,7 @@ record(longin, "$(D):ModWarnComm-Mon"){
     field(EGU, "")
 }
 
-record(longin, "$(D):ModWarnIntrnModMon"){
+record(longin, "$(D):ModWarnIntrnMod-Mon"){
     field(SCAN, "Passive")
     field(INP,  "$(D):ModTree.VAL[41] CP MSS")
     field(DESC, "Warn 7 - Intern (Modulator)")

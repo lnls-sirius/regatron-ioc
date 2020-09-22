@@ -16,11 +16,11 @@ DB += Regatron.proto
 DB += GenericCmd.db
 DB += GenericGetSet.db
 DB += GenericMon.db
-DB += ModMon.db
+DB += Mod-Mon.db
 DB += ModTree.db
 DB += SysCmd.db
 DB += SysGetSet.db
-DB += SysMon.db
+DB += Sys-Mon.db
 DB += SysTree.db
 DB += TempMon.db
 

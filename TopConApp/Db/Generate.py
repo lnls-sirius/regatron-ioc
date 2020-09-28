@@ -58,11 +58,11 @@ if __name__ == "__main__":
         {"file": "GenericCmd.db", "entries": generic_cmd},
         {"file": "GenericGetSet.db", "entries": generic_get_set},
         {"file": "GenericMon.db", "entries": generic_mon},
-        {"file": "Mod-Mon.db", "entries": mod_mon},
+        {"file": "ModMon.db", "entries": mod_mon},
         {"file": "ModTree.db", "entries": mod_tree},
         {"file": "SysCmd.db", "entries": sys_cmd},
         {"file": "SysGetSet.db", "entries": sys_get_set},
-        {"file": "Sys-Mon.db", "entries": sys_mon},
+        {"file": "SysMon.db", "entries": sys_mon},
         {"file": "SysTree.db", "entries": sys_tree},
         {"file": "TempMon.db", "entries": temperature},
     ]

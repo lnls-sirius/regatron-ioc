@@ -1,21 +1,21 @@
 version: '3.7'
 services:
   dipoles:
-    image: lnlscon/cons-topcon:dipoles-v1.0
+    image: lnlscon/cons-topcon:dipoles-v1.1
     build:
         context: .
         dockerfile: Dockerfile
         target: dipoles
 
   quadrupoles:
-    image: lnlscon/cons-topcon:quadrupoles-v1.0
+    image: lnlscon/cons-topcon:quadrupoles-v1.1
     build:
         context: .
         dockerfile: Dockerfile
         target: quadrupoles
 
   sextupoles:
-    image: lnlscon/cons-topcon:sextupoles-v1.0
+    image: lnlscon/cons-topcon:sextupoles-v1.1
     build:
         context: .
         dockerfile: Dockerfile

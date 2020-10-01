@@ -25,7 +25,7 @@ DEFAULTS = {
     "ftsv": "",
     "fvst": "",
     "fvsv": "",
-    "high":"0",
+    "high": "0",
     "linr": "NO CONVERSION",
     "mdel": "0",
     "nist": "",
@@ -271,8 +271,11 @@ record(bo, "${pv}"){
     field(DISA, "${disa}")
     field(DISV, "${disv}")
     field(PRIO, "${prio}")
-    field(DISS, "INVALID")
+    field(DISS, "${diss}")
     field(FLNK, "${flnk}")
+    field(HIGH, "${high}")
+    field(DISV, "${disv}")
+    field(SDIS, "${sdis}")
 
     field(DTYP, "stream")
     field(OUT,  "${proto} cmd(${param}) $(P)")

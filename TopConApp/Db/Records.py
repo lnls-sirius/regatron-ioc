@@ -284,6 +284,10 @@ sys_get_set = [
         "param": "cmdSlopeVoltWrite",
         "prio": "HIGH",
         "flnk": "$(D):SysVoltSlopeWf-Mon",
+        "diss": "NO_ALARM",
+        "disv": "0",
+        "high": "0.1",
+        "sdis": "$(D):SysWriteVoltSlope-Cmd",
     },
     {
         "pv": "$(D):SysCurrSlopeWf-Mon_proc",
@@ -415,6 +419,10 @@ sys_get_set = [
         "param": "cmdSlopeCurrentWrite",
         "prio": "HIGH",
         "flnk": "$(D):SysCurrSlopeWf-Mon",
+        "diss": "NO_ALARM",
+        "disv": "0",
+        "high": "0.1",
+        "sdis": "$(D):SysWriteCurrSlope-Cmd",
     },
 ]
 
@@ -425,6 +433,10 @@ sys_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdStoreParam",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):Save-Cmd",
     },
     {
         "pv": "$(D):Reset-Cmd",
@@ -432,6 +444,10 @@ sys_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdClearErrors",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):Reset-Cmd",
     },
 ]
 
@@ -618,6 +634,10 @@ generic_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdConnect",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):Connect-Cmd",
     },
     {
         "pv": "$(D):Disconnect-Cmd",
@@ -625,6 +645,10 @@ generic_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdDisconnect",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):Disconnect-Cmd",
     },
     {
         "pv": "$(D):ReadErrors-Cmd",
@@ -632,6 +656,10 @@ generic_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdReadErrors",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):ReadErrors-Cmd",
     },
 ]
 

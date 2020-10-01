@@ -110,24 +110,24 @@ mod_mon = [
 mod_get_set = []
 sys_get_set = [
     {
-        "pv": "$(D):SysOutVoltEnbl",
+        "pv": "$(D):PwrState",
         "desc": "Enable/Disable output voltage",
-        "type": TemplateType.BINARY_GET_SET,
+        "type": TemplateType.BINARY_STS_SEL,
         "znam": "Disable",
         "onam": "Enable",
         "param": "SysOutVoltEnable",
         "prio": "HIGH",
         "scan": "60 second",
     },
-    {
-        "pv": "$(D):SysVoltageRef",
-        "desc": "Reference val. for voltage",
-        "type": TemplateType.ANALOG_GET_SET,
-        "param": "SysVoltageRef",
-        "egu": "V",
-        "prio": "HIGH",
-        "scan": "60 second",
-    },
+    #   {
+    #       "pv": "$(D):SysVoltageRef",
+    #       "desc": "Reference val. for voltage",
+    #       "type": TemplateType.ANALOG_GET_SET,
+    #       "param": "SysVoltageRef",
+    #       "egu": "V",
+    #       "prio": "HIGH",
+    #       "scan": "60 second",
+    #   },
     {
         "pv": "$(D):SysCurrentRef",
         "desc": "Reference val. for current",
@@ -427,7 +427,7 @@ sys_cmd = [
         "prio": "HIGH",
     },
     {
-        "pv": "$(D):Clear-Cmd",
+        "pv": "$(D):Reset-Cmd",
         "desc": "Clear Errors and/or warnings",
         "type": TemplateType.BO_CMD,
         "param": "cmdClearErrors",
@@ -468,7 +468,7 @@ sys_mon = [
             "ftvl": FTVL.DOUBLE,
         },
         "items": [
-            {"pv": "$(D):SysOutVolt-Mon", "desc": "System out voltage", "egu": "V"},
+            {"pv": "$(D):Voltage-Mon", "desc": "System out voltage", "egu": "V"},
             {"pv": "$(D):SysOutCurrent-Mon", "desc": "System out current", "egu": "A"},
             {"pv": "$(D):SysOutPwr-Mon", "desc": "System out power", "egu": "kW"},
             {
@@ -477,7 +477,7 @@ sys_mon = [
                 "egu": "mOhm",
             },
             {
-                "pv": "$(D):SysState-Mon",
+                "pv": "$(D):OpMode-Sts",
                 "desc": "System state",
                 "type": TemplateType.MBBI_ITEM,
                 "onst": "",

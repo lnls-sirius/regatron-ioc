@@ -289,6 +289,39 @@ record(bi, "${pv}"){
 """
 )
 
+binary_get_sts_sel_db = Template(
+    """
+record(bi, "${pv}-Sts"){
+    field(DESC, "${desc}")
+    field(PHAS, "${phas}")
+    field(ZNAM, "${znam}")
+    field(ONAM, "${onam}")
+    field(PRIO, "${prio}")
+
+    field(DTYP, "stream")
+    field(INP,  "${proto} getInt(get${param}) $(P)")
+}
+record(bo, "${pv}-Sel"){
+    field(PINI, "NO")
+    field(DESC, "${desc}")
+    field(PHAS, "${phas}")
+    field(ZNAM, "${znam}")
+    field(ONAM, "${onam}")
+    field(PRIO, "${prio}")
+
+    field(DTYP, "stream")
+    field(OUT,  "${proto} setInt(set${param}) $(P)")
+    field(FLNK, "${pv}-Sts")
+}
+record(bi, "${pv}_proc"){
+    field(SCAN, "${scan}")
+    field(PHAS, "${phas}")
+    field(PRIO, "${prio}")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "${pv}-Sts")
+}
+"""
+)
 binary_get_set_db = Template(
     """
 record(bi, "${pv}-RB"){
@@ -464,6 +497,7 @@ class TemplateType(object):
     ANALOG_ITEM = item_ai_db
     ANALOG_SET = analog_set_db
     ALARM_OR = alarm_or_db
+    BINARY_STS_SEL = binary_get_sts_sel_db
     BINARY_GET_SET = binary_get_set_db
     BINARY_FLNK = binary_flnk_db
     BO_CMD = bo_cmd_db

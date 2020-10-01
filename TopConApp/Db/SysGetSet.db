@@ -1,5 +1,5 @@
 
-record(bi, "$(D):SysOutVoltEnbl-RB"){
+record(bi, "$(D):PwrState-Sts"){
     field(DESC, "Enable/Disable output voltage")
     field(PHAS, "0")
     field(ZNAM, "Disable")
@@ -9,7 +9,7 @@ record(bi, "$(D):SysOutVoltEnbl-RB"){
     field(DTYP, "stream")
     field(INP,  "@Regatron.proto getInt(getSysOutVoltEnable) $(P)")
 }
-record(bo, "$(D):SysOutVoltEnbl-SP"){
+record(bo, "$(D):PwrState-Sel"){
     field(PINI, "NO")
     field(DESC, "Enable/Disable output voltage")
     field(PHAS, "0")
@@ -19,52 +19,14 @@ record(bo, "$(D):SysOutVoltEnbl-SP"){
 
     field(DTYP, "stream")
     field(OUT,  "@Regatron.proto setInt(setSysOutVoltEnable) $(P)")
-    field(FLNK, "$(D):SysOutVoltEnbl-RB")
+    field(FLNK, "$(D):PwrState-Sts")
 }
-record(bi, "$(D):SysOutVoltEnbl_proc"){
+record(bi, "$(D):PwrState_proc"){
     field(SCAN, "60 second")
     field(PHAS, "0")
     field(PRIO, "HIGH")
     field(DTYP, "Soft Channel")
-    field(FLNK, "$(D):SysOutVoltEnbl-RB")
-}
-
-record(ai, "$(D):SysVoltageRef-RB"){
-    field(DESC, "Reference val. for voltage")
-    field(EGU,  "V")
-    field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
-    field(PRIO, "HIGH")
-
-    field(DTYP, "stream")
-    field(INP,  "@Regatron.proto getFloat(getSysVoltageRef) $(P)")
-}
-record(ao, "$(D):SysVoltageRef-SP"){
-    field(PINI, "NO")
-    field(DESC, "Reference val. for voltage")
-    field(EGU,  "V")
-    field(PREC, "2")
-    field(PHAS, "0")
-    field(LINR, "NO CONVERSION")
-    field(EOFF, "0")
-    field(ESLO, "1")
-    field(PRIO, "HIGH")
-    field(DRVH, "0")
-    field(DRVL, "0")
-
-    field(DTYP, "stream")
-    field(OUT,  "@Regatron.proto setFloat(setSysVoltageRef) $(P)")
-    field(FLNK, "$(D):SysVoltageRef-RB")
-}
-record(bi, "$(D):SysVoltageRef_proc"){
-    field(SCAN, "60 second")
-    field(PHAS, "0")
-    field(PRIO, "HIGH")
-    field(DTYP, "Soft Channel")
-    field(FLNK, "$(D):SysVoltageRef-RB")
+    field(FLNK, "$(D):PwrState-Sts")
 }
 
 record(ai, "$(D):SysCurrentRef-RB"){

@@ -13,7 +13,7 @@ record(bo, "$(D):Save-Cmd"){
     field(OUT,  "@Regatron.proto cmd(cmdStoreParam) $(P)")
 }
 
-record(bo, "$(D):Clear-Cmd"){
+record(bo, "$(D):Reset-Cmd"){
     field(DESC, "Clear Errors and/or warnings")
     field(ONAM, "")
     field(ZNAM, "")

@@ -710,7 +710,7 @@ sys = [
         ],
     },
     {
-        "pv": "$(D):GenErr-Mon",
+        "pv": "$(D):Intlk-Mon",
         "desc": "General Error Status",
         "inpa": "$(D):SysWarnGroup-Mon",
         "inpb": "$(D):ModWarnGroup-Mon",

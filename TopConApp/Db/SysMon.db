@@ -137,7 +137,7 @@ record(waveform, "$(D):Sys-Mon"){
     field(PRIO, "LOW")
 }
 
-record(ai, "$(D):SysOutVolt-Mon"){
+record(ai, "$(D):Voltage-Mon"){
     field(SCAN, "Passive")
     field(DESC, "System out voltage")
     field(EGU,  "V")
@@ -177,7 +177,7 @@ record(ai, "$(D):SysResPreset-Mon"){
     field(INP,  "$(D):Sys-Mon.VAL[3] CP MSS")
 }
 
-record(mbbi, "$(D):SysState-Mon") {
+record(mbbi, "$(D):OpMode-Sts") {
     field(SCAN, "Passive")
     field(DESC, "System state")
     field(DTYP, "Soft Channel")

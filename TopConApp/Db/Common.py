@@ -4,6 +4,7 @@ from string import Template
 
 PROTOCOL = "@Regatron.proto"
 DEFAULTS = {
+    "adel": "0",
     "disa": "1",
     "disv": "0",
     "drvh": "0",
@@ -24,7 +25,9 @@ DEFAULTS = {
     "ftsv": "",
     "fvst": "",
     "fvsv": "",
+    "high":"0",
     "linr": "NO CONVERSION",
+    "mdel": "0",
     "nist": "",
     "nisv": "",
     "onam": "",

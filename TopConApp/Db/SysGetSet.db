@@ -2,8 +2,8 @@
 record(bi, "$(D):PwrState-Sts"){
     field(DESC, "Enable/Disable output voltage")
     field(PHAS, "0")
-    field(ZNAM, "Disable")
-    field(ONAM, "Enable")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
     field(PRIO, "HIGH")
 
     field(DTYP, "stream")
@@ -13,8 +13,8 @@ record(bo, "$(D):PwrState-Sel"){
     field(PINI, "NO")
     field(DESC, "Enable/Disable output voltage")
     field(PHAS, "0")
-    field(ZNAM, "Disable")
-    field(ONAM, "Enable")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
     field(PRIO, "HIGH")
 
     field(DTYP, "stream")

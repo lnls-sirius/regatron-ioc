@@ -19,6 +19,7 @@ dbLoadRecords("db/TempMon.db",       "D=PA-RaPSD01:PS-DCLink-1B,P=P102")
 dbLoadRecords("db/ModMon.db",        "D=PA-RaPSD01:PS-DCLink-1B,P=P102")
 dbLoadRecords("db/ModTree.db",       "D=PA-RaPSD01:PS-DCLink-1B,P=P102")
 
+
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 iocLogInit

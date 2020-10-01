@@ -19,10 +19,12 @@ dbLoadRecords("db/TempMon.db",       "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
 dbLoadRecords("db/ModMon.db",        "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
 dbLoadRecords("db/ModTree.db",       "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
 
-dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
-dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
-dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
-dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
+
+dbLoadRecords("db/SysCmd.db",           "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
+dbLoadRecords("db/SysGetSet.db",        "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
+dbLoadRecords("db/SysMon.db",           "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
+dbLoadRecords("db/SysTree.db",          "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
+dbLoadRecords("db/SysCustomNamming.db", "D=PA-RaPSB07:PS-DCLink-SFA2SDP1,P=P135")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

@@ -19,10 +19,12 @@ dbLoadRecords("db/TempMon.db",       "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
 dbLoadRecords("db/ModMon.db",        "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
 dbLoadRecords("db/ModTree.db",       "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
 
-dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
-dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
-dbLoadRecords("db/SysMon.db",        "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
-dbLoadRecords("db/SysTree.db",       "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
+
+dbLoadRecords("db/SysCmd.db",           "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
+dbLoadRecords("db/SysGetSet.db",        "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
+dbLoadRecords("db/SysMon.db",           "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
+dbLoadRecords("db/SysTree.db",          "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
+dbLoadRecords("db/SysCustomNamming.db", "D=PA-RaPSB08:PS-DCLink-SDP23,P=P137")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

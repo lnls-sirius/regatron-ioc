@@ -19,10 +19,12 @@ dbLoadRecords("db/TempMon.db",       "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
 dbLoadRecords("db/ModMon.db",        "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
 dbLoadRecords("db/ModTree.db",       "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
 
-dbLoadRecords("db/SysCmd.db",        "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
-dbLoadRecords("db/SysGetSet.db",     "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
-dbLoadRecords("db/SysMon.db",        "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
-dbLoadRecords("db/SysTree.db",       "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
+
+dbLoadRecords("db/SysCmd.db",           "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
+dbLoadRecords("db/SysGetSet.db",        "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
+dbLoadRecords("db/SysMon.db",           "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
+dbLoadRecords("db/SysTree.db",          "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
+dbLoadRecords("db/SysCustomNamming.db", "D=PA-RaPSA03:PS-DCLink-QDAP,P=P119")
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

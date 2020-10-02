@@ -1,21 +1,31 @@
 version: '3.7'
 services:
+  test:
+    image: lnlscon/cons-topcon:base
+    build:
+        context: .
+        dockerfile: Dockerfile
+        target: base
+    environment:
+        - DEVS=
+        - INFO="Regatron - Base"
+
   dipoles:
-    image: lnlscon/cons-topcon:dipoles-v1.1
+    image: lnlscon/cons-topcon:dipoles-v1.2
     build:
         context: .
         dockerfile: Dockerfile
         target: dipoles
 
   quadrupoles:
-    image: lnlscon/cons-topcon:quadrupoles-v1.1
+    image: lnlscon/cons-topcon:quadrupoles-v1.2
     build:
         context: .
         dockerfile: Dockerfile
         target: quadrupoles
 
   sextupoles:
-    image: lnlscon/cons-topcon:sextupoles-v1.1
+    image: lnlscon/cons-topcon:sextupoles-v1.2
     build:
         context: .
         dockerfile: Dockerfile

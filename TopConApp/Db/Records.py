@@ -541,6 +541,11 @@ temperature = {
 
 generic_mon = [
     {
+        "pv": "$(D):Properties-Cte",
+        "type": TemplateType.WF_STRING_STATIC,
+        "nelm": "6000",
+    },
+    {
         "pv": "$(D):ActiveInterface-Mon",
         "desc": "Active interface",
         "scan": "60 second",

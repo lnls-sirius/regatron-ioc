@@ -72,6 +72,15 @@ class FTVL:
     ENUM = "ENUM"
 
 
+wf_string_static_db = Template(
+    """
+record(waveform, "${pv}"){
+    field(FTVL, "CHAR")
+    field(NELM, "${nelm}")
+}
+"""
+)
+
 wf_string_db = Template(
     """
 record(waveform, "${pv}"){
@@ -477,7 +486,7 @@ alarm_or_db = Template(
 record(calc, "${pv}"){
     field(CALC, "A|B")
     field(INPA, "${inpa} CP MSS")
-    field(INPA, "${inpb} CP MSS")
+    field(INPB, "${inpb} CP MSS")
     field(DESC, "${desc}")
 }
 """
@@ -516,3 +525,4 @@ class TemplateType(object):
     STRING_IN = stringin_db
     WF_DB = wf_db
     WF_STRING_DB = wf_string_db
+    WF_STRING_STATIC = wf_string_static_db

@@ -1,32 +1,42 @@
 #!/usr/bin/python3
 import os
 from string import Template
+import subprocess
 
-header = """#!../../bin/linux-x86_64/TopCon
+header = Template(
+    """#!../../bin/linux-x86_64/TopCon
 < envPaths
 
 epicsEnvSet("EPICS_IOC_LOG_INET", "$(EPICS_IOC_LOG_INET)")
 epicsEnvSet("EPICS_IOC_LOG_PORT", "$(EPICS_IOC_LOG_PORT)")
+epicsEnvSet("D", "${PV}")
+epicsEnvSet("P", "${P}")
 
 cd "${TOP}"
 
 dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
-asSetFilename("${TOP}/db/Security.as")
+asSetFilename("$(TOP)/db/Security.as")
 """
-footer = """
-cd "${TOP}/iocBoot/${IOC}"
+)
+
+footer = Template(
+    """
+cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
 iocLogInit
+
+<${PROPERTIES}
 
 caPutLogInit "$(EPICS_IOC_CAPUTLOG_INET):$(EPICS_IOC_CAPUTLOG_PORT)" 2
 
 #var streamDebug 1
 """
+)
 
 s_port = Template(
     """
-drvAsynIPPortConfigure("${P}","$(REGATRON_INTERFACE_MS_HOST):${COM}")
+drvAsynIPPortConfigure("$(P)","$(REGATRON_INTERFACE_MS_HOST):${COM}")
 """
 )
 
@@ -37,22 +47,22 @@ dbLoadRecords("db/asynRecord.db",   "P=${PV},R=,P=${P},ADDR=,IMAX=,OMAX=")"""
 
 module_db = Template(
     """
-dbLoadRecords("db/GenericCmd.db",    "D=${PV},P=${P}")
-dbLoadRecords("db/GenericGetSet.db", "D=${PV},P=${P}")
-dbLoadRecords("db/GenericMon.db",    "D=${PV},P=${P}")
-dbLoadRecords("db/TempMon.db",       "D=${PV},P=${P}")
-dbLoadRecords("db/ModMon.db",        "D=${PV},P=${P}")
-dbLoadRecords("db/ModTree.db",       "D=${PV},P=${P}")
+dbLoadRecords("db/GenericCmd.db",    "D=$(D),P=$(P)")
+dbLoadRecords("db/GenericGetSet.db", "D=$(D),P=$(P)")
+dbLoadRecords("db/GenericMon.db",    "D=$(D),P=$(P)")
+dbLoadRecords("db/TempMon.db",       "D=$(D),P=$(P)")
+dbLoadRecords("db/ModMon.db",        "D=$(D),P=$(P)")
+dbLoadRecords("db/ModTree.db",       "D=$(D),P=$(P)")
 
 """
 )
 system_db = Template(
     """
-dbLoadRecords("db/SysCmd.db",           "D=${PV},P=${P}")
-dbLoadRecords("db/SysGetSet.db",        "D=${PV},P=${P}")
-dbLoadRecords("db/SysMon.db",           "D=${PV},P=${P}")
-dbLoadRecords("db/SysTree.db",          "D=${PV},P=${P}")
-dbLoadRecords("db/SysCustomNamming.db", "D=${PV},P=${P}")
+dbLoadRecords("db/SysCmd.db",           "D=$(D),P=$(P)")
+dbLoadRecords("db/SysGetSet.db",        "D=$(D),P=$(P)")
+dbLoadRecords("db/SysMon.db",           "D=$(D),P=$(P)")
+dbLoadRecords("db/SysTree.db",          "D=$(D),P=$(P)")
+dbLoadRecords("db/SysCustomNamming.db", "D=$(D),P=$(P)")
 """
 )
 
@@ -107,15 +117,38 @@ devices = [
 # fmt: on
 BASE_COM = 20000
 if __name__ == "__main__":
+    base_props = (
+        subprocess.run(
+            "cat properties.txt | sort -u | xargs", shell=True, capture_output=True
+        )
+        .stdout.decode("utf-8")
+        .replace("\n", "")
+    )
+    master_props = (
+        subprocess.run(
+            "cat properties.txt properties-sys.txt | sort -u |xargs",
+            shell=True,
+            capture_output=True,
+        )
+        .stdout.decode("utf-8")
+        .replace("\n", "")
+    )
+
+    with open("PropertiesBase", "w+") as _f:
+        _f.write(f'\ndbpf ("$(D):Properties-Cte", "{base_props}")\n')
+
+    with open("PropertiesMaster", "w+") as _f:
+        _f.write(f'\ndbpf ("$(D):Properties-Cte", "{master_props}")\n')
+
     link = []
     for device in devices:
         port = device["port"]
         filename = "st-{:03}.cmd".format(port)
 
         with open(filename, "w+") as f:
-            f.write(header)
             s_ports, dbs, m_dbs, asyn_dbs = "", "", "", ""
             device["P"] = "P{}".format(port)
+            f.write(header.safe_substitute(**device))
             s_ports += s_port.safe_substitute(COM=str(BASE_COM + port), **device)
             dbs += module_db.safe_substitute(**device)
             if device["M"] == True:
@@ -124,5 +157,9 @@ if __name__ == "__main__":
             f.write(dbs)
             f.write(m_dbs)
             f.write(asyn_dbs)
-            f.write(footer)
+            f.write(
+                footer.safe_substitute(
+                    PROPERTIES="PropertiesMaster" if device["M"] else "PropertiesBase"
+                )
+            )
             os.chmod(filename, 0o755)

@@ -37,6 +37,12 @@ RUN envsubst < configure/RELEASE.tmplt > configure/RELEASE &&\
 
 CMD [ "/bin/bash", "/opt/cons-topcon/entrypoint.sh"]
 
+FROM base AS test
+RUN apt install -y vim
+ENV INFO "Regatron DCLinks - Test"
+ENV DEVS ""
+ENV REGATRON_INTERFACE_MS_HOST 0.0.0.0
+
 FROM base AS dipoles
 ENV INFO "Regatron DCLinks - DIPOLES"
 ENV DEVS "101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116"

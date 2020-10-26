@@ -536,16 +536,16 @@ record(longin, "$(D):SysWarnComm2-Mon"){
     field(EGU, "")
 }
 
-record(calc, "$(D):GenErr-Mon"){
+record(calc, "$(D):GenIntlk-Mon"){
     field(CALC, "A|B")
-    field(INPA, "$(D):SysWarnGroup-Mon CP MSS")
-    field(INPA, "$(D):ModWarnGroup-Mon CP MSS")
+    field(INPA, "$(D):SysErrGroup-Mon CP MSS")
+    field(INPB, "$(D):ModErrGroup-Mon CP MSS")
     field(DESC, "General Error Status")
 }
 
 record(calc, "$(D):GenWarn-Mon"){
     field(CALC, "A|B")
-    field(INPA, "$(D):SysErrGroup-Mon CP MSS")
-    field(INPA, "$(D):ModErrGroup-Mon CP MSS")
+    field(INPA, "$(D):SysWarnGroup-Mon CP MSS")
+    field(INPB, "$(D):ModWarnGroup-Mon CP MSS")
     field(DESC, "General Warning Status")
 }

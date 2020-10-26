@@ -110,24 +110,24 @@ mod_mon = [
 mod_get_set = []
 sys_get_set = [
     {
-        "pv": "$(D):SysOutVoltEnbl",
+        "pv": "$(D):PwrState",
         "desc": "Enable/Disable output voltage",
-        "type": TemplateType.BINARY_GET_SET,
-        "znam": "Disable",
-        "onam": "Enable",
+        "type": TemplateType.BINARY_STS_SEL,
+        "znam": "Off",
+        "onam": "On",
         "param": "SysOutVoltEnable",
         "prio": "HIGH",
         "scan": "60 second",
     },
-    {
-        "pv": "$(D):SysVoltageRef",
-        "desc": "Reference val. for voltage",
-        "type": TemplateType.ANALOG_GET_SET,
-        "param": "SysVoltageRef",
-        "egu": "V",
-        "prio": "HIGH",
-        "scan": "60 second",
-    },
+    #   {
+    #       "pv": "$(D):SysVoltageRef",
+    #       "desc": "Reference val. for voltage",
+    #       "type": TemplateType.ANALOG_GET_SET,
+    #       "param": "SysVoltageRef",
+    #       "egu": "V",
+    #       "prio": "HIGH",
+    #       "scan": "60 second",
+    #   },
     {
         "pv": "$(D):SysCurrentRef",
         "desc": "Reference val. for current",
@@ -284,6 +284,10 @@ sys_get_set = [
         "param": "cmdSlopeVoltWrite",
         "prio": "HIGH",
         "flnk": "$(D):SysVoltSlopeWf-Mon",
+        "diss": "NO_ALARM",
+        "disv": "0",
+        "high": "0.1",
+        "sdis": "$(D):SysWriteVoltSlope-Cmd",
     },
     {
         "pv": "$(D):SysCurrSlopeWf-Mon_proc",
@@ -415,6 +419,10 @@ sys_get_set = [
         "param": "cmdSlopeCurrentWrite",
         "prio": "HIGH",
         "flnk": "$(D):SysCurrSlopeWf-Mon",
+        "diss": "NO_ALARM",
+        "disv": "0",
+        "high": "0.1",
+        "sdis": "$(D):SysWriteCurrSlope-Cmd",
     },
 ]
 
@@ -425,13 +433,21 @@ sys_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdStoreParam",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):Save-Cmd",
     },
     {
-        "pv": "$(D):Clear-Cmd",
+        "pv": "$(D):Reset-Cmd",
         "desc": "Clear Errors and/or warnings",
         "type": TemplateType.BO_CMD,
         "param": "cmdClearErrors",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):Reset-Cmd",
     },
 ]
 
@@ -468,7 +484,7 @@ sys_mon = [
             "ftvl": FTVL.DOUBLE,
         },
         "items": [
-            {"pv": "$(D):SysOutVolt-Mon", "desc": "System out voltage", "egu": "V"},
+            {"pv": "$(D):Voltage-Mon", "desc": "System out voltage", "egu": "V"},
             {"pv": "$(D):SysOutCurrent-Mon", "desc": "System out current", "egu": "A"},
             {"pv": "$(D):SysOutPwr-Mon", "desc": "System out power", "egu": "kW"},
             {
@@ -477,7 +493,7 @@ sys_mon = [
                 "egu": "mOhm",
             },
             {
-                "pv": "$(D):SysState-Mon",
+                "pv": "$(D):OpMode-Sts",
                 "desc": "System state",
                 "type": TemplateType.MBBI_ITEM,
                 "onst": "",
@@ -524,6 +540,11 @@ temperature = {
 
 
 generic_mon = [
+    {
+        "pv": "$(D):Properties-Cte",
+        "type": TemplateType.WF_STRING_STATIC,
+        "nelm": "6000",
+    },
     {
         "pv": "$(D):ActiveInterface-Mon",
         "desc": "Active interface",
@@ -618,6 +639,10 @@ generic_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdConnect",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):Connect-Cmd",
     },
     {
         "pv": "$(D):Disconnect-Cmd",
@@ -625,6 +650,10 @@ generic_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdDisconnect",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):Disconnect-Cmd",
     },
     {
         "pv": "$(D):ReadErrors-Cmd",
@@ -632,6 +661,10 @@ generic_cmd = [
         "type": TemplateType.BO_CMD,
         "param": "cmdReadErrors",
         "prio": "HIGH",
+        "diss": "NO_ALARM",
+        "high": "0.1",
+        "disv": "0",
+        "sdis": "$(D):ReadErrors-Cmd",
     },
 ]
 

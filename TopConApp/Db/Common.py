@@ -4,6 +4,7 @@ from string import Template
 
 PROTOCOL = "@Regatron.proto"
 DEFAULTS = {
+    "adel": "0",
     "disa": "1",
     "disv": "0",
     "drvh": "0",
@@ -24,7 +25,9 @@ DEFAULTS = {
     "ftsv": "",
     "fvst": "",
     "fvsv": "",
+    "high": "0",
     "linr": "NO CONVERSION",
+    "mdel": "0",
     "nist": "",
     "nisv": "",
     "onam": "",
@@ -68,6 +71,15 @@ class FTVL:
     DOUBLE = "DOUBLE"
     ENUM = "ENUM"
 
+
+wf_string_static_db = Template(
+    """
+record(waveform, "${pv}"){
+    field(FTVL, "CHAR")
+    field(NELM, "${nelm}")
+}
+"""
+)
 
 wf_string_db = Template(
     """
@@ -268,8 +280,11 @@ record(bo, "${pv}"){
     field(DISA, "${disa}")
     field(DISV, "${disv}")
     field(PRIO, "${prio}")
-    field(DISS, "INVALID")
+    field(DISS, "${diss}")
     field(FLNK, "${flnk}")
+    field(HIGH, "${high}")
+    field(DISV, "${disv}")
+    field(SDIS, "${sdis}")
 
     field(DTYP, "stream")
     field(OUT,  "${proto} cmd(${param}) $(P)")
@@ -289,6 +304,39 @@ record(bi, "${pv}"){
 """
 )
 
+binary_get_sts_sel_db = Template(
+    """
+record(bi, "${pv}-Sts"){
+    field(DESC, "${desc}")
+    field(PHAS, "${phas}")
+    field(ZNAM, "${znam}")
+    field(ONAM, "${onam}")
+    field(PRIO, "${prio}")
+
+    field(DTYP, "stream")
+    field(INP,  "${proto} getInt(get${param}) $(P)")
+}
+record(bo, "${pv}-Sel"){
+    field(PINI, "NO")
+    field(DESC, "${desc}")
+    field(PHAS, "${phas}")
+    field(ZNAM, "${znam}")
+    field(ONAM, "${onam}")
+    field(PRIO, "${prio}")
+
+    field(DTYP, "stream")
+    field(OUT,  "${proto} setInt(set${param}) $(P)")
+    field(FLNK, "${pv}-Sts")
+}
+record(bi, "${pv}_proc"){
+    field(SCAN, "${scan}")
+    field(PHAS, "${phas}")
+    field(PRIO, "${prio}")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "${pv}-Sts")
+}
+"""
+)
 binary_get_set_db = Template(
     """
 record(bi, "${pv}-RB"){
@@ -438,7 +486,7 @@ alarm_or_db = Template(
 record(calc, "${pv}"){
     field(CALC, "A|B")
     field(INPA, "${inpa} CP MSS")
-    field(INPA, "${inpb} CP MSS")
+    field(INPB, "${inpb} CP MSS")
     field(DESC, "${desc}")
 }
 """
@@ -464,6 +512,7 @@ class TemplateType(object):
     ANALOG_ITEM = item_ai_db
     ANALOG_SET = analog_set_db
     ALARM_OR = alarm_or_db
+    BINARY_STS_SEL = binary_get_sts_sel_db
     BINARY_GET_SET = binary_get_set_db
     BINARY_FLNK = binary_flnk_db
     BO_CMD = bo_cmd_db
@@ -476,3 +525,4 @@ class TemplateType(object):
     STRING_IN = stringin_db
     WF_DB = wf_db
     WF_STRING_DB = wf_string_db
+    WF_STRING_STATIC = wf_string_static_db

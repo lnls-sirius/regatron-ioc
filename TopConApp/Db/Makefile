@@ -23,6 +23,7 @@ DB += SysGetSet.db
 DB += SysMon.db
 DB += SysTree.db
 DB += TempMon.db
+DB += SysCustomNamming.db
 
 #DB += $(ASYN)/db/asynRecord.db
 

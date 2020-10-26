@@ -3,25 +3,30 @@
 
 epicsEnvSet("EPICS_IOC_LOG_INET", "$(EPICS_IOC_LOG_INET)")
 epicsEnvSet("EPICS_IOC_LOG_PORT", "$(EPICS_IOC_LOG_PORT)")
+epicsEnvSet("D", "PA-RaPSD05:PS-DCLink-1B")
+epicsEnvSet("P", "P110")
 
 cd "${TOP}"
 
 dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
-asSetFilename("${TOP}/db/Security.as")
+asSetFilename("$(TOP)/db/Security.as")
 
-drvAsynIPPortConfigure("P110","$(REGATRON_INTERFACE_MS_HOST):20110")
+drvAsynIPPortConfigure("$(P)","$(REGATRON_INTERFACE_MS_HOST):20110")
 
-dbLoadRecords("db/GenericCmd.db",    "D=PA-RaPSD05:PS-DCLink-1B,P=P110")
-dbLoadRecords("db/GenericGetSet.db", "D=PA-RaPSD05:PS-DCLink-1B,P=P110")
-dbLoadRecords("db/GenericMon.db",    "D=PA-RaPSD05:PS-DCLink-1B,P=P110")
-dbLoadRecords("db/TempMon.db",       "D=PA-RaPSD05:PS-DCLink-1B,P=P110")
-dbLoadRecords("db/ModMon.db",        "D=PA-RaPSD05:PS-DCLink-1B,P=P110")
-dbLoadRecords("db/ModTree.db",       "D=PA-RaPSD05:PS-DCLink-1B,P=P110")
+dbLoadRecords("db/GenericCmd.db",    "D=$(D),P=$(P)")
+dbLoadRecords("db/GenericGetSet.db", "D=$(D),P=$(P)")
+dbLoadRecords("db/GenericMon.db",    "D=$(D),P=$(P)")
+dbLoadRecords("db/TempMon.db",       "D=$(D),P=$(P)")
+dbLoadRecords("db/ModMon.db",        "D=$(D),P=$(P)")
+dbLoadRecords("db/ModTree.db",       "D=$(D),P=$(P)")
 
-cd "${TOP}/iocBoot/${IOC}"
+
+cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
 iocLogInit
+
+<PropertiesBase
 
 caPutLogInit "$(EPICS_IOC_CAPUTLOG_INET):$(EPICS_IOC_CAPUTLOG_PORT)" 2
 

@@ -1,21 +1,29 @@
 version: '3.7'
 services:
+  test:
+    image: lnlscon/cons-topcon:test
+    network_mode: host
+    build:
+        context: .
+        dockerfile: Dockerfile
+        target: test
+
   dipoles:
-    image: lnlscon/cons-topcon:dipoles-v1.1
+    image: lnlscon/cons-topcon:dipoles-v1.3
     build:
         context: .
         dockerfile: Dockerfile
         target: dipoles
 
   quadrupoles:
-    image: lnlscon/cons-topcon:quadrupoles-v1.1
+    image: lnlscon/cons-topcon:quadrupoles-v1.3
     build:
         context: .
         dockerfile: Dockerfile
         target: quadrupoles
 
   sextupoles:
-    image: lnlscon/cons-topcon:sextupoles-v1.1
+    image: lnlscon/cons-topcon:sextupoles-v1.3
     build:
         context: .
         dockerfile: Dockerfile

@@ -1,0 +1,38 @@
+record(ai, "$(D):VoltageRef-Mon"){
+    field(DESC, "Reference val. for voltage")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+
+    field(DTYP, "stream")
+    field(INP,  "@Regatron.proto getFloat(getSysVoltageRef) $(P)")
+}
+record(ao, "$(D):Voltage-SP"){
+    field(PINI, "NO")
+    field(DESC, "Reference val. for voltage")
+    field(EGU,  "V")
+    field(PREC, "2")
+    field(PHAS, "0")
+    field(LINR, "NO CONVERSION")
+    field(EOFF, "0")
+    field(ESLO, "1")
+    field(PRIO, "HIGH")
+    field(DRVH, "0")
+    field(DRVL, "0")
+
+    field(DTYP, "stream")
+    field(OUT,  "@Regatron.proto setFloat(setSysVoltageRef) $(P)")
+    field(FLNK, "$(D):VoltageRef-Mon")
+}
+record(bi, "$(D):SysVoltageRef_proc"){
+    field(SCAN, "60 second")
+    field(PHAS, "0")
+    field(PRIO, "HIGH")
+    field(DTYP, "Soft Channel")
+    field(FLNK, "$(D):VoltageRef-Mon")
+}
+

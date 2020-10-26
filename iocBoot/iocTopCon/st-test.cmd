@@ -3,8 +3,8 @@
 
 epicsEnvSet("EPICS_IOC_LOG_INET", "$(EPICS_IOC_LOG_INET)")
 epicsEnvSet("EPICS_IOC_LOG_PORT", "$(EPICS_IOC_LOG_PORT)")
-epicsEnvSet("D", "PA-RaPSD03:PS-DCLink-4A")
-epicsEnvSet("P", "P107")
+epicsEnvSet("D", "Test:PS-DCLink-M")
+epicsEnvSet("P", "P001")
 
 cd "${TOP}"
 
@@ -12,7 +12,7 @@ dbLoadDatabase "dbd/TopCon.dbd"
 TopCon_registerRecordDeviceDriver pdbbase
 asSetFilename("$(TOP)/db/Security.as")
 
-drvAsynIPPortConfigure("$(P)","$(REGATRON_INTERFACE_MS_HOST):20107")
+drvAsynIPPortConfigure("$(P)","$(REGATRON_INTERFACE_MS_HOST):20101")
 
 dbLoadRecords("db/GenericCmd.db",    "D=$(D),P=$(P)")
 dbLoadRecords("db/GenericGetSet.db", "D=$(D),P=$(P)")

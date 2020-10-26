@@ -1,4 +1,9 @@
 
+record(waveform, "$(D):Properties-Cte"){
+    field(FTVL, "CHAR")
+    field(NELM, "6000")
+}
+
 record(mbbi, "$(D):ActiveInterface-Mon") {
     field(PINI, "NO")
     field(SCAN, "60 second")

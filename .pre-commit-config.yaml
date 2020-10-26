@@ -2,7 +2,12 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v1.2.3
     hooks:
-      -   id: trailing-whitespace
+      - id: trailing-whitespace
+      - id: check-json
+      - id: check-toml
+        id: pretty-format-json
+        no-sort-keys: true
+
 
   - repo: https://github.com/psf/black
     rev: 19.10b0 # Replace by any tag/version: https://github.com/psf/black/tags

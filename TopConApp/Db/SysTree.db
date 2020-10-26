@@ -536,7 +536,7 @@ record(longin, "$(D):SysWarnComm2-Mon"){
     field(EGU, "")
 }
 
-record(calc, "$(D):Intlk-Mon"){
+record(calc, "$(D):GenIntlk-Mon"){
     field(CALC, "A|B")
     field(INPA, "$(D):SysErrGroup-Mon CP MSS")
     field(INPB, "$(D):ModErrGroup-Mon CP MSS")

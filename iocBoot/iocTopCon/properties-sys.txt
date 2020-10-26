@@ -1,5 +1,5 @@
 GenWarn-Mon
-Intlk-Mon
+GenIntlk-Mon
 OpMode-Sts
 PwrState-Sel
 PwrState-Sts

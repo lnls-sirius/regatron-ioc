@@ -151,7 +151,7 @@ if __name__ == "__main__":
             f.write(header.safe_substitute(**device))
             s_ports += s_port.safe_substitute(COM=str(BASE_COM + port), **device)
             dbs += module_db.safe_substitute(**device)
-            if device["M"] == True:
+            if device["M"] is True:
                 m_dbs += system_db.safe_substitute(**device)
             f.write(s_ports)
             f.write(dbs)

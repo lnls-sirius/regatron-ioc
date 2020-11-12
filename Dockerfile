@@ -1,6 +1,6 @@
 # Author: Cláudio Ferreira Carneiro
 # LNLS - Brazilian Synchrotron Light Source Laboratory
-FROM  lnlscon/epics-r3.15.8:v1.1 as base
+FROM lnlscon/epics-r3.15.8:v1.2 AS base
 LABEL maintainer="Claudio Carneiro <claudio.carneiro@lnls.br>"
 
 RUN apt-get update && apt-get -y install gettext-base socat procps
@@ -25,13 +25,12 @@ RUN \
 
 WORKDIR ${TOP}
 
-COPY entrypoint.sh entrypoint.sh
-COPY configure     configure
-COPY Makefile      Makefile
-COPY iocBoot       iocBoot
-COPY TopConApp     TopConApp
+COPY . .
 
-RUN envsubst < configure/RELEASE.tmplt > configure/RELEASE &&\
+RUN cd ${TOP}/procCtrl && envsubst < configure/RELEASE.tmplt > configure/RELEASE &&\
+    cat configure/RELEASE && make distclean && make clean && make -j$(nproc) && mkdir sockets &&\
+    \
+    cd ${TOP} && envsubst < configure/RELEASE.tmplt > configure/RELEASE &&\
     make clean; make distclean; \
     cd ${TOP} && make
 

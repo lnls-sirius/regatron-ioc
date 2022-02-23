@@ -1,9 +1,12 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import os
-from string import Template
+import string
 import subprocess
+import sys
 
-header = Template(
+assert sys.version_info >= (3, 7)
+
+header = string.Template(
     """#!../../bin/linux-x86_64/TopCon
 < envPaths
 
@@ -20,13 +23,13 @@ asSetFilename("$(TOP)/db/Security.as")
 """
 )
 
-footer = Template(
+footer = string.Template(
     """
 cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
 iocLogInit
 
-<${PROPERTIES}
+< ${PROPERTIES}
 
 caPutLogInit "$(EPICS_IOC_CAPUTLOG_INET):$(EPICS_IOC_CAPUTLOG_PORT)" 2
 
@@ -34,18 +37,18 @@ caPutLogInit "$(EPICS_IOC_CAPUTLOG_INET):$(EPICS_IOC_CAPUTLOG_PORT)" 2
 """
 )
 
-s_port = Template(
+s_port = string.Template(
     """
 drvAsynIPPortConfigure("$(P)","$(REGATRON_INTERFACE_MS_HOST):${COM}")
 """
 )
 
-asyn_db = Template(
+asyn_db = string.Template(
     """
 dbLoadRecords("db/asynRecord.db",   "P=${PV},R=,P=${P},ADDR=,IMAX=,OMAX=")"""
 )
 
-module_db = Template(
+module_db = string.Template(
     """
 dbLoadRecords("db/GenericCmd.db",    "D=$(D),P=$(P)")
 dbLoadRecords("db/GenericGetSet.db", "D=$(D),P=$(P)")
@@ -56,7 +59,7 @@ dbLoadRecords("db/ModTree.db",       "D=$(D),P=$(P)")
 
 """
 )
-system_db = Template(
+system_db = string.Template(
     """
 dbLoadRecords("db/SysCmd.db",           "D=$(D),P=$(P)")
 dbLoadRecords("db/SysGetSet.db",        "D=$(D),P=$(P)")
@@ -116,15 +119,20 @@ devices = [
 ]
 # fmt: on
 BASE_COM = 20000
-if __name__ == "__main__":
-    base_props = (
+
+
+def load_base_properties():
+    return (
         subprocess.run(
             "cat properties.txt | sort -u | xargs", shell=True, capture_output=True
         )
         .stdout.decode("utf-8")
         .replace("\n", "")
     )
-    master_props = (
+
+
+def load_master_properties():
+    return (
         subprocess.run(
             "cat properties.txt properties-sys.txt | sort -u |xargs",
             shell=True,
@@ -134,12 +142,20 @@ if __name__ == "__main__":
         .replace("\n", "")
     )
 
+
+def generate_dbpf_base():
+    base_props = load_base_properties()
     with open("PropertiesBase", "w+") as _f:
         _f.write(f'\ndbpf ("$(D):Properties-Cte", "{base_props}")\n')
 
+
+def generate_dbpf_master():
+    master_props = load_master_properties()
     with open("PropertiesMaster", "w+") as _f:
         _f.write(f'\ndbpf ("$(D):Properties-Cte", "{master_props}")\n')
 
+
+def generate_ioc_cmd():
     link = []
     for device in devices:
         port = device["port"]
@@ -163,3 +179,32 @@ if __name__ == "__main__":
                 )
             )
             os.chmod(filename, 0o755)
+
+
+def pvlist():
+    base_props = load_base_properties().split(" ")
+    master_props = load_master_properties().split(" ")
+    pvs = []
+
+    for d in devices:
+        prefix = d["PV"]
+        for p in base_props:
+            pvs.append("{}:{}".format(prefix, p))
+
+        if d["M"]:
+            for p in master_props:
+                pvs.append("{}:{}".format(prefix, p))
+
+    with open("pvlist.txt", "w+") as f:
+        f.write("\n".join(pvs))
+
+
+def generate():
+    generate_dbpf_base()
+    generate_dbpf_master()
+    generate_ioc_cmd()
+
+
+if __name__ == "__main__":
+    generate()
+    pvlist()

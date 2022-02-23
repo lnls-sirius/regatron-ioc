@@ -26,7 +26,7 @@ cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
 iocLogInit
 
-<PropertiesBase
+< PropertiesBase
 
 caPutLogInit "$(EPICS_IOC_CAPUTLOG_INET):$(EPICS_IOC_CAPUTLOG_PORT)" 2
 

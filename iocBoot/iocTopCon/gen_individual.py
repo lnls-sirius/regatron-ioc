@@ -156,7 +156,6 @@ def generate_dbpf_master():
 
 
 def generate_ioc_cmd():
-    link = []
     for device in devices:
         port = device["port"]
         filename = "st-{:03}.cmd".format(port)
